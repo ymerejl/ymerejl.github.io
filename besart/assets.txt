@@ -1,0 +1,4 @@
+# name maxedge url  (temporary list, consumed by .github/workflows/fetch-preview-assets.yml)
+look-sidepart 1400 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260926_224805_77d5cc06-c092-4aed-88a2-bb99f7b07b80.png
+barber-razor 1400 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260926_224807_83d54e4c-9d64-4f0d-acdd-c4d0ea226de9.png
+look-curlfade 1400 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260926_224805_ddf2a345-889e-499e-b69a-12e303f47d12.png

@@ -1,7 +1,0 @@
-coiffeur p1: status 200, +1 venues
-coiffeur p2: status 200, +0 venues
-barbier p1: status 200, +2 venues
-barbier p2: status 200, +0 venues
-gruppe p1: status 200, +0 venues
-gruppe p2: status 200, +0 venues
-venues total 3, besart hits: []
