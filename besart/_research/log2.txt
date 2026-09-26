@@ -1,4 +1,0 @@
-rev-maps: 10 reviews, url https://www.google.com/maps/place/BesArt+Hairsalon/@47.257865,8.5876096,17z/data=!4m8!3m7!1s0x479aa9625950d77d:0xa4dac2e
-rev-cid: 0 reviews, url https://www.google.com/maps/place//@47.2938235,-119.5078446,7z/data=!3m1!4b1?hl=de&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDS
-rev-search: 377 chars
-rev-async: 404 1778 bytes
