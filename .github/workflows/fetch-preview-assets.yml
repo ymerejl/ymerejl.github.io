@@ -1,0 +1,58 @@
+# Temporary helper: downloads the generated preview images listed in
+# besart/assets.txt, converts them to WebP and commits them to the branch.
+name: fetch-preview-assets
+
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [besart/assets.txt]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          pip install --quiet pillow
+          if grep -q '\.mp4' besart/assets.txt; then sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg; fi
+
+      - name: Download and optimise
+        run: |
+          mkdir -p besart/img /tmp/src
+          grep -v '^#' besart/assets.txt | while read -r name maxedge url; do
+            [ -z "$name" ] && continue
+            case "$url" in
+              *.mp4)
+                curl -fsSL "$url" -o "/tmp/src/$name.mp4"
+                ffmpeg -nostdin -loglevel error -y -i "/tmp/src/$name.mp4" -vf "scale=-2:'min($maxedge,ih)'" \
+                  -c:v libx264 -crf 24 -preset slow -pix_fmt yuv420p -an -movflags +faststart "besart/img/$name.mp4"
+                ;;
+              *)
+                curl -fsSL "$url" -o "/tmp/src/$name.img"
+                python3 - "$name" "$maxedge" <<'PY'
+          import sys
+          from PIL import Image
+          name, maxedge = sys.argv[1], int(sys.argv[2])
+          im = Image.open(f"/tmp/src/{name}.img").convert("RGB")
+          im.thumbnail((maxedge, maxedge), Image.LANCZOS)
+          im.save(f"besart/img/{name}.webp", "WEBP", quality=82, method=6)
+          print(name, im.size)
+          PY
+                ;;
+            esac
+          done
+          ls -la besart/img
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add besart/img
+          git diff --cached --quiet && exit 0
+          git commit -m "Add optimised preview images"
+          git push
