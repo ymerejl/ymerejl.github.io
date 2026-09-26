@@ -1,0 +1,36 @@
+# Temporary helper: gathers salon info and shop photos for the BesArt preview.
+name: besart-research
+
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [.github/workflows/besart-research.yml, .github/research/research.mjs]
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright
+        run: |
+          cd .github/research && npm init -y >/dev/null && npm i --silent playwright@1.56.1
+          npx playwright install --with-deps chromium >/dev/null
+      - name: Research
+        run: |
+          cp .github/research/research.mjs .github/research/run.mjs
+          cd .github/research && node run.mjs || true
+          cd - && cat besart/_research/log.txt || true
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add besart/_research
+          git diff --cached --quiet && exit 0
+          git commit -m "Add temporary research output for BesArt preview"
+          git push
