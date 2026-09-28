@@ -1,0 +1,31 @@
+# Temporary helper: downloads files listed in _ref/raw.txt unchanged into
+# _ref/raw/ and commits them to the branch (removed afterwards).
+name: fetch-raw
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [_ref/raw.txt, .github/workflows/fetch-raw.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          mkdir -p _ref/raw
+          grep -v '^#' _ref/raw.txt | while read -r name url; do
+            [ -z "$name" ] && continue
+            [ -f "_ref/raw/$name" ] && continue
+            curl -fsSL --retry 3 "$url" -o "_ref/raw/$name"
+            ls -la "_ref/raw/$name"
+          done
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add _ref/raw
+          git diff --cached --quiet && exit 0
+          git commit -m "Add fetched raw files"
+          git push
