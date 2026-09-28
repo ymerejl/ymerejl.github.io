@@ -1,0 +1,31 @@
+# Temporary helper: downloads generated preview images listed in besart/assets.txt,
+# converts them to WebP and commits them to the branch (removed afterwards).
+name: fetch-preview-assets
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [besart/assets.txt, .github/workflows/fetch-preview-assets.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install --quiet pillow
+      - name: Download and optimise
+        run: |
+          mkdir -p besart/img /tmp/src
+          grep -v '^#' besart/assets.txt | while read -r name maxedge url; do
+            [ -z "$name" ] && continue
+            curl -fsSL --retry 3 "$url" -o "/tmp/src/$name.img"
+            python3 -c "import sys; from PIL import Image; n,m=sys.argv[1],int(sys.argv[2]); im=Image.open(f'/tmp/src/{n}.img').convert('RGB'); im.thumbnail((m,m),Image.LANCZOS); im.save(f'besart/img/{n}.webp','WEBP',quality=82,method=6); print(n,im.size)" "$name" "$maxedge"
+          done
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add besart/img
+          git diff --cached --quiet && exit 0
+          git commit -m "Add optimised preview images"
+          git push

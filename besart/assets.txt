@@ -1,0 +1,4 @@
+# name maxedge url
+pflege 1600 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_102101_c0d36d15-bcbc-4567-8f9f-952bdb7c82da.png
+kinder 1600 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_102101_79631c41-55a9-4195-9ef6-c66c327fdc69.png
+pensionaere 1600 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_102102_d8c310d8-74b9-44ed-a322-f6cbf85d0e1a.png
