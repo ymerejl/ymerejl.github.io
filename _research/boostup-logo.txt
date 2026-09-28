@@ -1,0 +1,5 @@
+# boostup-logo
+https://boostupcards.ch/collections/eigenes-logo
+ERROR page.goto: net::ERR_NAME_NOT_RESOLVED at https://boostupcards.ch/collections/eigenes-logo
+Call log:
+  - navigating to "https://boostupcards.ch/collections/eigenes-logo", waiting until "domcontentloaded"
