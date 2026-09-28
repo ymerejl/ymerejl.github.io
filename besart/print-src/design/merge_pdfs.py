@@ -6,7 +6,8 @@ from pypdf import PdfWriter, PdfReader
 from pypdf.generic import RectangleObject
 MM = 72 / 25.4
 d = json.load(open('final/_pdfs.json'))
-spec = {'card': ('BesArt-Visitenkarte-85x55-Druckdaten.pdf', 85, 55, 'Visitenkarte 85 × 55 mm'), 'flyer': ('BesArt-Flyer-A5-Druckdaten.pdf', 148, 210, 'Flyer A5 148 × 210 mm')}
+spec = {'card': ('BesArt-Visitenkarte-85x55-Druckdaten.pdf', 85, 55, 'Visitenkarte 85 × 55 mm'), 'flyer': ('BesArt-Flyer-A5-Druckdaten.pdf', 148, 210, 'Flyer A5 148 × 210 mm'),
+        'review': ('BesArt-Bewertungskarte-A6-Druckdaten.pdf', 105, 148, 'Google-Bewertungskarte A6 105 × 148 mm')}
 for k, files in d.items():
     name, W, H, title = spec[k]; w = PdfWriter()
     for f in files:

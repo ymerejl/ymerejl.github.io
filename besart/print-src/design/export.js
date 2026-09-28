@@ -9,6 +9,7 @@ const jobs = [
   ['card', 'back', 'visitenkarte-rueckseite', 600],
   ['flyer', 'front', 'flyer-a5-vorderseite', 300],
   ['flyer', 'back', 'flyer-a5-rueckseite', 300],
+  ['review', 'front', 'bewertungskarte-a6', 400],
 ];
 (async () => {
   const b = await chromium.launch();

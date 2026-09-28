@@ -1,6 +1,6 @@
 import segno, json, sys
-def build(url, ring, hole, eye):
-    q = segno.make(url, error='q', micro=False, boost_error=True)
+def build(url, ring, hole, eye, error='q'):
+    q = segno.make(url, error=error, micro=False, boost_error=(error == 'q'))
     m = [list(r) for r in q.matrix]; n = len(m)
     fin = lambda r, c: (r < 7 and c < 7) or (r < 7 and c >= n - 7) or (r >= n - 7 and c < 7)
     d = []
@@ -26,4 +26,5 @@ def build(url, ring, hole, eye):
     return {'url': url, 'version': q.version, 'error': q.error, 'n': n, 'd': ''.join(d)}
 if __name__ == '__main__':
     url = sys.argv[1]; ring, hole, eye = map(float, sys.argv[2:5])
-    json.dump(build(url, ring, hole, eye), open(sys.argv[5], 'w'))
+    err = sys.argv[6] if len(sys.argv) > 6 else 'q'   # m = larger modules for long URLs
+    json.dump(build(url, ring, hole, eye, err), open(sys.argv[5], 'w'))

@@ -1,0 +1,8 @@
+{
+  "name": "besart-aufsteller-render",
+  "private": true,
+  "description": "three.js-Renderer für den BesArt-Bewertungsaufsteller (siehe make.py)",
+  "dependencies": {
+    "three": "^0.186.1"
+  }
+}

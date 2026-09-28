@@ -15,6 +15,7 @@ const logo = (cls = 'logo', fill = 'currentColor') => `<svg class="${cls}" viewB
 // scissors-A monogram (A rest + scissors) cropped to its own box
 const mono = (cls = 'mono', fill = 'currentColor') => `<svg class="${cls}" viewBox="440 0 190 255" fill="${fill}" aria-hidden="true"><path fill-rule="evenodd" d="${SPLIT.Arest}"/><path fill-rule="evenodd" d="${SPLIT.scissors}"/></svg>`;
 const scissors = (cls = 'sc', fill = 'currentColor') => `<svg class="${cls}" viewBox="${SPLIT.sc_bbox[0] - 2} ${SPLIT.sc_bbox[1] - 2} ${SPLIT.sc_bbox[2] - SPLIT.sc_bbox[0] + 4} ${SPLIT.sc_bbox[3] - SPLIT.sc_bbox[1] + 4}" fill="${fill}" aria-hidden="true"><path fill-rule="evenodd" d="${SPLIT.scissors}"/></svg>`;
+const qrFrom = (Q, cls = 'qr', fill = 'currentColor') => `<svg class="${cls}" viewBox="0 0 ${Q.n} ${Q.n}" fill="${fill}" shape-rendering="geometricPrecision" aria-label="QR-Code: ${Q.url}"><path d="${Q.d}"/></svg>`;
 const qr = (cls = 'qr', fill = 'currentColor') => `<svg class="${cls}" viewBox="0 0 ${QR.n} ${QR.n}" fill="${fill}" shape-rendering="geometricPrecision" aria-label="QR-Code: ${QR.url}"><path d="${QR.d}"/></svg>`;
 
 const page = (w, h, bleed, css, body, opts = {}) => `<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><style>
@@ -28,4 +29,4 @@ ${opts.guides ? `.bleed::after{content:"";position:absolute;left:${bleed}mm;top:
 ${css}
 </style></head><body>${body}</body></html>`;
 
-module.exports = { ROOT, fontsCSS, logo, mono, scissors, qr, page, QR, SPLIT };
+module.exports = { ROOT, fontsCSS, logo, mono, scissors, qr, qrFrom, page, QR, SPLIT };
