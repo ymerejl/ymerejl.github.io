@@ -1,0 +1,6 @@
+[
+ {"scene": "m0-cards-travertine.png", "out": "out/mockup-karten-1.png", "faces": [{"design": "visitenkarte-vorderseite"}, {"design": "visitenkarte-rueckseite"}]},
+ {"scene": "m1-cards-counter.png", "out": "out/mockup-karten-2.png", "faces": [{"design": "visitenkarte-vorderseite", "skip": [1, 2]}, {"design": "visitenkarte-rueckseite"}]},
+ {"scene": "m2-flyer-travertine.png", "out": "out/mockup-flyer-1.png", "faces": [{"design": "flyer-a5-vorderseite", "sranges": {"1": [0.02, 0.72], "2": [0.12, 0.98]}}, {"design": "flyer-a5-rueckseite"}]},
+ {"scene": "m3-flyer-counter.png", "out": "out/mockup-flyer-2.png", "faces": [{"design": "flyer-a5-rueckseite", "sranges": {"3": [0.02, 0.98]}}, {"design": "flyer-a5-vorderseite"}]}
+]

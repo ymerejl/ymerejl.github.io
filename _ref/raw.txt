@@ -1,5 +1,0 @@
-# name url
-m0-cards-travertine.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_125553_15565e26-ffe7-4054-a252-f999776cc090.png
-m1-cards-counter.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_125557_5665c477-f4bd-44f3-b64a-c901d4af8c9d.png
-m2-flyer-travertine.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_125556_96d54e29-e9c3-4d20-bbdc-795a4b827321.png
-m3-flyer-counter.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_125554_e788557e-809a-4db3-82a6-b174062989eb.png
