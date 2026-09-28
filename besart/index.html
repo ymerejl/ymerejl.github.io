@@ -1433,6 +1433,13 @@ a.menu-book{text-decoration:none}
       'BEGIN:VALARM', 'TRIGGER:-PT24H', 'ACTION:DISPLAY', 'DESCRIPTION:Termin bei BesArt Hairsalon', 'END:VALARM',
       'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
     const a = document.createElement('a');
+    if (window.top !== window.self && 'claude' in window) {
+      // eingebettete Vorschau (claude.ai) erlaubt keine Downloads: Termin in Google Kalender öffnen
+      const q = new URLSearchParams({ action:'TEMPLATE', text:'Termin bei BesArt Hairsalon', dates:`${at(S.time)}/${at(S.time + need())}`, ctz:'Europe/Zurich', location:'BesArt Hairsalon, Neugasse 29, 8810 Horgen', details:list.map(s => s.name).join('\n') + '\nTelefon ' + TEL_TXT });
+      a.href = 'https://calendar.google.com/calendar/render?' + q; a.target = '_blank'; a.rel = 'noopener';
+      document.body.appendChild(a); a.click(); a.remove();
+      return;
+    }
     a.href = URL.createObjectURL(new Blob([txt], { type: 'text/calendar;charset=utf-8' }));
     a.download = 'BesArt-Termin.ics';
     document.body.appendChild(a); a.click();
