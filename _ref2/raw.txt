@@ -1,3 +1,5 @@
 # name url
 s0-stand-counter.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_143209_04284199-aad2-4eb5-b480-77e8987b9601.png
 s1-stand-checkout.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_143212_5016797c-6a17-47de-bb85-23f87375a9cd.png
+p0-counter-clean.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_143618_3558dab0-e309-4a99-9a03-2ea38318ddb4.png
+p1-checkout-clean.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_143624_4fdca826-a875-41da-af6f-5c617da8f854.png
