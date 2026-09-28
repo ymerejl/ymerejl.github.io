@@ -1,0 +1,3 @@
+# name url
+logo-a.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_083907_06759c71-6f2c-4b61-a2b9-59236530d43e.png
+logo-b.png https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_083908_8b3309c2-18ce-4afe-a735-51258fbe6184.png
