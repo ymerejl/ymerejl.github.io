@@ -1,0 +1,26 @@
+# Temporary helper: reads the public Salonkee page of the salon (removed afterwards).
+name: salonkee-research
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [.github/workflows/salonkee.yml, .github/research/salonkee.mjs]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm i --no-save playwright@1.55.0 && npx playwright install --with-deps chromium
+      - run: node .github/research/salonkee.mjs || true
+      - run: curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" -H "Accept-Language: de-CH,de;q=0.9" "https://salonkee.ch/salon/besart-hairsalon?lang=de" -o besart/_salonkee/curl.html -w "%{http_code}\n" || true
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add besart/_salonkee
+          git diff --cached --quiet && exit 0
+          git commit -m "Add Salonkee research output (temporary)"
+          git push
