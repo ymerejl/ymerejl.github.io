@@ -12,10 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 22 }
+        with:
+          node-version: 22
       - run: npm i --no-save playwright@1.55.0 && npx playwright install --with-deps chromium
       - run: node .github/research/salonkee.mjs || true
-      - run: curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" -H "Accept-Language: de-CH,de;q=0.9" "https://salonkee.ch/salon/besart-hairsalon?lang=de" -o besart/_salonkee/curl.html -w "%{http_code}\n" || true
+      - name: Plain HTTP fetch
+        run: |
+          mkdir -p besart/_salonkee
+          curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" -H "Accept-Language: de-CH,de;q=0.9" "https://salonkee.ch/salon/besart-hairsalon?lang=de" -o besart/_salonkee/curl.html -w "%{http_code}\n" || true
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
