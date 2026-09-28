@@ -1,0 +1,5 @@
+saved maps-start https://www.google.com/maps/place/BesArt+Hairsalon/@47.257865,8.5876096,17z/data=!4m6!3m5!1s0x479aa9625950d77d:0xa4dac2e
+clicked /Online buchen/i popup=true
+saved booking-1 https://salonkee.ch/salon/besart-hairsalon/widget?rwg_token=AE37R_gUAC-4vsPcTgwPNvyPGEFiq0N8TZmnk75BkVhzj4n6_zL6uHHlNlsV
+saved booking-2 https://salonkee.ch/salon/besart-hairsalon/widget?rwg_token=AE37R_gUAC-4vsPcTgwPNvyPGEFiq0N8TZmnk75BkVhzj4n6_zL6uHHlNlsV
+frames 1
