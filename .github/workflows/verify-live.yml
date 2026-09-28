@@ -1,0 +1,31 @@
+# Temporary: runs the full MacBook/Chrome function test against the live preview (removed afterwards).
+name: verify-live
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [.github/workflows/verify-live.yml]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the new deployment
+        run: |
+          want=9a8e65fb722794048ffe1a98770a7faaf51f429f22842a5f9ff3fed94afa989b
+          for i in $(seq 1 40); do
+            curl -sS -o live.html "https://ymerejl.github.io/besart/?nocache=$i$RANDOM"
+            got=$(sha256sum live.html | cut -d' ' -f1)
+            echo "try $i: $got"
+            [ "$got" = "$want" ] && echo "live page matches the deployed file" && exit 0
+            sleep 10
+          done
+          echo "live page does not match yet"; exit 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Full function test (MacBook 13", 16", fullscreen)
+        run: |
+          npm i --no-save playwright@1.55.0 >/dev/null 2>&1 && npx playwright install --with-deps chromium >/dev/null 2>&1
+          for size in "1440 789" "1728 1000" "1470 956"; do
+            echo "=== $size"; node .github/verify/maccheck.cjs https://ymerejl.github.io/besart/ live $size
+          done
