@@ -1850,8 +1850,11 @@ a.menu-book{text-decoration:none}
 
 
   /* ---------------- Print-Paket (versteckt hinter „Weiter“ im Footer) ---------------- */
+  // eigene Funktion, damit Namen wie go/open/close nicht mit anderen Modulen kollidieren
+  (() => {
   const pv = $('#print'), lb = $('#lightbox');
-  if (pv && lb) {
+  if (!pv || !lb) return;
+  {
     const HASH = '#printmedien';
     const slides = $$('.pv-slide', pv), whereN = $('#pvWhereN'), where = $('#pvWhere');
     const prevBtn = $('.pv-bar [data-pv-prev]', pv), nextBtn = $('.pv-bar [data-pv-next]', pv);
@@ -1883,7 +1886,7 @@ a.menu-book{text-decoration:none}
       pv.setAttribute('aria-hidden', 'false'); pv.classList.add('open');
       document.documentElement.classList.add('pv-lock');
       outside.forEach(el => { el.inert = true; });
-      if (push !== false && location.hash !== HASH) { history.pushState({ pv: 1 }, '', HASH); pushed = true; }
+      if (push !== false && location.hash !== HASH) { try { history.pushState({ pv: 1 }, '', HASH); pushed = true; } catch (e) {} }
       pv.focus({ preventScroll: true });
     }
     function close(fromHistory) {
@@ -1893,7 +1896,7 @@ a.menu-book{text-decoration:none}
       document.documentElement.classList.remove('pv-lock');
       outside.forEach(el => { el.inert = false; });
       if (!fromHistory) {
-        if (pushed) history.back(); else history.replaceState(null, '', location.pathname + location.search);
+        try { if (pushed) history.back(); else if (location.hash === HASH) history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
       }
       pushed = false;
       if (opener && opener.focus) opener.focus({ preventScroll: true });
@@ -1960,6 +1963,7 @@ a.menu-book{text-decoration:none}
     addEventListener('popstate', () => { if (location.hash === HASH) open(false); else close(true); });
     if (location.hash === HASH) open(false);
   }
+  })();
 
   /* ---------------- Scroll: Header, Parallax ---------------- */
   const header = $('#siteHeader');
