@@ -1,3 +1,0 @@
-# name url
-intro-v1.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_085826_00df0c24-0785-43d8-a910-f1d35c4227ff.mp4
-intro-v2.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20260928_085841_fedcf030-329d-437a-a5d9-b8f322c2228e.mp4
