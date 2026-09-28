@@ -701,6 +701,7 @@ a.menu-book{text-decoration:none}
 }
 /* ---------- Gesprächsmodus: Fragebogen vor der Website, Notizen je Seite, Abschluss, Export ---------- */
 .pitch-hold .site-header,.pitch-hold main,.pitch-hold .site-footer{visibility:hidden}
+.pitch,.pitch body{overscroll-behavior-x:none}
 .pt-lock,.pt-lock body{overflow:hidden}
 .pt[hidden],.pt-notes[hidden],.pt-fab[hidden],.pt [hidden]{display:none!important}
 .pt{position:fixed;inset:0;z-index:400;display:flex;flex-direction:column;background:var(--bg);color:var(--ivory);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .6s var(--ease),visibility 0s linear .6s}
@@ -733,7 +734,7 @@ a.menu-book{text-decoration:none}
 .pt-prog p{display:flex;justify-content:space-between;margin:0 0 10px;font-size:12px;color:var(--ivory-3)}
 .pt-bar{height:2px;background:var(--line);border-radius:2px;overflow:hidden}
 .pt-bar i{display:block;height:100%;width:0;background:var(--sand);transition:width .8s var(--ease)}
-.pt-main{position:relative;min-height:0;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;padding:clamp(30px,6vh,72px) clamp(22px,6vw,96px) 0}
+.pt-main{position:relative;min-height:0;overflow-y:auto;overscroll-behavior:contain;scroll-padding-bottom:120px;display:flex;flex-direction:column;padding:clamp(30px,6vh,72px) clamp(22px,6vw,96px) 0}
 .pt-mtop{display:none}
 .pt-step{width:100%;max-width:760px;margin:0 auto;flex:1}
 .pt-step.anim{animation:ptIn .7s var(--ease) both}
@@ -747,6 +748,37 @@ a.menu-book{text-decoration:none}
 .pt-agenda{margin:28px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .pt-agenda li{display:flex;align-items:baseline;gap:12px;padding:14px 16px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);font-size:14px;color:var(--ivory-2)}
 .pt-agenda li b{font:italic 400 18px/1 var(--serif);color:var(--sand)}
+/* Salon heute: Ablauf für mich, grosses Notizfeld mit Denkanwärmern */
+.pt-cue{margin:26px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.pt-cue li{display:flex;align-items:baseline;gap:12px;padding:14px 16px;border-radius:8px;background:rgba(199,181,147,.06);box-shadow:inset 0 0 0 1px rgba(199,181,147,.22);font-size:14.5px;line-height:1.45;color:var(--ivory)}
+.pt-cue b{font:italic 400 19px/1 var(--serif);color:var(--sand)}
+.pt-warm-h{margin:-4px 0 10px;font-size:12px;color:var(--ivory-3)}
+.pt-warm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.pt-wchip{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px 0 9px;border:0;border-radius:999px;background:none;box-shadow:inset 0 0 0 1px var(--line);color:var(--ivory-2);font:400 13px/1 var(--sans);cursor:pointer;transition:color .25s,box-shadow .25s}
+.pt-wchip svg{width:13px;height:13px;color:var(--sand)}
+.pt-wchip:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-wchip.used{color:var(--sand);box-shadow:inset 0 0 0 1px rgba(199,181,147,.45)}
+.pt-ta.big{min-height:clamp(240px,40vh,480px);font-size:16.5px;line-height:1.65}
+/* Farbpalette: Farbfelder in den Auswahlknöpfen */
+.pt-sw{display:inline-flex;margin-right:2px}
+.pt-sw i{width:14px;height:14px;border-radius:50%;box-shadow:0 0 0 1.5px var(--bg),0 0 0 2px rgba(237,230,218,.25)}
+.pt-sw i+i{margin-left:-4px}
+.pt-chip[aria-pressed="true"] .pt-sw i{box-shadow:0 0 0 1.5px var(--ivory),0 0 0 2px rgba(15,14,13,.25)}
+/* Mein Angebot */
+.pt-offer{margin-top:clamp(24px,4vh,36px)}
+.pt-offer-main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pt-offer-main article{padding:22px 22px 24px;border-radius:var(--r-md);background:radial-gradient(120% 120% at 0% 0%,#2A2622 0%,#1B1816 60%,#161412 100%);box-shadow:inset 0 0 0 1px var(--line-2)}
+.pt-oi{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(199,181,147,.4);color:var(--sand)}
+.pt-oi svg{width:22px;height:22px}
+.pt-offer-main h3{margin:16px 0 0;font:500 clamp(22px,2vw,27px)/1.15 var(--serif)}
+.pt-offer-main p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--ivory-2)}
+.pt-offer-h{display:flex;align-items:center;gap:14px;margin:26px 0 12px;font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--sand)}
+.pt-offer-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.pt-offer-inc{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.pt-offer-inc li{display:flex;align-items:center;gap:14px;padding:12px;border-radius:var(--r-md);box-shadow:inset 0 0 0 1px var(--line)}
+.pt-offer-inc .pv-thumb{width:68px;flex:none}
+.pt-offer-inc b{display:block;font:500 18px/1.2 var(--serif)}
+.pt-offer-inc div span{display:block;margin-top:3px;font-size:12.5px;line-height:1.45;color:var(--ivory-2)}
 .pt-qs{margin-top:clamp(26px,4vh,40px);display:flex;flex-direction:column;gap:clamp(24px,3.6vh,34px)}
 .pt-q{margin:0;padding:0;border:0;min-width:0}
 .pt-l{display:block;margin:0 0 12px;padding:0;font:500 14.5px/1.45 var(--sans);color:var(--ivory)}
@@ -808,10 +840,12 @@ a.menu-book{text-decoration:none}
 .pt-reset button:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
 .pt-reset button.arm{background:var(--err);color:var(--bg);box-shadow:none}
 /* Notizen während der Präsentation */
-.pt-fab{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:180;display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px 0 15px;border:0;border-radius:999px;background:rgba(21,19,17,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--line-2),0 14px 30px -12px rgba(0,0,0,.85);color:var(--ivory);font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:box-shadow .3s,opacity .5s,transform .6s var(--ease)}
+.pt-fab{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:180;display:inline-flex;align-items:center;gap:0;height:46px;padding:0 13px;border:0;border-radius:999px;background:rgba(21,19,17,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--line-2),0 14px 30px -12px rgba(0,0,0,.85);color:var(--ivory);font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:box-shadow .3s,opacity .5s,transform .6s var(--ease)}
 .pt-fab:hover,.pt-fab[aria-expanded="true"]{box-shadow:inset 0 0 0 1px var(--ivory),0 14px 30px -12px rgba(0,0,0,.85)}
 .pt-fab svg{width:18px;height:18px;color:var(--sand)}
-.pt-fab .n{min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--sand);color:var(--bg);font:600 11px/20px var(--sans);letter-spacing:0;text-align:center}
+.pt-fab .t{max-width:0;margin-left:0;opacity:0;overflow:hidden;white-space:nowrap;transition:max-width .5s var(--ease),margin .5s var(--ease),opacity .3s}
+.pt-fab:hover .t,.pt-fab:focus-visible .t,.pt-fab[aria-expanded="true"] .t{max-width:90px;margin-left:10px;opacity:1}
+.pt-fab .n{position:absolute;top:-5px;right:-5px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--sand);color:var(--bg);font:600 10.5px/19px var(--sans);letter-spacing:0;text-align:center;box-shadow:0 0 0 2px var(--bg)}
 .pt-fab .n:empty{display:none}
 .intro-on .pt-fab,.pitch-hold .pt-fab,.pt-lock .pt-fab{opacity:0;pointer-events:none;transform:translateY(12px)}
 .pt-tip{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(74px + env(safe-area-inset-bottom,0px));z-index:180;max-width:260px;margin:0;padding:12px 14px;border-radius:10px;background:var(--ivory);color:var(--bg);font-size:13px;line-height:1.45;box-shadow:0 18px 40px -16px rgba(0,0,0,.9);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .5s var(--ease),transform .6s var(--ease)}
@@ -866,7 +900,9 @@ a.menu-book{text-decoration:none}
   .pt-kicker{padding-left:14px;letter-spacing:.18em}
   .pt-saved{display:none}
   .pt-topbtn .t{display:none}
-  .pt-agenda{grid-template-columns:minmax(0,1fr)}
+  .pt-agenda,.pt-cue,.pt-offer-main{grid-template-columns:minmax(0,1fr)}
+  .pt-offer-inc{grid-template-columns:minmax(0,1fr)}
+
   .pt-dl{grid-template-columns:minmax(0,1fr);gap:2px}
   .pt-dl dd{margin-bottom:10px}
   .pt-nav .btn{padding-inline:18px}
@@ -973,7 +1009,7 @@ a.menu-book{text-decoration:none}
   if (!/[?&](kunde|termin)\b/.test(q)) {
     d.classList.add('pitch');
     var st = null; try { st = JSON.parse(localStorage.getItem('besart-pitch')); } catch (e) {}
-    if (!st || st.v !== 1 || st.stage === 'intake') d.classList.add('pitch-hold');
+    if (!st || st.v !== 2 || st.stage === 'intake') d.classList.add('pitch-hold');
   }
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   // QR-Code (?termin) und direkter Link aufs Print-Paket: ohne Intro
@@ -1650,7 +1686,7 @@ a.menu-book{text-decoration:none}
       </div>
       <div class="pv-pack pv-rv" style="--d:2">
         <ol class="pv-items">
-          <li><span class="pv-thumb is-web"><img data-src="img/paket-website.webp" alt="" width="640" height="400" decoding="async"></span><div><b>Website mit Online-Termin</b><span>Intro mit Logo-Animation, Leistungen und Preise, Bewertungen, Anfahrt und Terminbuchung in wenigen Klicks</span></div></li>
+          <li><span class="pv-thumb is-web"><img data-src="img/paket-website.webp" alt="" width="640" height="400" decoding="async"></span><div><b>Website mit Online-Termin</b><span>Top-Design und SEO-Optimierung für Google – mit Leistungen und Preisen, Bewertungen, Anfahrt und Terminbuchung</span></div></li>
           <li><span class="pv-thumb"><img data-src="img/print-karte-vorne.webp" alt="" width="1400" height="903" decoding="async"></span><div><b>Visitenkarten</b><span>85 × 55 mm, beidseitig, mit QR-Code zur Buchung</span></div></li>
           <li><span class="pv-thumb"><img data-src="img/print-flyer-vorne.webp" alt="" width="1100" height="1560" decoding="async"></span><div><b>Flyer A5</b><span>148 × 210 mm, beidseitig, alle Leistungen und Preise</span></div></li>
           <li><span class="pv-thumb is-light"><img data-src="img/aufsteller-ansicht.webp" alt="" width="800" height="800" decoding="async"></span><div><b>Google-Bewertungsaufsteller</b><span>3D-gedruckt, mit NFC-Chip und QR-Code, Karte A6</span></div></li>
@@ -2014,8 +2050,8 @@ a.menu-book{text-decoration:none}
     const t = e.target.closest('button'); if (!t || t.disabled) return;
     const k = t.dataset;
     if (k.cat) { S.cat = k.cat; S.tel = null; render(); }
-    else if (k.svc) { toggle(k.svc); render(); }
-    else if (k.add) { toggle(k.add, true); render(); }
+    else if (k.svc) { S.picked = true; toggle(k.svc); render(); }
+    else if (k.add) { S.picked = true; toggle(k.add, true); render(); }
     else if (k.tel) { S.tel = S.tel === k.tel ? null : k.tel; render(); }
     else if (k.go) { if (t.type !== 'submit') go(+k.go); }
     else if (k.who) { S.who = k.who; S.time = null; ensureDay(); render(); }
@@ -2049,6 +2085,8 @@ a.menu-book{text-decoration:none}
   function toBooking() { booking.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); flash(); }
   function preselect(id) {
     const s = svcById(id); if (!s) return;
+    if (!S.picked) S.sel = [];
+    S.picked = true;
     if (!S.sel.includes(id)) toggle(id, true);
     Object.assign(S, { cat:s.cat, tel:null, errors:{}, step:1 });
     render('back'); toBooking();
@@ -2384,7 +2422,7 @@ a.menu-book{text-decoration:none}
     const KEY = 'besart-pitch';
     const pad = n => String(n).padStart(2, '0');
     const dayISO = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
-    const mac = /Mac|iPhone|iPad/.test(navigator.platform || '');
+    const mac = /Mac|iPhone|iPad/i.test((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '');
     const touch = matchMedia('(hover: none)').matches;
     const I = {
       check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>',
@@ -2397,48 +2435,34 @@ a.menu-book{text-decoration:none}
       intake: {
         kicker: 'Gesprächsleitfaden', side: 'Vor der Präsentation', eyebrow: 'Fragebogen',
         steps: [
-          { id: 'gespraech', t: 'Gespräch', h: 'Bevor wir starten, <em>ein paar Fragen.</em>',
-            lead: 'Zuerst möchte ich den Salon besser kennenlernen. Danach zeige ich die neue Website, die Drucksachen und den Bewertungsaufsteller.',
-            agenda: ['Den Salon kennenlernen', 'Die neue Website mit Online-Termin', 'Visitenkarten, Flyer und Bewertungsaufsteller', 'Paket, Fragen und nächste Schritte'],
+          { id: 'gespraech', t: 'Kennenlernen', h: 'Erst einmal <em>kennenlernen.</em>',
+            lead: 'Bevor die neue Website kommt, ein kurzes Gespräch: wer wir sind, was BesArt ausmacht und was wichtig ist.',
+            agenda: ['Kennenlernen', 'Der Salon heute – {Name} erzählt', 'Was ich anbieten kann', 'Wünsche an die Website', 'Die neue Website und die Drucksachen', 'Fragen und nächste Schritte'],
             q: [
               { id: 'partner', l: 'Gesprächspartner', type: 'text', ph: 'Name' },
               { id: 'datum', l: 'Datum', type: 'date' },
               { id: 'ort', l: 'Wo findet das Gespräch statt?', type: 'chips', o: ['Im Salon', 'Bei mir', 'Telefon / Video'] },
             ] },
-          { id: 'salon', t: 'Der Salon heute', h: 'Der Salon <em>heute.</em>', lead: 'Wie läuft es im Moment?',
+          { id: 'salon', t: 'Der Salon heute', h: 'Der Salon <em>heute.</em>',
+            lead: 'Zuerst stelle ich mich kurz vor. Dann erzählt {Name} – ich halte das Wichtigste fest.',
+            cue: ['Mich kurz vorstellen: wer ich bin und was ich mache', '{Name} erzählt: über sich, den Salon und den eigenen Weg', 'Was erwartet {Name} von mir?', 'Kurz erwähnen: Ich mache mir ein paar Notizen'],
+            nonote: true,
             q: [
-              { id: 'seit', l: 'Seit wann gibt es BesArt?', type: 'text', ph: 'z. B. 2019' },
-              { id: 'team', l: 'Wie viele Personen arbeiten im Salon?', type: 'chips', o: ['Allein', '2', '3', '4 oder mehr'] },
-              { id: 'kundschaft', l: 'Wer kommt vor allem?', type: 'multi', o: ['Damen', 'Herren', 'Kinder', 'Pensionäre', 'Barber / Bart'] },
-              { id: 'stamm', l: 'Eher Stamm- oder Neukunden?', type: 'chips', o: ['Fast nur Stammkunden', 'Mehrheit Stamm', 'Ausgeglichen', 'Viele Neue'] },
-              { id: 'ruhig', l: 'Wann ist es eher ruhig?', type: 'text', ph: 'Tage oder Zeiten mit freien Plätzen' },
+              { id: 'notizen', l: 'Notizen zum Gespräch', type: 'bignote', ph: 'Stichworte, Zitate, Wünsche …',
+                warm: ['Werdegang', 'Seit wann BesArt', 'Team', 'Kundschaft', 'Was gut läuft', 'Was im Alltag nervt', 'Wie Termine zustande kommen', 'Wie Neukunden kommen', 'Konkurrenz', 'Ziele', 'Erwartungen an mich'] },
             ] },
-          { id: 'termine', t: 'Termine & Buchung', h: 'Termine <em>&amp; Buchung.</em>', lead: 'Wie kommen die Termine heute zustande – und was kostet dabei Zeit?',
+          { id: 'angebot', t: 'Mein Angebot', h: 'Was ich <em>anbieten kann.</em>',
+            lead: 'Ein Auftritt aus einem Guss: online gut gefunden werden – und im Salon in Erinnerung bleiben.',
+            offer: true, q: [] },
+          { id: 'wuensche', t: 'Website-Wünsche', h: 'Wünsche an <em>die Website.</em>',
+            lead: 'Was ist {name} wichtig – und wie soll sich BesArt online anfühlen?',
             q: [
-              { id: 'kanaele', l: 'Wie buchen die Kunden heute?', type: 'multi', o: ['Telefon', 'Salonkee online', 'WhatsApp', 'Instagram', 'Vor Ort', 'Ohne Termin'] },
-              { id: 'online', l: 'Anteil online gebuchter Termine (geschätzt)', type: 'chips', o: ['Unter 10 %', '10–30 %', '30–60 %', 'Über 60 %', 'Weiss nicht'] },
-              { id: 'nerv', l: 'Was stört bei Terminen am meisten?', type: 'multi', o: ['Anrufe während der Arbeit', 'Nicht erschienen', 'Kurzfristige Absagen', 'Lücken im Kalender', 'Nichts Besonderes'], other: 'Anderes' },
-              { id: 'salonkee', l: 'Soll die Buchung weiter über Salonkee laufen?', type: 'chips', o: ['Ja, beibehalten', 'Offen', 'Lieber eine eigene Lösung'] },
-            ] },
-          { id: 'sichtbarkeit', t: 'Sichtbarkeit', h: 'Wie Kunden <em>BesArt finden.</em>', lead: 'Online, auf Empfehlung oder im Vorbeigehen?',
-            q: [
-              { id: 'finden', l: 'Wie finden Neukunden den Salon?', type: 'multi', o: ['Google / Maps', 'Instagram', 'Facebook', 'TikTok', 'Empfehlung', 'Laufkundschaft', 'Salonkee'] },
-              { id: 'website', l: 'Gibt es heute eine eigene Website?', type: 'chips', o: ['Nein', 'Ja', 'Nur das Salonkee-Profil'], other: 'Adresse' },
-              { id: 'social', l: 'Wer kümmert sich um Social Media?', type: 'chips', o: ['Selbst', 'Jemand im Team', 'Extern', 'Niemand'] },
-              { id: 'bewertungen', l: 'Werden Kunden aktiv um eine Google-Bewertung gebeten?', type: 'chips', o: ['Ja, regelmässig', 'Manchmal', 'Nie'] },
-              { id: 'werbung', l: 'Bisherige Werbung', type: 'text', ph: 'Flyer, Inserate, Online-Werbung …' },
-            ] },
-          { id: 'ziele', t: 'Konkurrenz & Ziele', h: 'Konkurrenz <em>&amp; Ziele.</em>', lead: 'Wo steht BesArt heute, und wo soll es hingehen?',
-            q: [
-              { id: 'konkurrenz', l: 'Wichtigste Mitbewerber in der Umgebung', type: 'multi', o: ['Raja Hairstyling', 'Coiffeur B-beautiful', 'Intercoiffure Timodella', 'Beauty Werkstatt'], other: 'Andere' },
-              { id: 'usp', l: 'Was macht BesArt besser als die anderen?', type: 'area' },
-              { id: 'ziele', l: 'Ziele für die nächsten zwölf Monate', type: 'multi', o: ['Mehr Neukunden', 'Mehr Online-Buchungen', 'Weniger Telefon', 'Mehr Google-Bewertungen', 'Höhere Preise', 'Neue Leistungen', 'Personal finden'], other: 'Anderes' },
-              { id: 'auftritt', l: 'Wie wichtig ist ein moderner Auftritt?', type: 'scale', min: 1, max: 5, lo: 'Nebensache', hi: 'Sehr wichtig' },
-            ] },
-          { id: 'rahmen', t: 'Rahmen', h: 'Der <em>Rahmen.</em>', lead: 'Was ist für die Umsetzung wichtig?',
-            q: [
-              { id: 'anlass', l: 'Gibt es einen Termin oder Anlass?', type: 'text', ph: 'z. B. Jubiläum, Saisonstart, neue Räume' },
-              { id: 'entscheid', l: 'Wer entscheidet mit?', type: 'text', ph: 'z. B. allein, mit Partner oder Partnerin' },
+              { id: 'wuensche', l: 'Was wünscht sich {name} von der Website?', type: 'area', ph: 'Was soll sie zeigen, können, ausstrahlen? Gibt es Websites, die gefallen?' },
+              { id: 'farben', l: 'Farbpalette', type: 'multi', other: 'Eigene Farben, z. B. aus dem Logo',
+                o: [['Schwarz & Creme', ['#0F0E0D', '#EDE6DA', '#C7B593']], ['Hell & natürlich', ['#F3EEE6', '#D8C9B4', '#8B7A64']], ['Warm & erdig', ['#3A2A21', '#B07F55', '#E9D6C1']],
+                    ['Kühl & modern', ['#1D2227', '#95A2AC', '#EEF1F3']], ['Farbig & mutig', ['#2A1C3B', '#C2466A', '#F0BF4C']]] },
+              { id: 'wichtig', l: 'Was ist besonders wichtig?', type: 'multi', o: ['Online-Termin', 'Leistungen & Preise', 'Echte Fotos vom Salon', 'Team vorstellen', 'Google-Bewertungen', 'Instagram', 'Gut auf dem Handy', 'Inhalte selbst ändern'], other: 'Anderes' },
+              { id: 'effekte', l: 'Visuelle Effekte', type: 'chips', o: ['Lieber schlicht', 'Dezent', 'Gerne mehr Effekte', 'Nach der Präsentation entscheiden'] },
             ] },
         ],
         end: { id: 'bereit', t: 'Präsentation', end: true, h: 'Danke. <em>Jetzt zur Website.</em>',
@@ -2478,11 +2502,11 @@ a.menu-book{text-decoration:none}
     Object.values(FLOWS).forEach(f => f.steps.forEach(st => st.q.forEach(q => { Q[st.id + '.' + q.id] = { st, q }; })));
 
     /* ---------- Zustand (lokal gespeichert) ---------- */
-    const fresh = () => ({ v: 1, created: new Date().toISOString(), updated: null, stage: 'intake', step: { intake: 0, closing: 0 },
+    const fresh = () => ({ v: 2, created: new Date().toISOString(), updated: null, stage: 'intake', step: { intake: 0, closing: 0 },
       a: { 'gespraech.partner': 'Besart Beka', 'gespraech.datum': dayISO(new Date()) }, n: {}, tip: false });
     let S = null, saveT = 0, dead = false;
     try { S = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
-    if (!S || S.v !== 1 || typeof S.a !== 'object' || !S.a || typeof S.n !== 'object' || !S.n) S = fresh();
+    if (!S || S.v !== 2 || typeof S.a !== 'object' || !S.a || typeof S.n !== 'object' || !S.n) S = fresh();
     S.step = Object.assign({ intake: 0, closing: 0 }, S.step);
     const savedEl = $('#ptSaved');
     function store() {
@@ -2524,6 +2548,12 @@ a.menu-book{text-decoration:none}
       return s;
     }
 
+    function nm(t) {
+      const first = String(S.a['gespraech.partner'] || '').trim().split(/\s+/)[0];
+      return String(t).replace(/\{name\}/g, first || 'der Kunde').replace(/\{Name\}/g, first || 'Der Kunde');
+    }
+    const optV = o => Array.isArray(o) ? o[0] : o;
+
     /* ---------- Fragebogen-Overlay ---------- */
     const main = $('#ptMain'), stepsEl = $('#ptSteps'), kicker = $('#ptKicker'), topBtn = $('#ptTopBtn'), sideH = $('#ptSideH'), progN = $('#ptProgN'), bar = $('#ptBar');
     let mode = null, editing = false, opener = null, inertSaved = null;
@@ -2552,24 +2582,41 @@ a.menu-book{text-decoration:none}
       bar.style.width = (keys.length ? done / keys.length * 100 : 0).toFixed(1) + '%';
     }
     function qHTML(st, q) {
-      const k = st.id + '.' + q.id, id = 'pt_' + st.id + '_' + q.id, v = S.a[k];
+      const k = st.id + '.' + q.id, id = 'pt_' + st.id + '_' + q.id, v = S.a[k], L = nm(q.l);
       const otherL = q.other || '';
-      const other = q.other ? `<input class="pt-in sm" type="text" data-k="${k}~" aria-label="${esc(q.l + ': ' + otherL)}" placeholder="${esc(otherL)} …" value="${esc(S.a[k + '~'] || '')}" autocomplete="off">` : '';
+      const other = q.other ? `<input class="pt-in sm" type="text" data-k="${k}~" aria-label="${esc(L + ': ' + otherL)}" placeholder="${esc(otherL)} …" value="${esc(S.a[k + '~'] || '')}" autocomplete="off">` : '';
+      if (q.type === 'bignote')
+        return `<div class="pt-q"><label class="pt-l" for="${id}">${esc(L)}</label><p class="pt-warm-h" id="${id}_w">Denkanwärmer – antippen fügt das Stichwort ein</p><div class="pt-warm" role="group" aria-labelledby="${id}_w">${q.warm.map(w => `<button type="button" class="pt-wchip${String(v || '').includes(w) ? ' used' : ''}" data-warm="${esc(w)}" data-for="${id}">${I.plus}${esc(w)}</button>`).join('')}</div><textarea class="pt-ta big" id="${id}" data-k="${k}" rows="10" placeholder="${esc(q.ph || '')}">${esc(v || '')}</textarea></div>`;
       if (q.type === 'text' || q.type === 'date')
-        return `<div class="pt-q"><label class="pt-l" for="${id}">${esc(q.l)}</label><input class="pt-in" id="${id}" type="${q.type}" data-k="${k}" value="${esc(v || '')}"${q.ph ? ` placeholder="${esc(q.ph)}"` : ''} autocomplete="off"></div>`;
+        return `<div class="pt-q"><label class="pt-l" for="${id}">${esc(L)}</label><input class="pt-in" id="${id}" type="${q.type}" data-k="${k}" value="${esc(v || '')}"${q.ph ? ` placeholder="${esc(q.ph)}"` : ''} autocomplete="off"></div>`;
       if (q.type === 'area')
-        return `<div class="pt-q"><label class="pt-l" for="${id}">${esc(q.l)}</label><textarea class="pt-ta" id="${id}" data-k="${k}" rows="3"${q.ph ? ` placeholder="${esc(q.ph)}"` : ''}>${esc(v || '')}</textarea></div>`;
+        return `<div class="pt-q"><label class="pt-l" for="${id}">${esc(L)}</label><textarea class="pt-ta" id="${id}" data-k="${k}" rows="3"${q.ph ? ` placeholder="${esc(q.ph)}"` : ''}>${esc(v || '')}</textarea></div>`;
       if (q.type === 'scale') {
         let b = '';
         for (let n = q.min; n <= q.max; n++) b += `<button type="button" data-k="${k}" data-num="${n}" aria-pressed="${v === n}" aria-label="${n} von ${q.max}">${n}</button>`;
-        return `<div class="pt-q" role="group" aria-labelledby="${id}"><p class="pt-l" id="${id}">${esc(q.l)}</p><div class="pt-scale">${b}</div><div class="pt-scale-l" aria-hidden="true"><span>${esc(q.lo)}</span><span>${esc(q.hi)}</span></div></div>`;
+        return `<div class="pt-q" role="group" aria-labelledby="${id}"><p class="pt-l" id="${id}">${esc(L)}</p><div class="pt-scale">${b}</div><div class="pt-scale-l" aria-hidden="true"><span>${esc(q.lo)}</span><span>${esc(q.hi)}</span></div></div>`;
       }
       const multi = q.type === 'multi', on = o => multi ? (Array.isArray(v) && v.includes(o)) : v === o;
-      return `<div class="pt-q" role="group" aria-labelledby="${id}"><p class="pt-l" id="${id}">${esc(q.l)}${multi ? '<span class="sr"> (mehrere möglich)</span>' : ''}</p><div class="pt-chips${multi ? ' multi' : ''}">${q.o.map(o => `<button type="button" class="pt-chip" data-k="${k}" data-v="${esc(o)}" aria-pressed="${on(o)}">${multi ? I.check : ''}${esc(o)}</button>`).join('')}</div>${other}</div>`;
+      const sw = o => Array.isArray(o) ? `<span class="pt-sw" aria-hidden="true">${o[1].map(c => `<i style="background:${c}"></i>`).join('')}</span>` : '';
+      return `<div class="pt-q" role="group" aria-labelledby="${id}"><p class="pt-l" id="${id}">${esc(L)}${multi ? '<span class="sr"> (mehrere möglich)</span>' : ''}</p><div class="pt-chips${multi ? ' multi' : ''}">${q.o.map(o => `<button type="button" class="pt-chip" data-k="${k}" data-v="${esc(optV(o))}" aria-pressed="${on(optV(o))}">${multi ? I.check : ''}${sw(o)}${esc(optV(o))}</button>`).join('')}</div>${other}</div>`;
     }
     function noteHTML(st) {
       const k = 'step:' + st.id, v = S.n[k] || '', open = !!v.trim();
       return `<div class="pt-notebox"><button type="button" class="pt-addnote" data-act="note"${open ? ' hidden' : ''}>${I.plus}Notiz zu diesem Punkt</button><div${open ? '' : ' hidden'}><label class="pt-l" for="pt_note_${st.id}">Notiz zu «${esc(st.t)}»</label><textarea class="pt-ta" id="pt_note_${st.id}" data-note="${k}" rows="3" placeholder="Was ist sonst noch wichtig?">${esc(v)}</textarea></div></div>`;
+    }
+    // Was ich anbieten kann: Website mit Top-Design und SEO, dazu Visitenkarten, Flyer und Bewertungsaufsteller
+    function offerHTML() {
+      const inc = [['img/print-karte-vorne.webp', '', 'Visitenkarten', 'Beidseitig, mit QR-Code zur Online-Buchung'],
+        ['img/print-flyer-vorne.webp', '', 'Flyer A5', 'Leistungen und Preise, mit QR-Code'],
+        ['img/aufsteller-ansicht.webp', ' is-light', 'Bewertungen', 'Aufsteller für Google-Bewertungen, mit QR-Code und NFC']];
+      return `<div class="pt-offer">
+        <div class="pt-offer-main">
+          <article><span class="pt-oi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2.5" y="4" width="19" height="13" rx="1.5"/><path d="M9 20.5h6M12 17v3.5"/></svg></span><h3>Website mit Top-Design</h3><p>Ein Auftritt, der zu BesArt passt: edel, schnell und auf Handy wie Computer stark – mit Online-Termin, Leistungen und Preisen.</p></article>
+          <article><span class="pt-oi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M7.5 12.5l2-2.5 2 1.5 2.5-3.5"/></svg></span><h3>SEO für mehr Sichtbarkeit</h3><p>Suchmaschinenoptimiert, damit BesArt bei Google gefunden wird – zum Beispiel bei «Coiffeur Horgen».</p></article>
+        </div>
+        <p class="pt-offer-h">Inklusive</p>
+        <ul class="pt-offer-inc">${inc.map(([src, cls, t, d]) => `<li><span class="pv-thumb${cls}"><img src="${src}" alt="" loading="lazy" decoding="async"></span><div><b>${t}</b><span>${d}</span></div></li>`).join('')}</ul>
+      </div>`;
     }
     function endHTML() {
       const keys = keysOf(mode), done = keys.filter(answered).length;
@@ -2584,12 +2631,14 @@ a.menu-book{text-decoration:none}
       const all = flowSteps(mode), i = Math.max(0, Math.min(all.length - 1, S.step[mode] || 0)), st = all[i];
       S.step[mode] = i;
       const mtop = `<div class="pt-mtop"><p><span>Schritt ${i + 1} von ${all.length}</span><span>${esc(st.t)}</span></p><div class="pt-seg">${all.map((x, n) => `<button type="button" data-go="${n}" aria-label="Schritt ${n + 1}: ${esc(x.t)}"${n === i ? ' aria-current="step"' : ''}${n <= i ? ' class="on"' : ''}></button>`).join('')}</div></div>`;
-      const agenda = st.agenda ? `<ol class="pt-agenda">${st.agenda.map((x, n) => `<li><b>${n + 1}</b>${esc(x)}</li>`).join('')}</ol>` : '';
-      const body = st.end ? endHTML() : `<div class="pt-qs">${st.q.map(q => qHTML(st, q)).join('')}</div>${noteHTML(st)}`;
+      const agenda = st.agenda ? `<ol class="pt-agenda">${st.agenda.map((x, n) => `<li><b>${n + 1}</b>${esc(nm(x))}</li>`).join('')}</ol>` : '';
+      const cue = st.cue ? `<ol class="pt-cue">${st.cue.map((x, n) => `<li><b>${n + 1}</b><span>${esc(nm(x))}</span></li>`).join('')}</ol>` : '';
+      const qs = st.q && st.q.length ? `<div class="pt-qs">${st.q.map(q => qHTML(st, q)).join('')}</div>` : '';
+      const body = st.end ? endHTML() : cue + (st.offer ? offerHTML() : '') + qs + (st.nonote ? '' : noteHTML(st));
       const back = `<button type="button" class="btn btn-text" data-dir="-1"${i === 0 ? ' disabled' : ''}>${ARROW}Zurück</button>`;
       const nav = st.end ? `<div class="pt-nav">${back}</div>`
         : `<div class="pt-nav">${back}${touch ? '' : `<p class="pt-kbd"><kbd>${mac ? '⌘' : 'Ctrl'}</kbd> + <kbd>Enter</kbd> weiter</p>`}<button type="button" class="btn btn-primary" data-dir="1">Weiter${ARROW}</button></div>`;
-      main.innerHTML = mtop + `<section class="pt-step${anim && !reduce ? ' anim' : ''}" aria-labelledby="ptH"><p class="pt-eyebrow"><b>${pad(i + 1)}</b>${esc(FLOWS[mode].eyebrow)}</p><h2 id="ptH" tabindex="-1">${st.h}</h2>${st.lead ? `<p class="pt-lead">${st.lead}</p>` : ''}${agenda}${body}</section>` + nav;
+      main.innerHTML = mtop + `<section class="pt-step${anim && !reduce ? ' anim' : ''}" aria-labelledby="ptH"><p class="pt-eyebrow"><b>${pad(i + 1)}</b>${esc(FLOWS[mode].eyebrow)}</p><h2 id="ptH" tabindex="-1">${st.h}</h2>${st.lead ? `<p class="pt-lead">${esc(nm(st.lead))}</p>` : ''}${agenda}${body}</section>` + nav;
       main.scrollTop = 0;
       renderSide();
     }
@@ -2641,7 +2690,7 @@ a.menu-book{text-decoration:none}
       if (q.type === 'multi') {
         const arr = Array.isArray(S.a[k]) ? S.a[k].slice() : [], i = arr.indexOf(v);
         if (i < 0) arr.push(v); else arr.splice(i, 1);
-        S.a[k] = q.o.filter(o => arr.includes(o));
+        S.a[k] = q.o.map(optV).filter(o => arr.includes(o));
         b.setAttribute('aria-pressed', String(i < 0));
       } else {
         const on = S.a[k] !== v; S.a[k] = on ? v : '';
@@ -2655,6 +2704,14 @@ a.menu-book{text-decoration:none}
       if (t.dataset.go != null) return go(+t.dataset.go);
       if (t.dataset.dir) return go(S.step[mode] + +t.dataset.dir);
       if (t.classList.contains('pt-chip')) return toggleChip(t);
+      if (t.dataset.warm) {
+        const ta = document.getElementById(t.dataset.for); if (!ta) return;
+        const v = ta.value.replace(/\s+$/, '');
+        ta.value = (v ? v + '\n\n' : '') + t.dataset.warm + ': ';
+        ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length); ta.scrollTop = ta.scrollHeight;
+        ta.dispatchEvent(new Event('input', { bubbles: true }));
+        return;
+      }
       if (t.dataset.num) {
         const k = t.dataset.k, n = +t.dataset.num, on = S.a[k] !== n;
         S.a[k] = on ? n : null;
@@ -2673,7 +2730,10 @@ a.menu-book{text-decoration:none}
     });
     ov.addEventListener('input', e => {
       const t = e.target;
-      if (t.dataset.k) { S.a[t.dataset.k] = t.value; save(); renderSide(); }
+      if (t.dataset.k) {
+        S.a[t.dataset.k] = t.value; save(); renderSide();
+        if (t.classList.contains('big')) $$('.pt-wchip', t.parentElement).forEach(b => b.classList.toggle('used', t.value.includes(b.dataset.warm)));
+      }
       else if (t.dataset.note) { if (t.value.trim()) S.n[t.dataset.note] = t.value; else delete S.n[t.dataset.note]; save(); }
     });
     // solange der Fragebogen offen ist, gehören alle Tasten ihm (auch wenn der Fokus kurz auf <body> fällt)
@@ -2686,19 +2746,25 @@ a.menu-book{text-decoration:none}
 
     /* ---------- Zusammenfassung ---------- */
     function model() {
-      const block = (flow, st, i) => ({ h: st.t, flow, i, rows: st.id === 'gespraech' ? [] : st.q.map(q => [q.l, fmt(st.id + '.' + q.id)]), note: String(S.n['step:' + st.id] || '').trim() });
+      const block = (flow, st, i) => {
+        const qs = st.id === 'gespraech' ? [] : st.q;
+        return { h: st.t, flow, i,
+          text: qs.filter(q => q.type === 'bignote').map(q => String(S.a[st.id + '.' + q.id] || '').trim()).filter(Boolean).join('\n\n'),
+          rows: qs.filter(q => q.type !== 'bignote').map(q => [nm(q.l), fmt(st.id + '.' + q.id)]),
+          note: String(S.n['step:' + st.id] || '').trim() };
+      };
       const date = S.a['gespraech.datum'] || dayISO(new Date());
       return {
         partner: String(S.a['gespraech.partner'] || '').trim(), date,
         meta: [fmtDate(date, true), fmt('gespraech.ort'), 'BesArt Hairsalon, Horgen'].filter(Boolean).join(' · '),
-        intake: FLOWS.intake.steps.map((st, i) => block('intake', st, i)).filter(b => b.rows.length || b.note),
+        intake: FLOWS.intake.steps.map((st, i) => block('intake', st, i)).filter(b => b.rows.length || b.note || b.text),
         notes: CTX.filter(c => String(S.n[c.k] || '').trim()).map(c => ({ k: c.k, h: c.g === 'Allgemein' ? c.l : c.g + ' · ' + c.l, text: S.n[c.k].trim() })),
         closing: FLOWS.closing.steps.map((st, i) => block('closing', st, i)),
       };
     }
     function renderSummary() {
       const M = model();
-      const blocks = bs => bs.map(b => `<div class="pt-block"><h4>${esc(b.h)}<button type="button" data-act="edit" data-flow="${b.flow}" data-i="${b.i}">Bearbeiten</button></h4>${b.rows.length ? `<dl class="pt-dl">${b.rows.map(([l, v]) => `<dt>${esc(l)}</dt><dd${v ? '' : ' class="empty"'}>${v ? esc(v) : 'offen'}</dd>`).join('')}${b.note ? `<dt>Notiz</dt><dd>${esc(b.note)}</dd>` : ''}</dl>` : `<p class="pt-text">${esc(b.note)}</p>`}</div>`).join('');
+      const blocks = bs => bs.map(b => `<div class="pt-block"><h4>${esc(b.h)}<button type="button" data-act="edit" data-flow="${b.flow}" data-i="${b.i}">Bearbeiten</button></h4>${b.text ? `<p class="pt-text">${esc(b.text)}</p>` : ''}${b.rows.length ? `<dl class="pt-dl">${b.rows.map(([l, v]) => `<dt>${esc(l)}</dt><dd${v ? '' : ' class="empty"'}>${v ? esc(v) : 'offen'}</dd>`).join('')}${b.note ? `<dt>Notiz</dt><dd>${esc(b.note)}</dd>` : ''}</dl>` : b.note ? `<p class="pt-text">${esc(b.note)}</p>` : ''}</div>`).join('');
       const notes = M.notes.length ? M.notes.map(n => `<div class="pt-block"><h4>${esc(n.h)}<button type="button" data-act="editnote" data-ctx="${n.k}">Bearbeiten</button></h4><p class="pt-text">${esc(n.text)}</p></div>`).join('')
         : '<p class="pt-empty">Noch keine Notizen zur Präsentation. Sie entstehen mit dem Knopf «Notizen» unten links, direkt auf jeder Seite.</p>';
       main.innerHTML = `<article class="pt-doc${reduce ? '' : ' pt-step anim'}" aria-labelledby="ptH">
@@ -2732,6 +2798,7 @@ a.menu-book{text-decoration:none}
       const sec = t => L.push('', rule, t.toUpperCase(), rule, '');
       const blocks = bs => bs.forEach(b => {
         L.push(b.h, '·'.repeat(Math.min(52, b.h.length)));
+        if (b.text) L.push(b.text, '');
         b.rows.forEach(([l, v]) => L.push('• ' + l, '  ' + (v ? ind(v) : '–')));
         if (b.note) { if (b.rows.length) L.push('• Notiz', '  ' + ind(b.note)); else L.push(b.note); }
         L.push('');
@@ -2816,6 +2883,7 @@ a.menu-book{text-decoration:none}
       const para = t => { const ls = wrap(t, 'F1', 10, CW); room(Math.min(ls.length, 3) * 14.4); ls.forEach(l => { room(14.4); txt(l, 'F1', 10, ML, y, INK); y -= 14.4; }); y -= 4; };
       const blocks = bs => bs.forEach(b => {
         head(b.h);
+        if (b.text) para(b.text);
         b.rows.forEach(([l, v]) => row(l, v));
         if (b.note) { if (b.rows.length) row('Notiz', b.note); else para(b.note); }
         y -= 12;
