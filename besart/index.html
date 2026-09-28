@@ -155,9 +155,9 @@ section{position:relative}
 .bk-title em{font-style:italic;font-weight:400;color:var(--ivory-2)}
 .bk-body{position:relative}
 .bk-panel{display:flex;flex-direction:column}
-.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -26px 12px;padding:2px 26px}
+.chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0 0 12px;padding:2px 0}
 .chips::-webkit-scrollbar{display:none}
-.chip{flex:none;height:34px;padding:0 15px;border-radius:var(--r-sm);border:1px solid var(--line-2);background:transparent;cursor:pointer;font-size:12.5px;font-weight:400;color:var(--ivory-2);transition:background-color .3s,color .3s,border-color .3s}
+.chip{min-width:0;height:34px;padding:0 8px;border-radius:var(--r-sm);border:1px solid var(--line-2);background:transparent;cursor:pointer;font-size:12.5px;font-weight:400;color:var(--ivory-2);transition:background-color .3s,color .3s,border-color .3s}
 .chip:hover{border-color:var(--ivory);color:var(--ivory)}
 .chip[aria-pressed="true"]{background:var(--ivory);border-color:var(--ivory);color:var(--bg)}
 .svc-list{display:grid;gap:6px}
@@ -165,7 +165,8 @@ section{position:relative}
 .svc:hover{border-color:var(--line-2)}
 .radio{position:relative;width:16px;height:16px;border-radius:50%;border:1px solid var(--ivory-3)}
 .svc-name{display:block;font-size:14.5px;font-weight:400;line-height:1.25}
-.svc-meta{display:block;margin-top:2px;font-size:12px;color:var(--ivory-3)}
+.svc-meta{display:flex;align-items:center;gap:6px;margin-top:3px;font-size:12px;color:var(--ivory-3)}
+.svc-meta svg{width:12px;height:12px;flex:none}
 .svc-price{font-size:14px;font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
 .svc[aria-pressed="true"]{background:var(--ivory);border-color:var(--ivory);color:var(--bg)}
 .svc[aria-pressed="true"] .svc-meta{color:rgba(15,14,13,.6)}
@@ -256,20 +257,22 @@ section{position:relative}
 .tabs{position:relative;display:inline-flex;gap:4px;padding:4px;border-radius:var(--r-sm);box-shadow:inset 0 0 0 1px var(--line-2);max-width:100%;overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tab-ind{position:absolute;top:4px;bottom:4px;left:0;width:0;border-radius:2px;background:var(--ivory);transition:transform .7s var(--ease),width .7s var(--ease)}
-.tabs button{position:relative;z-index:1;flex:none;height:40px;padding:0 20px;border:0;border-radius:2px;background:none;cursor:pointer;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-2);transition:color .4s}
+.tabs button{position:relative;z-index:1;flex:none;height:40px;padding:0 17px;border:0;border-radius:2px;background:none;cursor:pointer;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-2);transition:color .4s}
 .tabs button[aria-selected="true"]{color:var(--bg)}
 .svc-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,100px);align-items:start}
 .menu{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.menu-row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto auto 40px;grid-template-areas:"name dur price book" "desc desc desc book";align-items:baseline;gap:2px 28px;padding:22px 4px;border-bottom:1px solid var(--line);transition:background-color .4s}
+.menu-row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto auto 40px;grid-template-areas:"name tag price book";align-items:center;gap:4px 28px;padding:22px 4px;border-bottom:1px solid var(--line);transition:background-color .4s}
 .menu-row:hover{background:rgba(237,230,218,.03)}
 .menu-row.enter{animation:rowIn .8s var(--ease) both;animation-delay:calc(var(--r) * 70ms)}
 @keyframes rowIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .menu-name{grid-area:name;font-family:var(--serif);font-size:clamp(22px,1.8vw,27px);font-weight:500;line-height:1.2}
-.menu-desc{grid-area:desc;font-size:14px;color:var(--ivory-3)}
-.menu-dur{grid-area:dur;font-size:13px;color:var(--ivory-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.menu-tag{grid-area:tag;display:inline-flex;align-items:center;gap:7px;font-size:12px;letter-spacing:.04em;color:var(--ivory-3);white-space:nowrap}
+.menu-tag svg{width:13px;height:13px}
+.menu-note a{color:var(--ivory-2);text-decoration:none;border-bottom:1px solid var(--line-2)}
 .menu-price{grid-area:price;font-size:15px;font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;min-width:6.5em}
 .menu-book{grid-area:book;align-self:center;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;cursor:pointer;border:1px solid var(--line-2);background:transparent;color:var(--ivory);transition:background-color .35s,color .35s,border-color .35s}
 .menu-book svg{width:15px;height:15px}
+a.menu-book{text-decoration:none}
 .menu-book:hover{background:var(--ivory);color:var(--bg);border-color:var(--ivory)}
 .menu-note{margin:20px 0 0;font-size:12.5px;color:var(--ivory-3)}
 .svc-visual{position:sticky;top:110px;margin:0}
@@ -296,6 +299,12 @@ section{position:relative}
 .stat+.stat{padding-left:24px;border-left:1px solid var(--line)}
 .stat .num{font-family:var(--serif);font-weight:500;font-size:clamp(38px,3.4vw,52px);line-height:1}
 .stat p{margin:8px 0 0;font-size:12.5px;color:var(--ivory-3)}
+.offer{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.offer li{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:4px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.offer b{font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.3;color:var(--ivory)}
+.offer span{font-size:14.5px;line-height:1.65;color:var(--ivory-3)}
+.about-sign{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(21px,1.7vw,25px);line-height:1.45;color:var(--ivory)}
+.scores{display:flex;flex-wrap:wrap;gap:28px 48px}
 .quote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(21px,1.7vw,25px);line-height:1.45;color:var(--ivory)}
 .quote cite{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:12.5px;color:var(--ivory-3)}
 
@@ -409,14 +418,14 @@ section{position:relative}
   .hero-copy{gap:22px}
   .hero-meta .status{display:none}
   .booking{padding:22px 18px 18px}
-  .chips{margin-inline:-18px;padding-inline:18px}
   .bk-next .lbl{display:none}
   .slots{grid-template-columns:repeat(4,minmax(0,1fr))}
   .fields{grid-template-columns:1fr}
   .who{grid-template-columns:1fr}
   .stat+.stat{padding-left:14px}
-  .menu-row{grid-template-columns:minmax(0,1fr) auto 40px;grid-template-areas:"name name book" "desc desc book" "dur price book";gap:2px 14px}
-  .menu-dur,.menu-price{margin-top:6px}
+  .offer li{grid-template-columns:minmax(0,1fr)}
+  .menu-row{grid-template-columns:minmax(0,1fr) auto 40px;grid-template-areas:"name name book" "tag price book";gap:2px 14px}
+  .menu-tag,.menu-price{margin-top:6px}
   .tabs button{padding:0 14px;height:38px;font-size:11px}
   .looks-grid{gap:14px}
   .look figcaption{flex-direction:column;gap:2px}
@@ -822,7 +831,7 @@ section{position:relative}
       <div class="hero-copy">
         <p class="eyebrow">Hairsalon &amp; Barber in Horgen</p>
         <h1 class="h1" id="heroTitle" data-split>Haar mit <em>Art.</em></h1>
-        <p class="lede">Präzise Herrenschnitte, Fades und Bartpflege. Damenschnitte, Farbe und Styling. Für Damen, Herren und Kinder an der Neugasse 29.</p>
+        <p class="lede">Ihr Coiffeur des Vertrauens in Horgen: Haarschnitte, Colorationen, Styling, Pflege und Barberservices – für Damen, Herren, Kinder und Pensionäre.</p>
         <div class="hero-meta">
           <a class="rating" href="#bewertungen"><b>4,9</b><span class="stars" data-stars="5"></span><span>67 Google-Bewertungen</span></a>
           <a class="status" id="heroStatus" href="#besuch"><span class="dot"></span><span class="txt"></span></a>
@@ -846,14 +855,14 @@ section{position:relative}
       <div class="sec-head">
         <div class="left">
           <p class="eyebrow" data-reveal>Leistungen &amp; Preise</p>
-          <h2 class="h2" id="svcTitle" data-split>Für Damen, Herren <em>und Kinder.</em></h2>
+          <h2 class="h2" id="svcTitle" data-split>Alle Leistungen<br><em>auf einen Blick.</em></h2>
         </div>
         <div class="tabs" role="tablist" aria-label="Kategorien" id="svcTabs" data-reveal><span class="tab-ind" id="tabInd"></span></div>
       </div>
       <div class="svc-grid">
         <div>
           <ul class="menu" id="svcMenu" role="tabpanel"></ul>
-          <p class="menu-note">Preise in CHF inkl. MwSt. Mit dem Pfeil übernimmst du die Leistung direkt in die Online-Buchung.</p>
+          <p class="menu-note">Preise in CHF, Ab-Preise je nach Aufwand. Mit dem Pfeil übernehmen Sie die Leistung direkt in die Online-Buchung. Balayage und Foliensträhnen vereinbaren Sie bitte telefonisch unter <a href="tel:+41447251404">044 725 14 04</a>.</p>
         </div>
         <figure class="svc-visual" data-reveal>
           <div class="svc-frame" id="svcImgs"></div>
@@ -873,15 +882,22 @@ section{position:relative}
         </div>
       </figure>
       <div class="about-copy">
-        <p class="eyebrow" data-reveal>Über BesArt</p>
-        <h2 class="h2" id="aboutTitle" data-split>Barber-Handwerk trifft <em>Hairsalon.</em></h2>
-        <p class="lede" data-reveal>2024 hat Besart Beka an der Neugasse 29 seinen eigenen Salon eröffnet: klassische Barberstühle, heller Marmor, viel Ruhe. Ob Skin Fade, Bartkontur, Stufenschnitt oder Balayage – jeder Termin beginnt mit einer ehrlichen Beratung.</p>
+        <p class="eyebrow" data-reveal>Willkommen bei BesArt Hairsalon</p>
+        <h2 class="h2" id="aboutTitle" data-split>Ihr Coiffeur des Vertrauens <em>in Horgen.</em></h2>
+        <p class="lede" data-reveal>Bei BesArt Hairsalon steht Ihre Zufriedenheit an erster Stelle. Unser erfahrenes und engagiertes Team bietet Ihnen eine breite Palette an professionellen Friseur-Dienstleistungen, die auf Ihre individuellen Bedürfnisse und Wünsche zugeschnitten sind.</p>
+        <ul class="offer" data-reveal aria-label="Unsere Leistungen">
+          <li><b>Haarschnitte</b><span>Von klassischen Schnitten bis zu den neuesten Trends – wir sorgen dafür, dass Sie mit Ihrem neuen Look zufrieden sind.</span></li>
+          <li><b>Colorationen</b><span>Ob dezente Farbauffrischung oder auffällige Farbveränderung – wir verwenden nur hochwertige Produkte, um Ihr Haar zu schonen und Ihnen ein brillantes Ergebnis zu bieten.</span></li>
+          <li><b>Styling</b><span>Für besondere Anlässe oder einfach, um sich selbst zu verwöhnen – wir kreieren das perfekte Styling für jeden Anlass.</span></li>
+          <li><b>Pflegebehandlungen</b><span>Unsere speziellen Pflegebehandlungen geben Ihrem Haar genau das, was es braucht, um gesund und glänzend zu bleiben.</span></li>
+          <li><b>Barberservices</b><span>Speziell für unsere männlichen Kunden bieten wir Bartpflege und moderne Haarschnitte an.</span></li>
+        </ul>
         <div class="stats" data-reveal>
-          <div class="stat"><div class="num"><span data-count="4.9" data-dec="1">0</span></div><p>Google-Bewertung</p></div>
-          <div class="stat"><div class="num"><span data-count="67">0</span></div><p>Rezensionen</p></div>
+          <div class="stat"><div class="num"><span data-count="4.9" data-dec="1">0</span></div><p>Google · 67 Bewertungen</p></div>
+          <div class="stat"><div class="num"><span data-count="5" data-dec="1">0</span></div><p>Salonkee · 25 Bewertungen</p></div>
           <div class="stat"><div class="num">2024</div><p>eröffnet in Horgen</p></div>
         </div>
-        <blockquote class="quote" data-reveal>«Er nimmt sich immer genügend Zeit und stellt sicher, dass man mit dem Ergebnis auch zufrieden ist.»<cite>Marteng · Google-Rezension</cite></blockquote>
+        <p class="about-sign" data-reveal>Wir freuen uns darauf, Sie bald bei uns begrüssen zu dürfen!</p>
       </div>
     </div>
   </section>
@@ -892,9 +908,9 @@ section{position:relative}
       <div class="sec-head">
         <div class="left">
           <p class="eyebrow" data-reveal>Inspiration</p>
-          <h2 class="h2" id="looksTitle" data-split>Dein nächster <em>Look.</em></h2>
+          <h2 class="h2" id="looksTitle" data-split>Ihr nächster <em>Look.</em></h2>
         </div>
-        <p class="lede" data-reveal style="max-width:24rem">Vom Textured Crop bis zur Hochsteckfrisur: such dir etwas aus und bring es mit in den Stuhl.</p>
+        <p class="lede" data-reveal style="max-width:24rem">Vom Textured Crop bis zur Hochsteckfrisur: Suchen Sie sich etwas aus und bringen Sie es mit in den Stuhl.</p>
       </div>
       <div class="looks-grid" id="looksGrid"></div>
     </div>
@@ -904,16 +920,22 @@ section{position:relative}
   <section class="sec reviews" id="bewertungen" aria-labelledby="revTitle">
     <div class="wrap sec-head">
       <div class="left">
-        <p class="eyebrow" data-reveal>Google-Bewertungen</p>
+        <p class="eyebrow" data-reveal>Bewertungen</p>
         <h2 class="h2" id="revTitle" data-split>Das sagen unsere <em>Kunden.</em></h2>
       </div>
-      <div class="score" id="score" data-reveal>
-        <span class="big" data-count="4.9" data-dec="1">0</span>
-        <span><span class="stars" data-stars="5"></span><small>aus 67 Google-Bewertungen</small><a href="https://www.google.com/maps/place/BesArt+Hairsalon/@47.2580723,8.5880566,17z/data=!4m8!3m7!1s0x479aa9625950d77d:0xa4dac2e1859d1952!8m2!3d47.2580723!4d8.5880566!9m1!1b1!16s%2Fg%2F11tf41hnn_" target="_blank" rel="noopener">Alle auf Google lesen</a></span>
+      <div class="scores">
+        <div class="score" id="score" data-reveal>
+          <span class="big" data-count="4.9" data-dec="1">0</span>
+          <span><span class="stars" data-stars="5"></span><small>aus 67 Google-Bewertungen</small><a href="https://www.google.com/maps/place/BesArt+Hairsalon/@47.2580723,8.5880566,17z/data=!4m8!3m7!1s0x479aa9625950d77d:0xa4dac2e1859d1952!8m2!3d47.2580723!4d8.5880566!9m1!1b1!16s%2Fg%2F11tf41hnn_" target="_blank" rel="noopener">Auf Google lesen</a></span>
+        </div>
+        <div class="score" id="score2" data-reveal>
+          <span class="big" data-count="5" data-dec="1">0</span>
+          <span><span class="stars" data-stars="5"></span><small>aus 25 verifizierten Salonkee-Bewertungen</small><a href="https://salonkee.ch/salon/besart-hairsalon?lang=de" target="_blank" rel="noopener">Auf Salonkee lesen</a></span>
+        </div>
       </div>
     </div>
     <div class="rev-rail"><div class="rev-track" id="revTrack"></div></div>
-    <p class="wrap rev-note">Auszug aus echten Google-Rezensionen, Stand 26. September 2026.</p>
+    <p class="wrap rev-note">Auszug aus echten Google- und Salonkee-Bewertungen, Stand 28. September 2026.</p>
   </section>
 
   <!-- ============ BESUCH ============ -->
@@ -921,9 +943,9 @@ section{position:relative}
     <div class="wrap visit-grid">
       <div class="visit-info">
         <p class="eyebrow" data-reveal>Kontakt</p>
-        <h2 class="h2" id="visitTitle" data-split>Besuch uns an der <em>Neugasse.</em></h2>
+        <h2 class="h2" id="visitTitle" data-split>Besuchen Sie uns an der <em>Neugasse.</em></h2>
         <address data-reveal>BesArt Hairsalon<br>Neugasse 29, 8810 Horgen</address>
-        <p class="visit-note" data-reveal>Wenige Schritte vom Bahnhof Horgen Oberdorf · <a href="tel:+41447251404">044 725 14 04</a></p>
+        <p class="visit-note" data-reveal><a href="tel:+41447251404">+41 44 725 14 04</a> · Wenige Schritte vom Bahnhof Horgen Oberdorf<br>Es hat zahlungspflichtige Besucherparkplätze zur Verfügung.</p>
         <div class="now" id="nowCard" data-reveal>
           <div class="now-top"><span class="dot"></span><b id="nowTitle"></b><span id="nowSub"></span></div>
           <div class="now-bar"><i id="nowBar"></i></div>
@@ -946,13 +968,13 @@ section{position:relative}
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-cta">
-      <h2 class="h2" data-split>Bereit für deinen <em>nächsten Look?</em></h2>
+      <h2 class="h2" data-split>Bereit für Ihren <em>nächsten Look?</em></h2>
       <a class="btn btn-primary" href="#termin" data-book-cta>Jetzt Termin buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="foot-logo" id="footLogo" aria-hidden="true"><svg viewBox="0 0 909.3 353"><defs><clipPath id="ftWrite"><rect class="wr" x="0" y="190" width="910" height="165"/></clipPath></defs><g fill="currentColor"><use href="#lp0" class="l" style="--i:0"/><use href="#lp1" class="l" style="--i:1"/><use href="#lp2" class="l" style="--i:2"/><use href="#lp3" class="l" style="--i:3"/><use href="#lp4" class="l" style="--i:4"/><use href="#lp5" class="l" style="--i:5"/><g clip-path="url(#ftWrite)"><use href="#lp6"/></g></g></svg></div>
     <div class="foot-meta">
       <span>BesArt Hairsalon · Neugasse 29 · 8810 Horgen · 044 725 14 04</span>
-      <span>Designkonzept &amp; Vorschau · Look-Bilder KI-generiert, Preise und Zeiten als Beispiel · <a class="replay" href="?intro" data-replay>Intro ansehen</a></span>
+      <span>Designkonzept &amp; Vorschau · Leistungen, Preise und Öffnungszeiten laut Salonkee · Bilder teils KI-generiert · <a class="replay" href="?intro" data-replay>Intro ansehen</a></span>
     </div>
   </div>
 </footer>
@@ -967,9 +989,11 @@ section{position:relative}
   const CHEV = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="${d === 'l' ? 'M15 5l-7 7 7 7' : 'M9 5l7 7-7 7'}"/></svg>`;
   const SCISSORS = '<svg viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="6" cy="6" r="4"/><circle cx="6" cy="18" r="4"/><path d="M9.6 8 30 14M9.6 16 30 10"/></svg>';
   const STAR = '<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.7L10 14.5l-5.1 2.8 1.1-5.7-4.3-4 5.8-.7z"/></svg>';
+  const PHONE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>';
+  const TEL = 'tel:+41447251404', TEL_TXT = '044 725 14 04';
   const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   $$('[data-stars]').forEach(el => { el.innerHTML = STAR.repeat(+el.dataset.stars); el.setAttribute('role', 'img'); el.setAttribute('aria-label', el.dataset.stars + ' von 5 Sternen'); });
-  $$('.score .stars svg').forEach((s, i) => s.style.transitionDelay = (0.5 + i * 0.12) + 's');
+  $$('.score').forEach((sc, k) => sc.querySelectorAll('.stars svg').forEach((s, i) => s.style.transitionDelay = (0.5 + k * 0.2 + i * 0.12) + 's'));
 
   /* ---------------- Wörter aufsplitten ---------------- */
   $$('[data-split]').forEach(el => {
@@ -991,43 +1015,52 @@ section{position:relative}
   });
 
   /* ---------------- Daten ---------------- */
+  // Leistungen und Preise 1:1 von Salonkee (Stand September 2026). Salonkee nennt keine Dauer:
+  // "min" ist nur ein interner Richtwert, damit die Demo-Buchung passende Zeitfenster zeigt.
+  // tel: Leistung wird auf Salonkee nur telefonisch vereinbart.
   const CATS = [
-    { id:'herren', label:'Herren', img:'img/look-sidepart.webp', alt:'Mann mit Seitenscheitel und gepflegtem Vollbart', cap:['Herren', 'Schere und Maschine'],
+    { id:'damen', label:'Damen', img:'img/styling-salon.webp', alt:'Stylistin föhnt weiche Wellen', cap:['Damen', 'Waschen, Schneiden, Föhnen'],
       items:[
-        { id:'h1', name:'Herrenschnitt', desc:'Schere und Maschine, inklusive Styling.', min:30, price:45 },
-        { id:'h2', name:'Skin Fade', desc:'Übergang bis auf die Haut, oben mit Schere.', min:45, price:50 },
-        { id:'h3', name:'Maschinenschnitt', desc:'Eine Länge, sauber konturiert.', min:20, price:35 },
-        { id:'h4', name:'Kinderschnitt', desc:'Für Kinder bis 12 Jahre.', min:30, price:30 }
+        { id:'d1', name:'Waschen, Schneiden, Föhnen', min:60, price:95, from:true },
+        { id:'d2', name:'Waschen, Schneiden, ohne Föhnen', min:45, price:75, from:true },
+        { id:'d3', name:'Waschen, Föhnen oder Legen', min:45, price:45, from:true },
+        { id:'d4', name:'Kopfmassage mit Lotion', min:15, price:8 }
       ]},
-    { id:'bart', label:'Bart', img:'img/barber-razor.webp', alt:'Barber zieht die Bartkontur mit dem Rasiermesser', cap:['Bart & Rasur', 'Klinge und heisses Tuch'],
+    { id:'pflege', label:'Pflege', img:'img/pflege.webp', alt:'Pflegekur wird in langes dunkles Haar eingearbeitet', cap:['Pflege', 'Aufbaukur und Conditioner'],
       items:[
-        { id:'b1', name:'Schnitt & Bart', desc:'Haarschnitt und Bartpflege in einem Termin.', min:60, price:60 },
-        { id:'b2', name:'Bart trimmen & Konturen', desc:'Form, Linien mit der Klinge, Pflegeöl.', min:20, price:25 },
-        { id:'b3', name:'Nassrasur', desc:'Mit Rasiermesser und heissem Tuch.', min:30, price:35 },
-        { id:'b4', name:'Bart färben', desc:'Grau abdecken oder Farbe auffrischen.', min:30, price:30 }
+        { id:'p1', name:'Intensive Aufbaukur', min:15, price:10 },
+        { id:'p2', name:'Leave-in Conditioner', min:10, price:8 }
       ]},
-    { id:'damen', label:'Damen', img:'img/styling-salon.webp', alt:'Stylistin föhnt weiche Wellen', cap:['Damen', 'Schnitt, Föhnen, Styling'],
+    { id:'farbe', label:'Farbe', img:'img/colour-macro.webp', alt:'Balayage von Schokobraun zu Honigblond', cap:['Farbe', 'Ansatz, Balayage, Strähnen'],
       items:[
-        { id:'d1', name:'Schneiden & Föhnen', desc:'Beratung, Haarwäsche, Schnitt und Styling.', min:60, price:60, from:true },
-        { id:'d2', name:'Waschen & Föhnen', desc:'Glatt, voluminös oder mit weichen Wellen.', min:30, price:45 },
-        { id:'d3', name:'Stufen & Spitzen', desc:'Nachschneiden oder neue Stufen für langes Haar.', min:45, price:55, from:true },
-        { id:'d4', name:'Styling für Anlässe', desc:'Hochsteckfrisur, Hochzeit, Ball.', min:60, price:80, from:true }
+        { id:'f1', name:'Ansatz färben', min:60, price:70 },
+        { id:'f2', name:'Ansatz färben, Länge und Spitzen anpassen', min:90, price:80, from:true },
+        { id:'f3', name:'Balayage', min:150, price:110, from:true, tel:true },
+        { id:'f4', name:'Foliensträhnen Oberkopf', min:90, price:81, from:true, tel:true },
+        { id:'f5', name:'Foliensträhnen ganzer Kopf', min:120, price:110, from:true, tel:true },
+        { id:'f6', name:'Intensivtönung', min:60, price:55, from:true }
       ]},
-    { id:'farbe', label:'Farbe', img:'img/colour-macro.webp', alt:'Balayage von Schokobraun zu Honigblond', cap:['Farbe', 'Balayage, Strähnen, Glossing'],
+    { id:'herren', label:'Herren', img:'img/look-sidepart.webp', alt:'Mann mit Seitenscheitel und gepflegtem Vollbart', cap:['Herren', 'Schnitt, Bart, Kopfmassage'],
       items:[
-        { id:'f1', name:'Ansatzfarbe', desc:'Nachfärben am Ansatz, inklusive Föhnen.', min:90, price:90, from:true },
-        { id:'f2', name:'Strähnen & Balayage', desc:'Mit Folie oder freihand für weiche Verläufe.', min:150, price:160, from:true },
-        { id:'f3', name:'Glossing', desc:'Mehr Glanz und ein frischer Farbton.', min:30, price:45 },
-        { id:'f4', name:'Pflegebehandlung', desc:'Intensivpflege für gesundes, glänzendes Haar.', min:20, price:25 }
+        { id:'h1', name:'Waschen, Schneiden, Stylen', min:30, price:42, from:true },
+        { id:'h2', name:'Bart schneiden und rasieren', min:20, price:18 },
+        { id:'h3', name:'Kopfmassage mit Lotion', min:15, price:8 }
+      ]},
+    { id:'kinder', label:'Kinder', img:'img/kinder.webp', alt:'Junge im Barberstuhl beim Haareschneiden', cap:['Kinder', 'Waschen und Schneiden'],
+      items:[
+        { id:'k1', name:'Waschen, Schneiden', min:30, price:30, from:true }
+      ]},
+    { id:'pensionaere', label:'Pensionäre', img:'img/pensionaere.webp', alt:'Elegante Frau mit silbernem Kurzhaarschnitt', cap:['Pensionäre', 'Ab 65 Jahren'],
+      items:[
+        { id:'r1', name:'Waschen, Schneiden', note:'ab 65 Jahren', min:30, price:25 }
       ]}
   ];
   const ALL = CATS.flatMap(c => c.items.map(i => ({ ...i, cat:c.id })));
   const svcById = id => ALL.find(s => s.id === id);
   const price = s => (s.from ? 'ab ' : '') + 'CHF ' + s.price + '.–';
-  const dur = m => m >= 60 ? (m % 60 ? `${Math.floor(m / 60)} Std. ${m % 60} Min.` : `${m / 60} Std.`) : `${m} Min.`;
 
-  // Öffnungszeiten: So & Mo geschlossen, Di ab 09:00 (laut Google); übrige Zeiten als Beispiel
-  const HOURS = { 0:null, 1:null, 2:[540,1110], 3:[540,1110], 4:[540,1200], 5:[540,1110], 6:[480,960] };
+  // Öffnungszeiten laut Salonkee
+  const HOURS = { 0:null, 1:null, 2:[540,1110], 3:[540,1110], 4:[570,1170], 5:[600,1200], 6:[480,960] };
   const WD = ['So','Mo','Di','Mi','Do','Fr','Sa'];
   const WDL = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
   const MON = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
@@ -1081,7 +1114,7 @@ section{position:relative}
     return out;
   }
   const dayOpen = (d, minutes, who) => slotsFor(d, minutes, who).some(s => !s.off);
-  const S = { step:1, cat:'herren', svc:'h1', who:'any', day:null, time:null, name:'', phone:'', email:'', sms:true, errors:{} };
+  const S = { step:1, cat:'damen', svc:'d1', who:'any', day:null, time:null, name:'', phone:'', email:'', sms:true, errors:{} };
   const body = $('#bkBody'), booking = $('#termin');
   function nextFree() {
     const s = svcById(S.svc); if (!s) return null;
@@ -1095,28 +1128,30 @@ section{position:relative}
     return long ? `${WDL[d.getDay()]}, ${d.getDate()}. ${MON[d.getMonth()]}` : `${WD[d.getDay()]}, ${d.getDate()}. ${MONS[d.getMonth()]}`;
   }
   function renderHead() {
-    const n = nextFree();
+    const cur = svcById(S.svc), n = cur && cur.tel ? null : nextFree();
     $('#bkNext').innerHTML = n ? `<span class="dot"></span><span><span class="lbl">Nächster Termin: </span><b>${fmtDay(n.d)} ${hhmm(n.m)}</b></span>` : '';
     [...$('#bkSteps').children].forEach((li, i) => { li.className = S.step > i + 1 ? 'is-done' : (S.step === i + 1 ? 'is-on' : ''); });
   }
   const V = {
     1() {
       const cat = CATS.find(c => c.id === S.cat), s = svcById(S.svc);
-      return `<h2 class="bk-title">Was dürfen wir für dich <em>tun?</em></h2>
+      return `<h2 class="bk-title">Was dürfen wir für Sie <em>tun?</em></h2>
         <div class="chips" role="group" aria-label="Kategorie">${CATS.map(c => `<button type="button" class="chip" data-cat="${c.id}" data-focus="cat-${c.id}" aria-pressed="${c.id === S.cat}">${c.label}</button>`).join('')}</div>
-        <div class="svc-list" role="group" aria-label="Leistung">${cat.items.map(i => `<button type="button" class="svc" data-svc="${i.id}" data-focus="svc-${i.id}" aria-pressed="${i.id === S.svc}"><span class="radio" aria-hidden="true"></span><span><span class="svc-name">${i.name}</span><span class="svc-meta">${dur(i.min)}</span></span><span class="svc-price">${price(i)}</span></button>`).join('')}</div>
-        <div class="bk-foot"><div class="bk-sum">${s ? `Gewählt<b>${s.name}</b>` : 'Noch nichts gewählt<b>&nbsp;</b>'}</div><button type="button" class="btn btn-primary btn-go" data-go="2" data-focus="next1" ${s ? '' : 'disabled'}>Weiter${ARROW}</button></div>`;
+        <div class="svc-list" role="group" aria-label="Leistung">${cat.items.map(i => `<button type="button" class="svc" data-svc="${i.id}" data-focus="svc-${i.id}" aria-pressed="${i.id === S.svc}"><span class="radio" aria-hidden="true"></span><span><span class="svc-name">${i.name}</span>${i.tel ? `<span class="svc-meta">${PHONE}Telefonisch vereinbaren</span>` : i.note ? `<span class="svc-meta">${i.note}</span>` : ''}</span><span class="svc-price">${price(i)}</span></button>`).join('')}</div>
+        <div class="bk-foot">${s && s.tel
+          ? `<div class="bk-sum">Nur telefonisch<b>${TEL_TXT}</b></div><a class="btn btn-primary btn-go" href="${TEL}" data-focus="call1">Anrufen${PHONE}</a>`
+          : `<div class="bk-sum">${s ? `Gewählt<b>${s.name}</b>` : 'Noch nichts gewählt<b>&nbsp;</b>'}</div><button type="button" class="btn btn-primary btn-go" data-go="2" data-focus="next1" ${s ? '' : 'disabled'}>Weiter${ARROW}</button>`}</div>`;
     },
     2() {
       const s = svcById(S.svc), d = S.day, slots = d ? slotsFor(d, s.min, S.who) : [];
-      return `<h2 class="bk-title">Wann passt es <em>dir?</em></h2>
+      return `<h2 class="bk-title">Wann passt es <em>Ihnen?</em></h2>
         <div class="who" role="group" aria-label="Bei wem">
           <button type="button" data-who="any" data-focus="who-any" aria-pressed="${S.who === 'any'}"><span class="av">${SCISSORS}</span><span><b>Egal</b><small>Erster freier Termin</small></span></button>
           <button type="button" data-who="besart" data-focus="who-besart" aria-pressed="${S.who === 'besart'}"><span class="av"><img src="img/besart-real.webp" alt=""></span><span><b>Besart</b><small>Inhaber</small></span></button>
         </div>
         <div class="cal-head"><span class="cal-month">${d ? MON[d.getMonth()] + ' ' + d.getFullYear() : ''}</span><span class="cal-nav"><button type="button" data-scroll="-1" aria-label="Frühere Tage">${CHEV('l')}</button><button type="button" data-scroll="1" aria-label="Spätere Tage">${CHEV('r')}</button></span></div>
         <div class="days" id="bkDays" role="group" aria-label="Datum">${DAYS.map((x, i) => { const open = dayOpen(x, s.min, S.who), sel = d && dkey(x) === dkey(d); return `<button type="button" class="day" data-day="${i}" data-focus="day-${i}" aria-pressed="${!!sel}" ${open ? '' : 'disabled'} aria-label="${fmtDay(x, true)}${open ? '' : ', ausgebucht oder geschlossen'}"><small>${WD[x.getDay()]}</small><b>${x.getDate()}</b><i></i></button>`; }).join('')}</div>
-        <div class="slots-head"><span>${d ? fmtDay(d, true) : 'Datum wählen'}</span><span>${dur(s.min)}</span></div>
+        <div class="slots-head"><span>${d ? fmtDay(d, true) : 'Datum wählen'}</span><span>${s.name}</span></div>
         <div class="slots" role="group" aria-label="Uhrzeit">${slots.length ? slots.map(x => `<button type="button" class="slot" data-time="${x.m}" data-focus="t-${x.m}" aria-pressed="${S.time === x.m}" ${x.off ? 'disabled aria-label="' + hhmm(x.m) + ' vergeben"' : ''}>${hhmm(x.m)}</button>`).join('') : '<p class="slots-empty">An diesem Tag ist der Salon geschlossen.</p>'}</div>
         <div class="bk-foot"><button type="button" class="btn btn-text" data-go="1">${ARROW}Zurück</button><button type="button" class="btn btn-primary btn-go" data-go="3" data-focus="next2" ${S.time != null ? '' : 'disabled'}>Weiter${ARROW}</button></div>`;
     },
@@ -1140,9 +1175,9 @@ section{position:relative}
       return `<div class="done">
         <svg class="done-mark" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="30" cy="30" r="27"/><path d="M19 31l7.5 7.5L42 23"/></svg>
         <h2 class="bk-title">Bis bald, <em>${first}!</em></h2>
-        <p>Dein Termin ist reserviert${S.sms ? ', die Erinnerung kommt per SMS' : ''}.</p>
+        <p>Ihr Termin ist reserviert${S.sms ? ', die Erinnerung kommt per SMS' : ''}.</p>
         <div class="ticket"><div class="ticket-top"><div><small>Termin bestätigt</small><div class="ticket-date">${fmtDay(S.day, true)}</div></div><div class="ticket-time">${hhmm(S.time)}</div></div><div class="ticket-cut"></div>
-          <dl><dt>Leistung</dt><dd>${s.name}</dd><dt>Dauer</dt><dd>${dur(s.min)}</dd><dt>Bei</dt><dd>${S.who === 'besart' ? 'Besart' : 'Team BesArt'}</dd><dt>Preis</dt><dd>${price(s)}</dd><dt>Ort</dt><dd>Neugasse 29, Horgen</dd></dl></div>
+          <dl><dt>Leistung</dt><dd>${s.name}</dd><dt>Bei</dt><dd>${S.who === 'besart' ? 'Besart' : 'Team BesArt'}</dd><dt>Preis</dt><dd>${price(s)}</dd><dt>Ort</dt><dd>Neugasse 29, Horgen</dd></dl></div>
         <div class="done-actions"><span class="demo-note" style="margin:0;text-align:left">Designvorschau, keine echte Buchung.</span><button type="button" class="btn btn-primary btn-go" data-reset data-focus="reset">Neuer Termin${ARROW}</button></div>
       </div>`;
     }
@@ -1190,8 +1225,8 @@ section{position:relative}
   body.addEventListener('submit', e => {
     e.preventDefault();
     const errors = {};
-    if (S.name.trim().length < 2) errors.name = 'Bitte gib deinen Namen ein.';
-    if (S.phone.replace(/\D/g, '').length < 9) errors.phone = 'Bitte gib eine gültige Mobilnummer ein.';
+    if (S.name.trim().length < 2) errors.name = 'Bitte geben Sie Ihren Namen ein.';
+    if (S.phone.replace(/\D/g, '').length < 9) errors.phone = 'Bitte geben Sie eine gültige Mobilnummer ein.';
     S.errors = errors;
     if (Object.keys(errors).length) { render(); const f = body.querySelector('[aria-invalid="true"]'); if (f) f.focus(); return; }
     const b = $('#bkSubmit'); b.classList.add('is-loading');
@@ -1205,7 +1240,7 @@ section{position:relative}
   render();
 
   /* ---------------- Leistungen ---------------- */
-  let activeCat = 'herren';
+  let activeCat = 'damen';
   const imgs = $('#svcImgs'), tabs = $('#svcTabs'), ind = $('#tabInd');
   imgs.innerHTML = CATS.map(c => `<img src="${c.img}" alt="${c.alt}" data-cat="${c.id}">`).join('');
   tabs.insertAdjacentHTML('beforeend', CATS.map(c => `<button type="button" role="tab" id="tab-${c.id}" aria-controls="svcMenu" data-tab="${c.id}">${c.label}</button>`).join(''));
@@ -1217,7 +1252,9 @@ section{position:relative}
     imgs.querySelectorAll('img').forEach(i => i.classList.toggle('is-active', i.dataset.cat === activeCat));
     $('#svcCapTitle').textContent = c.cap[0]; $('#svcCapText').textContent = c.cap[1];
     const menu = $('#svcMenu'); menu.setAttribute('aria-labelledby', 'tab-' + c.id);
-    menu.innerHTML = c.items.map((i, r) => `<li class="menu-row${swap ? ' enter' : ''}" style="--r:${r}"><span class="menu-name">${i.name}</span><span class="menu-desc">${i.desc}</span><span class="menu-dur">${dur(i.min)}</span><span class="menu-price">${price(i)}</span><button type="button" class="menu-book" data-pre="${i.id}" aria-label="${i.name} buchen">${ARROW}</button></li>`).join('');
+    menu.innerHTML = c.items.map((i, r) => `<li class="menu-row${swap ? ' enter' : ''}" style="--r:${r}"><span class="menu-name">${i.name}</span>${i.tel ? `<span class="menu-tag">${PHONE}Telefonisch</span>` : i.note ? `<span class="menu-tag">${i.note}</span>` : ''}<span class="menu-price">${price(i)}</span>${i.tel
+      ? `<a class="menu-book" href="${TEL}" aria-label="${i.name} telefonisch vereinbaren">${PHONE}</a>`
+      : `<button type="button" class="menu-book" data-pre="${i.id}" aria-label="${i.name} buchen">${ARROW}</button>`}</li>`).join('');
   }
   tabs.addEventListener('click', e => { const t = e.target.closest('[data-tab]'); if (t && t.dataset.tab !== activeCat) { activeCat = t.dataset.tab; renderMenu(true); } });
   tabs.addEventListener('keydown', e => {
@@ -1249,16 +1286,18 @@ section{position:relative}
 
   /* ---------------- Bewertungen ---------------- */
   const REVIEWS = [
+    ['Tobias', '28.05.2026', 'Vielen Dank, alles hat hervorragend geklappt. Unkompliziert und sehr wertschätzend', 'Salonkee'],
     ['Besarta F.', 'vor 5 Monaten', 'Ich war bei Besart und habe mir bei meinen langen Haaren Stufen schneiden lassen und ich bin absolut begeistert! So zufrieden war ich schon lange nicht mehr nach einem Friseurbesuch.'],
     ['Marteng', 'vor 2 Jahren', 'Top Coiffeur. Bei weitem der beste den ich je hatte. Besart geht individuell auf die Wünsche der Kunden ein und bietet auch eine super Beratung.'],
     ['F. T.', 'vor 7 Monaten', 'Exzellente Beratung und TOP Handwerk! Eine der besten Coiffeur-Erfahrungen die ich je hatte. Danke Bes, ich freue mich auf den nächsten Besuch!'],
     ['Lukas L.', 'vor einem Jahr', 'Man wird immer freundlich empfangen, er hört zu, geht auf die Wünsche ein und berät ehrlich. Angenehme Atmosphäre, faire Preise – ich kann den Salon jedem nur empfehlen!'],
     ['DER TOURI', 'vor einem Jahr', 'Ich habe schweres und dichtes Haar, und er hat es perfekt geschnitten. Auch anspruchsvolle Frisuren und komplizierte Färbearbeiten beherrscht er mühelos.'],
     ['Eddy O.', 'vor 4 Monaten', 'Eine sehr kompetente Beratung und daraufhin perfekt umgesetzte Arbeit. Ich freue mich auf das nächste Mal.'],
+    ['Daniel', '01.05.2026', 'Wie jedesmal, freundlich und professionell! Sehr empfehlenswert!', 'Salonkee'],
     ['Takashi H.', 'vor einem Jahr', 'Der beste Friseur, den ich jemals hatte. Besart weiss wirklich was er tut. Oder besser gesagt, er ist ein Meister in seinem Werk.'],
     ['Oliver C.', 'vor einem Jahr', 'Die erste und einzige Anlaufstelle in der Region Horgen, wenn es um den perfekten Haarschnitt geht! Hier fühlt man sich rundum gut aufgehoben.']
   ];
-  const card = (r, hidden) => `<article class="rev-card"${hidden ? ' aria-hidden="true"' : ''}><p>«${esc(r[2])}»</p><footer><b>${esc(r[0])}</b><small>${esc(r[1])} · Google</small></footer></article>`;
+  const card = (r, hidden) => `<article class="rev-card"${hidden ? ' aria-hidden="true"' : ''}><p>«${esc(r[2])}»</p><footer><b>${esc(r[0])}</b><small>${esc(r[1])} · ${r[3] || 'Google'}</small></footer></article>`;
   const rt = $('#revTrack');
   rt.innerHTML = REVIEWS.map(r => card(r)).join('') + REVIEWS.map(r => card(r, true)).join('');
   if (!reduce && rt.animate) {
