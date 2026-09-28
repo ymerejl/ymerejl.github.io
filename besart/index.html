@@ -549,6 +549,7 @@ a.menu-book{text-decoration:none}
 .foot-next:hover,.foot-next:focus-visible{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--line-2)}
 .foot-next:hover svg{transform:translateX(4px)}
 .pv:focus{outline:none}
+.pv [hidden]{display:none!important}
 .pv{position:fixed;inset:0;z-index:150;overflow-y:auto;overscroll-behavior:contain;background:var(--bg);color:var(--ivory);opacity:0;visibility:hidden;transition:opacity .7s var(--ease),visibility 0s linear .7s}
 .pv.open{opacity:1;visibility:visible;transition:opacity .7s var(--ease),visibility 0s}
 .pv-lock,.pv-lock body{overflow:hidden}
@@ -581,10 +582,12 @@ a.menu-book{text-decoration:none}
 .pv-cover .c1{z-index:1;left:23%;top:1%;width:52%;aspect-ratio:1100/1560;transform:translate3d(0,60px,0) rotate(0deg)}
 .pv-cover .c2{z-index:2;left:1%;top:57%;width:50%;aspect-ratio:1400/903;transform:translate3d(-40px,60px,0) rotate(0deg)}
 .pv-cover .c3{z-index:3;left:48%;top:49%;width:50%;aspect-ratio:1400/903;transform:translate3d(40px,60px,0) rotate(0deg)}
+.pv-cover .c4{z-index:0;left:64%;top:0;width:34%;aspect-ratio:1000/1412;transform:translate3d(40px,60px,0) rotate(0deg)}
 .pv.open .pv-cover img{opacity:1}
 .pv.open .pv-cover .c1{transform:translate3d(calc(var(--px,0) * 10px),calc(var(--py,0) * 8px),0) rotate(-4deg);transition-delay:.2s}
 .pv.open .pv-cover .c2{transform:translate3d(calc(var(--px,0) * 22px),calc(var(--py,0) * 16px),0) rotate(7deg);transition-delay:.38s}
 .pv.open .pv-cover .c3{transform:translate3d(calc(var(--px,0) * 34px),calc(var(--py,0) * 24px),0) rotate(-8deg);transition-delay:.5s}
+.pv.open .pv-cover .c4{transform:translate3d(calc(var(--px,0) * 6px),calc(var(--py,0) * 5px),0) rotate(9deg);transition-delay:.12s}
 .pv-anim{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1.2s var(--ease);transition-delay:calc(.12s + var(--d,0) * 90ms)}
 .pv.open .pv-anim{opacity:1;transform:none}
 .pv-slide{min-height:calc(100svh - 75px);display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,4.5vh,64px) 0;border-top:1px solid var(--line);scroll-margin-top:75px}
@@ -621,6 +624,36 @@ a.menu-book{text-decoration:none}
 .pv-hint{display:inline-flex;align-items:center;gap:10px;margin:0;font-size:13px;color:var(--ivory-3)}
 .pv-hint svg{width:17px;height:17px;flex:none;color:var(--sand)}
 .pv-foot .btns{display:flex;flex-wrap:wrap;gap:10px}
+/* Station 05: Bewertungskarte + 360°-Ansicht des Aufstellers */
+.pv-stage.is-stand{grid-template-columns:repeat(2,auto);justify-content:center;column-gap:clamp(32px,6vw,104px);padding-block:clamp(20px,3.5vh,48px)}
+.pv-stage.is-stand .pv-zoom{width:auto}
+.pv-stage.is-stand .pv-flat img{width:auto;max-width:100%;height:clamp(300px,calc(100svh - 440px),600px);aspect-ratio:1000/1412}
+.pv-spin{position:relative;height:clamp(300px,calc(100svh - 440px),600px);aspect-ratio:1/1;border-radius:var(--r-md);overflow:hidden;background:#ECE6DB no-repeat 0 0/600% 600%;box-shadow:0 44px 70px -34px rgba(0,0,0,.9),0 0 0 1px rgba(237,230,218,.08);cursor:grab;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.pv-spin.is-drag{cursor:grabbing}
+.pv-spin:focus{outline:none}
+.pv-spin:focus-visible{box-shadow:0 44px 70px -34px rgba(0,0,0,.9),0 0 0 1px var(--bg),0 0 0 2px var(--ivory)}
+.pv-spin-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;transition:opacity .4s}
+.pv-spin.is-ready .pv-spin-poster{opacity:0}
+.pv-spin-hint{position:absolute;left:50%;bottom:16px;display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 14px 0 12px;border-radius:999px;background:rgba(15,14,13,.72);color:var(--ivory);font:500 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;transform:translateX(-50%);pointer-events:none;transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.pv-spin-hint svg{width:15px;height:15px}
+.pv-spin.is-used .pv-spin-hint{opacity:0;transform:translate(-50%,6px)}
+/* Station 07: Paketübersicht mit Preis */
+.pv-pack{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);border-radius:var(--r-lg);background:radial-gradient(90% 85% at 50% 0%,#2A2622 0%,#1B1816 55%,#141211 100%);box-shadow:inset 0 0 0 1px var(--line)}
+.pv-items{margin:0;padding:clamp(10px,2vh,22px) clamp(22px,3.4vw,52px);list-style:none;counter-reset:pk}
+.pv-items li{counter-increment:pk;display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:clamp(14px,2vw,26px);padding:clamp(14px,2.3vh,24px) 0;border-bottom:1px solid var(--line)}
+.pv-items li:last-child{border-bottom:0}
+.pv-items li::before{content:"0" counter(pk);font:italic 400 24px/1 var(--serif);color:var(--sand);min-width:1.4em}
+.pv-thumb{position:relative;display:grid;place-items:center;width:clamp(84px,8vw,112px);aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:#0F0E0D;box-shadow:inset 0 0 0 1px var(--line)}
+.pv-thumb img{max-width:74%;max-height:78%;width:auto;height:auto;box-shadow:0 8px 16px -8px rgba(0,0,0,.9)}
+.pv-thumb.is-web img,.pv-thumb.is-light img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;box-shadow:none}
+.pv-thumb.is-light{background:#ECE6DB}
+.pv-items b{display:block;font:500 clamp(20px,1.7vw,25px)/1.15 var(--serif)}
+.pv-items div span{display:block;margin-top:5px;font-size:13.5px;line-height:1.55;color:var(--ivory-2)}
+.pv-price{display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,5vh,56px) clamp(24px,3.4vw,52px);border-left:1px solid var(--line)}
+.pv-amount{display:flex;align-items:flex-start;gap:12px;margin:18px 0 0;font:500 clamp(56px,min(6.2vw,10vh),96px)/.9 var(--serif);letter-spacing:-.01em;white-space:nowrap}
+.pv-amount small{margin-top:.5em;font:500 12px/1 var(--sans);letter-spacing:.22em;color:var(--ivory-3)}
+.pv-price-note{margin:14px 0 0;font-size:13.5px;color:var(--ivory-3)}
+.pv-price .btns{display:flex;flex-direction:column;align-items:stretch;gap:10px;margin-top:clamp(24px,4vh,40px)}
 .lb{position:fixed;inset:0;z-index:190;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,44px);background:rgba(10,9,8,.95);opacity:0;visibility:hidden;cursor:zoom-out;transition:opacity .45s var(--ease),visibility 0s linear .45s}
 .lb.open{opacity:1;visibility:visible;transition:opacity .45s var(--ease),visibility 0s}
 .lb img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:4px;box-shadow:0 40px 100px -30px rgba(0,0,0,.9);transform:scale(.97);transition:transform .6s var(--ease)}
@@ -637,6 +670,9 @@ a.menu-book{text-decoration:none}
   .pv-desc{grid-column:1/-1;max-width:36rem}
   .pv-slide{min-height:0}
   .pv-mock,.pv-mock+.pv-foot{max-width:100%;min-width:0}
+  .pv-pack{grid-template-columns:minmax(0,1fr)}
+  .pv-price{border-left:0;border-top:1px solid var(--line)}
+  .pv-price .btns{flex-direction:row;flex-wrap:wrap}
 }
 @media (max-width:640px){
   .pv-bar{grid-template-columns:auto minmax(0,1fr) auto;gap:10px;padding-block:10px}
@@ -647,10 +683,202 @@ a.menu-book{text-decoration:none}
   .pv-stage,.pv-stage.is-flyer{grid-template-columns:minmax(0,1fr);padding:26px 22px 24px;gap:28px}
   .pv-stage.is-flyer img{width:100%;height:auto}
   .pv-stage.is-flyer .pv-zoom{width:100%}
+  .pv-stage.is-stand{grid-template-columns:minmax(0,1fr)}
+  .pv-stage.is-stand .pv-zoom{width:min(74%,300px)}
+  .pv-stage.is-stand .pv-flat img{width:100%;height:auto}
+  .pv-spinfig{width:100%}
+  .pv-spin{width:100%;height:auto}
+  .pv-items{padding-inline:18px}
+  .pv-items li{grid-template-columns:auto minmax(0,1fr);gap:14px}
+  .pv-items li::before{display:none}
+  .pv-thumb{width:76px}
+  .pv-price{padding:28px 22px}
+  .pv-price .btns{flex-direction:column}
   .pv-facts li{height:auto;min-height:38px;padding-block:8px}
   .pv-head .eyebrow{letter-spacing:.2em}
   .pv-head .eyebrow::before{display:none}
   .pv-foot .btns,.pv-foot .btn{width:100%}
+}
+/* ---------- Gesprächsmodus: Fragebogen vor der Website, Notizen je Seite, Abschluss, Export ---------- */
+.pitch-hold .site-header,.pitch-hold main,.pitch-hold .site-footer{visibility:hidden}
+.pt-lock,.pt-lock body{overflow:hidden}
+.pt[hidden],.pt-notes[hidden],.pt-fab[hidden],.pt [hidden]{display:none!important}
+.pt{position:fixed;inset:0;z-index:400;display:flex;flex-direction:column;background:var(--bg);color:var(--ivory);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .6s var(--ease),visibility 0s linear .6s}
+.pt.open,.pitch-hold .pt{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .6s var(--ease),visibility 0s}
+.pt:focus{outline:none}
+.pt-top{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;align-items:center;gap:22px;padding:14px var(--gutter);padding-top:calc(14px + env(safe-area-inset-top,0px));border-bottom:1px solid var(--line)}
+.pt-logo{display:block;width:104px;height:auto;color:var(--ivory)}
+.pt-kicker{margin:0;padding-left:22px;border-left:1px solid var(--line-2);font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--sand);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pt-saved{display:inline-flex;align-items:center;gap:8px;margin:0;font-size:12px;color:var(--ivory-3);opacity:0;transition:opacity .5s}
+.pt-saved.on{opacity:1}
+.pt-saved svg{width:14px;height:14px;color:var(--open)}
+.pt-topbtn{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 4px;border:0;background:none;color:var(--ivory-2);font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:color .3s}
+.pt-topbtn:hover{color:var(--ivory)}
+.pt-topbtn svg{width:16px;height:16px;transition:transform .5s var(--ease)}
+.pt-topbtn:hover svg{transform:translateX(4px)}
+.pt-body{flex:1;min-height:0;display:grid;grid-template-columns:minmax(250px,300px) minmax(0,1fr)}
+.pt.is-doc .pt-body{grid-template-columns:minmax(0,1fr)}
+.pt.is-doc .pt-side{display:none}
+.pt-side{display:flex;flex-direction:column;gap:26px;min-height:0;overflow-y:auto;padding:clamp(28px,5vh,52px) 30px 30px var(--gutter);border-right:1px solid var(--line)}
+.pt-side-h{margin:0;font:italic 400 22px/1.2 var(--serif);color:var(--ivory-2)}
+.pt-steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:2px}
+.pt-steps button{width:100%;display:grid;grid-template-columns:30px minmax(0,1fr) auto;align-items:center;gap:8px;padding:11px 12px 11px 0;border:0;border-radius:6px;background:none;color:var(--ivory-3);font:400 14.5px/1.3 var(--sans);text-align:left;cursor:pointer;transition:color .3s,background-color .3s}
+.pt-steps button:hover{color:var(--ivory)}
+.pt-steps .no{font:italic 400 17px/1 var(--serif);color:var(--sand);opacity:.6;text-align:right;padding-right:6px}
+.pt-steps .st{font-size:11px;letter-spacing:.04em;color:var(--ivory-3)}
+.pt-steps .st svg{width:14px;height:14px;color:var(--sand);display:block}
+.pt-steps [aria-current="step"]{color:var(--ivory);background:rgba(237,230,218,.05)}
+.pt-steps [aria-current="step"] .no{opacity:1}
+.pt-prog{margin-top:auto}
+.pt-prog p{display:flex;justify-content:space-between;margin:0 0 10px;font-size:12px;color:var(--ivory-3)}
+.pt-bar{height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.pt-bar i{display:block;height:100%;width:0;background:var(--sand);transition:width .8s var(--ease)}
+.pt-main{position:relative;min-height:0;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;padding:clamp(30px,6vh,72px) clamp(22px,6vw,96px) 0}
+.pt-mtop{display:none}
+.pt-step{width:100%;max-width:760px;margin:0 auto;flex:1}
+.pt-step.anim{animation:ptIn .7s var(--ease) both}
+@keyframes ptIn{from{opacity:0;transform:translateY(18px)}}
+.pt-eyebrow{display:flex;align-items:center;gap:14px;margin:0;font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--sand)}
+.pt-eyebrow b{font:italic 400 22px/1 var(--serif);letter-spacing:0}
+.pt-step h2{margin:18px 0 0;font:500 clamp(36px,min(4.2vw,7vh),60px)/1.03 var(--serif);letter-spacing:-.005em;text-wrap:balance}
+.pt-step h2:focus,.pt-doc h2:focus{outline:none}
+.pt-step h2 em{font-style:italic;font-weight:400;color:var(--ivory-2)}
+.pt-lead{margin:16px 0 0;max-width:36rem;font-size:16px;line-height:1.7;color:var(--ivory-2)}
+.pt-agenda{margin:28px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.pt-agenda li{display:flex;align-items:baseline;gap:12px;padding:14px 16px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--line);font-size:14px;color:var(--ivory-2)}
+.pt-agenda li b{font:italic 400 18px/1 var(--serif);color:var(--sand)}
+.pt-qs{margin-top:clamp(26px,4vh,40px);display:flex;flex-direction:column;gap:clamp(24px,3.6vh,34px)}
+.pt-q{margin:0;padding:0;border:0;min-width:0}
+.pt-l{display:block;margin:0 0 12px;padding:0;font:500 14.5px/1.45 var(--sans);color:var(--ivory)}
+.pt-in{display:block;width:100%;height:48px;padding:0 2px;border:0;border-bottom:1px solid var(--line-2);border-radius:0;background:transparent;color:var(--ivory);font:350 18px/1.3 var(--sans);transition:border-color .3s}
+.pt-in::placeholder,.pt-ta::placeholder{color:rgba(237,230,218,.3)}
+.pt-in:focus,.pt-ta:focus{outline:none;border-color:var(--ivory)}
+.pt-in[type="date"]{width:auto;min-width:210px;color-scheme:dark}
+.pt-in.sm{height:42px;margin-top:10px;font-size:16px}
+.pt-ta{display:block;width:100%;min-height:112px;padding:14px 16px;border:1px solid var(--line-2);border-radius:8px;background:rgba(237,230,218,.03);color:var(--ivory);font:350 16px/1.6 var(--sans);resize:vertical;transition:border-color .3s}
+.pt-chips{display:flex;flex-wrap:wrap;gap:8px}
+.pt-chip{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 16px;border:0;border-radius:999px;background:none;box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory-2);font:400 14px/1.3 var(--sans);text-align:left;cursor:pointer;transition:color .25s,box-shadow .25s,background-color .25s}
+.pt-chip:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-chip[aria-pressed="true"]{background:var(--ivory);color:var(--bg);box-shadow:none}
+.pt-chip svg{width:14px;height:14px;flex:none;margin-left:-4px;display:none}
+.pt-chips.multi .pt-chip[aria-pressed="true"] svg{display:block}
+.pt-scale{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pt-scale button{width:48px;height:48px;border:0;border-radius:8px;background:none;box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory-2);font:500 20px/1 var(--serif);cursor:pointer;transition:color .25s,box-shadow .25s,background-color .25s}
+.pt-scale button:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-scale button[aria-pressed="true"]{background:var(--ivory);color:var(--bg);box-shadow:none}
+.pt-scale-l{display:flex;justify-content:space-between;width:min(100%,280px);margin-top:10px;font-size:12px;color:var(--ivory-3)}
+.pt-notebox{margin-top:clamp(26px,4vh,38px);padding-top:clamp(20px,3vh,28px);border-top:1px solid var(--line)}
+.pt-addnote{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0;border:0;background:none;color:var(--ivory-3);font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:color .3s}
+.pt-addnote:hover{color:var(--ivory)}
+.pt-addnote svg{width:16px;height:16px;color:var(--sand)}
+.pt-notebox .pt-ta{margin-top:10px}
+.pt-nav{position:sticky;bottom:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;max-width:760px;margin:clamp(34px,5vh,56px) auto 0;padding:18px 0 calc(24px + env(safe-area-inset-bottom,0px));background:linear-gradient(rgba(15,14,13,0),var(--bg) 34%)}
+.pt-nav .btn-text svg{transform:rotate(180deg)}
+.pt-nav .btn-text:hover svg{transform:rotate(180deg) translateX(4px)}
+.pt-nav .btn-text[disabled]{visibility:hidden}
+.pt-kbd{margin:0 auto 0 0;font-size:12px;color:var(--ivory-3)}
+.pt-kbd kbd{display:inline-block;min-width:22px;padding:2px 6px;margin:0 2px;border-radius:4px;box-shadow:inset 0 0 0 1px var(--line-2);font:500 11px/1.4 var(--sans);text-align:center;color:var(--ivory-2)}
+.pt-done{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0;padding:0;list-style:none}
+.pt-done li{display:inline-flex;align-items:center;gap:10px;height:38px;padding:0 16px 0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-2);font-size:13px;color:var(--ivory-2)}
+.pt-done svg{width:16px;height:16px;color:var(--sand)}
+.pt-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+/* Zusammenfassung / Export */
+.pt-doc{width:100%;max-width:860px;margin:0 auto;padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+.pt-doc h2{margin:18px 0 0;font:500 clamp(38px,4.4vw,62px)/1.03 var(--serif)}
+.pt-doc h2 em{font-style:italic;font-weight:400;color:var(--ivory-2)}
+.pt-meta{margin:14px 0 0;font-size:15px;color:var(--ivory-2)}
+.pt-export{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:30px 0 0;padding:18px;border-radius:var(--r-lg);background:radial-gradient(90% 120% at 50% 0%,#2A2622 0%,#1B1816 60%,#141211 100%);box-shadow:inset 0 0 0 1px var(--line)}
+.pt-export .btn{height:46px}
+.pt-export .pt-msg{flex:1 1 180px;margin:0 0 0 6px;font-size:13px;color:var(--ivory-3)}
+.pt-part{margin-top:clamp(40px,6vh,64px)}
+.pt-part>h3{display:flex;align-items:baseline;gap:14px;margin:0 0 6px;padding-bottom:14px;border-bottom:1px solid var(--line-2);font:500 clamp(26px,2.6vw,34px)/1.1 var(--serif)}
+.pt-part>h3 b{font:italic 400 .8em/1 var(--serif);color:var(--sand)}
+.pt-block{padding:22px 0;border-bottom:1px solid var(--line)}
+.pt-block h4{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;font:500 11.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+.pt-block h4 button{height:30px;padding:0 12px;border:0;border-radius:999px;background:none;box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory-3);font:500 10px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:color .3s,box-shadow .3s}
+.pt-block h4 button:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-dl{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:8px 26px;margin:0}
+.pt-dl dt{font-size:13.5px;line-height:1.5;color:var(--ivory-3)}
+.pt-dl dd{margin:0;font-size:15px;line-height:1.5;color:var(--ivory);white-space:pre-wrap;overflow-wrap:anywhere}
+.pt-dl dd.empty{color:rgba(237,230,218,.28)}
+.pt-text{margin:0;font-size:15px;line-height:1.65;color:var(--ivory);white-space:pre-wrap;overflow-wrap:anywhere}
+.pt-empty{margin:18px 0 0;font-size:14px;color:var(--ivory-3)}
+.pt-reset{margin-top:48px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;font-size:13px;color:var(--ivory-3)}
+.pt-reset button{height:40px;padding:0 16px;border:0;border-radius:999px;background:none;box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory-2);font:500 10.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:color .3s,box-shadow .3s,background-color .3s}
+.pt-reset button:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-reset button.arm{background:var(--err);color:var(--bg);box-shadow:none}
+/* Notizen während der Präsentation */
+.pt-fab{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:180;display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px 0 15px;border:0;border-radius:999px;background:rgba(21,19,17,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--line-2),0 14px 30px -12px rgba(0,0,0,.85);color:var(--ivory);font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:box-shadow .3s,opacity .5s,transform .6s var(--ease)}
+.pt-fab:hover,.pt-fab[aria-expanded="true"]{box-shadow:inset 0 0 0 1px var(--ivory),0 14px 30px -12px rgba(0,0,0,.85)}
+.pt-fab svg{width:18px;height:18px;color:var(--sand)}
+.pt-fab .n{min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--sand);color:var(--bg);font:600 11px/20px var(--sans);letter-spacing:0;text-align:center}
+.pt-fab .n:empty{display:none}
+.intro-on .pt-fab,.pitch-hold .pt-fab,.pt-lock .pt-fab{opacity:0;pointer-events:none;transform:translateY(12px)}
+.pt-tip{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(74px + env(safe-area-inset-bottom,0px));z-index:180;max-width:260px;margin:0;padding:12px 14px;border-radius:10px;background:var(--ivory);color:var(--bg);font-size:13px;line-height:1.45;box-shadow:0 18px 40px -16px rgba(0,0,0,.9);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.pt-tip.on{opacity:1;transform:none}
+.pt-tip kbd{padding:1px 6px;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(15,14,13,.3);font:600 11px/1.4 var(--sans)}
+.pt-notes{position:fixed;top:0;right:0;bottom:0;z-index:185;width:min(420px,100%);display:flex;flex-direction:column;gap:16px;padding:calc(18px + env(safe-area-inset-top,0px)) 24px calc(18px + env(safe-area-inset-bottom,0px));background:rgba(18,16,15,.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-left:1px solid var(--line);box-shadow:-40px 0 90px -40px rgba(0,0,0,.9);transform:translateX(104%);visibility:hidden;transition:transform .6s var(--ease),visibility 0s linear .6s}
+.pt-notes.open{transform:none;visibility:visible;transition:transform .6s var(--ease),visibility 0s}
+.pt-nh{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.pt-x{width:40px;height:40px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:none;box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory-2);cursor:pointer;transition:color .3s,box-shadow .3s}
+.pt-x:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-x svg{width:16px;height:16px}
+.pt-ctx{position:relative}
+.pt-ctx select{width:100%;height:48px;padding:0 44px 0 14px;border:0;border-radius:8px;background:rgba(237,230,218,.05);box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory);font:500 22px/1 var(--serif);-webkit-appearance:none;appearance:none;cursor:pointer}
+.pt-ctx select:focus{outline:none;box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-ctx svg{position:absolute;right:14px;top:50%;width:16px;height:16px;margin-top:-8px;color:var(--ivory-2);pointer-events:none}
+.pt-follow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:-6px 0 0;font-size:12px;color:var(--ivory-3)}
+.pt-follow button{padding:0;border:0;background:none;color:var(--sand);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.pt-notes .pt-ta{flex:0 0 auto;min-height:0;height:clamp(150px,30vh,280px)}
+.pt-nlist{flex:1;min-height:0;overflow-y:auto;margin:0 -8px;padding:0 8px}
+.pt-nlist h3{margin:4px 0 8px;font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory-3)}
+.pt-nlist ul{margin:0;padding:0;list-style:none}
+.pt-nlist li button{width:100%;display:block;padding:10px 0;border:0;border-bottom:1px solid var(--line);background:none;color:inherit;text-align:left;cursor:pointer}
+.pt-nlist li button:hover b{color:var(--ivory)}
+.pt-nlist b{display:block;font:500 17px/1.25 var(--serif);color:var(--ivory-2);transition:color .3s}
+.pt-nlist small{display:block;margin-top:3px;font-size:12.5px;line-height:1.45;color:var(--ivory-3);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.pt-nlist .none{font-size:13px;color:var(--ivory-3)}
+.pt-nfoot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pt-nfoot button{height:42px;padding:0 6px;border:0;border-radius:6px;background:none;box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory-2);font:500 10px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:color .3s,box-shadow .3s,background-color .3s}
+.pt-nfoot button:hover{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--ivory)}
+.pt-nfoot button.main{background:var(--ivory);color:var(--bg);box-shadow:none}
+.pt-nfoot button.main:hover{background:#fff}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media (max-width:1100px){
+  .pt-body{grid-template-columns:minmax(220px,250px) minmax(0,1fr)}
+  .pt-side{padding-right:22px}
+}
+@media (max-width:800px){
+  .pt-body{grid-template-columns:minmax(0,1fr)}
+  .pt-side{display:none}
+  .pt-mtop{display:block;width:100%;max-width:760px;margin:0 auto 26px}
+  .pt-mtop p{display:flex;justify-content:space-between;gap:12px;margin:0 0 6px;font-size:12px;color:var(--ivory-3)}
+  .pt-seg{display:flex;gap:4px}
+  .pt-seg button{flex:1;height:22px;padding:0;border:0;background:none;cursor:pointer;position:relative}
+  .pt-seg button::after{content:"";position:absolute;left:0;right:0;top:10px;height:2px;border-radius:2px;background:var(--line-2);transition:background-color .4s}
+  .pt-seg button.on::after{background:var(--sand)}
+  .pt-seg button[aria-current="step"]::after{background:var(--ivory)}
+  .pt-kbd{display:none}
+}
+@media (max-width:640px){
+  .pt-top{grid-template-columns:auto minmax(0,1fr) auto;gap:14px;padding-block:10px}
+  .pt-logo{width:84px}
+  .pt-kicker{padding-left:14px;letter-spacing:.18em}
+  .pt-saved{display:none}
+  .pt-topbtn .t{display:none}
+  .pt-agenda{grid-template-columns:minmax(0,1fr)}
+  .pt-dl{grid-template-columns:minmax(0,1fr);gap:2px}
+  .pt-dl dd{margin-bottom:10px}
+  .pt-nav .btn{padding-inline:18px}
+  .pt-export .btn{flex:1 1 100%}
+  .pt-fab{height:48px;padding:0 15px}
+  .pt-fab .t{display:none}
+  .pt-notes{top:auto;left:0;width:100%;height:min(82svh,660px);border-left:0;border-top:1px solid var(--line);border-radius:18px 18px 0 0;transform:translateY(104%)}
+  .pt-notes .pt-ta{height:clamp(120px,24svh,220px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .pt,.pt-notes,.pt-fab,.pt-tip{transition:none}
+  .pt-step.anim{animation:none}
 }
 
 /* ---------- Responsive ---------- */
@@ -740,11 +968,17 @@ a.menu-book{text-decoration:none}
 <body>
 <script>
 (function () {
-  var d = document.documentElement; d.classList.add('js');
+  var d = document.documentElement, q = location.search; d.classList.add('js');
+  // Gesprächsmodus: vor der Website kommt der Fragebogen (?kunde oder ?termin = reine Website)
+  if (!/[?&](kunde|termin)\b/.test(q)) {
+    d.classList.add('pitch');
+    var st = null; try { st = JSON.parse(localStorage.getItem('besart-pitch')); } catch (e) {}
+    if (!st || st.v !== 1 || st.stage === 'intake') d.classList.add('pitch-hold');
+  }
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   // QR-Code (?termin) und direkter Link aufs Print-Paket: ohne Intro
-  if (/[?&]termin\b/.test(location.search) || location.hash === '#printmedien') return;
-  var force = /[?&]intro\b/.test(location.search), seen = false;
+  if (/[?&]termin\b/.test(q) || location.hash === '#printmedien') return;
+  var force = /[?&]intro\b/.test(q) || d.classList.contains('pitch-hold'), seen = false;
   try { seen = sessionStorage.getItem('besart-intro') === '1'; sessionStorage.setItem('besart-intro', '1'); } catch (e) {}
   if (force || !seen) d.classList.add('intro-on');
 })();
@@ -769,12 +1003,16 @@ a.menu-book{text-decoration:none}
   var root = document.documentElement, intro = document.getElementById('intro'), done;
   window.__introDone = new Promise(function (r) { done = r; });
   if (!root.classList.contains('intro-on')) { intro.remove(); done(); return; }
-  var over = false, skipNow;
+  var over = false, skipNow, hardStop;
   function bail() { if (over) return; over = true; root.classList.remove('intro-on'); root.classList.add('intro-played'); intro.remove(); done(); }
   skipNow = bail;
-  var hardStop = setTimeout(function () { try { skipNow(); } catch (e) { bail(); } }, 15000);
-  function boot() { try { run(); } catch (e) { bail(); } }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  function boot() {
+    hardStop = setTimeout(function () { try { skipNow(); } catch (e) { bail(); } }, 15000);
+    try { run(); } catch (e) { bail(); }
+  }
+  // Gesprächsmodus: das Intro wartet, bis nach dem Fragebogen die Präsentation startet
+  function ready() { if (root.classList.contains('pitch-hold')) document.addEventListener('pitch:start', boot, { once: true }); else boot(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready); else ready();
 
   function run() {
     var NS = 'http://www.w3.org/2000/svg';
@@ -1263,7 +1501,7 @@ a.menu-book{text-decoration:none}
     <button type="button" class="pv-back" data-print-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg><span class="t">Zur Website</span></button>
     <svg class="pv-logo" viewBox="0 0 909.3 353" role="img" aria-label="BesArt Hairsalon"><g fill="currentColor"><use href="#lp0"/><use href="#lp1"/><use href="#lp2"/><use href="#lp3"/><use href="#lp4"/><use href="#lp5"/><use href="#lp6"/></g></svg>
     <div class="pv-nav">
-      <p class="pv-where" aria-live="polite"><b id="pvWhereN">00</b><i>/ 04</i><span id="pvWhere">Übersicht</span></p>
+      <p class="pv-where" aria-live="polite"><b id="pvWhereN">00</b><i id="pvWhereT">/ 07</i><span id="pvWhere">Übersicht</span></p>
       <div class="pv-arrows">
         <button type="button" data-pv-prev aria-label="Zurück"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
         <button type="button" data-pv-next aria-label="Weiter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
@@ -1275,12 +1513,13 @@ a.menu-book{text-decoration:none}
     <section class="pv-intro" aria-labelledby="pvTitle">
       <div class="pv-intro-text">
       <p class="eyebrow pv-anim" style="--d:0">Print-Paket</p>
-      <h2 class="h2 pv-anim" id="pvTitle" style="--d:1">Visitenkarte &amp; Flyer <em>im gleichen Auftritt.</em></h2>
-      <p class="lede pv-anim" style="--d:2">Damit BesArt auch offline im Kopf bleibt: Visitenkarte und Flyer im Stil der neuen Website. Beide tragen einen QR-Code, der direkt in die Online-Buchung führt – vom Flyer zum Termin in wenigen Sekunden.</p>
+      <h2 class="h2 pv-anim" id="pvTitle" style="--d:1">Karte, Flyer &amp; Aufsteller <em>im gleichen Auftritt.</em></h2>
+      <p class="lede pv-anim" style="--d:2">Damit BesArt auch offline im Kopf bleibt: Visitenkarte, Flyer und ein Bewertungsaufsteller für die Theke, alles im Stil der neuen Website. Die QR-Codes führen direkt in die Online-Buchung – und vom Aufsteller ohne Umweg zur Google-Bewertung.</p>
       <ul class="pv-facts pv-anim" style="--d:3">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2.5v2.5H14zM17.5 17.5H20V20h-2.5zM14 20h2M20 14v2"/></svg>QR-Code führt zur Online-Buchung</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2.5v2.5H14zM17.5 17.5H20V20h-2.5zM14 20h2M20 14v2"/></svg>QR-Codes zu Buchung &amp; Google-Bewertung</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2v16h16M2 6h16v16"/></svg>Druckfertig mit 3 mm Beschnitt</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Preise &amp; Zeiten 1:1 von Salonkee</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8.5 8.5a5 5 0 0 1 0 7M11.5 6a8.5 8.5 0 0 1 0 12M14.5 3.5a12 12 0 0 1 0 17"/></svg>Aufsteller aus dem 3D-Drucker, mit NFC</li>
       </ul>
       <button type="button" class="btn btn-primary pv-anim" style="--d:4" data-pv-next>Ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
       </div>
@@ -1288,6 +1527,7 @@ a.menu-book{text-decoration:none}
         <img class="c1" data-src="img/print-flyer-vorne.webp" alt="" width="1100" height="1560" decoding="async">
         <img class="c2" data-src="img/print-karte-vorne.webp" alt="" width="1400" height="903" decoding="async">
         <img class="c3" data-src="img/print-karte-hinten.webp" alt="" width="1400" height="903" decoding="async">
+        <img class="c4" data-src="img/print-bewertungskarte.webp" alt="" width="1000" height="1412" decoding="async">
       </div>
     </section>
 
@@ -1357,7 +1597,73 @@ a.menu-book{text-decoration:none}
       </div>
       <div class="pv-foot pv-rv" style="--d:3">
         <div class="pv-scenes" role="group" aria-label="Szene wählen"><button type="button" aria-pressed="true">Travertin</button><button type="button" aria-pressed="false">Empfang</button></div>
-        <div class="btns"><button type="button" class="btn btn-primary" data-print-close>Zurück zur Website<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></div>
+        <button type="button" class="btn btn-ghost" data-pv-next>Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+
+    <section class="pv-slide" id="pv5" data-label="Google-Bewertung · Aufsteller" aria-labelledby="pv5t">
+      <div class="pv-head">
+        <span class="pv-num pv-rv" aria-hidden="true">05</span>
+        <div class="pv-rv" style="--d:1"><p class="eyebrow">Google-Bewertung · Aufsteller</p><h3 id="pv5t">Mehr Bewertungen, <em>ganz nebenbei.</em></h3></div>
+        <p class="pv-desc pv-rv" style="--d:2">Eine A6-Karte im Aufsteller aus dem 3D-Drucker, für Theke oder Kasse. Code scannen oder Handy auflegen (NFC) – schon öffnet sich das Bewertungsfenster von BesArt auf Google, ganz ohne Suchen.</p>
+      </div>
+      <div class="pv-stage is-stand pv-rv" style="--d:2">
+        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Bewertungskarte gross anzeigen"><img data-src="img/print-bewertungskarte.webp" alt="Bewertungskarte A6: schwarz mit BesArt-Logo, «Zufrieden mit Ihrem neuen Look?», fünf Sterne, QR-Code zur Google-Bewertung und der Hinweis Code scannen oder Handy auflegen" width="1000" height="1412" decoding="async"></button><figcaption>Karte A6 · 105 × 148 mm</figcaption></figure>
+        <figure class="pv-flat pv-spinfig">
+          <div class="pv-spin" tabindex="0" role="slider" aria-label="Aufsteller drehen" aria-valuemin="0" aria-valuemax="350" aria-valuenow="0" aria-valuetext="Vorderseite mit QR-Code" data-sprite="img/aufsteller-360.webp" data-sprite-small="img/aufsteller-360-klein.webp">
+            <img class="pv-spin-poster" data-src="img/aufsteller-ansicht.webp" alt="" width="800" height="800" decoding="async">
+            <span class="pv-spin-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 8 3 12l4 4M17 8l4 4-4 4M3 12h18"/></svg>Ziehen zum Drehen</span>
+          </div>
+          <figcaption>Aufsteller · 360° · NFC-Chip auf der Rückseite</figcaption>
+        </figure>
+      </div>
+      <div class="pv-foot pv-rv" style="--d:3">
+        <p class="pv-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Code mit dem Handy scannen – er öffnet das echte Bewertungsfenster.</p>
+        <button type="button" class="btn btn-ghost" data-pv-next>Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+
+    <section class="pv-slide" id="pv6" data-label="Google-Bewertung · Mockup" aria-labelledby="pv6t">
+      <div class="pv-head">
+        <span class="pv-num pv-rv" aria-hidden="true">06</span>
+        <div class="pv-rv" style="--d:1"><p class="eyebrow">Google-Bewertung · Mockup</p><h3 id="pv6t">Genau dort, <em>wo bezahlt wird.</em></h3></div>
+        <p class="pv-desc pv-rv" style="--d:2">Fotorealistische Vorschau: Aufsteller und Karte stammen 1:1 aus dem 3D-Modell und den Druckdaten, die Szene ist KI-generiert.</p>
+      </div>
+      <div class="pv-mock pv-rv" style="--d:2">
+        <button type="button" class="pv-frame pv-zoom" aria-label="Mockup gross anzeigen">
+          <img class="on" data-src="img/mockup-aufsteller-1.webp" alt="Mockup: schwarzer Bewertungsaufsteller mit der BesArt-Karte auf einer Marmortheke im Salon, daneben eine Vase mit Trockenblumen" width="2048" height="1360" decoding="async">
+          <img data-src="img/mockup-aufsteller-2.webp" alt="Mockup: Bewertungsaufsteller an der Kasse auf einer Holztheke neben dem Kartenterminal" width="2048" height="1360" decoding="async">
+          <span class="pv-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>Vollansicht</span>
+        </button>
+      </div>
+      <div class="pv-foot pv-rv" style="--d:3">
+        <div class="pv-scenes" role="group" aria-label="Szene wählen"><button type="button" aria-pressed="true">Theke</button><button type="button" aria-pressed="false">Kasse</button></div>
+        <button type="button" class="btn btn-ghost" data-pv-next>Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+
+    <section class="pv-slide" id="pv7" data-label="Das Paket" aria-labelledby="pv7t">
+      <div class="pv-head">
+        <span class="pv-num pv-rv" aria-hidden="true">07</span>
+        <div class="pv-rv" style="--d:1"><p class="eyebrow">Das Paket</p><h3 id="pv7t">Alles aus einer Hand, <em>ein Auftritt.</em></h3></div>
+        <p class="pv-desc pv-rv" style="--d:2">Website, Visitenkarten, Flyer und Bewertungsaufsteller – aufeinander abgestimmt, online wie im Salon.</p>
+      </div>
+      <div class="pv-pack pv-rv" style="--d:2">
+        <ol class="pv-items">
+          <li><span class="pv-thumb is-web"><img data-src="img/paket-website.webp" alt="" width="640" height="400" decoding="async"></span><div><b>Website mit Online-Termin</b><span>Intro mit Logo-Animation, Leistungen und Preise, Bewertungen, Anfahrt und Terminbuchung in wenigen Klicks</span></div></li>
+          <li><span class="pv-thumb"><img data-src="img/print-karte-vorne.webp" alt="" width="1400" height="903" decoding="async"></span><div><b>Visitenkarten</b><span>85 × 55 mm, beidseitig, mit QR-Code zur Buchung</span></div></li>
+          <li><span class="pv-thumb"><img data-src="img/print-flyer-vorne.webp" alt="" width="1100" height="1560" decoding="async"></span><div><b>Flyer A5</b><span>148 × 210 mm, beidseitig, alle Leistungen und Preise</span></div></li>
+          <li><span class="pv-thumb is-light"><img data-src="img/aufsteller-ansicht.webp" alt="" width="800" height="800" decoding="async"></span><div><b>Google-Bewertungsaufsteller</b><span>3D-gedruckt, mit NFC-Chip und QR-Code, Karte A6</span></div></li>
+        </ol>
+        <div class="pv-price">
+          <p class="eyebrow">Komplettpaket</p>
+          <p class="pv-amount"><small>CHF</small>1'920.–</p>
+          <p class="pv-price-note">Alle vier Teile zusammen.</p>
+          <div class="btns">
+            <button type="button" class="btn btn-primary" data-pitch-closing hidden>Abschluss-Fragen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+            <button type="button" class="btn btn-ghost" data-print-close>Zurück zur Website<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -1367,6 +1673,41 @@ a.menu-book{text-decoration:none}
   <img alt="">
   <button type="button" class="lb-close" aria-label="Schliessen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 </div>
+
+<div class="pt" id="pitch" role="dialog" aria-modal="true" aria-labelledby="ptKicker" tabindex="-1">
+  <div class="pt-top">
+    <svg class="pt-logo" viewBox="0 0 909.3 353" role="img" aria-label="BesArt Hairsalon"><g fill="currentColor"><use href="#lp0"/><use href="#lp1"/><use href="#lp2"/><use href="#lp3"/><use href="#lp4"/><use href="#lp5"/><use href="#lp6"/></g></svg>
+    <p class="pt-kicker" id="ptKicker">Gesprächsleitfaden</p>
+    <p class="pt-saved" id="ptSaved" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Gespeichert</p>
+    <button type="button" class="pt-topbtn" id="ptTopBtn" data-act="start"><span class="t">Direkt zur Präsentation</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+  </div>
+  <div class="pt-body">
+    <nav class="pt-side" aria-label="Schritte">
+      <p class="pt-side-h" id="ptSideH">Vor der Präsentation</p>
+      <ol class="pt-steps" id="ptSteps"></ol>
+      <div class="pt-prog"><p><span>Beantwortet</span><span id="ptProgN">0 / 0</span></p><div class="pt-bar"><i id="ptBar"></i></div></div>
+    </nav>
+    <div class="pt-main" id="ptMain"></div>
+  </div>
+</div>
+<button type="button" class="pt-fab" id="ptFab" aria-controls="ptNotes" aria-expanded="false" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17v3zM14.5 7.5l2 2"/></svg><span class="t">Notizen</span><span class="n" id="ptFabN"></span></button>
+<p class="pt-tip" id="ptTip" role="status"></p>
+<aside class="pt-notes" id="ptNotes" aria-labelledby="ptNotesT" hidden>
+  <div class="pt-nh">
+    <p class="eyebrow" id="ptNotesT">Notizen</p>
+    <button type="button" class="pt-x" data-nact="close" aria-label="Notizen schliessen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="pt-ctx"><label class="sr" for="ptCtx">Notiz zu</label><select id="ptCtx"></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></div>
+  <p class="pt-follow" id="ptFollow"></p>
+  <label class="sr" for="ptNote">Notiz</label>
+  <textarea class="pt-ta" id="ptNote" rows="6"></textarea>
+  <div class="pt-nlist"><h3 id="ptNListH">Alle Notizen</h3><ul id="ptNList" aria-labelledby="ptNListH"></ul></div>
+  <div class="pt-nfoot">
+    <button type="button" data-nact="intake">Fragebogen</button>
+    <button type="button" data-nact="closing">Abschluss</button>
+    <button type="button" class="main" data-nact="summary">Export</button>
+  </div>
+</aside>
 
 <script>
 (() => {
@@ -1860,11 +2201,13 @@ a.menu-book{text-decoration:none}
     const prevBtn = $('.pv-bar [data-pv-prev]', pv), nextBtn = $('.pv-bar [data-pv-next]', pv);
     const outside = [$('#siteHeader'), $('main'), $('.site-footer')].filter(Boolean);
     const lbImg = $('img', lb), lbClose = $('.lb-close', lb);
+    const whereT = $('#pvWhereT'); if (whereT) whereT.textContent = '/ ' + String(slides.length).padStart(2, '0');
     let opener = null, pushed = false, cur = -1, lbReturn = null, loaded = false;
     const isOpen = () => pv.classList.contains('open');
     function loadImages() {
       if (loaded) return; loaded = true;
       $$('img[data-src]', pv).forEach(im => { im.src = im.dataset.src; im.removeAttribute('data-src'); });
+      spins.forEach(sp => sp.load());
     }
     function setCurrent(i) {
       cur = i;
@@ -1928,6 +2271,70 @@ a.menu-book{text-decoration:none}
       }));
     });
 
+    // 360°-Ansicht des Aufstellers: 36 Bilder im 10°-Takt als 6 × 6-Raster; ziehen, wischen oder Pfeiltasten
+    function Spin(el) {
+      const N = 36, AZ0 = -30, small = Math.min(innerWidth, screen.width || innerWidth) <= 700;
+      let pos = 0, frame = -1, ready = false, used = false, drag = null, vel = 0, raf = 0, t0 = 0, turned = false, visible = false;
+      const label = f => { const a = (((AZ0 + f * 10) % 360) + 360) % 360; return a <= 50 || a >= 310 ? 'Vorderseite mit QR-Code' : a >= 130 && a <= 230 ? 'Rückseite mit NFC-Chip' : 'Seitenansicht'; };
+      function show(p) {
+        pos = p; const f = ((Math.round(p) % N) + N) % N;
+        if (f === frame) return; frame = f;
+        if (ready) el.style.backgroundPosition = (f % 6) * 20 + '% ' + Math.floor(f / 6) * 20 + '%';
+        el.setAttribute('aria-valuenow', f * 10); el.setAttribute('aria-valuetext', label(f));
+      }
+      function use() { if (!used) { used = true; el.classList.add('is-used'); } }
+      // beim ersten Sichtbarwerden eine ruhige Umdrehung zurück zur Schrägansicht, danach Schwung nach dem Loslassen
+      function tick(t) {
+        raf = 0;
+        if (drag || !visible) return;
+        if (!used && !turned && ready && !reduce) {
+          if (!t0) t0 = t + 450;
+          const k = Math.min(1, Math.max(0, (t - t0) / 3200));
+          show((k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2) * N);
+          if (k >= 1) { turned = true; show(0); return; }
+        } else if (Math.abs(vel) > 0.02) { show(pos + vel); vel *= 0.93; }
+        else return;
+        raf = requestAnimationFrame(tick);
+      }
+      const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+      this.load = () => {
+        const src = el.dataset[small ? 'spriteSmall' : 'sprite']; if (!src || ready) return;
+        const im = new Image();
+        im.onload = () => { el.style.backgroundImage = 'url("' + src + '")'; ready = true; frame = -1; show(pos); el.classList.add('is-ready'); kick(); };
+        im.src = src;
+      };
+      const step = () => el.clientWidth / 30;   // ca. 1,2 Bildbreiten Wischen = eine Umdrehung
+      el.addEventListener('pointerdown', e => {
+        if (e.button > 0) return;
+        drag = { x: e.clientX, p: pos, t: e.timeStamp, lx: e.clientX, id: e.pointerId, moved: false }; vel = 0;
+        el.classList.add('is-drag');
+      });
+      el.addEventListener('pointermove', e => {
+        if (!drag || e.pointerId !== drag.id) return;
+        if (!drag.moved && Math.abs(e.clientX - drag.x) > 4) { drag.moved = true; use(); try { el.setPointerCapture(e.pointerId); } catch (err) {} }
+        if (!drag.moved) return;
+        const dt = Math.max(1, e.timeStamp - drag.t);
+        vel = vel * 0.6 + (-(e.clientX - drag.lx) / step()) / dt * 16 * 0.4;
+        drag.t = e.timeStamp; drag.lx = e.clientX;
+        show(drag.p - (e.clientX - drag.x) / step());
+      });
+      const end = e => { if (!drag || (e && e.pointerId !== drag.id)) return; drag = null; el.classList.remove('is-drag'); vel = Math.max(-1.5, Math.min(1.5, vel)); kick(); };
+      el.addEventListener('pointerup', end); el.addEventListener('pointercancel', end); el.addEventListener('lostpointercapture', end);
+      el.addEventListener('keydown', e => {
+        const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (e.key === 'Home') { e.preventDefault(); e.stopPropagation(); use(); vel = 0; show(0); return; }
+        if (!d) return;
+        e.preventDefault(); e.stopPropagation(); use(); vel = 0; show(Math.round(pos) + d * (e.shiftKey ? 9 : 1));
+      });
+      if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(en => {
+        visible = en.isIntersecting;
+        if (visible) kick(); else if (!turned && !used) { t0 = 0; show(0); }   // halbe Drehung beim nächsten Mal neu beginnen
+      }), { root: pv, threshold: 0.6 }).observe(el);
+      else visible = true;
+      show(0);
+    }
+    const spins = $$('.pv-spin', pv).map(el => new Spin(el));
+
     // Übersicht: Karten folgen leicht dem Zeiger
     const cover = $('.pv-cover', pv), intro = $('.pv-intro', pv);
     if (cover && !reduce && matchMedia('(pointer: fine)').matches) intro.addEventListener('pointermove', e => {
@@ -1962,6 +2369,643 @@ a.menu-book{text-decoration:none}
     });
     addEventListener('popstate', () => { if (location.hash === HASH) open(false); else close(true); });
     if (location.hash === HASH) open(false);
+  }
+  })();
+
+  /* ---------------- Gesprächsmodus: Fragebogen vor der Website, Notizen je Seite, Abschluss und Export ---------------- */
+  // Alles bleibt lokal im Browser (localStorage); ?kunde oder ?termin zeigen die reine Website.
+  (() => {
+  const html = document.documentElement;
+  if (!html.classList.contains('pitch')) return;
+  const ov = $('#pitch'), fab = $('#ptFab'), panel = $('#ptNotes'), tip = $('#ptTip'), pv0 = $('#print');
+  const release = () => { html.classList.remove('pitch-hold'); document.dispatchEvent(new Event('pitch:start')); };
+  if (!ov || !fab || !panel) { release(); return; }
+  try {
+    const KEY = 'besart-pitch';
+    const pad = n => String(n).padStart(2, '0');
+    const dayISO = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+    const mac = /Mac|iPhone|iPad/.test(navigator.platform || '');
+    const touch = matchMedia('(hover: none)').matches;
+    const I = {
+      check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>',
+      plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
+      down: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v12M6.5 10.5 12 16l5.5-5.5M5 20h14"/></svg>',
+    };
+
+    /* ---------- Fragen ---------- */
+    const FLOWS = {
+      intake: {
+        kicker: 'Gesprächsleitfaden', side: 'Vor der Präsentation', eyebrow: 'Fragebogen',
+        steps: [
+          { id: 'gespraech', t: 'Gespräch', h: 'Bevor wir starten, <em>ein paar Fragen.</em>',
+            lead: 'Zuerst möchte ich den Salon besser kennenlernen. Danach zeige ich die neue Website, die Drucksachen und den Bewertungsaufsteller.',
+            agenda: ['Den Salon kennenlernen', 'Die neue Website mit Online-Termin', 'Visitenkarten, Flyer und Bewertungsaufsteller', 'Paket, Fragen und nächste Schritte'],
+            q: [
+              { id: 'partner', l: 'Gesprächspartner', type: 'text', ph: 'Name' },
+              { id: 'datum', l: 'Datum', type: 'date' },
+              { id: 'ort', l: 'Wo findet das Gespräch statt?', type: 'chips', o: ['Im Salon', 'Bei mir', 'Telefon / Video'] },
+            ] },
+          { id: 'salon', t: 'Der Salon heute', h: 'Der Salon <em>heute.</em>', lead: 'Wie läuft es im Moment?',
+            q: [
+              { id: 'seit', l: 'Seit wann gibt es BesArt?', type: 'text', ph: 'z. B. 2019' },
+              { id: 'team', l: 'Wie viele Personen arbeiten im Salon?', type: 'chips', o: ['Allein', '2', '3', '4 oder mehr'] },
+              { id: 'kundschaft', l: 'Wer kommt vor allem?', type: 'multi', o: ['Damen', 'Herren', 'Kinder', 'Pensionäre', 'Barber / Bart'] },
+              { id: 'stamm', l: 'Eher Stamm- oder Neukunden?', type: 'chips', o: ['Fast nur Stammkunden', 'Mehrheit Stamm', 'Ausgeglichen', 'Viele Neue'] },
+              { id: 'ruhig', l: 'Wann ist es eher ruhig?', type: 'text', ph: 'Tage oder Zeiten mit freien Plätzen' },
+            ] },
+          { id: 'termine', t: 'Termine & Buchung', h: 'Termine <em>&amp; Buchung.</em>', lead: 'Wie kommen die Termine heute zustande – und was kostet dabei Zeit?',
+            q: [
+              { id: 'kanaele', l: 'Wie buchen die Kunden heute?', type: 'multi', o: ['Telefon', 'Salonkee online', 'WhatsApp', 'Instagram', 'Vor Ort', 'Ohne Termin'] },
+              { id: 'online', l: 'Anteil online gebuchter Termine (geschätzt)', type: 'chips', o: ['Unter 10 %', '10–30 %', '30–60 %', 'Über 60 %', 'Weiss nicht'] },
+              { id: 'nerv', l: 'Was stört bei Terminen am meisten?', type: 'multi', o: ['Anrufe während der Arbeit', 'Nicht erschienen', 'Kurzfristige Absagen', 'Lücken im Kalender', 'Nichts Besonderes'], other: 'Anderes' },
+              { id: 'salonkee', l: 'Soll die Buchung weiter über Salonkee laufen?', type: 'chips', o: ['Ja, beibehalten', 'Offen', 'Lieber eine eigene Lösung'] },
+            ] },
+          { id: 'sichtbarkeit', t: 'Sichtbarkeit', h: 'Wie Kunden <em>BesArt finden.</em>', lead: 'Online, auf Empfehlung oder im Vorbeigehen?',
+            q: [
+              { id: 'finden', l: 'Wie finden Neukunden den Salon?', type: 'multi', o: ['Google / Maps', 'Instagram', 'Facebook', 'TikTok', 'Empfehlung', 'Laufkundschaft', 'Salonkee'] },
+              { id: 'website', l: 'Gibt es heute eine eigene Website?', type: 'chips', o: ['Nein', 'Ja', 'Nur das Salonkee-Profil'], other: 'Adresse' },
+              { id: 'social', l: 'Wer kümmert sich um Social Media?', type: 'chips', o: ['Selbst', 'Jemand im Team', 'Extern', 'Niemand'] },
+              { id: 'bewertungen', l: 'Werden Kunden aktiv um eine Google-Bewertung gebeten?', type: 'chips', o: ['Ja, regelmässig', 'Manchmal', 'Nie'] },
+              { id: 'werbung', l: 'Bisherige Werbung', type: 'text', ph: 'Flyer, Inserate, Online-Werbung …' },
+            ] },
+          { id: 'ziele', t: 'Konkurrenz & Ziele', h: 'Konkurrenz <em>&amp; Ziele.</em>', lead: 'Wo steht BesArt heute, und wo soll es hingehen?',
+            q: [
+              { id: 'konkurrenz', l: 'Wichtigste Mitbewerber in der Umgebung', type: 'multi', o: ['Raja Hairstyling', 'Coiffeur B-beautiful', 'Intercoiffure Timodella', 'Beauty Werkstatt'], other: 'Andere' },
+              { id: 'usp', l: 'Was macht BesArt besser als die anderen?', type: 'area' },
+              { id: 'ziele', l: 'Ziele für die nächsten zwölf Monate', type: 'multi', o: ['Mehr Neukunden', 'Mehr Online-Buchungen', 'Weniger Telefon', 'Mehr Google-Bewertungen', 'Höhere Preise', 'Neue Leistungen', 'Personal finden'], other: 'Anderes' },
+              { id: 'auftritt', l: 'Wie wichtig ist ein moderner Auftritt?', type: 'scale', min: 1, max: 5, lo: 'Nebensache', hi: 'Sehr wichtig' },
+            ] },
+          { id: 'rahmen', t: 'Rahmen', h: 'Der <em>Rahmen.</em>', lead: 'Was ist für die Umsetzung wichtig?',
+            q: [
+              { id: 'anlass', l: 'Gibt es einen Termin oder Anlass?', type: 'text', ph: 'z. B. Jubiläum, Saisonstart, neue Räume' },
+              { id: 'entscheid', l: 'Wer entscheidet mit?', type: 'text', ph: 'z. B. allein, mit Partner oder Partnerin' },
+            ] },
+        ],
+        end: { id: 'bereit', t: 'Präsentation', end: true, h: 'Danke. <em>Jetzt zur Website.</em>',
+          lead: 'Alles ist gespeichert. Während der Präsentation lässt sich zu jeder Seite eine Notiz festhalten: mit dem Knopf «Notizen» unten links' + (touch ? '.' : ' oder der Taste N.') },
+      },
+      closing: {
+        kicker: 'Abschluss', side: 'Nach der Präsentation', eyebrow: 'Abschluss',
+        steps: [
+          { id: 'eindruck', t: 'Eindruck', h: 'Wie wirkt <em>das Ganze?</em>', lead: 'Ehrliches Feedback hilft am meisten.',
+            q: [
+              { id: 'gesamt', l: 'Gesamteindruck', type: 'scale', min: 1, max: 5, lo: 'Eher nicht', hi: 'Begeistert' },
+              { id: 'gefaellt', l: 'Was gefällt am besten?', type: 'multi', o: ['Intro mit der Schere', 'Design', 'Online-Termin', 'Visitenkarten', 'Flyer', 'Bewertungsaufsteller'] },
+              { id: 'fehlt', l: 'Was fehlt oder soll anders sein?', type: 'area' },
+            ] },
+          { id: 'umsetzung', t: 'Umsetzung', h: 'Für den <em>Start.</em>', lead: 'Was es für die Umsetzung braucht.',
+            q: [
+              { id: 'start', l: 'Gewünschter Start', type: 'chips', o: ['Sofort', 'In den nächsten Wochen', 'Später'], other: 'Datum oder Anlass' },
+              { id: 'domain', l: 'Webadresse (Domain)', type: 'chips', o: ['Vorhanden', 'Neu registrieren', 'Weiss nicht'], other: 'Adresse' },
+              { id: 'fotos', l: 'Bilder für die Website', type: 'chips', o: ['Eigene Fotos vorhanden', 'Fotoshooting gewünscht', 'KI-Bilder sind in Ordnung'] },
+              { id: 'karten', l: 'Visitenkarten – Menge', type: 'chips', o: ['250', '500', '1000'] },
+              { id: 'flyer', l: 'Flyer – Menge', type: 'chips', o: ['500', '1000', '2500'] },
+              { id: 'aufsteller', l: 'Bewertungsaufsteller – Anzahl', type: 'chips', o: ['1', '2', '3'] },
+            ] },
+          { id: 'entscheid', t: 'Entscheid', h: 'Wie geht es <em>weiter?</em>', lead: 'Zum Schluss das Wichtigste festhalten.',
+            q: [
+              { id: 'entscheid', l: 'Entscheid', type: 'chips', o: ['Zusage', 'Bedenkzeit', 'Absage'] },
+              { id: 'next', l: 'Nächster Schritt', type: 'text', ph: 'z. B. Offerte senden, Fotos schicken' },
+              { id: 'followup', l: 'Nachfassen am', type: 'date' },
+              { id: 'offen', l: 'Offene Fragen oder Einwände', type: 'area' },
+            ] },
+        ],
+        end: { id: 'fertig', t: 'Notizen sichern', end: true, h: 'Vielen Dank <em>für das Gespräch.</em>',
+          lead: 'Alle Antworten und Notizen sind gespeichert. In der Übersicht lassen sie sich prüfen und als PDF oder Textdatei auf dem Gerät sichern.' },
+      },
+    };
+    const Q = {};
+    Object.values(FLOWS).forEach(f => f.steps.forEach(st => st.q.forEach(q => { Q[st.id + '.' + q.id] = { st, q }; })));
+
+    /* ---------- Zustand (lokal gespeichert) ---------- */
+    const fresh = () => ({ v: 1, created: new Date().toISOString(), updated: null, stage: 'intake', step: { intake: 0, closing: 0 },
+      a: { 'gespraech.partner': 'Besart Beka', 'gespraech.datum': dayISO(new Date()) }, n: {}, tip: false });
+    let S = null, saveT = 0, dead = false;
+    try { S = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+    if (!S || S.v !== 1 || typeof S.a !== 'object' || !S.a || typeof S.n !== 'object' || !S.n) S = fresh();
+    S.step = Object.assign({ intake: 0, closing: 0 }, S.step);
+    const savedEl = $('#ptSaved');
+    function store() {
+      saveT = 0; if (dead) return false;
+      S.updated = new Date().toISOString();
+      try { localStorage.setItem(KEY, JSON.stringify(S)); return true; } catch (e) { return false; }
+    }
+    function save(now) {
+      clearTimeout(saveT);
+      if (now) { store(); return; }
+      saveT = setTimeout(() => { if (store()) flashSaved(); }, 350);
+    }
+    let savedT = 0;
+    function flashSaved() {
+      savedEl.classList.add('on'); clearTimeout(savedT); savedT = setTimeout(() => savedEl.classList.remove('on'), 1800);
+      if (panel.classList.contains('open')) nsaved();
+    }
+    addEventListener('pagehide', () => { if (saveT) { clearTimeout(saveT); store(); } });
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && saveT) { clearTimeout(saveT); store(); } });
+
+    /* ---------- Antworten lesen und formatieren ---------- */
+    const filled = v => Array.isArray(v) ? v.length > 0 : typeof v === 'number' ? true : !!(v && String(v).trim());
+    const answered = k => filled(S.a[k]) || filled(S.a[k + '~']);
+    const keysOf = f => FLOWS[f].steps.flatMap(st => st.q.map(q => st.id + '.' + q.id));
+    function fmtDate(iso, long) {
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+      if (!m) return iso || '';
+      if (!long) return m[3] + '.' + m[2] + '.' + m[1];
+      return new Date(+m[1], m[2] - 1, +m[3]).toLocaleDateString('de-CH', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    }
+    function fmt(k) {
+      const { q } = Q[k], v = S.a[k], o = String(S.a[k + '~'] || '').trim();
+      let s = '';
+      if (q.type === 'multi') s = (Array.isArray(v) ? v : []).join(', ');
+      else if (q.type === 'scale') s = typeof v === 'number' ? v + ' von ' + q.max + (v === q.min ? ' (' + q.lo + ')' : v === q.max ? ' (' + q.hi + ')' : '') : '';
+      else if (q.type === 'date') s = fmtDate(v);
+      else s = String(v || '').trim();
+      if (o) s = s ? s + (q.type === 'multi' ? ', ' : ' – ') + o : o;
+      return s;
+    }
+
+    /* ---------- Fragebogen-Overlay ---------- */
+    const main = $('#ptMain'), stepsEl = $('#ptSteps'), kicker = $('#ptKicker'), topBtn = $('#ptTopBtn'), sideH = $('#ptSideH'), progN = $('#ptProgN'), bar = $('#ptBar');
+    let mode = null, editing = false, opener = null, inertSaved = null;
+    const flowSteps = f => FLOWS[f].steps.concat([FLOWS[f].end]);
+    function lock(on) {
+      if (on && !inertSaved) {
+        inertSaved = [...document.body.children].filter(el => el !== ov && el.tagName !== 'SCRIPT').map(el => [el, el.inert]);
+        inertSaved.forEach(([el]) => { el.inert = true; });
+        html.classList.add('pt-lock');
+      } else if (!on && inertSaved) {
+        inertSaved.forEach(([el, was]) => { el.inert = was; }); inertSaved = null;
+        html.classList.remove('pt-lock');
+      }
+    }
+    function renderSide() {
+      if (!mode || mode === 'summary') return;
+      const all = flowSteps(mode), cur = S.step[mode];
+      sideH.textContent = FLOWS[mode].side;
+      stepsEl.innerHTML = all.map((st, i) => {
+        const qs = st.q || [], n = qs.filter(q => answered(st.id + '.' + q.id)).length;
+        const state = st.end || !n ? '' : n === qs.length ? I.check : n + '/' + qs.length;
+        return `<li><button type="button" data-go="${i}"${i === cur ? ' aria-current="step"' : ''}><span class="no">${pad(i + 1)}</span><span>${esc(st.t)}</span><span class="st">${state}</span></button></li>`;
+      }).join('');
+      const keys = keysOf(mode), done = keys.filter(answered).length;
+      progN.textContent = done + ' / ' + keys.length;
+      bar.style.width = (keys.length ? done / keys.length * 100 : 0).toFixed(1) + '%';
+    }
+    function qHTML(st, q) {
+      const k = st.id + '.' + q.id, id = 'pt_' + st.id + '_' + q.id, v = S.a[k];
+      const otherL = q.other || '';
+      const other = q.other ? `<input class="pt-in sm" type="text" data-k="${k}~" aria-label="${esc(q.l + ': ' + otherL)}" placeholder="${esc(otherL)} …" value="${esc(S.a[k + '~'] || '')}" autocomplete="off">` : '';
+      if (q.type === 'text' || q.type === 'date')
+        return `<div class="pt-q"><label class="pt-l" for="${id}">${esc(q.l)}</label><input class="pt-in" id="${id}" type="${q.type}" data-k="${k}" value="${esc(v || '')}"${q.ph ? ` placeholder="${esc(q.ph)}"` : ''} autocomplete="off"></div>`;
+      if (q.type === 'area')
+        return `<div class="pt-q"><label class="pt-l" for="${id}">${esc(q.l)}</label><textarea class="pt-ta" id="${id}" data-k="${k}" rows="3"${q.ph ? ` placeholder="${esc(q.ph)}"` : ''}>${esc(v || '')}</textarea></div>`;
+      if (q.type === 'scale') {
+        let b = '';
+        for (let n = q.min; n <= q.max; n++) b += `<button type="button" data-k="${k}" data-num="${n}" aria-pressed="${v === n}" aria-label="${n} von ${q.max}">${n}</button>`;
+        return `<div class="pt-q" role="group" aria-labelledby="${id}"><p class="pt-l" id="${id}">${esc(q.l)}</p><div class="pt-scale">${b}</div><div class="pt-scale-l" aria-hidden="true"><span>${esc(q.lo)}</span><span>${esc(q.hi)}</span></div></div>`;
+      }
+      const multi = q.type === 'multi', on = o => multi ? (Array.isArray(v) && v.includes(o)) : v === o;
+      return `<div class="pt-q" role="group" aria-labelledby="${id}"><p class="pt-l" id="${id}">${esc(q.l)}${multi ? '<span class="sr"> (mehrere möglich)</span>' : ''}</p><div class="pt-chips${multi ? ' multi' : ''}">${q.o.map(o => `<button type="button" class="pt-chip" data-k="${k}" data-v="${esc(o)}" aria-pressed="${on(o)}">${multi ? I.check : ''}${esc(o)}</button>`).join('')}</div>${other}</div>`;
+    }
+    function noteHTML(st) {
+      const k = 'step:' + st.id, v = S.n[k] || '', open = !!v.trim();
+      return `<div class="pt-notebox"><button type="button" class="pt-addnote" data-act="note"${open ? ' hidden' : ''}>${I.plus}Notiz zu diesem Punkt</button><div${open ? '' : ' hidden'}><label class="pt-l" for="pt_note_${st.id}">Notiz zu «${esc(st.t)}»</label><textarea class="pt-ta" id="pt_note_${st.id}" data-note="${k}" rows="3" placeholder="Was ist sonst noch wichtig?">${esc(v)}</textarea></div></div>`;
+    }
+    function endHTML() {
+      const keys = keysOf(mode), done = keys.filter(answered).length;
+      const notes = FLOWS[mode].steps.filter(s => (S.n['step:' + s.id] || '').trim()).length;
+      const chips = `<ul class="pt-done"><li>${I.check}${done} von ${keys.length} Fragen beantwortet</li>${notes ? `<li>${I.check}${notes} ${notes === 1 ? 'Notiz' : 'Notizen'}</li>` : ''}<li>${I.check}Lokal gespeichert</li></ul>`;
+      const actions = mode === 'intake'
+        ? (editing ? `<button type="button" class="btn btn-primary" data-act="close">Zurück zur Präsentation${ARROW}</button>` : `<button type="button" class="btn btn-primary" data-act="start">Präsentation starten${ARROW}</button>`)
+        : `<button type="button" class="btn btn-primary" data-act="summary">Notizen ansehen &amp; sichern${ARROW}</button><button type="button" class="btn btn-ghost" data-act="close">Zurück zur Präsentation${ARROW}</button>`;
+      return chips + `<div class="pt-actions">${actions}</div>`;
+    }
+    function renderStep(anim) {
+      const all = flowSteps(mode), i = Math.max(0, Math.min(all.length - 1, S.step[mode] || 0)), st = all[i];
+      S.step[mode] = i;
+      const mtop = `<div class="pt-mtop"><p><span>Schritt ${i + 1} von ${all.length}</span><span>${esc(st.t)}</span></p><div class="pt-seg">${all.map((x, n) => `<button type="button" data-go="${n}" aria-label="Schritt ${n + 1}: ${esc(x.t)}"${n === i ? ' aria-current="step"' : ''}${n <= i ? ' class="on"' : ''}></button>`).join('')}</div></div>`;
+      const agenda = st.agenda ? `<ol class="pt-agenda">${st.agenda.map((x, n) => `<li><b>${n + 1}</b>${esc(x)}</li>`).join('')}</ol>` : '';
+      const body = st.end ? endHTML() : `<div class="pt-qs">${st.q.map(q => qHTML(st, q)).join('')}</div>${noteHTML(st)}`;
+      const back = `<button type="button" class="btn btn-text" data-dir="-1"${i === 0 ? ' disabled' : ''}>${ARROW}Zurück</button>`;
+      const nav = st.end ? `<div class="pt-nav">${back}</div>`
+        : `<div class="pt-nav">${back}${touch ? '' : `<p class="pt-kbd"><kbd>${mac ? '⌘' : 'Ctrl'}</kbd> + <kbd>Enter</kbd> weiter</p>`}<button type="button" class="btn btn-primary" data-dir="1">Weiter${ARROW}</button></div>`;
+      main.innerHTML = mtop + `<section class="pt-step${anim && !reduce ? ' anim' : ''}" aria-labelledby="ptH"><p class="pt-eyebrow"><b>${pad(i + 1)}</b>${esc(FLOWS[mode].eyebrow)}</p><h2 id="ptH" tabindex="-1">${st.h}</h2>${st.lead ? `<p class="pt-lead">${st.lead}</p>` : ''}${agenda}${body}</section>` + nav;
+      main.scrollTop = 0;
+      renderSide();
+    }
+    function go(i, focus) {
+      const all = flowSteps(mode);
+      S.step[mode] = Math.max(0, Math.min(all.length - 1, i)); save();
+      renderStep(true);
+      if (focus !== false) { const h = $('#ptH', main); if (h) h.focus({ preventScroll: true }); }
+    }
+    function setTop() {
+      const start = mode === 'intake' && !editing;
+      topBtn.dataset.act = start ? 'start' : 'close';
+      $('.t', topBtn).textContent = start ? 'Direkt zur Präsentation' : 'Zurück zur Präsentation';
+      topBtn.setAttribute('aria-label', start ? 'Fragebogen überspringen und Präsentation starten' : 'Zurück zur Präsentation');
+      kicker.textContent = mode === 'summary' ? 'Gesprächsnotizen' : FLOWS[mode].kicker;
+    }
+    function openOverlay(m, step) {
+      if (panel.classList.contains('open')) closePanel(true);
+      if (!mode) opener = document.activeElement;
+      editing = S.stage !== 'intake';
+      mode = m; if (step != null && m !== 'summary') S.step[m] = step;
+      ov.classList.toggle('is-doc', m === 'summary');
+      setTop();
+      if (m === 'summary') renderSummary(); else renderStep(true);
+      ov.classList.add('open'); ov.removeAttribute('aria-hidden');
+      lock(true);
+      const h = $('#ptH', main);
+      (h || ov).focus({ preventScroll: true });
+    }
+    function closeOverlay() {
+      if (!mode) return;
+      mode = null; save(true);
+      ov.classList.remove('open'); ov.setAttribute('aria-hidden', 'true');
+      lock(false);
+      if (opener && opener.focus && document.contains(opener) && !opener.closest('[inert]')) opener.focus({ preventScroll: true });
+      updateFab();
+    }
+    function startPresentation() {
+      S.stage = 'site'; S.started = S.started || new Date().toISOString(); save(true);
+      mode = null;
+      ov.classList.remove('open'); ov.setAttribute('aria-hidden', 'true');
+      lock(false);
+      setTimeout(release, 60);     // Intro beginnt, während der Fragebogen ausblendet
+      introDone.then(() => setTimeout(showTip, 1400));
+      updateFab();
+    }
+    function toggleChip(b) {
+      const k = b.dataset.k, v = b.dataset.v, { q } = Q[k];
+      if (q.type === 'multi') {
+        const arr = Array.isArray(S.a[k]) ? S.a[k].slice() : [], i = arr.indexOf(v);
+        if (i < 0) arr.push(v); else arr.splice(i, 1);
+        S.a[k] = q.o.filter(o => arr.includes(o));
+        b.setAttribute('aria-pressed', String(i < 0));
+      } else {
+        const on = S.a[k] !== v; S.a[k] = on ? v : '';
+        $$('.pt-chip', b.parentElement).forEach(x => x.setAttribute('aria-pressed', String(on && x === b)));
+      }
+      save(); renderSide();
+    }
+    ov.addEventListener('click', e => {
+      const t = e.target.closest('button');
+      if (!t || !ov.contains(t) || t.disabled) return;
+      if (t.dataset.go != null) return go(+t.dataset.go);
+      if (t.dataset.dir) return go(S.step[mode] + +t.dataset.dir);
+      if (t.classList.contains('pt-chip')) return toggleChip(t);
+      if (t.dataset.num) {
+        const k = t.dataset.k, n = +t.dataset.num, on = S.a[k] !== n;
+        S.a[k] = on ? n : null;
+        $$('button', t.parentElement).forEach(x => x.setAttribute('aria-pressed', String(on && x === t)));
+        save(); renderSide(); return;
+      }
+      const act = t.dataset.act;
+      if (act === 'note') { t.hidden = true; const box = t.nextElementSibling; box.hidden = false; $('textarea', box).focus(); }
+      else if (act === 'start') startPresentation();
+      else if (act === 'close') closeOverlay();
+      else if (act === 'summary') openOverlay('summary');
+      else if (act === 'edit') openOverlay(t.dataset.flow, +t.dataset.i);
+      else if (act === 'editnote') { closeOverlay(); openPanel(t.dataset.ctx); }
+      else if (act === 'pdf' || act === 'txt' || act === 'copy') exportAs(act, t);
+      else if (act === 'reset') armReset(t);
+    });
+    ov.addEventListener('input', e => {
+      const t = e.target;
+      if (t.dataset.k) { S.a[t.dataset.k] = t.value; save(); renderSide(); }
+      else if (t.dataset.note) { if (t.value.trim()) S.n[t.dataset.note] = t.value; else delete S.n[t.dataset.note]; save(); }
+    });
+    // solange der Fragebogen offen ist, gehören alle Tasten ihm (auch wenn der Fokus kurz auf <body> fällt)
+    document.addEventListener('keydown', e => {
+      if (!mode) return;
+      e.stopPropagation();
+      if (e.key === 'Escape' && (mode !== 'intake' || editing)) { e.preventDefault(); closeOverlay(); }
+      else if (e.key === 'Enter' && (e.metaKey || e.ctrlKey) && mode !== 'summary') { e.preventDefault(); go(S.step[mode] + 1); }
+    }, true);
+
+    /* ---------- Zusammenfassung ---------- */
+    function model() {
+      const block = (flow, st, i) => ({ h: st.t, flow, i, rows: st.id === 'gespraech' ? [] : st.q.map(q => [q.l, fmt(st.id + '.' + q.id)]), note: String(S.n['step:' + st.id] || '').trim() });
+      const date = S.a['gespraech.datum'] || dayISO(new Date());
+      return {
+        partner: String(S.a['gespraech.partner'] || '').trim(), date,
+        meta: [fmtDate(date, true), fmt('gespraech.ort'), 'BesArt Hairsalon, Horgen'].filter(Boolean).join(' · '),
+        intake: FLOWS.intake.steps.map((st, i) => block('intake', st, i)).filter(b => b.rows.length || b.note),
+        notes: CTX.filter(c => String(S.n[c.k] || '').trim()).map(c => ({ k: c.k, h: c.g === 'Allgemein' ? c.l : c.g + ' · ' + c.l, text: S.n[c.k].trim() })),
+        closing: FLOWS.closing.steps.map((st, i) => block('closing', st, i)),
+      };
+    }
+    function renderSummary() {
+      const M = model();
+      const blocks = bs => bs.map(b => `<div class="pt-block"><h4>${esc(b.h)}<button type="button" data-act="edit" data-flow="${b.flow}" data-i="${b.i}">Bearbeiten</button></h4>${b.rows.length ? `<dl class="pt-dl">${b.rows.map(([l, v]) => `<dt>${esc(l)}</dt><dd${v ? '' : ' class="empty"'}>${v ? esc(v) : 'offen'}</dd>`).join('')}${b.note ? `<dt>Notiz</dt><dd>${esc(b.note)}</dd>` : ''}</dl>` : `<p class="pt-text">${esc(b.note)}</p>`}</div>`).join('');
+      const notes = M.notes.length ? M.notes.map(n => `<div class="pt-block"><h4>${esc(n.h)}<button type="button" data-act="editnote" data-ctx="${n.k}">Bearbeiten</button></h4><p class="pt-text">${esc(n.text)}</p></div>`).join('')
+        : '<p class="pt-empty">Noch keine Notizen zur Präsentation. Sie entstehen mit dem Knopf «Notizen» unten links, direkt auf jeder Seite.</p>';
+      main.innerHTML = `<article class="pt-doc${reduce ? '' : ' pt-step anim'}" aria-labelledby="ptH">
+        <p class="pt-eyebrow">Gesprächsnotizen · BesArt Hairsalon</p>
+        <h2 id="ptH" tabindex="-1">${M.partner ? 'Gespräch mit <em>' + esc(M.partner) + '</em>' : 'Gesprächs<em>notizen</em>'}</h2>
+        <p class="pt-meta">${esc(M.meta)}</p>
+        <div class="pt-export"><button type="button" class="btn btn-primary" data-act="pdf">PDF speichern${I.down}</button><button type="button" class="btn btn-ghost" data-act="txt">Textdatei</button><button type="button" class="btn btn-ghost" data-act="copy">Kopieren</button><p class="pt-msg" id="ptMsg" role="status">Automatisch in diesem Browser gespeichert.</p></div>
+        <section class="pt-part"><h3><b>1</b>Fragebogen</h3>${blocks(M.intake)}</section>
+        <section class="pt-part"><h3><b>2</b>Notizen zur Präsentation</h3>${notes}</section>
+        <section class="pt-part"><h3><b>3</b>Abschluss</h3>${blocks(M.closing)}</section>
+        <div class="pt-reset"><button type="button" data-act="reset">Neues Gespräch beginnen</button><span>Löscht alle Antworten und Notizen in diesem Browser – vorher sichern.</span></div>
+      </article>`;
+      main.scrollTop = 0;
+    }
+    function armReset(b) {
+      if (!b.classList.contains('arm')) {
+        b.classList.add('arm'); b.textContent = 'Wirklich alles löschen?';
+        clearTimeout(b._t); b._t = setTimeout(() => { b.classList.remove('arm'); b.textContent = 'Neues Gespräch beginnen'; }, 4500);
+        return;
+      }
+      dead = true; clearTimeout(saveT);
+      try { localStorage.removeItem(KEY); sessionStorage.removeItem('besart-intro'); } catch (e) {}
+      try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+      location.reload();
+    }
+
+    /* ---------- Export: Text, PDF, Zwischenablage ---------- */
+    function toText(M) {
+      const L = [], rule = '─'.repeat(52);
+      const ind = s => String(s).replace(/\n/g, '\n  ');
+      const sec = t => L.push('', rule, t.toUpperCase(), rule, '');
+      const blocks = bs => bs.forEach(b => {
+        L.push(b.h, '·'.repeat(Math.min(52, b.h.length)));
+        b.rows.forEach(([l, v]) => L.push('• ' + l, '  ' + (v ? ind(v) : '–')));
+        if (b.note) { if (b.rows.length) L.push('• Notiz', '  ' + ind(b.note)); else L.push(b.note); }
+        L.push('');
+      });
+      L.push('BESART HAIRSALON · GESPRÄCHSNOTIZEN', '', M.partner ? 'Gespräch mit ' + M.partner : 'Gespräch', M.meta);
+      sec('1 · Fragebogen'); blocks(M.intake);
+      sec('2 · Notizen zur Präsentation');
+      if (M.notes.length) M.notes.forEach(n => L.push(n.h, '·'.repeat(Math.min(52, n.h.length)), n.text, '')); else L.push('Keine Notizen.', '');
+      sec('3 · Abschluss'); blocks(M.closing);
+      L.push('', 'Gesichert am ' + new Date().toLocaleString('de-CH', { dateStyle: 'medium', timeStyle: 'short' }));
+      return '﻿' + L.join('\n');
+    }
+    // PDF ohne Bibliothek: A4, Standardschriften (Helvetica, Times) in WinAnsi, Zeilenumbruch mit echten Zeichenbreiten
+    const PDFW = { F1: '7q7q9vfgfgopij5b9999atg87q997q7qfgfgfgfgfgfgfgfgfgfg7q7qg8g8g8fgs7ijijk2k2ijgzlmk27qdwijfgn5k2lmijlmk2ijgzk2ijq8ijijgz7q7q7qd1fg99fgfgdwfgfg7qfgfg6666dw66n5fgfgfgfg99dw7qfgdwk2dwdwdw9a789ag89q7q7q66fg99rsfgfg99rsij99rs7qgz7q7q666699999qfgrs99rsdw99q87qdwij7q99fgfgfgfg78fg99khaafgg899kh99b4g8999999fgex7q9999a5fgn6n6n6gzijijijijijijrsk2ijijijij7q7q7q7qk2k2lmlmlmlmlmg8lmk2k2k2k2ijijgzfgfgfgfgfgfgopdwfgfgfgfg7q7q7q7qfgfgfgfgfgfgfgg8gzfgfgfgfgdwfgdw', F2: '7q99d6fgfgopk26m9999atg87q997q7qfgfgfgfgfgfgfgfgfgfg9999g8g8g8gzr3k2k2k2k2ijgzlmk27qfgk2gzn5k2lmijlmk2ijgzk2ijq8ijijgz997q99g8fg99fggzfggzfg99gzgz7q7qfg7qopgzgzgzgzatfg99gzfglmfgfgdwat7satg89q7q7q7qfgdwrsfgfg99rsij99rs7qgz7q7q7q7qdwdw9qfgrs99rsfg99q87qdwij7q99fgfgfgfg7sfg99khaafgg899kh99b4g8999999gzfg7q9999a5fgn6n6n6gzk2k2k2k2k2k2rsk2ijijijij7q7q7q7qk2k2lmlmlmlmlmg8lmk2k2k2k2ijijgzfgfgfgfgfgfgopfgfgfgfgfg7q7q7q7qgzgzgzgzgzgzgzg8gzgzgzgzgzfggzfg', F3: '6y99bcdwdwn5lm509999dwfo6y996y7qdwdwdwdwdwdwdwdwdwdw7q7qfofofoccplk2ijijk2gzfgk2k299atk2gzopk2k2fgk2ijfggzk2k2q8k2k2gz997q99d1dw99ccdwccdwcc99dwdw7q7qdw7qlmdwdwdwdw99at7qdwdwk2dwdwccdc5kdcf19q6y6y99dwccrsdwdw99rsfg99op6ygz6y6y9999cccc9qdwrs99r8at99k26ycck26y99dwdwdwdw5kdw99l47odwfo99l499b4fo8c8c99dwcl6y998c8mdwkukukucck2k2k2k2k2k2opijgzgzgzgz99999999k2k2k2k2k2k2k2fok2k2k2k2k2k2fgdwccccccccccccijcccccccccc7q7q7q7qdwdwdwdwdwdwdwfodwdwdwdwdwdwdwdw', F4: '6y99bodwdwn5lm5y9999dwir6y996y7qdwdwdwdwdwdwdwdwdwdw9999iririrdwpkgzgzijk2gzgzk2k299ccijfgn5ijk2gzk2gzdwfgk2gzn5gzfgfgat7qatbqdw99dwdwccdwcc7qdwdw7q7qcc7qk2dwdwdwdwatat7qdwccijccccatb47nb4f19q6y6y99dwfgopdwdw99rsdw99q86yfg6y6y9999fgfg9qdwop99r8at99ij6yatfg6yatdwdwdwdw7ndw99l47odwir99l499b4ir8c8c99dwej6y998c8mdwkukukudwgzgzgzgzgzgzopijgzgzgzgz99999999k2ijk2k2k2k2k2irk2k2k2k2k2fggzdwdwdwdwdwdwdwijcccccccccc7q7q7q7qdwdwdwdwdwdwdwirdwdwdwdwdwccdwcc' };
+    function toPDF(M) {
+      const W = {};
+      for (const f in PDFW) { const s = PDFW[f], a = []; for (let i = 0; i < s.length; i += 2) a.push(parseInt(s.substr(i, 2), 36)); W[f] = a; }
+      const CP = { 0x20AC: 128, 0x201A: 130, 0x0192: 131, 0x201E: 132, 0x2026: 133, 0x2020: 134, 0x2021: 135, 0x02C6: 136, 0x2030: 137, 0x0160: 138, 0x2039: 139, 0x0152: 140, 0x017D: 142,
+        0x2018: 145, 0x2019: 146, 0x201C: 147, 0x201D: 148, 0x2022: 149, 0x2013: 150, 0x2014: 151, 0x02DC: 152, 0x2122: 153, 0x0161: 154, 0x203A: 155, 0x0153: 156, 0x017E: 158, 0x0178: 159 };
+      const SUB = { '→': '->', '←': '<-', '−': '-', '‐': '-', '‑': '-', '­': '', '​': '', ' ': ' ', ' ': ' ', ' ': ' ', ' ': ' ', '✓': 'x', '✔': 'x', '\t': '  ' };
+      const enc = s => {
+        const out = [];
+        for (const ch of String(s).normalize('NFC')) {
+          if (SUB[ch] != null) { for (const c of SUB[ch]) out.push(c.charCodeAt(0)); continue; }
+          const c = ch.codePointAt(0);
+          if ((c >= 32 && c < 127) || (c >= 160 && c <= 255)) out.push(c);
+          else if (CP[c]) out.push(CP[c]);
+          else if (c > 0xFFFF || (c >= 0x2600 && c <= 0x27BF) || c === 0xFE0F || c === 0x200D) continue;   // Emoji weglassen
+          else if (c >= 32) out.push(63);
+        }
+        return out;
+      };
+      const wid = (codes, f, size) => codes.reduce((s, c) => s + W[f][c - 32], 0) * size / 1000;
+      const str = codes => '(' + codes.map(c => c === 40 || c === 41 || c === 92 ? '\\' + String.fromCharCode(c) : c < 32 || c > 126 ? '\\' + c.toString(8).padStart(3, '0') : String.fromCharCode(c)).join('') + ')';
+      function wrap(t, f, size, max) {
+        const lines = [];
+        String(t).split(/\r?\n/).forEach(par => {
+          let line = [];
+          par.split(/ +/).forEach(word => {
+            let w = enc(word);
+            if (!w.length) return;
+            const cand = line.length ? line.concat([32], w) : w;
+            if (wid(cand, f, size) <= max) { line = cand; return; }
+            if (line.length) { lines.push(line); line = []; }
+            while (wid(w, f, size) > max) { let n = w.length - 1; while (n > 1 && wid(w.slice(0, n), f, size) > max) n--; lines.push(w.slice(0, n)); w = w.slice(n); }
+            line = w;
+          });
+          lines.push(line);
+        });
+        return lines;
+      }
+      const PW = 595.28, PH = 841.89, ML = 58, MR = 58, MT = 66, MB = 72, CW = PW - ML - MR, LW = 176, VX = ML + LW + 16, VW = PW - MR - VX;
+      const INK = '0.106 0.094 0.086', MUTE = '0.46 0.43 0.39', SAND = '0.60 0.50 0.34', RULE = '0.84 0.81 0.76';
+      const pages = []; let ops, y;
+      const page = () => { ops = []; pages.push(ops); y = PH - MT; };
+      const txt = (codes, f, size, x, yy, col, tc) => { if (codes.length) ops.push(`BT /${f} ${size} Tf ${col} rg ${tc || 0} Tc ${x.toFixed(2)} ${yy.toFixed(2)} Td ${str(codes)} Tj ET`); };
+      const hr = (yy, col, w) => ops.push(`${col} RG ${w} w ${ML} ${yy.toFixed(2)} m ${(PW - MR).toFixed(2)} ${yy.toFixed(2)} l S`);
+      const room = h => { if (y - h < MB) page(); };
+      page();
+      txt(enc('BESART HAIRSALON  ·  GESPRÄCHSNOTIZEN'), 'F2', 7.5, ML, y, SAND, 1.2); y -= 38;
+      wrap(M.partner ? 'Gespräch mit ' + M.partner : 'Gesprächsnotizen', 'F3', 27, CW).forEach(l => { txt(l, 'F3', 27, ML, y, INK); y -= 30; });
+      y += 8;
+      wrap(M.meta, 'F1', 10, CW).forEach(l => { txt(l, 'F1', 10, ML, y, MUTE); y -= 14; });
+      y -= 12; hr(y, RULE, 0.6); y -= 8;
+      const section = (n, t) => {
+        room(96); y -= 26;
+        const nc = enc(n); txt(nc, 'F4', 17, ML, y, SAND); txt(enc(t), 'F3', 18, ML + wid(nc, 'F4', 17) + 9, y, INK);
+        y -= 11; hr(y, RULE, 0.6); y -= 20;
+      };
+      const head = t => { room(54); txt(enc(t.toUpperCase()), 'F2', 7.8, ML, y, SAND, 0.9); y -= 17; };
+      const row = (label, value) => {
+        const Ls = wrap(label, 'F1', 8.8, LW), Vs = wrap(value || '–', 'F1', 10, VW), n = Math.max(Ls.length, Vs.length);
+        room(Math.min(n, 3) * 13.6);
+        for (let i = 0; i < n; i++) {
+          room(13.6);
+          if (Ls[i]) txt(Ls[i], 'F1', 8.8, ML, y, MUTE);
+          if (Vs[i]) txt(Vs[i], 'F1', 10, VX, y, value ? INK : MUTE);
+          y -= 13.6;
+        }
+        y -= 4.5;
+      };
+      const para = t => { const ls = wrap(t, 'F1', 10, CW); room(Math.min(ls.length, 3) * 14.4); ls.forEach(l => { room(14.4); txt(l, 'F1', 10, ML, y, INK); y -= 14.4; }); y -= 4; };
+      const blocks = bs => bs.forEach(b => {
+        head(b.h);
+        b.rows.forEach(([l, v]) => row(l, v));
+        if (b.note) { if (b.rows.length) row('Notiz', b.note); else para(b.note); }
+        y -= 12;
+      });
+      section('1', 'Fragebogen'); blocks(M.intake);
+      section('2', 'Notizen zur Präsentation');
+      if (M.notes.length) M.notes.forEach(n => { head(n.h); para(n.text); y -= 12; }); else para('Keine Notizen.');
+      section('3', 'Abschluss'); blocks(M.closing);
+      const foot = enc('BesArt Hairsalon  ·  Gesprächsnotizen  ·  ' + fmtDate(M.date));
+      pages.forEach((p, i) => {
+        ops = p;
+        ops.push(`${RULE} RG 0.5 w ${ML} ${MB - 28} m ${(PW - MR).toFixed(2)} ${MB - 28} l S`);
+        txt(foot, 'F1', 7.5, ML, MB - 42, MUTE);
+        const pn = enc('Seite ' + (i + 1) + ' von ' + pages.length);
+        txt(pn, 'F1', 7.5, PW - MR - wid(pn, 'F1', 7.5), MB - 42, MUTE);
+      });
+      // Objekte: 1 Katalog, 2 Seitenbaum, 3–6 Schriften, 7 Info, danach je Seite Seite + Inhalt
+      const obj = [], kids = [], now = new Date();
+      obj[1] = '<< /Type /Catalog /Pages 2 0 R >>';
+      ['Helvetica', 'Helvetica-Bold', 'Times-Roman', 'Times-Italic'].forEach((f, i) => { obj[3 + i] = `<< /Type /Font /Subtype /Type1 /BaseFont /${f} /Encoding /WinAnsiEncoding >>`; });
+      const stamp = now.getFullYear() + pad(now.getMonth() + 1) + pad(now.getDate()) + pad(now.getHours()) + pad(now.getMinutes()) + pad(now.getSeconds());
+      const u16 = t => '<FEFF' + [...String(t)].map(ch => { const c = ch.codePointAt(0); return c > 0xFFFF ? '' : c.toString(16).padStart(4, '0'); }).join('').toUpperCase() + '>';
+      obj[7] = `<< /Title ${u16('BesArt Hairsalon – Gesprächsnotizen ' + fmtDate(M.date))} /Producer (BesArt Designvorschau) /CreationDate (D:${stamp}) >>`;
+      pages.forEach((p, i) => {
+        const pid = 8 + i * 2, s = p.join('\n');
+        kids.push(pid + ' 0 R');
+        obj[pid] = `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${PW} ${PH}] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents ${pid + 1} 0 R >>`;
+        obj[pid + 1] = `<< /Length ${s.length} >>\nstream\n${s}\nendstream`;
+      });
+      obj[2] = `<< /Type /Pages /Kids [${kids.join(' ')}] /Count ${pages.length} >>`;
+      let out = '%PDF-1.4\n%âãÏÓ\n'; const off = [];
+      for (let i = 1; i < obj.length; i++) { off[i] = out.length; out += i + ' 0 obj\n' + obj[i] + '\nendobj\n'; }
+      const xref = out.length;
+      out += 'xref\n0 ' + obj.length + '\n0000000000 65535 f \n' + off.slice(1).map(o => String(o).padStart(10, '0') + ' 00000 n \n').join('');
+      out += 'trailer\n<< /Size ' + obj.length + ' /Root 1 0 R /Info 7 0 R >>\nstartxref\n' + xref + '\n%%EOF\n';
+      const bytes = new Uint8Array(out.length);
+      for (let i = 0; i < out.length; i++) bytes[i] = out.charCodeAt(i) & 255;
+      return bytes;
+    }
+    async function saveFile(name, data, type) {
+      try {
+        if (window.claude && typeof window.claude.use === 'function') {
+          const dl = await window.claude.use('downloads');
+          if (dl) { await dl.save({ filename: name, data }); return 'ok'; }
+        }
+      } catch (e) { return e && e.code === 'declined' ? 'declined' : e && e.code === 'rate_limited' ? 'busy' : 'fail'; }
+      try {
+        const url = URL.createObjectURL(new Blob([data], { type })), a = document.createElement('a');
+        a.href = url; a.download = name; a.rel = 'noopener'; a.style.display = 'none';
+        ov.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+        return 'ok';
+      } catch (e) { return 'fail'; }
+    }
+    async function copyText(t) {
+      try { await navigator.clipboard.writeText(t); return true; } catch (e) {}
+      const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+      ov.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (e) {} ta.remove(); return ok;
+    }
+    let exporting = false;
+    async function exportAs(kind, btn) {
+      const msg = $('#ptMsg'), M = model(), base = 'BesArt-Gespraech-' + M.date;
+      const say = t => { if (msg) msg.textContent = t; };
+      if (exporting) return; exporting = true; btn.setAttribute('aria-busy', 'true');
+      try {
+        if (kind === 'copy') say(await copyText(toText(M).replace(/^﻿/, '')) ? 'In die Zwischenablage kopiert.' : 'Kopieren nicht möglich – bitte «Textdatei» verwenden.');
+        else {
+          const r = kind === 'pdf' ? await saveFile(base + '.pdf', toPDF(M), 'application/pdf') : await saveFile(base + '.txt', toText(M), 'text/plain;charset=utf-8');
+          say(r === 'ok' ? (kind === 'pdf' ? 'PDF' : 'Textdatei') + ' gespeichert: ' + base + (kind === 'pdf' ? '.pdf' : '.txt')
+            : r === 'declined' ? 'Speichern abgebrochen.' : r === 'busy' ? 'Einen Moment – ein Speichern-Dialog ist noch offen.' : 'Speichern hier nicht möglich – bitte «Kopieren» verwenden.');
+        }
+      } catch (e) { say('Das hat nicht geklappt – bitte «Kopieren» verwenden.'); }
+      exporting = false; btn.removeAttribute('aria-busy');
+    }
+
+    /* ---------- Notizen während der Präsentation ---------- */
+    const pv = $('#print'), ctxSel = $('#ptCtx'), noteTA = $('#ptNote'), nlist = $('#ptNList'), nlistH = $('#ptNListH'), follow = $('#ptFollow');
+    const WEB = [['intro', 'Intro mit der Schere'], ['hero', 'Start & Online-Termin'], ['leistungen', 'Leistungen & Preise'], ['ueber', 'Über den Salon'], ['looks', 'Looks'], ['bewertungen', 'Bewertungen'], ['besuch', 'Besuch & Anfahrt'], ['footer', 'Fusszeile']];
+    const CTX = [
+      ...WEB.map(([id, l]) => ({ k: 'web:' + id, g: 'Website', l })),
+      { k: 'pv:intro', g: 'Print-Paket', l: 'Übersicht' },
+      ...(pv ? $$('.pv-slide', pv) : []).map(s => ({ k: 'pv:' + s.id, g: 'Print-Paket', l: s.dataset.label })),
+      { k: 'allg', g: 'Allgemein', l: 'Allgemeine Notizen' },
+    ];
+    const ctxBy = k => CTX.find(c => c.k === k) || CTX[CTX.length - 1];
+    ctxSel.innerHTML = ['Website', 'Print-Paket', 'Allgemein'].map(g => `<optgroup label="${g}">${CTX.filter(c => c.g === g).map(c => `<option value="${c.k}">${esc(c.l)}</option>`).join('')}</optgroup>`).join('');
+    let cur = null, pinned = false, typedAt = 0, followRaf = 0;
+    function here() {
+      const mid = innerHeight * 0.45;
+      if (pv && pv.classList.contains('open')) {
+        let k = 'pv:intro';
+        [$('.pv-intro', pv), ...$$('.pv-slide', pv)].forEach(el => { if (el && el.getBoundingClientRect().top <= mid) k = el.classList.contains('pv-intro') ? 'pv:intro' : 'pv:' + el.id; });
+        return k;
+      }
+      let k = 'web:hero';
+      WEB.slice(2).forEach(([id]) => { const el = id === 'footer' ? $('.site-footer') : document.getElementById(id); if (el && el.getBoundingClientRect().top <= mid) k = 'web:' + id; });
+      return k;
+    }
+    function nsaved() { follow.dataset.saved = '1'; setFollow(); }
+    function setFollow() {
+      const c = ctxBy(cur);
+      follow.innerHTML = pinned
+        ? `<span>Fest gewählt</span><button type="button" data-nact="follow">Der Seite folgen</button>`
+        : `<span>Folgt der aktuellen Seite</span>${follow.dataset.saved ? '<span>Gespeichert</span>' : ''}`;
+      noteTA.placeholder = 'Notiz zu «' + c.l + '» …';
+    }
+    function showCtx(k) {
+      if (k === cur) return;
+      cur = k; ctxSel.value = k; noteTA.value = S.n[k] || ''; follow.dataset.saved = '';
+      setFollow();
+      if (!reduce && ctxSel.animate) ctxSel.animate([{ boxShadow: 'inset 0 0 0 1px #C7B593' }, { boxShadow: 'inset 0 0 0 1px rgba(237,230,218,.22)' }], { duration: 900, easing: 'ease-out' });
+    }
+    function renderList() {
+      const items = CTX.filter(c => String(S.n[c.k] || '').trim());
+      nlistH.textContent = items.length ? 'Alle Notizen (' + items.length + ')' : 'Alle Notizen';
+      nlist.innerHTML = items.length
+        ? items.map(c => `<li><button type="button" data-ctx="${c.k}"><b>${esc(c.l)}</b><small>${c.g === 'Allgemein' ? '' : esc(c.g) + ' · '}${esc(S.n[c.k].trim().slice(0, 180))}</small></button></li>`).join('')
+        : `<li class="none">Noch keine Notizen. Jede Seite hat ihr eigenes Notizfeld – einfach lostippen.</li>`;
+    }
+    function updateFab() {
+      const n = CTX.filter(c => String(S.n[c.k] || '').trim()).length;
+      $('#ptFabN').textContent = n ? String(n) : '';
+      fab.setAttribute('aria-label', 'Notizen' + (n ? ' (' + n + ')' : ''));
+    }
+    function openPanel(k) {
+      tip.classList.remove('on');
+      pinned = !!k; cur = null;
+      showCtx(k || here()); renderList();
+      panel.classList.add('open'); fab.setAttribute('aria-expanded', 'true');
+      if (!touch || k) setTimeout(() => noteTA.focus({ preventScroll: true }), 80);
+    }
+    function closePanel(quiet) {
+      panel.classList.remove('open'); fab.setAttribute('aria-expanded', 'false');
+      if (!quiet && panel.contains(document.activeElement)) fab.focus({ preventScroll: true });
+    }
+    const togglePanel = () => panel.classList.contains('open') ? closePanel() : openPanel();
+    fab.addEventListener('click', () => { tip.classList.remove('on'); togglePanel(); });
+    ctxSel.addEventListener('change', () => { pinned = true; const k = ctxSel.value; cur = null; showCtx(k); noteTA.focus({ preventScroll: true }); });
+    noteTA.addEventListener('input', () => {
+      typedAt = Date.now();
+      if (noteTA.value.trim()) S.n[cur] = noteTA.value; else delete S.n[cur];
+      save(); renderList(); updateFab();
+    });
+    panel.addEventListener('click', e => {
+      const t = e.target.closest('button'); if (!t) return;
+      if (t.dataset.ctx) { pinned = true; cur = null; showCtx(t.dataset.ctx); noteTA.focus({ preventScroll: true }); return; }
+      const a = t.dataset.nact;
+      if (a === 'close') closePanel();
+      else if (a === 'follow') { pinned = false; cur = null; showCtx(here()); }
+      else if (a === 'intake' || a === 'closing' || a === 'summary') openOverlay(a);
+    });
+    panel.addEventListener('keydown', e => {
+      e.stopPropagation();
+      if (e.key === 'Escape') { e.preventDefault(); closePanel(); }
+    });
+    // Notizfeld folgt der Seite (nicht mitten im Tippen)
+    document.addEventListener('scroll', () => {
+      if (!panel.classList.contains('open') || pinned || followRaf) return;
+      followRaf = requestAnimationFrame(() => {
+        followRaf = 0;
+        if (Date.now() - typedAt < 1500) return;
+        showCtx(here());
+      });
+    }, true);
+    document.addEventListener('keydown', e => {
+      if ((e.key !== 'n' && e.key !== 'N') || e.metaKey || e.ctrlKey || e.altKey || mode) return;
+      if (html.classList.contains('intro-on') || html.classList.contains('pitch-hold')) return;
+      if (e.target.closest && e.target.closest('input,textarea,select,[contenteditable="true"]')) return;
+      const lb = $('#lightbox'); if (lb && lb.classList.contains('open')) return;
+      e.preventDefault(); togglePanel();
+    });
+    function showTip() {
+      if (S.tip || mode) return;
+      S.tip = true; save(true);
+      tip.innerHTML = 'Notizen zu jeder Seite: hier unten' + (touch ? '.' : ' – oder Taste <kbd>N</kbd>.');
+      tip.classList.add('on'); setTimeout(() => tip.classList.remove('on'), 6500);
+    }
+
+    /* ---------- Start ---------- */
+    fab.hidden = false; panel.hidden = false;
+    const closingBtn = $('[data-pitch-closing]');
+    if (closingBtn) { closingBtn.hidden = false; closingBtn.addEventListener('click', () => openOverlay('closing')); }
+    updateFab();
+    if (html.classList.contains('pitch-hold')) { S.stage = 'intake'; openOverlay('intake'); }
+    else ov.setAttribute('aria-hidden', 'true');
+  } catch (err) {
+    // Sicherheitsnetz: bei einem Fehler nie auf dem leeren Fragebogen hängen bleiben
+    ov.classList.remove('open'); html.classList.remove('pt-lock');
+    if (!(pv0 && pv0.classList.contains('open'))) $$('body > [inert]').forEach(el => { el.inert = false; });
+    release();
   }
   })();
 
