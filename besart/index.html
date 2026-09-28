@@ -434,13 +434,14 @@ section{position:relative}
   .foot-logo .wr{transform:none}
 }
 
-/* ---------- Intro ---------- */
+/* ---------- Intro: Schere schneidet durch BESART ---------- */
 .intro{display:none}
-.intro-on .intro{display:block;position:fixed;inset:0;z-index:200}
-.intro-stage{position:absolute;inset:0;background:#0E0D0C;overflow:hidden}
-.intro video{position:absolute;left:50%;top:50%;width:min(100vw,177.78vh);height:auto;aspect-ratio:16/9;transform:translate(-50%,-50%);background:var(--bg);-webkit-mask-image:radial-gradient(50% 50% at 50% 50%,#000 72%,transparent);mask-image:radial-gradient(50% 50% at 50% 50%,#000 72%,transparent);animation:introIn .7s .1s ease both}
-@keyframes introIn{from{opacity:0}}
-@media (max-aspect-ratio:1/1){.intro video{width:min(138vw,177.78vh)}}
+.intro-on .intro{display:block;position:fixed;inset:0;z-index:200;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.intro-stage{position:absolute;inset:0;background:var(--bg)}
+.intro-svg{position:absolute;inset:0;width:100%;height:100%;fill:var(--ivory);overflow:visible}
+.intro.is-user{cursor:none}
+.intro-hint{position:absolute;left:var(--gutter);right:var(--gutter);margin:0;text-align:center;font:400 11px/1.5 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ivory-3);opacity:0;transform:translateY(8px);transition:opacity .7s var(--ease),transform .7s var(--ease);pointer-events:none}
+.intro-hint.show{opacity:1;transform:none}
 .intro-skip{position:absolute;right:max(var(--gutter),env(safe-area-inset-right,0px));bottom:calc(28px + env(safe-area-inset-bottom,0px));height:40px;padding:0 4px;border:0;background:none;color:var(--ivory-3);font:400 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer;opacity:0;animation:skipIn .6s 1s var(--ease) forwards;transition:color .3s}
 .intro-skip:hover,.intro-skip:focus-visible{color:var(--ivory)}
 @keyframes skipIn{to{opacity:1}}
@@ -460,12 +461,18 @@ section{position:relative}
 })();
 </script>
 <div class="intro" id="intro" aria-hidden="true">
-  <div class="intro-stage">
-    <video muted playsinline preload="auto" poster="img/intro-poster.webp" disablepictureinpicture>
-      <source src="img/intro.mp4" type="video/mp4">
-      <source src="img/intro.webm" type="video/webm">
-    </video>
-  </div>
+  <div class="intro-stage"></div>
+  <svg class="intro-svg" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <path id="iArest" fill-rule="evenodd" d="M425.73,160.11C425.33,159.77 425.26,159.56 425.2,158.64C425.12,157.34 425.45,156.39 426.03,156.26C426.24,156.21 427.32,156.02 428.42,155.83C432.05,155.21 434.55,154.27 437.06,152.6C441.4,149.71 444.47,145.27 448.13,136.58C450.13,131.83 451.37,128.92 452.42,126.5C453.9,123.08 455.75,118.69 460.13,108.17C460.95,106.2 461.96,103.8 462.38,102.83C462.79,101.87 463.77,99.51 464.55,97.58C466.43,92.96 468.63,87.59 469.38,85.83C469.71,85.05 470.82,82.39 471.85,79.92C474.36,73.87 475.99,69.98 477.82,65.58C479.5,61.57 480.32,59.59 481.92,55.67C485.16,47.7 489.72,36.87 491.24,33.5C491.9,32.05 492.94,29.61 494.41,26.08C494.99,24.71 496.37,21.41 497.5,18.75C498.62,16.09 500.08,12.6 500.75,11C501.42,9.4 502.11,7.73 502.3,7.3C502.61,6.6 503.05,6.17 503.47,6.17C503.55,6.17 505.4,13.28 507.58,21.98L511.53,37.8L511.2,38.28C511.01,38.54 510.32,40.18 509.66,41.92C508.29,45.49 506.54,49.9 503.28,57.92C499.16,68.08 493.8,81.4 492.92,83.67C492.44,84.9 491.54,87.11 490.92,88.58C489.6,91.73 489.49,92.16 489.97,92.64L490.32,92.99L509.81,92.99C528.78,92.99 529.31,92.98 529.7,92.67L530.11,92.35L531.99,97.05C533.02,99.64 533.9,101.83 533.94,101.92C533.98,102.03 527.51,102.08 514.71,102.06C504.1,102.05 493.13,102.09 490.34,102.14L485.26,102.25L484.2,104.75C483.62,106.12 482.93,107.77 482.67,108.42C482.41,109.06 481.47,111.35 480.58,113.5C479.69,115.65 478.45,118.65 477.83,120.17C477.21,121.68 476.09,124.38 475.34,126.17C473.18,131.33 471.53,135.58 471.08,137.14C469.69,142.01 469.23,145.53 469.72,147.45C470.31,149.72 471.57,151.38 473.8,152.8C475.9,154.15 477.8,154.72 481.67,155.18C482.54,155.28 483.38,155.44 483.54,155.52C483.7,155.61 484.02,156.05 484.25,156.5C484.8,157.59 484.79,158.51 484.2,159.58L483.75,160.42L454.97,160.46L426.19,160.5L425.73,160.11Z"/>
+      <path id="iH1" fill-rule="evenodd" d="M582.15,189.51L580.38,185.53L580.98,185.14C582.61,184.09 583.71,179.37 583.32,175.11C582.69,168.29 580.24,162.2 575.53,155.75C573.93,153.56 573.73,153.35 568.43,148.25C566.14,146.05 563.56,143.54 562.68,142.67C558.9,138.92 556.99,137.17 556.68,137.17C556.5,137.17 556.25,137.31 556.12,137.49C555.98,137.69 553.99,138.59 550.97,139.81L546.04,141.79L545.84,140.85C545.46,139.11 543.82,132.93 543.23,131C542.9,129.95 541.44,125.37 539.97,120.83C537.56,113.33 536.46,109.92 534.54,103.83C534.17,102.69 533.03,99.65 532,97.08C530.69,93.84 530.13,92.24 530.15,91.84C530.17,91.46 527.47,83.09 522.15,67.09C512.15,36.98 512.51,38 511.87,38C511.63,38 510.97,35.54 507.62,22.14C505.44,13.42 503.69,6.25 503.74,6.2C503.96,5.99 504.44,6.76 505.69,9.31C506.44,10.84 508.01,14.05 509.19,16.45C511.34,20.83 514.06,26.48 517.61,33.92C521.17,41.36 522.9,44.9 525.52,50.17C526.96,53.05 528.6,56.35 529.17,57.5C530.39,59.95 532.75,64.92 534.91,69.58C536.6,73.23 538.06,76.36 539.92,80.33C540.59,81.75 542.61,85.92 544.42,89.58C546.22,93.25 547.84,96.56 548,96.93C548.16,97.31 549.01,99.11 549.88,100.93C550.74,102.76 551.98,105.38 552.63,106.75C553.27,108.12 554.16,110 554.59,110.92C555.02,111.83 555.88,113.67 556.5,115C557.12,116.33 557.94,118.09 558.33,118.92C559.89,122.23 559.89,122.21 559.25,124.21C558.8,125.62 558.72,126.65 559.03,126.97C559.34,127.27 559.82,127.21 560.83,126.74C561.34,126.5 562.04,126.29 562.4,126.28L563.05,126.25L564.9,128.93C565.92,130.41 567.29,132.29 567.94,133.1C568.59,133.92 569.55,135.11 570.07,135.75C572.86,139.21 578.69,145.26 582.5,148.63C585.88,151.63 586.47,151.96 589.4,152.52L591.38,152.9L594.57,152.49C599.07,151.91 604.18,151.91 606.5,152.48C611.54,153.73 615.29,156.07 618.85,160.17C620.17,161.69 621.05,163.05 621.91,164.86C622.87,166.88 623.39,168.74 623.76,171.39C624.23,174.75 623.86,177.35 622.4,181.07C620.56,185.72 617.41,189.13 612.86,191.41C609.97,192.85 607.27,193.43 604.04,193.29C601.31,193.17 599.8,192.84 597.32,191.84C594.27,190.59 593.64,190.43 591.75,190.43C590.45,190.43 589.72,190.53 588.46,190.88C586.43,191.44 585.62,191.84 584.67,192.76L583.92,193.49L582.15,189.51ZM606.61,182.82C608.1,182.36 608.86,181.96 610.08,181.04C611.98,179.6 613.5,177.38 614.09,175.17C614.4,173.99 614.4,171.58 614.08,170.08C613.76,168.53 612.56,166.14 611.51,164.97C609.99,163.28 607.86,162.08 605.46,161.58C600.08,160.44 594.56,164.15 593.23,169.8C592.83,171.5 592.99,174.56 593.55,176.04C594.15,177.59 594.73,178.54 595.81,179.7C598.68,182.8 602.79,183.99 606.61,182.82ZM543.36,103.98C545.14,103.08 545.46,100.7 543.98,99.3C541.62,97.05 537.85,99.92 539.34,102.84C539.7,103.55 540.16,103.92 541.13,104.26C541.83,104.52 542.46,104.44 543.36,103.98Z"/>
+      <path id="iH2" fill-rule="evenodd" d="M564.59,248.91C563.24,248.4 562.59,247.35 562.71,245.86C562.79,244.88 563.95,242.41 566.14,238.58C570.55,230.85 571.67,228.24 571.67,225.63C571.67,223.59 570.7,221.45 569.52,220.84C569.16,220.66 568.05,220.36 567.06,220.18C562.96,219.43 560.54,218.97 559.51,218.73C551.52,216.92 545.66,211.98 543.44,205.16C542.7,202.89 542.48,201.51 542.45,198.9C542.43,196.61 542.63,195.06 543.25,192.92C544.83,187.4 547.73,183.29 552.26,180.15C553.85,179.05 554.29,178.38 554.91,176.16C556.05,172.08 555.87,167.82 554.38,163.83C553.56,161.63 553.27,161.19 550.82,158.39C547.8,154.93 547.59,154.49 547.17,150.5C546.99,148.8 546.76,146.67 546.66,145.75C546.4,143.41 545.8,140.49 544.74,136.42C543.66,132.31 543.46,131.66 539.97,120.83C537.56,113.33 536.46,109.92 534.54,103.83C534.17,102.69 533.03,99.65 532,97.08C530.69,93.84 530.13,92.24 530.15,91.84C530.17,91.46 527.47,83.09 522.15,67.09C512.15,36.98 512.51,38 511.87,38C511.63,38 510.97,35.54 507.62,22.14C505.44,13.42 503.69,6.25 503.74,6.2C503.96,5.99 504.44,6.76 505.69,9.31C506.44,10.84 508.01,14.05 509.19,16.45C511.34,20.83 514.06,26.48 517.61,33.92C521.17,41.36 522.9,44.9 525.52,50.17C526.96,53.05 528.6,56.35 529.17,57.5C530.39,59.95 532.75,64.92 534.91,69.58C536.6,73.23 538.06,76.36 539.92,80.33C540.59,81.75 542.61,85.92 544.42,89.58C546.22,93.25 547.84,96.56 548,96.93C548.16,97.31 549.01,99.11 549.88,100.93C550.74,102.76 551.98,105.38 552.63,106.75C553.27,108.12 554.16,110 554.59,110.92C555.02,111.83 555.88,113.67 556.5,115C557.12,116.33 557.94,118.09 558.33,118.92C559.89,122.23 559.89,122.21 559.25,124.21C558.8,125.62 558.72,126.65 559.03,126.97C559.34,127.27 559.82,127.21 560.83,126.74C561.34,126.5 562.04,126.29 562.4,126.28L563.05,126.25L564.9,128.93C565.92,130.41 567,131.93 567.3,132.31L567.86,133L567.47,133.15C567.26,133.23 564.91,134.18 562.25,135.26C559.48,136.39 557.17,137.23 556.84,137.24C556.14,137.25 555.96,137.55 555.59,139.32C555.02,142 555.42,145.49 557,151.58C558.22,156.31 558.52,157.04 561.33,162.15C563.36,165.83 563.78,166.47 566.39,169.74C567.51,171.13 569.03,173.05 569.79,174.01C570.54,174.97 571.36,175.98 571.62,176.25C571.87,176.53 572.53,177.28 573.08,177.92C573.63,178.56 574.12,179.12 574.16,179.17C574.21,179.21 574.7,179.78 575.25,180.42C575.8,181.06 576.29,181.62 576.34,181.67C576.39,181.71 577.1,182.53 577.92,183.48C578.74,184.44 579.64,185.31 579.91,185.42C580.36,185.61 580.61,186.06 582.19,189.6C583.92,193.48 583.95,193.58 583.72,194.12C583.54,194.56 583.48,196.66 583.42,204.68C583.36,212.25 583.28,215.23 583.08,216.89C582.94,218.1 582.75,219.83 582.66,220.75C582.57,221.67 582.42,223.01 582.32,223.73C582.23,224.45 582.08,225.95 582.01,227.06C581.9,228.78 581.78,229.33 581.26,230.75C579.39,235.81 574.82,243.15 571.42,246.58C569.65,248.36 568.3,249.06 566.5,249.12C565.7,249.14 565.01,249.07 564.59,248.91ZM565.21,208.91C568.86,207.96 571.7,205.31 572.96,201.68C573.34,200.59 573.4,200.14 573.4,198.42C573.4,196.1 573.17,195.13 572.12,193.08C570.37,189.69 566.49,187.32 562.7,187.34C560.21,187.34 557.47,188.46 555.51,190.27C553.75,191.9 552.79,193.65 552.23,196.21C551.81,198.18 551.89,199.87 552.5,201.69C553.09,203.47 553.5,204.23 554.57,205.54C555.79,207.04 557.72,208.28 559.73,208.85C561.06,209.23 563.84,209.26 565.21,208.91ZM543.36,103.98C545.14,103.08 545.46,100.7 543.98,99.3C541.62,97.05 537.85,99.92 539.34,102.84C539.7,103.55 540.16,103.92 541.13,104.26C541.83,104.52 542.46,104.44 543.36,103.98Z"/>
+      <linearGradient id="iGl" gradientUnits="userSpaceOnUse" x1="-260" y1="0" x2="0" y2="140">
+        <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <p class="intro-hint"></p>
   <button class="intro-skip" type="button" tabindex="-1">Intro überspringen</button>
 </div>
 <script>
@@ -473,41 +480,302 @@ section{position:relative}
   var root = document.documentElement, intro = document.getElementById('intro'), done;
   window.__introDone = new Promise(function (r) { done = r; });
   if (!root.classList.contains('intro-on')) { intro.remove(); done(); return; }
-  var v = intro.querySelector('video'), stage = intro.querySelector('.intro-stage'), skip = intro.querySelector('.intro-skip');
-  // Lage des Logos im Videobild (1920 x 1080)
-  var FW = 1920, LX = 340, LY = 259.3, LW = 1240;
-  var finished = false, guard;
-  function finish() {
-    if (finished) return; finished = true; clearTimeout(guard);
-    try { v.pause(); } catch (e) {}
-    var vr = v.getBoundingClientRect(), k = vr.width / FW;
-    var fx = vr.left + LX * k, fy = vr.top + LY * k, fw = LW * k;
-    var target = document.querySelector('.logo svg').getBoundingClientRect();
-    var fly = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    fly.setAttribute('viewBox', '0 0 909.3 353'); fly.setAttribute('class', 'intro-fly');
-    fly.innerHTML = '<use href="#lp0"/><use href="#lp1"/><use href="#lp2"/><use href="#lp3"/><use href="#lp4"/><use href="#lp5"/><use href="#lp6"/>';
-    fly.style.left = fx + 'px'; fly.style.top = fy + 'px'; fly.style.width = fw + 'px';
-    intro.appendChild(fly);
-    var D = 1100, W = 320, ease = 'cubic-bezier(.7,0,.2,1)';
-    if (!fly.animate) { root.classList.remove('intro-on'); root.classList.add('intro-played'); intro.remove(); done(); return; }
-    fly.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 180, fill: 'forwards' });
-    v.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 140, delay: 140, fill: 'forwards' });
-    skip.animate([{ opacity: getComputedStyle(skip).opacity }, { opacity: 0 }], { duration: 200, fill: 'forwards' });
-    fly.animate([{ transform: 'none' }, { transform: 'translate(' + (target.left - fx) + 'px,' + (target.top - fy) + 'px) scale(' + (target.width / fw) + ')' }],
-      { duration: D, delay: W, easing: ease, fill: 'forwards' });
-    stage.animate([{ opacity: 1 }, { opacity: 0 }], { duration: D * .75, delay: W + D * .2, easing: 'ease-in-out', fill: 'forwards' });
-    setTimeout(done, W + D * .3);
-    setTimeout(function () { root.classList.remove('intro-on'); root.classList.add('intro-played'); intro.remove(); }, W + D + 40);
+  var over = false, skipNow;
+  function bail() { if (over) return; over = true; root.classList.remove('intro-on'); root.classList.add('intro-played'); intro.remove(); done(); }
+  skipNow = bail;
+  var hardStop = setTimeout(function () { try { skipNow(); } catch (e) { bail(); } }, 15000);
+  function boot() { try { run(); } catch (e) { bail(); } }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+
+  function run() {
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = intro.querySelector('.intro-svg'), defs = svg.querySelector('defs'), stage = intro.querySelector('.intro-stage');
+    var skip = intro.querySelector('.intro-skip'), hint = intro.querySelector('.intro-hint');
+    // Logo-Masse (Einheiten der viewBox 909.3 x 353) und Lage der Schere im fertigen Logo
+    var VW = 909.3, VH = 353, PIV = [541.876, 101.353], ANG = -111.975, CUT = 58;
+    var BB = { lp0: [65.5, 5.3, 202.2, 198], lp1: [204.7, 7, 329.7, 171.3], lp2: [330.8, 3.3, 432.8, 178.3],
+               iArest: [425.2, 6.2, 533.8, 160.3], lp4: [614.8, 2.3, 778.2, 166], lp5: [746, 2, 904.7, 195.7] };
+    var ORDER = ['lp0', 'lp1', 'lp2', 'iArest', 'lp4', 'lp5'];
+    var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+    function mk(n, a, p) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+    var hit = document.createElement('canvas').getContext('2d');
+
+    /* ---------- Szene aufbauen ---------- */
+    var world = mk('g', {}, svg);
+    var wr = mk('rect', { x: -4, y: 196, width: 0, height: 160 }, mk('clipPath', { id: 'iWr' }, defs));
+    mk('use', { href: '#lp6', 'clip-path': 'url(#iWr)' }, world);
+    var letters = ORDER.map(function (id, i) {
+      var src = document.getElementById(id);
+      var g = mk('g', { opacity: 0 }, world);
+      var whole = mk('use', { href: '#' + id }, g);
+      var cA = mk('path', {}, mk('clipPath', { id: 'iA' + i }, defs));
+      var cB = mk('path', {}, mk('clipPath', { id: 'iB' + i }, defs));
+      var hA = mk('g', { display: 'none' }, g), hB = mk('g', { display: 'none' }, g);
+      mk('use', { href: '#' + id, 'clip-path': 'url(#iA' + i + ')' }, hA);
+      mk('use', { href: '#' + id, 'clip-path': 'url(#iB' + i + ')' }, hB);
+      return { g: g, whole: whole, hA: hA, hB: hB, cA: cA, cB: cB, bb: BB[id], p2d: new Path2D(src.getAttribute('d')),
+               rule: src.getAttribute('fill-rule') === 'evenodd' ? 'evenodd' : 'nonzero', entry: null, entryT: 0, split: null, cuts: 0, lastCut: -1e4 };
+    });
+    var clipsG = mk('g', { fill: 'none', stroke: '#EDE6DA', 'stroke-linecap': 'round' }, world);
+    var sc = mk('g', {}, world);
+    // dunkler Rand hinter der Schere, damit sie sich beim Schneiden von den Buchstaben abhebt
+    var halo = mk('g', { fill: 'none', stroke: '#0F0E0D', 'stroke-linejoin': 'round' }, sc);
+    var hs2 = mk('g', {}, halo), hs1 = mk('g', {}, halo);
+    var s2 = mk('g', {}, sc), s1 = mk('g', {}, sc);
+    var local = 'rotate(' + (-ANG) + ') translate(' + (-PIV[0]) + ' ' + (-PIV[1]) + ')';
+    [[hs2, '#iH2'], [hs1, '#iH1'], [s2, '#iH2'], [s1, '#iH1']].forEach(function (a) { mk('use', { href: a[1], transform: local }, a[0]); });
+    var gl = mk('g', { fill: 'url(#iGl)', opacity: 0 }, world);
+    ['lp0', 'lp1', 'lp2', 'lp3', 'lp4', 'lp5', 'lp6'].forEach(function (id) { mk('use', { href: '#' + id }, gl); });
+    var glGrad = document.getElementById('iGl');
+    hint.textContent = fine ? 'Maus bewegen und selbst schneiden' : 'Über das Logo wischen und selbst schneiden';
+
+    /* ---------- Layout: Logo-Einheiten auf den Bildschirm ---------- */
+    var lw, s, lx, ly, U;
+    function layout() {
+      var vw = innerWidth, vh = innerHeight, portrait = vh > vw * 1.05;
+      lw = Math.min(vw * (portrait ? 0.84 : 0.6), 1100, vh * 1.45);
+      s = lw / VW; lx = (vw - lw) / 2; ly = vh * 0.5 - VH * s * 0.5;
+      U = Math.max(1, 0.85 / s);                                    // Effekte auf kleinen Screens sichtbar halten
+      svg.setAttribute('viewBox', (-lx / s) + ' ' + (-ly / s) + ' ' + (vw / s) + ' ' + (vh / s));
+      clipsG.setAttribute('stroke-width', (1.3 * U).toFixed(2));
+      halo.setAttribute('stroke-width', (5.5 * U).toFixed(2));
+      hint.style.top = Math.round(ly + VH * s + Math.max(30, 64 * s)) + 'px';
+    }
+    layout(); addEventListener('resize', layout);
+    function toLogo(x, y) { return [(x - lx) / s, (y - ly) / s]; }
+
+    /* ---------- Schere ---------- */
+    var pose = { x: -560, y: 96, h: 0, th: 14 }, snip = 0;
+    function render() {
+      sc.setAttribute('transform', 'translate(' + pose.x.toFixed(2) + ' ' + pose.y.toFixed(2) + ') rotate(' + pose.h.toFixed(2) + ')');
+      var r1 = 'rotate(' + (-pose.th).toFixed(2) + ')', r2 = 'rotate(' + pose.th.toFixed(2) + ')';
+      s1.setAttribute('transform', r1); hs1.setAttribute('transform', r1);
+      s2.setAttribute('transform', r2); hs2.setAttribute('transform', r2);
+    }
+    function cutPoint() { var r = pose.h * Math.PI / 180; return [pose.x + Math.cos(r) * CUT, pose.y + Math.sin(r) * CUT]; }
+    function angTo(a, b, k) { var d = ((b - a + 540) % 360) - 180; return a + d * k; }
+    function snipAngle(dt, hz, lo, hi) { snip += 2 * Math.PI * hz * dt; return lo + (hi - lo) * (0.5 - 0.5 * Math.cos(snip)); }
+
+    /* ---------- Schneiden ---------- */
+    function lerp2(p, q, t) { return [p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t]; }
+    function segBox(p, q, b) {
+      var t0 = 0, t1 = 1, dx = q[0] - p[0], dy = q[1] - p[1];
+      var P = [-dx, dx, -dy, dy], Q = [p[0] - b[0], b[2] - p[0], p[1] - b[1], b[3] - p[1]];
+      for (var i = 0; i < 4; i++) {
+        if (P[i] === 0) { if (Q[i] < 0) return null; continue; }
+        var r = Q[i] / P[i];
+        if (P[i] < 0) { if (r > t1) return null; if (r > t0) t0 = r; } else { if (r < t0) return null; if (r < t1) t1 = r; }
+      }
+      return [t0, t1];
+    }
+    var prevC = null, clips = [];
+    function detect(now, dwell) {
+      var C = cutPoint();
+      if (!prevC) { prevC = C; return; }
+      letters.forEach(function (L) {
+        var r = segBox(prevC, C, [L.bb[0] - 4, L.bb[1] - 4, L.bb[2] + 4, L.bb[3] + 4]);
+        if (!r) { L.entry = null; return; }
+        if (!L.entry) { L.entry = lerp2(prevC, C, r[0]); L.entryT = now; }
+        if (r[1] < 1) { cut(L, L.entry, lerp2(prevC, C, r[1]), now); L.entry = null; }
+        else if (dwell && now - L.entryT > 360) { cut(L, L.entry, C, now); L.entry = C; L.entryT = now; }
+      });
+      prevC = C;
+    }
+    function cut(L, E, X, now) {
+      var dx = X[0] - E[0], dy = X[1] - E[1], len = Math.hypot(dx, dy);
+      if (len < 14 || now - L.lastCut < 420) return;
+      var ink = false;
+      for (var k = 0; k <= 24 && !ink; k++) { var p = lerp2(E, X, k / 24); ink = hit.isPointInPath(L.p2d, p[0], p[1], L.rule); }
+      if (!ink) return;
+      L.lastCut = now; L.cuts++;
+      var ux = dx / len, uy = dy / len, nx = -uy, ny = ux, F = 3000;
+      var a = [E[0] - ux * F, E[1] - uy * F], b = [X[0] + ux * F, X[1] + uy * F];
+      function half(g) { return 'M' + a[0] + ' ' + a[1] + 'L' + b[0] + ' ' + b[1] + 'L' + (b[0] + nx * F * g) + ' ' + (b[1] + ny * F * g) + 'L' + (a[0] + nx * F * g) + ' ' + (a[1] + ny * F * g) + 'Z'; }
+      L.cA.setAttribute('d', half(1)); L.cB.setAttribute('d', half(-1));
+      L.split = { t0: now, nx: nx, ny: ny, cx: (E[0] + X[0]) / 2, cy: (E[1] + X[1]) / 2 };
+      L.whole.setAttribute('display', 'none'); L.hA.removeAttribute('display'); L.hB.removeAttribute('display');
+      snip = 0;                                                   // Klingen schnappen genau beim Schnitt zu
+      var n = 4 + Math.floor(Math.random() * 3);
+      for (var i = 0; i < n; i++) {
+        var q = lerp2(E, X, 0.15 + Math.random() * 0.7);
+        clips.push({ e: mk('path', { d: 'M-3 0q3-2.6 6-.4' }, clipsG), x: q[0], y: q[1],
+                     vx: ux * (40 + Math.random() * 90) + (Math.random() - 0.5) * 70, vy: -50 - Math.random() * 100,
+                     r: Math.random() * 360, vr: (Math.random() - 0.5) * 800, age: 0, life: 0.9 + Math.random() * 0.7, k: (0.8 + Math.random()) * U });
+      }
+    }
+    function updSplits(now) {
+      letters.forEach(function (L) {
+        var S = L.split; if (!S) return;
+        var t = (now - S.t0) / 1000;
+        if (t > 0.9) { L.split = null; L.hA.setAttribute('display', 'none'); L.hB.setAttribute('display', 'none'); L.whole.removeAttribute('display'); return; }
+        var f = t < 0.06 ? 1 - Math.pow(1 - t / 0.06, 3) : t < 0.16 ? 1 : Math.exp(-(t - 0.16) * 7) * Math.cos((t - 0.16) * 13);
+        var d = 9 * U * f, r = 3 * f;
+        L.hA.setAttribute('transform', 'translate(' + (S.nx * d).toFixed(2) + ' ' + (S.ny * d).toFixed(2) + ') rotate(' + r.toFixed(2) + ' ' + S.cx.toFixed(1) + ' ' + S.cy.toFixed(1) + ')');
+        L.hB.setAttribute('transform', 'translate(' + (-S.nx * d).toFixed(2) + ' ' + (-S.ny * d).toFixed(2) + ') rotate(' + (-r).toFixed(2) + ' ' + S.cx.toFixed(1) + ' ' + S.cy.toFixed(1) + ')');
+      });
+    }
+    function updClips(dt) {
+      for (var i = clips.length - 1; i >= 0; i--) {
+        var c = clips[i]; c.age += dt;
+        if (c.age > c.life) { c.e.remove(); clips.splice(i, 1); continue; }
+        c.vy += 560 * dt; c.vx *= 0.985; c.x += c.vx * dt; c.y += c.vy * dt; c.r += c.vr * dt;
+        var q = c.age / c.life;
+        c.e.setAttribute('transform', 'translate(' + c.x.toFixed(1) + ' ' + c.y.toFixed(1) + ') rotate(' + c.r.toFixed(0) + ') scale(' + c.k.toFixed(2) + ')');
+        c.e.setAttribute('opacity', (q < 0.6 ? 1 : 1 - (q - 0.6) / 0.4).toFixed(2));
+      }
+    }
+
+    /* ---------- Eingabe: selbst schneiden ---------- */
+    var phase = 'enter', T0 = performance.now(), last = T0, tPhase = 0, ptr = null, ptrPrev = null, vel = [0, 0], moved = 0, lastMove = 0, down = false;
+    var userT0 = 0, hopFrom = null, hopAt = 0, landAt = 0, lastXY = null;
+    function setPhase(p, now) { phase = p; tPhase = now; prevC = null; }
+    function takeOver(now) {
+      if (phase !== 'enter' && phase !== 'idle' && phase !== 'auto') return;
+      setPhase('user', now); userT0 = now; intro.classList.add('is-user'); hint.classList.remove('show');
+    }
+    function onMove(e) {
+      if (e.pointerType !== 'mouse' && !down) return;
+      var now = performance.now();
+      if (lastXY) moved += Math.hypot(e.clientX - lastXY[0], e.clientY - lastXY[1]);
+      lastXY = [e.clientX, e.clientY];
+      var p = toLogo(e.clientX, e.clientY);
+      if (e.pointerType !== 'mouse') p[1] -= 46 / s;             // auf dem Handy über dem Finger schneiden
+      ptr = p; lastMove = now;
+      if (moved > 36) takeOver(now);
+    }
+    intro.addEventListener('pointermove', onMove);
+    intro.addEventListener('pointerdown', function (e) { down = true; lastXY = [e.clientX, e.clientY]; moved = 0; onMove(e); });
+    intro.addEventListener('pointerup', function (e) {
+      down = false;
+      if (e.target === skip) return;
+      var now = performance.now();
+      if (moved < 10 || (phase === 'user' && e.pointerType !== 'mouse' && cutsTotal() > 0)) startHop(now + (moved < 10 ? 0 : 250));
+    });
+    skip.addEventListener('pointerup', function (e) { e.stopPropagation(); skipNow(); });
+    skip.addEventListener('click', function () { skipNow(); });
+    addEventListener('keydown', function (e) { if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') skipNow(); });
+    function cutsTotal() { return letters.reduce(function (n, L) { return n + (L.cuts ? 1 : 0); }, 0); }
+
+    /* ---------- Sprung ins A ---------- */
+    function startHop(at) {
+      if (phase === 'hop' || phase === 'land' || phase === 'fly' || phase === 'prehop') return;
+      hopAt = at || performance.now();
+      phase = 'prehop';
+    }
+    function beginHop(now) {
+      setPhase('hop', now); hint.classList.remove('show'); intro.classList.remove('is-user');
+      hopFrom = { x: pose.x, y: pose.y, h: pose.h, th: pose.th };
+      hopFrom.ctrl = [(pose.x + PIV[0]) / 2 + (pose.x > PIV[0] ? 40 : -40), Math.min(pose.y, PIV[1]) - 380];
+      letters.forEach(function (L) { L.g.setAttribute('opacity', 1); L.g.removeAttribute('transform'); });
+      wr.setAttribute('width', 915);
+    }
+    var HOP = 0.86, LAND = 0.62;
+    function hopPose(t) {
+      var p = 0.62 * t + 0.38 * (0.5 - 0.5 * Math.cos(Math.PI * t)), a = hopFrom, c = a.ctrl, m = 1 - p;
+      pose.x = m * m * a.x + 2 * m * p * c[0] + p * p * PIV[0];
+      pose.y = m * m * a.y + 2 * m * p * c[1] + p * p * PIV[1];
+      var e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      pose.h = angTo(a.h, ANG, e);
+      pose.th = t < 0.72 ? a.th + (26 - a.th) * Math.sin(Math.min(1, t / 0.72) * Math.PI / 2) : t < 0.9 ? 26 : 26 * (1 - (t - 0.9) / 0.1);
+    }
+
+    /* ---------- Abflug in den Header ---------- */
+    function startFly() {
+      if (phase === 'fly') return;
+      phase = 'fly'; clearTimeout(hardStop);
+      hint.classList.remove('show'); intro.classList.remove('is-user');
+      var target = document.querySelector('.logo svg').getBoundingClientRect();
+      var fly = mk('svg', { viewBox: '0 0 909.3 353', class: 'intro-fly' });
+      fly.innerHTML = '<use href="#lp0"/><use href="#lp1"/><use href="#lp2"/><use href="#lp3"/><use href="#lp4"/><use href="#lp5"/><use href="#lp6"/>';
+      fly.style.left = lx + 'px'; fly.style.top = ly + 'px'; fly.style.width = lw + 'px';
+      intro.appendChild(fly);
+      svg.style.visibility = 'hidden';
+      var D = 1100, W = 120;
+      if (!fly.animate) { bail(); return; }
+      skip.animate([{ opacity: getComputedStyle(skip).opacity }, { opacity: 0 }], { duration: 200, fill: 'forwards' });
+      fly.animate([{ transform: 'none' }, { transform: 'translate(' + (target.left - lx) + 'px,' + (target.top - ly) + 'px) scale(' + (target.width / lw) + ')' }],
+        { duration: D, delay: W, easing: 'cubic-bezier(.7,0,.2,1)', fill: 'forwards' });
+      stage.animate([{ opacity: 1 }, { opacity: 0 }], { duration: D * .75, delay: W + D * .2, easing: 'ease-in-out', fill: 'forwards' });
+      setTimeout(done, W + D * .3);
+      setTimeout(function () { over = true; root.classList.remove('intro-on'); root.classList.add('intro-played'); intro.remove(); }, W + D + 40);
+    }
+    skipNow = function () {
+      if (over || phase === 'fly') return;
+      letters.forEach(function (L) { L.split = null; L.hA.setAttribute('display', 'none'); L.hB.setAttribute('display', 'none'); L.whole.removeAttribute('display'); L.g.setAttribute('opacity', 1); L.g.removeAttribute('transform'); });
+      clips.forEach(function (c) { c.e.remove(); }); clips = [];
+      wr.setAttribute('width', 915);
+      pose.x = PIV[0]; pose.y = PIV[1]; pose.h = ANG; pose.th = 0; render();
+      startFly();
+    };
+
+    /* ---------- Hauptschleife ---------- */
+    var A0 = -150, A1 = 1030, AUTO = 1.35;
+    function autoPose(u) {
+      var w = Math.PI * 2.4;
+      pose.x = A0 + u * (A1 - A0); pose.y = 96 + 10 * Math.sin(u * w) - 8 * u;
+      pose.h = Math.atan2(10 * w * Math.cos(u * w) - 8, A1 - A0) * 180 / Math.PI;
+    }
+    function frame(now) {
+      if (phase === 'fly' || over) return;
+      var dt = Math.min(0.05, (now - last) / 1000); last = now;
+      var t = (now - T0) / 1000, tp = (now - tPhase) / 1000;
+      // Eintritt: Buchstaben heben sich, Schrift wird geschrieben
+      if (t < 1.4 && phase !== 'hop' && phase !== 'land') {
+        letters.forEach(function (L, i) {
+          var k = Math.min(1, Math.max(0, (t - 0.08 - i * 0.06) / 0.7)), e = 1 - Math.pow(1 - k, 3);
+          L.g.setAttribute('opacity', e.toFixed(3));
+          if (k < 1) L.g.setAttribute('transform', 'translate(0 ' + (30 * (1 - e)).toFixed(2) + ')'); else L.g.removeAttribute('transform');
+        });
+        var kw = Math.min(1, Math.max(0, (t - 0.3) / 1.0));
+        wr.setAttribute('width', (915 * (kw < 0.5 ? 2 * kw * kw : 1 - Math.pow(-2 * kw + 2, 2) / 2)).toFixed(1));
+      }
+      if (phase === 'enter') {
+        var k1 = Math.min(1, Math.max(0, (t - 0.15) / 0.8)), e1 = 1 - Math.pow(1 - k1, 3);
+        pose.x = -560 + (A0 + 560) * e1; pose.y = 96; pose.h = 0; pose.th = snipAngle(dt, 1.6, 2, 18);
+        if (t > 0.85 && !hint.classList.contains('show')) hint.classList.add('show');
+        if (t > 0.95) setPhase('idle', now);
+      } else if (phase === 'idle') {
+        pose.x = A0; pose.y = 96 + Math.sin(tp * 5) * 2; pose.th = snipAngle(dt, 1.6, 2, 18);
+        if (tp > 0.3) { setPhase('auto', now); snip = 0; }
+      } else if (phase === 'auto') {
+        var u = Math.min(1, tp / AUTO); u = 0.7 * u + 0.3 * u * u * (3 - 2 * u);
+        autoPose(u); pose.th = snipAngle(dt, 5.2, 0, 20);
+        detect(now, false);
+        if (tp > 0.35) hint.classList.remove('show');
+        if (tp >= AUTO) beginHop(now);
+      } else if (phase === 'user' || phase === 'prehop') {
+        if (ptr) {
+          var v = ptrPrev ? [(ptr[0] - ptrPrev[0]) / Math.max(dt, 1e-3), (ptr[1] - ptrPrev[1]) / Math.max(dt, 1e-3)] : [0, 0];
+          ptrPrev = ptr.slice(); vel = [vel[0] * 0.8 + v[0] * 0.2, vel[1] * 0.8 + v[1] * 0.2];
+          var sp = Math.hypot(vel[0], vel[1]);
+          if (sp > 120) pose.h = angTo(pose.h, Math.atan2(vel[1], vel[0]) * 180 / Math.PI, 1 - Math.exp(-dt * 9));
+          var r = pose.h * Math.PI / 180, tx = ptr[0] - Math.cos(r) * CUT, ty = ptr[1] - Math.sin(r) * CUT, kk = 1 - Math.exp(-dt * 22);
+          pose.x += (tx - pose.x) * kk; pose.y += (ty - pose.y) * kk;
+          pose.th = snipAngle(dt, 2 + Math.min(sp / 160, 5), 3, 20);
+        }
+        detect(now, true);
+        var idle = (now - lastMove) / 1000, n = cutsTotal();
+        if (phase === 'user' && (n === letters.length || (now - userT0) / 1000 > 5 || (n > 0 && idle > 1.3 && !down) || idle > 2.4)) startHop(now + (n === letters.length ? 300 : 0));
+        if (phase === 'prehop' && now >= hopAt) beginHop(now);
+      } else if (phase === 'hop') {
+        var th = Math.min(1, tp / HOP); hopPose(th);
+        halo.setAttribute('opacity', Math.max(0, Math.min(1, (0.94 - th) / 0.2)).toFixed(3));
+        if (th >= 1) { setPhase('land', now); landAt = now; pose.x = PIV[0]; pose.y = PIV[1]; pose.h = ANG; pose.th = 0; }
+      } else if (phase === 'land') {
+        pose.h = ANG + 3.5 * Math.exp(-tp * 9) * Math.sin(tp * 26); pose.th = 0;
+        var pk = tp < 0.34 ? Math.sin(Math.PI * tp / 0.34) : 0, cx = VW / 2, cy = VH / 2, k2 = 1 + 0.014 * pk;
+        world.setAttribute('transform', 'translate(' + cx + ' ' + cy + ') scale(' + k2.toFixed(4) + ') translate(' + (-cx) + ' ' + (-cy) + ')');
+        var g = Math.min(1, Math.max(0, (tp - 0.04) / 0.58));
+        gl.setAttribute('opacity', (0.55 * Math.sin(Math.PI * g)).toFixed(3));
+        glGrad.setAttribute('gradientTransform', 'translate(' + (-200 + g * 1400).toFixed(1) + ' 0)');
+        if (tp >= LAND) { pose.h = ANG; world.removeAttribute('transform'); gl.setAttribute('opacity', 0); render(); startFly(); return; }
+      }
+      updSplits(now); updClips(dt); render();
+      requestAnimationFrame(frame);
+    }
+    render();
+    requestAnimationFrame(frame);
   }
-  v.addEventListener('ended', finish);
-  v.addEventListener('error', finish);
-  var srcs = v.querySelectorAll('source'); srcs[srcs.length - 1].addEventListener('error', finish);   // erst wenn keine Quelle passt
-  skip.addEventListener('click', finish);
-  intro.addEventListener('click', function (e) { if (e.target !== skip) finish(); });
-  addEventListener('keydown', function (e) { if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') finish(); });
-  guard = setTimeout(finish, 4000);
-  v.addEventListener('playing', function () { clearTimeout(guard); guard = setTimeout(finish, (v.duration || 6) * 1000 + 2500); });
-  var p = v.play(); if (p && p.catch) p.catch(finish);
 })();
 </script>
 
