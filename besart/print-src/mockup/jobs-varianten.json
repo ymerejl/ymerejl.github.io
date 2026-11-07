@@ -1,0 +1,230 @@
+[
+ {
+  "scene": "m0-cards-travertine.png",
+  "out": "out/varianten/mockup-karte-A-1.png",
+  "faces": [
+   {
+    "design": "visitenkarte-vorderseite",
+    "file": "../design/varianten/karte-A-vorne.png"
+   },
+   {
+    "design": "visitenkarte-rueckseite",
+    "file": "../design/varianten/karte-A-hinten.png"
+   }
+  ]
+ },
+ {
+  "scene": "m1-cards-counter.png",
+  "out": "out/varianten/mockup-karte-A-2.png",
+  "faces": [
+   {
+    "design": "visitenkarte-vorderseite",
+    "skip": [
+     1,
+     2
+    ],
+    "file": "../design/varianten/karte-A-vorne.png"
+   },
+   {
+    "design": "visitenkarte-rueckseite",
+    "file": "../design/varianten/karte-A-hinten.png"
+   }
+  ]
+ },
+ {
+  "scene": "m2-flyer-travertine.png",
+  "out": "out/varianten/mockup-flyer-A-1.png",
+  "faces": [
+   {
+    "design": "flyer-a5-vorderseite",
+    "sranges": {
+     "1": [
+      0.02,
+      0.72
+     ],
+     "2": [
+      0.12,
+      0.98
+     ]
+    },
+    "file": "../design/varianten/flyer-A-vorne.png"
+   },
+   {
+    "design": "flyer-a5-rueckseite",
+    "file": "../design/varianten/flyer-A-hinten.png"
+   }
+  ]
+ },
+ {
+  "scene": "m3-flyer-counter.png",
+  "out": "out/varianten/mockup-flyer-A-2.png",
+  "faces": [
+   {
+    "design": "flyer-a5-rueckseite",
+    "sranges": {
+     "3": [
+      0.02,
+      0.98
+     ]
+    },
+    "file": "../design/varianten/flyer-A-hinten.png"
+   },
+   {
+    "design": "flyer-a5-vorderseite",
+    "file": "../design/varianten/flyer-A-vorne.png"
+   }
+  ]
+ },
+ {
+  "scene": "m0-cards-travertine.png",
+  "out": "out/varianten/mockup-karte-B-1.png",
+  "faces": [
+   {
+    "design": "visitenkarte-vorderseite",
+    "file": "../design/varianten/karte-B-hinten.png"
+   },
+   {
+    "design": "visitenkarte-rueckseite",
+    "file": "../design/varianten/karte-B-vorne.png"
+   }
+  ]
+ },
+ {
+  "scene": "m1-cards-counter.png",
+  "out": "out/varianten/mockup-karte-B-2.png",
+  "faces": [
+   {
+    "design": "visitenkarte-vorderseite",
+    "skip": [
+     1,
+     2
+    ],
+    "file": "../design/varianten/karte-B-hinten.png"
+   },
+   {
+    "design": "visitenkarte-rueckseite",
+    "file": "../design/varianten/karte-B-vorne.png"
+   }
+  ]
+ },
+ {
+  "scene": "m2-flyer-travertine.png",
+  "out": "out/varianten/mockup-flyer-B-1.png",
+  "faces": [
+   {
+    "design": "flyer-a5-vorderseite",
+    "sranges": {
+     "1": [
+      0.02,
+      0.72
+     ],
+     "2": [
+      0.12,
+      0.98
+     ]
+    },
+    "file": "../design/varianten/flyer-B-vorne.png"
+   },
+   {
+    "design": "flyer-a5-rueckseite",
+    "file": "../design/varianten/flyer-A-hinten.png"
+   }
+  ]
+ },
+ {
+  "scene": "m3-flyer-counter.png",
+  "out": "out/varianten/mockup-flyer-B-2.png",
+  "faces": [
+   {
+    "design": "flyer-a5-rueckseite",
+    "sranges": {
+     "3": [
+      0.02,
+      0.98
+     ]
+    },
+    "file": "../design/varianten/flyer-A-hinten.png"
+   },
+   {
+    "design": "flyer-a5-vorderseite",
+    "file": "../design/varianten/flyer-B-vorne.png"
+   }
+  ]
+ },
+ {
+  "scene": "m0-cards-travertine.png",
+  "out": "out/varianten/mockup-karte-C-1.png",
+  "faces": [
+   {
+    "design": "visitenkarte-vorderseite",
+    "file": "../design/varianten/karte-C-vorne.png"
+   },
+   {
+    "design": "visitenkarte-rueckseite",
+    "file": "../design/varianten/karte-C-hinten.png"
+   }
+  ]
+ },
+ {
+  "scene": "m1-cards-counter.png",
+  "out": "out/varianten/mockup-karte-C-2.png",
+  "faces": [
+   {
+    "design": "visitenkarte-vorderseite",
+    "skip": [
+     1,
+     2
+    ],
+    "file": "../design/varianten/karte-C-vorne.png"
+   },
+   {
+    "design": "visitenkarte-rueckseite",
+    "file": "../design/varianten/karte-C-hinten.png"
+   }
+  ]
+ },
+ {
+  "scene": "m2-flyer-travertine.png",
+  "out": "out/varianten/mockup-flyer-C-1.png",
+  "faces": [
+   {
+    "design": "flyer-a5-vorderseite",
+    "sranges": {
+     "1": [
+      0.02,
+      0.72
+     ],
+     "2": [
+      0.12,
+      0.98
+     ]
+    },
+    "file": "../design/varianten/flyer-C-vorne.png"
+   },
+   {
+    "design": "flyer-a5-rueckseite",
+    "file": "../design/varianten/flyer-C-hinten.png"
+   }
+  ]
+ },
+ {
+  "scene": "m3-flyer-counter.png",
+  "out": "out/varianten/mockup-flyer-C-2.png",
+  "faces": [
+   {
+    "design": "flyer-a5-rueckseite",
+    "sranges": {
+     "3": [
+      0.02,
+      0.98
+     ]
+    },
+    "file": "../design/varianten/flyer-C-hinten.png"
+   },
+   {
+    "design": "flyer-a5-vorderseite",
+    "file": "../design/varianten/flyer-C-vorne.png"
+   }
+  ]
+ }
+]

@@ -29,4 +29,4 @@ ${opts.guides ? `.bleed::after{content:"";position:absolute;left:${bleed}mm;top:
 ${css}
 </style></head><body>${body}</body></html>`;
 
-module.exports = { ROOT, fontsCSS, logo, mono, scissors, qr, qrFrom, page, QR, SPLIT };
+module.exports = { ROOT, fontsCSS, logo, mono, scissors, qr, qrFrom, page, QR, SPLIT, logoPaths };

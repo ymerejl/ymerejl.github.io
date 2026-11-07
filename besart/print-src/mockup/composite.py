@@ -77,15 +77,21 @@ def warp(scene_shape, H, Hi, D, design, bbox):
     h, w = y1 - y0, x1 - x0
     return cv2.resize(img, (w, h), interpolation=cv2.INTER_AREA), cv2.resize(cov, (w, h), interpolation=cv2.INTER_AREA)
 
-def composite_face(S, scene, quad, design_name, exclude=None, skip=(), sranges={}, rim=1.0, seed=1, log=None):
-    dark = 'vorderseite' in design_name
+def composite_face(S, scene, quad, design_name, exclude=None, skip=(), sranges={}, rim=1.0, seed=1, log=None, file=None):
+    dark = 'vorderseite' in design_name          # Art der Fläche in der Szene (schwarzer Karton / helles Papier)
+    # Das Lichtmodell wird immer am Originaldesign dieser Fläche eingemessen (dazu passt die Szene) und dann
+    # auf das gewünschte Design angewandt (file). So kann z. B. ein dunkles Design auf die helle Papierfläche.
     des = cv2.imread(FIN + design_name + '.png').astype(np.float32) / 255
+    new = cv2.imread(file).astype(np.float32) / 255 if file else des
+    if new.shape != des.shape: new = cv2.resize(new, (des.shape[1], des.shape[0]), interpolation=cv2.INTER_AREA)
     Hs, Ws = S.shape[:2]
     q = np.float32(quad)
     # pre-scale the design so one supersample step is ~1 design pixel (no aliasing, no wasted detail)
     side = max(np.linalg.norm(q[1] - q[0]), np.linalg.norm(q[2] - q[1]))
     scale = min(1.0, side * SS * 1.1 / max(des.shape[:2]))
-    des = cv2.resize(des, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA) if scale < 1 else des
+    if scale < 1:
+        des = cv2.resize(des, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
+        new = cv2.resize(new, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
     Wd, Hd = des.shape[1], des.shape[0]
     H, Hi, D, res = face_geometry(scene, q, Wd, Hd, dark, skip, sranges)
     x0, y0 = np.floor(q.min(0) - 12).astype(int); x1, y1 = np.ceil(q.max(0) + 12).astype(int)
@@ -93,6 +99,10 @@ def composite_face(S, scene, quad, design_name, exclude=None, skip=(), sranges={
     Dw, cov = warp(S.shape, H, Hi, D, des, (x0, y0, x1, y1))
     Dw = cv2.GaussianBlur(Dw, (0, 0), 0.45)
     reg = S[y0:y1, x0:x1]; Sl = srgb2lin(reg); Dl = srgb2lin(Dw)
+    if file:
+        Nw, _ = warp(S.shape, H, Hi, D, new, (x0, y0, x1, y1)); Nl = srgb2lin(cv2.GaussianBlur(Nw, (0, 0), 0.45))
+    else:
+        Nl = Dl
     ex = np.zeros(cov.shape, bool) if exclude is None else exclude[y0:y1, x0:x1]
     inner = cv2.erode((cov > 0.99).astype(np.uint8), np.ones((7, 7), np.uint8)).astype(bool) & ~ex
     Ls, Ld = lum(Sl), lum(Dl)
@@ -103,7 +113,7 @@ def composite_face(S, scene, quad, design_name, exclude=None, skip=(), sranges={
         Mp = inner & dpaper & apaper
         G, _ = nblur(Sl / np.maximum(Dl, 1e-4), Mp, 10)
         G = np.clip(G, 0.2, 2.5)
-        out = G * (Dl + 0.022 * P) / 1.022
+        out = G * (Nl + 0.022 * P) / 1.022
         info = dict(kind='paper', paper_px=int(Mp.sum()), G_med=np.median(G[inner], 0).round(3).tolist())
         flat = Mp
     else:
@@ -119,7 +129,9 @@ def composite_face(S, scene, quad, design_name, exclude=None, skip=(), sranges={
         Gs = np.clip((A_l - A_d) / np.maximum(ref_light - ref_dark, 1e-3), 0.3, 2.0)
         F, _ = nblur(Sl - Gs * Dl, Md, 30)
         F = np.clip(F, 0, 0.2)
-        out = Gs * Dl + F
+        if file:   # anderes Motiv: Reste aus dem KI-Inhalt der Szene (z. B. Haarfarbe) dürfen nicht durchscheinen
+            F = np.minimum(F, np.median(F[inner], 0) * 1.4)
+        out = Gs * Nl + F
         info = dict(kind='black', dark_px=int(Md.sum()), light_px=int(Ml.sum()), G=Gs.round(3).tolist(), F_med=np.median(F[inner], 0).round(4).tolist())
         flat = Md
     # paper texture: take the AI render's own fine structure (fibres, felt) from areas without printed
@@ -144,7 +156,9 @@ def composite_face(S, scene, quad, design_name, exclude=None, skip=(), sranges={
     info['tex_std'] = round(float(np.std(hp[valid])) * 255, 2) if valid.any() else None
     res_srgb = lin2srgb(out).astype(np.float32)
     if not dark:
-        k = 0.4 + 0.6 * np.clip(lum(res_srgb) / max(float(np.median(lum(res_srgb)[inner])), 1e-3), 0, 1)
+        # Papierstruktur ist auf dunklem Druck kaum sichtbar: Stärke nach Helligkeit relativ zum Papier der Szene
+        floor = 0.4 if np.median(lum(Nl)[inner]) > 0.3 else 0.12
+        k = floor + (1 - floor) * np.clip(lum(res_srgb) / max(float(np.median(Sg[inner & ~content] if (inner & ~content).any() else Sg[inner])), 1e-3), 0, 1)
     else:
         k = np.ones(T.shape, np.float32)
     res_srgb = np.clip(res_srgb + (T * k)[..., None], 0, 1)
@@ -178,6 +192,6 @@ if __name__ == '__main__':
             for g in job['faces'][idx + 1:]:
                 m = np.zeros(S.shape[:2], np.uint8); cv2.fillPoly(m, [np.int32(np.round(np.array(tops[g['design']]) * 8))], 1, cv2.LINE_8, 3); ex |= m.astype(bool)
             ex = cv2.dilate(ex.astype(np.uint8), np.ones((3, 3), np.uint8)).astype(bool) if ex.any() else None
-            composite_face(S, job['scene'], tops[f['design']], f['design'], exclude=ex, skip=tuple(f.get('skip', [])), sranges={int(k): v for k, v in f.get('sranges', {}).items()}, log=log)
+            composite_face(S, job['scene'], tops[f['design']], f['design'], exclude=ex, skip=tuple(f.get('skip', [])), sranges={int(k): v for k, v in f.get('sranges', {}).items()}, log=log, file=f.get('file'))
         cv2.imwrite(job['out'], np.clip(S * 255 + 0.5, 0, 255).astype(np.uint8))
         print(job['out']); [print('  ', d, i) for d, i in log]

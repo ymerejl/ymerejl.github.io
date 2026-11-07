@@ -624,6 +624,17 @@ a.menu-book{text-decoration:none}
 .pv-hint{display:inline-flex;align-items:center;gap:10px;margin:0;font-size:13px;color:var(--ivory-3)}
 .pv-hint svg{width:17px;height:17px;flex:none;color:var(--sand)}
 .pv-foot .btns{display:flex;flex-wrap:wrap;gap:10px}
+.pv-ctrl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
+.pv-vars{display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line-2)}
+.pv-vars button{display:inline-flex;align-items:center;gap:9px;height:34px;padding:0 15px 0 6px;border:0;border-radius:999px;background:none;color:var(--ivory-2);font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:color .3s,background-color .3s}
+.pv-vars button b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line-2);font:italic 500 15px/1 var(--serif);letter-spacing:0;text-transform:none;color:var(--sand);transition:inherit}
+.pv-vars button:hover{color:var(--ivory)}
+.pv-vars button[aria-pressed="true"]{background:rgba(199,181,147,.14);color:var(--ivory)}
+.pv-vars button[aria-pressed="true"] b{background:linear-gradient(135deg,#F3DE9C,#C9A24A 55%,#8E6B22);box-shadow:none;color:#1B1816}
+.pv-flat img,.pv-frame img{will-change:opacity}
+.pv-vswap{animation:pvSwap .6s var(--ease)}
+@keyframes pvSwap{from{opacity:.25;filter:blur(3px)}to{opacity:1;filter:none}}
+@media (prefers-reduced-motion:reduce){.pv-vswap{animation:none}}
 /* Station 05: Bewertungskarte + 360°-Ansicht des Aufstellers */
 .pv-stage.is-stand{grid-template-columns:repeat(2,auto);justify-content:center;column-gap:clamp(32px,6vw,104px);padding-block:clamp(20px,3.5vh,48px)}
 .pv-stage.is-stand .pv-zoom{width:auto}
@@ -698,6 +709,9 @@ a.menu-book{text-decoration:none}
   .pv-head .eyebrow{letter-spacing:.2em}
   .pv-head .eyebrow::before{display:none}
   .pv-foot .btns,.pv-foot .btn{width:100%}
+  .pv-ctrl{width:100%}
+  .pv-vars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;border-radius:20px}
+  .pv-vars button{flex-direction:column;justify-content:center;gap:6px;height:62px;padding:0 4px;border-radius:16px;font-size:10px;letter-spacing:.12em;white-space:nowrap}
 }
 /* ---------- Gesprächsmodus: Fragebogen vor der Website, Notizen je Seite, Abschluss, Export ---------- */
 .pitch-hold .site-header,.pitch-hold main,.pitch-hold .site-footer{visibility:hidden}
@@ -1567,23 +1581,23 @@ a.menu-book{text-decoration:none}
       </div>
     </section>
 
-    <section class="pv-slide" id="pv1" data-label="Visitenkarte · Druckvorlage" aria-labelledby="pv1t">
+    <section class="pv-slide" id="pv1" data-vgroup="karte" data-label="Visitenkarte · Druckvorlage" aria-labelledby="pv1t">
       <div class="pv-head">
         <span class="pv-num pv-rv" aria-hidden="true">01</span>
         <div class="pv-rv" style="--d:1"><p class="eyebrow">Visitenkarte · Druckvorlage</p><h3 id="pv1t">85 × 55 mm, <em>beidseitig.</em></h3></div>
-        <p class="pv-desc pv-rv" style="--d:2">Vorne schwarz mit dem Logo, hinten creme mit Kontakt, Öffnungszeiten und QR-Code. Die feine Linie vor dem Namen greift die Linie aus dem Logo auf.</p>
+        <p class="pv-desc pv-rv" style="--d:2" data-vdesc>Vorne schwarzer Karton mit dem Logo in Goldfolie, hinten creme mit Kontakt, Öffnungszeiten und QR-Code. Die feine Goldlinie vor dem Namen greift die Linie aus dem Logo auf.</p>
       </div>
       <div class="pv-stage is-card pv-rv" style="--d:2">
-        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Vorderseite gross anzeigen"><img data-src="img/print-karte-vorne.webp" alt="Visitenkarte Vorderseite: schwarzer Karton mit dem BesArt-Hairsalon-Logo in Creme, darunter Coiffeur · Horgen" width="1400" height="903" decoding="async"></button><figcaption>Vorderseite</figcaption></figure>
-        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Rückseite gross anzeigen"><img data-src="img/print-karte-hinten.webp" alt="Visitenkarte Rückseite: Besart Beka, Inhaber und Coiffeur, Telefon 044 725 14 04, Neugasse 29 in Horgen, Öffnungszeiten und QR-Code zur Online-Buchung" width="1400" height="903" decoding="async"></button><figcaption>Rückseite</figcaption></figure>
+        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Vorderseite gross anzeigen"><img data-face="vorne" data-src="img/print-karte-vorne.webp" alt="Visitenkarte Vorderseite: schwarzer Karton mit dem BesArt-Hairsalon-Logo in Gold, darunter Coiffeur · Horgen" width="1400" height="903" decoding="async"></button><figcaption>Vorderseite</figcaption></figure>
+        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Rückseite gross anzeigen"><img data-face="hinten" data-src="img/print-karte-hinten.webp" alt="Visitenkarte Rückseite: Besart Beka, Inhaber und Coiffeur, Telefon 044 725 14 04, Neugasse 29 in Horgen, Öffnungszeiten und QR-Code zur Online-Buchung" width="1400" height="903" decoding="async"></button><figcaption>Rückseite</figcaption></figure>
       </div>
       <div class="pv-foot pv-rv" style="--d:3">
-        <p class="pv-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Tipp: QR-Code mit dem Handy direkt vom Bildschirm scannen.</p>
+        <div class="pv-ctrl"><div class="pv-vars" role="group" aria-label="Variante Visitenkarte"><button type="button" data-v="A" aria-pressed="true"><b>A</b>Noir &amp; Gold</button><button type="button" data-v="B" aria-pressed="false"><b>B</b>Ivoire</button><button type="button" data-v="C" aria-pressed="false"><b>C</b>Monogramm</button></div><p class="pv-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Tipp: QR-Code mit dem Handy direkt vom Bildschirm scannen.</p></div>
         <button type="button" class="btn btn-ghost" data-pv-next>Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
       </div>
     </section>
 
-    <section class="pv-slide" id="pv2" data-label="Visitenkarte · Mockup" aria-labelledby="pv2t">
+    <section class="pv-slide" id="pv2" data-vgroup="karte" data-label="Visitenkarte · Mockup" aria-labelledby="pv2t">
       <div class="pv-head">
         <span class="pv-num pv-rv" aria-hidden="true">02</span>
         <div class="pv-rv" style="--d:1"><p class="eyebrow">Visitenkarte · Mockup</p><h3 id="pv2t">So wirkt sie <em>gedruckt.</em></h3></div>
@@ -1591,34 +1605,34 @@ a.menu-book{text-decoration:none}
       </div>
       <div class="pv-mock pv-rv" style="--d:2">
         <button type="button" class="pv-frame pv-zoom" aria-label="Mockup gross anzeigen">
-          <img class="on" data-src="img/mockup-karten-1.webp" alt="Mockup: Visitenkarten-Vorder- und Rückseite auf Travertin neben einer Friseurschere" width="2048" height="1360" decoding="async">
-          <img data-src="img/mockup-karten-2.webp" alt="Mockup: Stapel Visitenkarten und eine Rückseite auf der Theke im Salon" width="2048" height="1360" decoding="async">
+          <img class="on" data-scene="1" data-src="img/mockup-karten-1.webp" alt="Mockup: Visitenkarten-Vorder- und Rückseite auf Travertin neben einer Friseurschere" width="2048" height="1360" decoding="async">
+          <img data-scene="2" data-src="img/mockup-karten-2.webp" alt="Mockup: Stapel Visitenkarten und eine Rückseite auf der Theke im Salon" width="2048" height="1360" decoding="async">
           <span class="pv-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>Vollansicht</span>
         </button>
       </div>
       <div class="pv-foot pv-rv" style="--d:3">
-        <div class="pv-scenes" role="group" aria-label="Szene wählen"><button type="button" aria-pressed="true">Travertin</button><button type="button" aria-pressed="false">Salon</button></div>
+        <div class="pv-ctrl"><div class="pv-vars" role="group" aria-label="Variante Visitenkarte"><button type="button" data-v="A" aria-pressed="true"><b>A</b>Noir &amp; Gold</button><button type="button" data-v="B" aria-pressed="false"><b>B</b>Ivoire</button><button type="button" data-v="C" aria-pressed="false"><b>C</b>Monogramm</button></div><div class="pv-scenes" role="group" aria-label="Szene wählen"><button type="button" aria-pressed="true">Travertin</button><button type="button" aria-pressed="false">Salon</button></div></div>
         <button type="button" class="btn btn-ghost" data-pv-next>Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
       </div>
     </section>
 
-    <section class="pv-slide" id="pv3" data-label="Flyer A5 · Druckvorlage" aria-labelledby="pv3t">
+    <section class="pv-slide" id="pv3" data-vgroup="flyer" data-label="Flyer A5 · Druckvorlage" aria-labelledby="pv3t">
       <div class="pv-head">
         <span class="pv-num pv-rv" aria-hidden="true">03</span>
         <div class="pv-rv" style="--d:1"><p class="eyebrow">Flyer A5 · Druckvorlage</p><h3 id="pv3t">148 × 210 mm, <em>beidseitig.</em></h3></div>
-        <p class="pv-desc pv-rv" style="--d:2">Vorne der Claim «Haar mit Art.» mit Bild und QR-Code, hinten alle Leistungen und Preise 1:1 von Salonkee, Öffnungszeiten, Anfahrt und eine echte Kundenstimme.</p>
+        <p class="pv-desc pv-rv" style="--d:2" data-vdesc>Vorne das Porträt im Bogen, Logo in Gold, der Claim «Haar mit Art.» und QR-Code. Hinten alle Leistungen und Preise, Öffnungszeiten, Anfahrt und eine echte Kundenstimme.</p>
       </div>
       <div class="pv-stage is-flyer pv-rv" style="--d:2">
-        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Flyer-Vorderseite gross anzeigen"><img data-src="img/print-flyer-vorne.webp" alt="Flyer Vorderseite: Logo, Porträt im Bogen, Claim Haar mit Art. und QR-Code zur Online-Buchung" width="1100" height="1560" decoding="async"></button><figcaption>Vorderseite</figcaption></figure>
-        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Flyer-Rückseite gross anzeigen"><img data-src="img/print-flyer-hinten.webp" alt="Flyer Rückseite: Leistungen und Preise, Kundenstimme, Öffnungszeiten, Adresse und QR-Code" width="1100" height="1560" decoding="async"></button><figcaption>Rückseite</figcaption></figure>
+        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Flyer-Vorderseite gross anzeigen"><img data-face="vorne" data-src="img/print-flyer-vorne.webp" alt="Flyer Vorderseite: Logo, Porträt im Bogen, Claim Haar mit Art. und QR-Code zur Online-Buchung" width="1100" height="1560" decoding="async"></button><figcaption>Vorderseite</figcaption></figure>
+        <figure class="pv-flat"><button type="button" class="pv-zoom" aria-label="Flyer-Rückseite gross anzeigen"><img data-face="hinten" data-src="img/print-flyer-hinten.webp" alt="Flyer Rückseite: Leistungen und Preise, Kundenstimme, Öffnungszeiten, Adresse und QR-Code" width="1100" height="1560" decoding="async"></button><figcaption>Rückseite</figcaption></figure>
       </div>
       <div class="pv-foot pv-rv" style="--d:3">
-        <p class="pv-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Beide QR-Codes führen direkt zur Terminbuchung.</p>
+        <div class="pv-ctrl"><div class="pv-vars" role="group" aria-label="Variante Flyer"><button type="button" data-v="A" aria-pressed="true"><b>A</b>Bogen</button><button type="button" data-v="B" aria-pressed="false"><b>B</b>Vollbild</button><button type="button" data-v="C" aria-pressed="false"><b>C</b>Typografie</button></div><p class="pv-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Beide QR-Codes führen direkt zur Terminbuchung.</p></div>
         <button type="button" class="btn btn-ghost" data-pv-next>Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
       </div>
     </section>
 
-    <section class="pv-slide" id="pv4" data-label="Flyer A5 · Mockup" aria-labelledby="pv4t">
+    <section class="pv-slide" id="pv4" data-vgroup="flyer" data-label="Flyer A5 · Mockup" aria-labelledby="pv4t">
       <div class="pv-head">
         <span class="pv-num pv-rv" aria-hidden="true">04</span>
         <div class="pv-rv" style="--d:1"><p class="eyebrow">Flyer A5 · Mockup</p><h3 id="pv4t">Bereit für Theke <em>und Briefkasten.</em></h3></div>
@@ -1626,13 +1640,13 @@ a.menu-book{text-decoration:none}
       </div>
       <div class="pv-mock pv-rv" style="--d:2">
         <button type="button" class="pv-frame pv-zoom" aria-label="Mockup gross anzeigen">
-          <img class="on" data-src="img/mockup-flyer-1.webp" alt="Mockup: Flyer-Vorder- und Rückseite auf Travertin mit Schere und Kamm" width="2048" height="1360" decoding="async">
-          <img data-src="img/mockup-flyer-2.webp" alt="Mockup: Flyer-Vorder- und Rückseite auf der Marmortheke im Salon" width="2048" height="1360" decoding="async">
+          <img class="on" data-scene="1" data-src="img/mockup-flyer-1.webp" alt="Mockup: Flyer-Vorder- und Rückseite auf Travertin mit Schere und Kamm" width="2048" height="1360" decoding="async">
+          <img data-scene="2" data-src="img/mockup-flyer-2.webp" alt="Mockup: Flyer-Vorder- und Rückseite auf der Marmortheke im Salon" width="2048" height="1360" decoding="async">
           <span class="pv-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>Vollansicht</span>
         </button>
       </div>
       <div class="pv-foot pv-rv" style="--d:3">
-        <div class="pv-scenes" role="group" aria-label="Szene wählen"><button type="button" aria-pressed="true">Travertin</button><button type="button" aria-pressed="false">Empfang</button></div>
+        <div class="pv-ctrl"><div class="pv-vars" role="group" aria-label="Variante Flyer"><button type="button" data-v="A" aria-pressed="true"><b>A</b>Bogen</button><button type="button" data-v="B" aria-pressed="false"><b>B</b>Vollbild</button><button type="button" data-v="C" aria-pressed="false"><b>C</b>Typografie</button></div><div class="pv-scenes" role="group" aria-label="Szene wählen"><button type="button" aria-pressed="true">Travertin</button><button type="button" aria-pressed="false">Empfang</button></div></div>
         <button type="button" class="btn btn-ghost" data-pv-next>Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
       </div>
     </section>
@@ -2246,6 +2260,7 @@ a.menu-book{text-decoration:none}
       if (loaded) return; loaded = true;
       $$('img[data-src]', pv).forEach(im => { im.src = im.dataset.src; im.removeAttribute('data-src'); });
       spins.forEach(sp => sp.load());
+      preloadVariants();
     }
     function setCurrent(i) {
       cur = i;
@@ -2308,6 +2323,67 @@ a.menu-book{text-decoration:none}
         btns.forEach((x, j) => x.setAttribute('aria-pressed', String(i === j)));
       }));
     });
+
+    // Design-Varianten A/B/C: eine Wahl gilt für Druckvorlage und Mockup derselben Drucksache
+    const PV_VARS = {
+      karte: {
+        A: { n: 'Noir & Gold', d: 'Vorne schwarzer Karton mit dem Logo in Goldfolie, hinten creme mit Kontakt, Öffnungszeiten und QR-Code. Die feine Goldlinie vor dem Namen greift die Linie aus dem Logo auf.',
+             vorne: 'img/print-karte-vorne.webp', hinten: 'img/print-karte-hinten.webp', m: ['img/mockup-karten-1.webp', 'img/mockup-karten-2.webp'],
+             av: 'Visitenkarte Vorderseite: schwarzer Karton mit dem BesArt-Hairsalon-Logo in Gold, darunter Coiffeur · Horgen',
+             ah: 'Visitenkarte Rückseite: creme, Besart Beka, Inhaber und Coiffeur, Telefon 044 725 14 04, Neugasse 29 in Horgen, Öffnungszeiten und QR-Code zur Online-Buchung' },
+        B: { n: 'Ivoire', d: 'Umgekehrt gedacht: vorne heller Naturkarton mit dem Logo in Gold, hinten schwarz mit goldenen Akzenten und hellem Feld für den QR-Code.',
+             vorne: 'img/print-karte-B-vorne.webp', hinten: 'img/print-karte-B-hinten.webp', m: ['img/mockup-karten-B-1.webp', 'img/mockup-karten-B-2.webp'],
+             av: 'Visitenkarte Variante Ivoire, Vorderseite: heller Karton mit dem BesArt-Logo in Gold',
+             ah: 'Visitenkarte Variante Ivoire, Rückseite: schwarz mit goldenen Akzenten, Kontakt, Öffnungszeiten und QR-Code' },
+        C: { n: 'Monogramm', d: 'Beidseitig schwarz mit feinem Goldrahmen. Vorne das «A» mit der Schere als Monogramm, hinten Logo, Kontakt, Öffnungszeiten und QR-Code.',
+             vorne: 'img/print-karte-C-vorne.webp', hinten: 'img/print-karte-C-hinten.webp', m: ['img/mockup-karten-C-1.webp', 'img/mockup-karten-C-2.webp'],
+             av: 'Visitenkarte Variante Monogramm, Vorderseite: schwarz mit goldenem A-Monogramm mit Schere und Goldrahmen',
+             ah: 'Visitenkarte Variante Monogramm, Rückseite: schwarz mit Gold-Logo, Kontakt, Öffnungszeiten und QR-Code' }
+      },
+      flyer: {
+        A: { n: 'Bogen', d: 'Vorne das Porträt im Bogen, Logo in Gold, der Claim «Haar mit Art.» und QR-Code. Hinten alle Leistungen und Preise, Öffnungszeiten, Anfahrt und eine echte Kundenstimme.',
+             vorne: 'img/print-flyer-vorne.webp', hinten: 'img/print-flyer-hinten.webp', m: ['img/mockup-flyer-1.webp', 'img/mockup-flyer-2.webp'],
+             av: 'Flyer Vorderseite: Logo in Gold, Porträt im Bogen, Claim Haar mit Art. und QR-Code zur Online-Buchung',
+             ah: 'Flyer Rückseite: Leistungen und Preise, Kundenstimme, Öffnungszeiten, Adresse und QR-Code' },
+        B: { n: 'Vollbild', d: 'Vorne ein randloses Porträt mit grossem Claim, ruhig und editorial wie eine Magazinseite. Die Rückseite mit allen Preisen bleibt wie bei Variante A.',
+             vorne: 'img/print-flyer-B-vorne.webp', hinten: 'img/print-flyer-hinten.webp', m: ['img/mockup-flyer-B-1.webp', 'img/mockup-flyer-B-2.webp'],
+             av: 'Flyer Variante Vollbild, Vorderseite: randloses Herrenporträt, Logo in Gold, Claim Haar mit Art. und QR-Code',
+             ah: 'Flyer Rückseite: Leistungen und Preise, Kundenstimme, Öffnungszeiten, Adresse und QR-Code' },
+        C: { n: 'Typografie', d: 'Ganz ohne Foto: grosser Claim, das Monogramm als Wasserzeichen und vier Bereiche mit Ab-Preisen. Hinten die Preisliste auf Schwarz mit goldenen Akzenten.',
+             vorne: 'img/print-flyer-C-vorne.webp', hinten: 'img/print-flyer-C-hinten.webp', m: ['img/mockup-flyer-C-1.webp', 'img/mockup-flyer-C-2.webp'],
+             av: 'Flyer Variante Typografie, Vorderseite: schwarz, grosser Claim Haar mit Art., Monogramm als Wasserzeichen, Ab-Preise und QR-Code',
+             ah: 'Flyer Variante Typografie, Rückseite: Preisliste auf Schwarz mit Gold, Öffnungszeiten, Adresse und QR-Code' }
+      }
+    };
+    const pvChoice = { karte: 'A', flyer: 'A' };
+    function setSrc(im, src) {
+      if (!im) return;
+      if (im.hasAttribute('data-src')) { im.dataset.src = src; return; }
+      if (im.getAttribute('src') === src) return;
+      im.src = src;
+      if (!reduce) { im.classList.remove('pv-vswap'); void im.offsetWidth; im.classList.add('pv-vswap'); }
+    }
+    function setVariant(group, v) {
+      const V = PV_VARS[group][v]; if (!V) return;
+      pvChoice[group] = v;
+      $$('[data-vgroup="' + group + '"]', pv).forEach(sl => {
+        const fv = $('img[data-face="vorne"]', sl), fh = $('img[data-face="hinten"]', sl);
+        if (fv) { setSrc(fv, V.vorne); fv.alt = V.av; }
+        if (fh) { setSrc(fh, V.hinten); fh.alt = V.ah; }
+        $$('img[data-scene]', sl).forEach(im => setSrc(im, V.m[+im.dataset.scene - 1]));
+        const d = $('[data-vdesc]', sl); if (d) d.textContent = V.d;
+        $$('.pv-vars button', sl).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === v)));
+      });
+    }
+    $$('.pv-vars button', pv).forEach(b => b.addEventListener('click', () => setVariant(b.closest('[data-vgroup]').dataset.vgroup, b.dataset.v)));
+    let pvPreloaded = false;
+    function preloadVariants() {   // nach dem Öffnen im Leerlauf, damit der Wechsel sofort sitzt
+      if (pvPreloaded) return; pvPreloaded = true;
+      const urls = [];
+      Object.values(PV_VARS).forEach(g => Object.values(g).forEach(V => urls.push(V.vorne, V.hinten, ...V.m)));
+      const run = () => [...new Set(urls)].forEach(u => { const i = new Image(); i.decoding = 'async'; i.src = u; });
+      (window.requestIdleCallback || (f => setTimeout(f, 1500)))(run);
+    }
 
     // 360°-Ansicht des Aufstellers: 36 Bilder im 10°-Takt als 6 × 6-Raster; ziehen, wischen oder Pfeiltasten
     function Spin(el) {
