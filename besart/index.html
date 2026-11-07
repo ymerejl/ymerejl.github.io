@@ -1070,7 +1070,7 @@ a.menu-book{text-decoration:none}
   if (!/[?&](kunde|termin)\b/.test(q)) {
     d.classList.add('pitch');
     var st = null; try { st = JSON.parse(localStorage.getItem('besart-pitch')); } catch (e) {}
-    if (!st || st.v !== 2 || st.stage === 'intake') d.classList.add('pitch-hold');
+    if (!st || st.v !== 3 || st.stage === 'intake') d.classList.add('pitch-hold');
   }
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   // QR-Code (?termin) und direkter Link aufs Print-Paket: ohne Intro
@@ -1527,7 +1527,7 @@ a.menu-book{text-decoration:none}
         </ul>
         <div class="stats" data-reveal>
           <div class="stat"><div class="num"><span data-count="4.9" data-dec="1">0</span></div><p>Google · 67 Bewertungen</p></div>
-          <div class="stat"><div class="num"><span data-count="5" data-dec="1">0</span></div><p>Salonkee · 25 Bewertungen</p></div>
+          <div class="stat"><div class="num"><span data-count="5" data-dec="1">0</span></div><p>Salonkee · 26 Bewertungen</p></div>
           <div class="stat"><div class="num">2024</div><p>eröffnet in Horgen</p></div>
         </div>
         <p class="about-sign" data-reveal>Wir freuen uns darauf, Sie bald bei uns begrüssen zu dürfen!</p>
@@ -1563,7 +1563,7 @@ a.menu-book{text-decoration:none}
         </div>
         <div class="score" id="score2" data-reveal>
           <span class="big" data-count="5" data-dec="1">0</span>
-          <span><span class="stars" data-stars="5"></span><small>aus 25 verifizierten Salonkee-Bewertungen</small><a href="https://salonkee.ch/salon/besart-hairsalon?lang=de" target="_blank" rel="noopener">Auf Salonkee lesen</a></span>
+          <span><span class="stars" data-stars="5"></span><small>aus 26 verifizierten Salonkee-Bewertungen</small><a href="https://salonkee.ch/salon/besart-hairsalon?lang=de" target="_blank" rel="noopener">Auf Salonkee lesen</a></span>
         </div>
       </div>
     </div>
@@ -2574,66 +2574,83 @@ a.menu-book{text-decoration:none}
     };
 
     /* ---------- Fragen ---------- */
+    // Zweites Gespräch (10. November 2026): zeigen, was neu ist, und gemeinsam entscheiden
     const FLOWS = {
       intake: {
-        kicker: 'Gesprächsleitfaden', side: 'Vor der Präsentation', eyebrow: 'Fragebogen',
+        kicker: 'Gesprächsleitfaden · 2. Termin', side: 'Vor der Präsentation', eyebrow: 'Einstieg',
         steps: [
-          { id: 'gespraech', t: 'Kennenlernen', h: 'Erst einmal <em>kennenlernen.</em>',
-            lead: 'Bevor die neue Website kommt, ein kurzes Gespräch: wer wir sind, was BesArt ausmacht und was wichtig ist.',
-            agenda: ['Kennenlernen', 'Der Salon heute – {Name} erzählt', 'Was ich anbieten kann', 'Wünsche an die Website', 'Die neue Website und die Drucksachen', 'Fragen und nächste Schritte'],
+          { id: 'gespraech', t: 'Begrüssung', h: 'Schön, dass wir <em>weitermachen.</em>',
+            lead: 'Heute zeigen wir, was seit dem ersten Gespräch entstanden ist, und treffen gemeinsam die Entscheide für den Start im Januar.',
+            agenda: ['Rückblick: was sich {Name} gewünscht hat', 'Kurz in den Salonkee-Vertrag schauen', 'Die Website: Gold, Bewegung und Video', 'Visitenkarte und Flyer: je drei Varianten', 'Entscheide: Buchung, Zahlgerät, Domain, Preise ab Januar', 'Vertrag, Zahlungsplan und nächste Schritte'],
             q: [
               { id: 'partner', l: 'Gesprächspartner', type: 'text', ph: 'Name' },
               { id: 'datum', l: 'Datum', type: 'date' },
               { id: 'ort', l: 'Wo findet das Gespräch statt?', type: 'chips', o: ['Im Salon', 'Bei mir', 'Telefon / Video'] },
             ] },
-          { id: 'salon', t: 'Der Salon heute', h: 'Der Salon <em>heute.</em>',
-            lead: 'Zuerst stelle ich mich kurz vor. Dann erzählt {Name} – ich halte das Wichtigste fest.',
-            cue: ['Mich kurz vorstellen: wer ich bin und was ich mache', '{Name} erzählt: über sich, den Salon und den eigenen Weg', 'Was erwartet {Name} von mir?', 'Kurz erwähnen: Ich mache mir ein paar Notizen'],
-            nonote: true,
+          { id: 'rueckblick', t: 'Rückblick', h: 'Was wir <em>mitgenommen haben.</em>',
+            lead: 'Kurz zusammenfassen, was {Name} beim ersten Gespräch wichtig war, und nachfragen, ob sich etwas geändert hat.',
+            cue: ['Die Website gefällt bereits, Aufbau und Stil bleiben', 'Logo und «Art» in Gold, dazu edle goldene Akzente', 'Mehr Leben: Video im Startbild, Scroll-Animation, animiertes Logo', 'Start im Januar 2027, zusammen mit den neuen Preisen', 'Das Hosting im ersten Jahr ist geschenkt'],
             q: [
-              { id: 'notizen', l: 'Notizen zum Gespräch', type: 'bignote', ph: 'Stichworte, Zitate, Wünsche …',
-                warm: ['Werdegang', 'Seit wann BesArt', 'Team', 'Kundschaft', 'Was gut läuft', 'Was im Alltag nervt', 'Wie Termine zustande kommen', 'Wie Neukunden kommen', 'Konkurrenz', 'Ziele', 'Erwartungen an mich'] },
+              { id: 'neu', l: 'Gibt es seit dem letzten Gespräch etwas Neues?', type: 'area', ph: 'z. B. Team, Öffnungszeiten, Leistungen, Wünsche' },
             ] },
-          { id: 'angebot', t: 'Mein Angebot', h: 'Was ich <em>anbieten kann.</em>',
-            lead: 'Ein Auftritt aus einem Guss: online gut gefunden werden – und im Salon in Erinnerung bleiben.',
-            offer: true, q: [] },
-          { id: 'wuensche', t: 'Website-Wünsche', h: 'Wünsche an <em>die Website.</em>',
-            lead: 'Was ist {name} wichtig – und wie soll sich BesArt online anfühlen?',
+          { id: 'salonkee', t: 'Salonkee prüfen', h: 'Ein Blick <em>in den Vertrag.</em>',
+            lead: 'Die Bedingungen für Salons sind nicht öffentlich. Bevor wir über Variante 1 oder 2 entscheiden, schauen wir sie gemeinsam im Salonkee-Dashboard oder in der Registrierungs-E-Mail an. Bis dahin nichts kündigen.',
             q: [
-              { id: 'wuensche', l: 'Was wünscht sich {name} von der Website?', type: 'area', ph: 'Was soll sie zeigen, können, ausstrahlen? Gibt es Websites, die gefallen?' },
-              { id: 'farben', l: 'Farbpalette', type: 'multi', other: 'Eigene Farben, z. B. aus dem Logo',
-                o: [['Schwarz & Creme', ['#0F0E0D', '#EDE6DA', '#C7B593']], ['Hell & natürlich', ['#F3EEE6', '#D8C9B4', '#8B7A64']], ['Warm & erdig', ['#3A2A21', '#B07F55', '#E9D6C1']],
-                    ['Kühl & modern', ['#1D2227', '#95A2AC', '#EEF1F3']], ['Farbig & mutig', ['#2A1C3B', '#C2466A', '#F0BF4C']]] },
-              { id: 'wichtig', l: 'Was ist besonders wichtig?', type: 'multi', o: ['Online-Termin', 'Leistungen & Preise', 'Echte Fotos vom Salon', 'Team vorstellen', 'Google-Bewertungen', 'Instagram', 'Gut auf dem Handy', 'Inhalte selbst ändern'], other: 'Anderes' },
-              { id: 'effekte', l: 'Visuelle Effekte', type: 'chips', o: ['Lieber schlicht', 'Dezent', 'Gerne mehr Effekte', 'Nach der Präsentation entscheiden'] },
+              { id: 'paket', l: 'Welches Paket ist gebucht?', type: 'chips', o: ['Go', 'Smart', 'Pro', 'Weiss nicht'], other: 'Zusatzmodule, z. B. Payments' },
+              { id: 'kosten', l: 'Kosten pro Monat laut letzter Rechnung', type: 'text', ph: 'CHF … (mit oder ohne MwSt.?)' },
+              { id: 'laufzeit', l: 'Laufzeit und Kündigungsfrist', type: 'text', ph: 'z. B. monatlich, 1 Monat auf Monatsende' },
+              { id: 'verlaengerung', l: 'Nächstes Verlängerungs- oder Enddatum', type: 'date' },
+              { id: 'terminal', l: 'Das Adyen-Zahlgerät ist …', type: 'chips', o: ['gekauft', 'gemietet', 'leihweise', 'unklar'] },
+              { id: 'gebuehren', l: 'Gebühren pro Zahlung laut Abrechnung', type: 'text', ph: 'Debit, Kredit, TWINT – Kommission auf Buchungen?' },
+              { id: 'ausfaelle', l: 'Kurzfristige Absagen und Nichterscheinen', type: 'chips', o: ['Kaum', '1–2 pro Monat', 'Mehr als 2 pro Monat'] },
             ] },
         ],
         end: { id: 'bereit', t: 'Präsentation', end: true, h: 'Danke. <em>Jetzt zur Website.</em>',
           lead: 'Alles ist gespeichert. Während der Präsentation lässt sich zu jeder Seite eine Notiz festhalten: mit dem Knopf «Notizen» unten links' + (touch ? '.' : ' oder der Taste N.') },
       },
       closing: {
-        kicker: 'Abschluss', side: 'Nach der Präsentation', eyebrow: 'Abschluss',
+        kicker: 'Entscheide', side: 'Nach der Präsentation', eyebrow: 'Entscheide',
         steps: [
-          { id: 'eindruck', t: 'Eindruck', h: 'Wie wirkt <em>das Ganze?</em>', lead: 'Ehrliches Feedback hilft am meisten.',
+          { id: 'eindruck', t: 'Eindruck', h: 'Wie wirkt <em>das Neue?</em>', lead: 'Ehrliches Feedback hilft am meisten.',
             q: [
               { id: 'gesamt', l: 'Gesamteindruck', type: 'scale', min: 1, max: 5, lo: 'Eher nicht', hi: 'Begeistert' },
-              { id: 'gefaellt', l: 'Was gefällt am besten?', type: 'multi', o: ['Intro mit der Schere', 'Design', 'Online-Termin', 'Visitenkarten', 'Flyer', 'Bewertungsaufsteller'] },
-              { id: 'fehlt', l: 'Was fehlt oder soll anders sein?', type: 'area' },
+              { id: 'gefaellt', l: 'Was gefällt am besten?', type: 'multi', o: ['Gold-Logo', 'Video im Startbild', 'Scroll-Animation «Handwerk»', 'Intro mit der Schere', 'Visitenkarten', 'Flyer', 'Bewertungsaufsteller'] },
+              { id: 'fehlt', l: 'Was soll noch anders werden?', type: 'area' },
             ] },
-          { id: 'umsetzung', t: 'Umsetzung', h: 'Für den <em>Start.</em>', lead: 'Was es für die Umsetzung braucht.',
+          { id: 'druck', t: 'Drucksachen', h: 'Welche Variante <em>wird gedruckt?</em>', lead: 'Die Varianten A, B und C lassen sich im Print-Paket umschalten («Weiter» ganz unten auf der Website).',
             q: [
-              { id: 'start', l: 'Gewünschter Start', type: 'chips', o: ['Sofort', 'In den nächsten Wochen', 'Später'], other: 'Datum oder Anlass' },
-              { id: 'domain', l: 'Webadresse (Domain)', type: 'chips', o: ['Vorhanden', 'Neu registrieren', 'Weiss nicht'], other: 'Adresse' },
-              { id: 'fotos', l: 'Bilder für die Website', type: 'chips', o: ['Eigene Fotos vorhanden', 'Fotoshooting gewünscht', 'KI-Bilder sind in Ordnung'] },
+              { id: 'karte', l: 'Visitenkarte', type: 'chips', o: ['A · Noir & Gold', 'B · Ivoire', 'C · Monogramm'] },
+              { id: 'flyer', l: 'Flyer A5', type: 'chips', o: ['A · Bogen', 'B · Vollbild', 'C · Typografie'] },
+              { id: 'aenderung', l: 'Änderungen an der gewählten Variante', type: 'area', ph: 'Texte, Bild, Farben …' },
               { id: 'karten', l: 'Visitenkarten – Menge', type: 'chips', o: ['250', '500', '1000'] },
-              { id: 'flyer', l: 'Flyer – Menge', type: 'chips', o: ['500', '1000', '2500'] },
+              { id: 'flyermenge', l: 'Flyer – Menge', type: 'chips', o: ['500', '1000', '2500'] },
               { id: 'aufsteller', l: 'Bewertungsaufsteller – Anzahl', type: 'chips', o: ['1', '2', '3'] },
             ] },
-          { id: 'entscheid', t: 'Entscheid', h: 'Wie geht es <em>weiter?</em>', lead: 'Zum Schluss das Wichtigste festhalten.',
+          { id: 'buchung', t: 'Buchung & Zahlung', h: 'Salonkee, Buchung <em>und Zahlgerät.</em>',
+            lead: 'Variante 1: Salonkee bleibt, die Website führt mit «Termin buchen» direkt in die Salonkee-Buchung (einbetten lässt Salonkee nicht zu). Variante 2: eigene Online-Buchung, Salonkee wird gekündigt, dazu ein neues Zahlgerät.',
             q: [
-              { id: 'entscheid', l: 'Entscheid', type: 'chips', o: ['Zusage', 'Bedenkzeit', 'Absage'] },
-              { id: 'next', l: 'Nächster Schritt', type: 'text', ph: 'z. B. Offerte senden, Fotos schicken' },
-              { id: 'followup', l: 'Nachfassen am', type: 'date' },
+              { id: 'variante', l: 'Welche Variante?', type: 'chips', o: ['Variante 1 · Salonkee bleibt', 'Variante 2 · Eigene Buchung', 'Noch offen'] },
+              { id: 'terminal', l: 'Zahlgerät', type: 'chips', o: ['Salonkee-Terminal behalten', 'Worldline All-in-One (inkl. TWINT)', 'Stripe + TWINT-Sticker', 'SumUp + TWINT-Sticker', 'Noch offen'] },
+              { id: 'storno', l: 'Absagen unter 24 Stunden', type: 'chips', o: ['Regel nur kommunizieren', 'Karte hinterlegen (Neukunden)', 'Anzahlung bei Wiederholung', 'Keine Regel'], other: 'Gebühr, z. B. 50 % / 100 % bei Nichterscheinen' },
+              { id: 'kollegen', l: 'Kollegenpreis für enge Freunde', type: 'chips', o: ['Betrag frei eintippen', 'Fester Rabatt im Gerät', 'Kein Thema'] },
+            ] },
+          { id: 'start', t: 'Start im Januar', h: 'Domain, Preise <em>und Daten.</em>',
+            lead: 'besart.ch ist vergeben. Frei sind unter anderem besart-hairsalon.ch, besart-horgen.ch und haarmitart.ch (Stand 7. November). Später kommt die Website auch auf Englisch und Italienisch – heute noch kein Thema.',
+            q: [
+              { id: 'domain', l: 'Hauptadresse', type: 'chips', o: ['besart-hairsalon.ch', 'besart-horgen.ch', 'haarmitart.ch'], other: 'Andere Adresse' },
+              { id: 'weiter', l: 'Zusätzlich als Weiterleitung sichern', type: 'multi', o: ['besart-hairsalon.ch', 'besart-horgen.ch', 'haarmitart.ch', 'besarthairsalon.ch'] },
+              { id: 'mail', l: 'E-Mail-Adresse auf der neuen Domain', type: 'text', ph: 'z. B. info@…' },
+              { id: 'preise', l: 'Preise ab Januar', type: 'chips', o: ['Zurückhaltend', 'Mittel (Empfehlung)', 'Ambitioniert', 'Eigene Preise'], other: 'Notiz zu den Preisen' },
+              { id: 'preisdatum', l: 'Neue Preise gelten ab', type: 'date' },
+              { id: 'golive', l: 'Website-Start', type: 'date' },
+              { id: 'daten', l: 'Öffnungszeiten, Leistungen, Preise (Datenprüfliste)', type: 'chips', o: ['Geprüft, alles stimmt', 'Geprüft, Änderungen notiert', 'Folgt per E-Mail'] },
+            ] },
+          { id: 'entscheid', t: 'Vertrag', h: 'Vertrag und <em>nächste Schritte.</em>', lead: 'Zum Schluss das Wichtigste festhalten.',
+            q: [
+              { id: 'vertrag', l: 'Vertrag', type: 'chips', o: ['Unterschrieben', 'Geht per E-Mail', 'Bedenkzeit'] },
+              { id: 'zahlung', l: 'Zahlung', type: 'chips', o: ['6 Raten wie vorgeschlagen', 'Anderer Plan'], other: 'Plan' },
+              { id: 'next', l: 'Nächster Schritt', type: 'text', ph: 'z. B. Domain registrieren, Fotos schicken, Salonkee anschreiben' },
+              { id: 'followup', l: 'Nächster Termin am', type: 'date' },
               { id: 'offen', l: 'Offene Fragen oder Einwände', type: 'area' },
             ] },
         ],
@@ -2645,11 +2662,12 @@ a.menu-book{text-decoration:none}
     Object.values(FLOWS).forEach(f => f.steps.forEach(st => st.q.forEach(q => { Q[st.id + '.' + q.id] = { st, q }; })));
 
     /* ---------- Zustand (lokal gespeichert) ---------- */
-    const fresh = () => ({ v: 2, created: new Date().toISOString(), updated: null, stage: 'intake', step: { intake: 0, closing: 0 },
+    const fresh = () => ({ v: 3, created: new Date().toISOString(), updated: null, stage: 'intake', step: { intake: 0, closing: 0 },
       a: { 'gespraech.partner': 'Besart Beka', 'gespraech.datum': dayISO(new Date()) }, n: {}, tip: false });
     let S = null, saveT = 0, dead = false;
     try { S = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
-    if (!S || S.v !== 2 || typeof S.a !== 'object' || !S.a || typeof S.n !== 'object' || !S.n) S = fresh();
+    if (S && S.v === 2) { try { if (!localStorage.getItem(KEY + '-1')) localStorage.setItem(KEY + '-1', JSON.stringify(S)); } catch (e) {} }
+    if (!S || S.v !== 3 || typeof S.a !== 'object' || !S.a || typeof S.n !== 'object' || !S.n) S = fresh();
     S.step = Object.assign({ intake: 0, closing: 0 }, S.step);
     const savedEl = $('#ptSaved');
     function store() {
