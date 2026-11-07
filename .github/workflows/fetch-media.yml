@@ -1,0 +1,34 @@
+# Temporary helper: downloads the generated videos listed in _media/raw.txt,
+# re-encodes them visually lossless (smaller) and commits them to the branch (removed afterwards).
+name: fetch-media
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [_media/raw.txt, .github/workflows/fetch-media.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and re-encode
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          mkdir -p _media/raw
+          grep -v '^#' _media/raw.txt | while read -r name url; do
+            [ -z "$name" ] && continue
+            [ -f "_media/raw/$name" ] && continue
+            curl -fsSL --retry 3 "$url" -o "/tmp/$name.src"
+            ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames -show_entries format=duration,bit_rate "/tmp/$name.src"
+            ffmpeg -nostdin -loglevel error -i "/tmp/$name.src" -an -c:v libx264 -preset slow -crf 12 -pix_fmt yuv420p "_media/raw/$name"
+            ls -la "/tmp/$name.src" "_media/raw/$name"
+          done
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add _media/raw
+          git diff --cached --quiet && exit 0
+          git commit -m "Add fetched media (temporary)"
+          git push
