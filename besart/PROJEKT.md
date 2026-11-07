@@ -16,15 +16,15 @@ Preise, Varianten und Zahlungsplan stehen im Vertrag und in der Rechnung (bewuss
 
 ## Mit Besart prüfen (10.11.)
 
-- Öffnungszeiten, Preise und Dienstleistungen (Datenprüfliste in `dokumente/`)
-- Domain auswählen (Liste mit Verfügbarkeit: `_recherche/05-domains.md`)
+- Öffnungszeiten, Preise und Dienstleistungen (Datenprüfliste als privates Claude Doc)
+- Domain auswählen (besart.ch ist vergeben; Liste mit Verfügbarkeit im Branch `claude/besart-recherche`, `besart/_recherche/05-domains.md`)
 - Je 3 Varianten Flyer und Visitenkarte (A/B/C im Showcase «Printmedien») – eine auswählen
 - Variante 1 oder 2 (Salonkee behalten und einbinden oder durch eigene Buchung ersetzen)
 
-## Offene Themen (Recherche in `_recherche/`)
+## Offene Themen (Recherche im Branch `claude/besart-recherche`, Ordner `besart/_recherche/`)
 
 1. Salonkee kündigen: Frist, Weg, Terminal-Rückgabe, Datenexport
-2. Open-Source-Terminbuchung für Coiffeure (Kandidaten: Easy!Appointments, Cal.com …)
+2. Open-Source-Terminbuchung für Coiffeure: Easy!Appointments (GPL, braucht eigenes Hosting); Cal.com ist seit April 2026 nicht mehr Open Source
 3. Stornierung innerhalb 24 h: Gebühr belasten oder in Rechnung stellen (Salonkee kann das heute)
 4. Ersatz für das Adyen-Terminal von Salonkee: zuverlässig, einfach verbindbar, tiefe Gebühren (nicht SumUp), Live-Buchhaltung für die Steuererklärung, freier Preis für den Kollegenpreis (~10 enge Freunde)
 5. Domains auf Infomaniak prüfen
@@ -35,6 +35,7 @@ Preise, Varianten und Zahlungsplan stehen im Vertrag und in der Rechnung (bewuss
 - Die aktuelle Website gefällt ihm bereits.
 - Logo goldig, «Art» im Titel goldig, mehr edle goldene Akzente.
 - Mehr Leben und Animation: Scroll-Animationen, Intro-Video, neues animiertes Logo (Higgsfield).
+  Umgesetzt am 07.11.: Gold-Logo und Gold-Akzente, Hero-Video (echter Salon im Abendlicht, Higgsfield), Scroll-Sequenz «Handwerk» (Higgsfield), Logo-Glanz.
 
 ## Für später notiert (noch nicht umsetzen)
 
