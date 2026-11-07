@@ -1,3 +1,0 @@
-mac {"title":"BesArt Hairsalon","vt":2.845,"on":true,"craft":true,"variants":4,"gold":"url(\"#auG\")","rev":true}
-phone {"title":"BesArt Hairsalon","vt":2.629,"on":true,"craft":true,"variants":4,"gold":"url(\"#auG\")","rev":true}
-errors []
