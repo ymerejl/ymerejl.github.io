@@ -35,7 +35,8 @@ Preise, Varianten und Zahlungsplan stehen im Vertrag und in der Rechnung (bewuss
 - Die aktuelle Website gefällt ihm bereits.
 - Logo goldig, «Art» im Titel goldig, mehr edle goldene Akzente.
 - Mehr Leben und Animation: Scroll-Animationen, Intro-Video, neues animiertes Logo (Higgsfield).
-  Umgesetzt am 07.11.: Gold-Logo und Gold-Akzente, Hero-Video (echter Salon im Abendlicht, Higgsfield), Scroll-Sequenz «Handwerk» (Higgsfield), Logo-Glanz.
+  Umgesetzt am 07.11.: Gold-Logo und Gold-Akzente, Scroll-Sequenz «Handwerk» (Higgsfield), Logo-Glanz.
+  Umgesetzt am 09.11.: Hero als Markenfilm (3 Einstellungen, Higgsfield/Kling), Buchung als eigener Abschnitt, Leistungsband, lebende Looks.
 
 ## Für später notiert (noch nicht umsetzen)
 

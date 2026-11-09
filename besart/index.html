@@ -237,10 +237,11 @@ section{position:relative}
 .nav .btn .short{display:none}
 
 /* ---------- Hero ---------- */
-.hero{min-height:max(720px,100svh);display:flex;flex-direction:column;justify-content:center;padding:calc(130px + env(safe-area-inset-top,0px)) 0 90px;overflow:clip;isolation:isolate}
-.hero-bg{position:absolute;inset:-8% 0;z-index:-2}
-.hero-bg img,.hero-vid{width:100%;height:100%;object-fit:cover;object-position:58% 50%;filter:saturate(.55) brightness(.78) contrast(1.05);animation:kenburns 16s var(--ease) both}
-.hero-vid{position:absolute;inset:0;opacity:0;transition:opacity 1.6s var(--ease);filter:saturate(.78) brightness(.8) contrast(1.05)}
+.hero{min-height:max(700px,100svh);display:flex;flex-direction:column;justify-content:flex-end;padding:calc(130px + env(safe-area-inset-top,0px)) 0 clamp(96px,13vh,150px);overflow:clip;isolation:isolate;background:#0B0908}
+.hero-film{position:absolute;inset:-3% 0;z-index:-3}
+.hero-film img,.hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 22%}
+.hero-film img{animation:kenburns 18s var(--ease) both}
+.hero-vid{opacity:0;transition:opacity 1.6s var(--ease)}
 .hero-vid.on{opacity:1}
 /* ---------- Handwerk: Scroll-Sequenz (Higgsfield-Video als Einzelbilder, Bild folgt dem Scrollen) ---------- */
 .craft{height:330vh;background:#0B0A09}
@@ -271,26 +272,52 @@ section{position:relative}
   .craft-beats{min-height:11em}
 }
 @keyframes kenburns{from{transform:scale(1.1)}to{transform:scale(1)}}
-.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,14,13,.96) 0%,rgba(15,14,13,.86) 40%,rgba(15,14,13,.62) 68%,rgba(15,14,13,.8) 100%),linear-gradient(0deg,var(--bg) 0%,rgba(15,14,13,0) 30%)}
-.hero-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,452px);gap:clamp(32px,6vw,110px);align-items:center;width:100%}
-.hero-copy{display:flex;flex-direction:column;gap:30px}
-.hero .eyebrow,.hero .lede,.hero-meta{opacity:0;transform:translateY(20px);transition:opacity 1.1s var(--ease),transform 1.2s var(--ease)}
+/* ---------- Hero: Markenfilm (Higgsfield), Schrift links im dunklen Raum ---------- */
+.hero-shade{position:absolute;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(90deg,rgba(11,9,8,.9) 0%,rgba(11,9,8,.66) 28%,rgba(11,9,8,.12) 56%,rgba(11,9,8,0) 72%),linear-gradient(0deg,var(--bg) 0%,rgba(15,14,13,.55) 16%,rgba(15,14,13,0) 38%),linear-gradient(180deg,rgba(11,9,8,.6) 0%,rgba(11,9,8,0) 20%)}
+.hero-grain{position:absolute;inset:-60%;z-index:-1;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.6 -.3'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");animation:grain 1.1s steps(5) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-2%)}60%{transform:translate(-2%,-4%)}80%{transform:translate(4%,2%)}100%{transform:translate(0,0)}}
+.hero-inner{width:100%}
+.hero-copy{display:flex;flex-direction:column;gap:30px;max-width:min(44rem,54vw)}
+.hero .h1{font-size:clamp(66px,9.4vw,164px);line-height:.9;letter-spacing:-.012em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero .eyebrow,.hero .lede,.hero-actions,.hero-meta,.hero-reel{opacity:0;transform:translateY(20px);transition:opacity 1.1s var(--ease),transform 1.2s var(--ease)}
 .hero.ready .eyebrow{opacity:1;transform:none;transition-delay:.1s}
 .hero.ready .lede{opacity:1;transform:none;transition-delay:.55s}
-.hero.ready .hero-meta{opacity:1;transform:none;transition-delay:.7s}
+.hero.ready .hero-actions{opacity:1;transform:none;transition-delay:.68s}
+.hero.ready .hero-meta{opacity:1;transform:none;transition-delay:.8s}
+.hero.ready.has-film .hero-reel{opacity:1;transform:none;transition-delay:1s}
+.hero-reel{position:absolute;right:var(--gutter);bottom:clamp(40px,6vh,64px);display:flex;gap:22px;margin:0;padding:0;list-style:none;pointer-events:none}
+.hero-reel li{display:flex;flex-direction:column;gap:9px;width:64px;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory-3);transition:color .6s}
+.hero-reel li.on{color:var(--ivory)}
+.hero-reel li i{position:relative;display:block;height:1px;background:var(--line-2);overflow:hidden}
+.hero-reel li i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--gold-line),var(--gold));transform:scaleX(var(--p,0));transform-origin:0 50%}
 .hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;padding-top:26px;border-top:1px solid var(--line);max-width:32rem}
 .rating{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:13px;color:var(--ivory-2)}
 .rating b{font-family:var(--serif);font-weight:500;font-size:24px;line-height:1;color:var(--ivory)}
 .stars{display:inline-flex;gap:2px;color:var(--sand)}
 .stars svg{width:13px;height:13px}
-.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory-3);text-decoration:none}
+.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory-3);text-decoration:none}
 .scroll-cue span{position:relative;width:1px;height:44px;background:var(--line);overflow:hidden}
 .scroll-cue span::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--ivory);animation:cue 2.4s var(--ease-io) infinite}
 @keyframes cue{to{top:100%}}
 
 /* ---------- Buchungs-Widget ---------- */
 .booking{position:relative;z-index:3;scroll-margin-top:100px;border-radius:var(--r-lg);padding:26px 26px 22px;color:var(--ivory);background:rgba(21,19,17,.88);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);box-shadow:0 50px 100px -40px rgba(0,0,0,.9),inset 0 0 0 1px var(--line-2);opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--ease) .35s,transform 1.4s var(--ease) .35s}
-.hero.ready .booking{opacity:1;transform:none}
+.booking.in{opacity:1;transform:none}
+.book{background:var(--bg)}
+.book-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,470px);gap:clamp(40px,7vw,120px);align-items:center}
+.book-copy{display:flex;flex-direction:column;gap:26px;max-width:34rem}
+.book-copy .lede a{color:var(--ivory);text-decoration:none;border-bottom:1px solid var(--gold-line)}
+.book-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:6px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.book-facts li{padding:18px 16px 0 0;font-size:13px;line-height:1.5;color:var(--ivory-3)}
+.book-facts b{display:block;margin-bottom:6px;font:italic 400 26px/1 var(--serif);color:var(--gold)}
+.marquee{position:relative;overflow:hidden;padding:clamp(22px,3vw,40px) 0;background:var(--bg);border-block:1px solid var(--line);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{display:flex;width:max-content;animation:mq 46s linear infinite}
+.mq-track span{display:flex;align-items:center;gap:clamp(22px,3vw,48px);padding-right:clamp(22px,3vw,48px);font:italic 400 clamp(38px,5.4vw,88px)/1 var(--serif);white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(217,188,124,.55)}
+.mq-track span:nth-child(even){-webkit-text-stroke:0;background:var(--au);background-size:200% 100%;-webkit-background-clip:text;background-clip:text}
+.mq-track i{font-style:normal;font-size:.36em;color:var(--gold);-webkit-text-stroke:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}.hero-grain{animation:none}}
 .booking.flash{animation:flash 1.4s var(--ease)}
 @keyframes flash{0%{box-shadow:0 0 0 0 rgba(237,230,218,.5),0 50px 100px -40px rgba(0,0,0,.9),inset 0 0 0 1px var(--line-2)}100%{box-shadow:0 0 0 22px rgba(237,230,218,0),0 50px 100px -40px rgba(0,0,0,.9),inset 0 0 0 1px var(--line-2)}}
 .bk-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -515,8 +542,10 @@ a.menu-book{text-decoration:none}
 .looks-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.2vw,32px)}
 .look{margin:0}
 .look-img{position:relative;aspect-ratio:4/5;border-radius:var(--r-md);overflow:hidden;background:var(--bg-3)}
-.look-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
-.look:hover .look-img img{transform:scale(1.05)}
+.look-img img,.look-img video{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease),opacity 1s var(--ease)}
+.look-img video{position:absolute;inset:0;opacity:0}
+.look-img video.on{opacity:1}
+.look:hover .look-img img,.look:hover .look-img video{transform:scale(1.05)}
 .look figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .look figcaption b{font-family:var(--serif);font-size:21px;font-weight:500;line-height:1.2}
 .look figcaption span{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--sand)}
@@ -977,12 +1006,12 @@ a.menu-book{text-decoration:none}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1180px){
-  .hero-inner{grid-template-columns:minmax(0,1fr) minmax(0,410px)}
+  .book-grid{grid-template-columns:minmax(0,1fr) minmax(0,420px)}
   .nav-links{gap:22px}
 }
 @media (max-width:980px){
-  .hero{min-height:0;padding-bottom:72px}
-  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-copy{max-width:min(40rem,70vw)}
+  .book-grid{grid-template-columns:minmax(0,1fr)}
   .booking{max-width:560px}
   .about-grid,.visit-grid{grid-template-columns:minmax(0,1fr)}
   .about-photo{max-width:520px}
@@ -1003,11 +1032,15 @@ a.menu-book{text-decoration:none}
   .nav .btn .long{display:none}
   .nav .btn .short{display:inline}
   .nav .btn svg{display:none}
-  .hero{padding-top:calc(104px + env(safe-area-inset-top,0px))}
-  .hero-bg img{object-position:62% 50%}
-  .hero-shade{background:linear-gradient(180deg,rgba(15,14,13,.6) 0%,rgba(15,14,13,.84) 45%,var(--bg) 90%)}
-  .h1{font-size:clamp(56px,17vw,86px)}
-  .hero-copy{gap:22px}
+  .hero{min-height:100svh;padding:calc(104px + env(safe-area-inset-top,0px)) 0 44px}
+  .hero-film img,.hero-vid{object-position:50% 30%}
+  .hero-shade{background:linear-gradient(180deg,rgba(11,9,8,.55) 0%,rgba(11,9,8,0) 18%,rgba(11,9,8,0) 40%,rgba(15,14,13,.82) 64%,var(--bg) 92%)}
+  .h1,.hero .h1{font-size:clamp(56px,17vw,86px)}
+  .hero-copy{gap:20px;max-width:100%}
+  .hero-actions .btn-ghost{display:none}
+  .hero-reel{display:none}
+  .book-facts{grid-template-columns:minmax(0,1fr);gap:0}
+  .book-facts li{padding:14px 0;border-bottom:1px solid var(--line)}
   .hero-meta .status{display:none}
   .booking{padding:22px 18px 18px}
   .bk-next .lbl{display:none}
@@ -1070,7 +1103,7 @@ a.menu-book{text-decoration:none}
   if (!/[?&](kunde|termin)\b/.test(q)) {
     d.classList.add('pitch');
     var st = null; try { st = JSON.parse(localStorage.getItem('besart-pitch')); } catch (e) {}
-    if (!st || st.v !== 3 || st.stage === 'intake') d.classList.add('pitch-hold');
+    if (!st || st.v !== 4 || st.stage === 'intake') d.classList.add('pitch-hold');
   }
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   // QR-Code (?termin) und direkter Link aufs Print-Paket: ohne Intro
@@ -1438,19 +1471,43 @@ a.menu-book{text-decoration:none}
 
   <!-- ============ HERO + BUCHUNG ============ -->
   <section class="hero" id="hero" aria-labelledby="heroTitle">
-    <div class="hero-bg" data-parallax="0.16"><img src="img/salon-real.webp" alt="" fetchpriority="high"><video class="hero-vid" muted playsinline loop preload="none" disablepictureinpicture aria-hidden="true" tabindex="-1" data-src="media/salon-loop.mp4" data-src-mobile="media/salon-loop-mobil.mp4"></video></div>
+    <div class="hero-film" data-parallax="0.12" aria-hidden="true">
+      <picture><source media="(max-width: 700px) and (orientation: portrait)" srcset="img/hero-film-mobil.webp"><img src="img/hero-film.webp" alt="" fetchpriority="high"></picture>
+      <video class="hero-vid" muted playsinline loop preload="none" disablepictureinpicture tabindex="-1" data-src="media/hero-film.mp4" data-src-mobile="media/hero-film-mobil.mp4"></video>
+    </div>
     <div class="hero-shade"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-copy">
         <p class="eyebrow">Hairsalon &amp; Barber in Horgen</p>
         <h1 class="h1" id="heroTitle" data-split>Haar mit <em>Art.</em></h1>
         <p class="lede">Ihr Coiffeur des Vertrauens in Horgen: Haarschnitte, Colorationen, Styling, Pflege und Barberservices – für Damen, Herren, Kinder und Pensionäre.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#termin" data-book-cta>Termin buchen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="#leistungen">Leistungen &amp; Preise</a>
+        </div>
         <div class="hero-meta">
           <a class="rating" href="#bewertungen"><b>4,9</b><span class="stars" data-stars="5"></span><span>67 Google-Bewertungen</span></a>
           <a class="status" id="heroStatus" href="#besuch"><span class="dot"></span><span class="txt"></span></a>
         </div>
       </div>
-      <aside class="booking" id="termin" aria-label="Online-Terminbuchung">
+    </div>
+    <ol class="hero-reel" aria-hidden="true"><li>Damen<i></i></li><li>Herren<i></i></li><li>Farbe<i></i></li></ol>
+    <a class="scroll-cue" href="#leistungen" aria-label="Weiter nach unten"><span></span>Scrollen</a>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="mq-track"><span>Damen<i>✦</i></span><span>Herren<i>✦</i></span><span>Barber<i>✦</i></span><span>Farbe<i>✦</i></span><span>Pflege<i>✦</i></span><span>Kinder<i>✦</i></span><span>Pensionäre<i>✦</i></span><span>Damen<i>✦</i></span><span>Herren<i>✦</i></span><span>Barber<i>✦</i></span><span>Farbe<i>✦</i></span><span>Pflege<i>✦</i></span><span>Kinder<i>✦</i></span><span>Pensionäre<i>✦</i></span></div></div>
+
+  <!-- ============ ONLINE-TERMIN ============ -->
+  <section class="sec book" id="buchen" aria-labelledby="bookTitle">
+    <div class="wrap book-grid">
+      <div class="book-copy">
+        <p class="eyebrow" data-reveal>Online-Termin</p>
+        <h2 class="h2" id="bookTitle" data-split>In drei Schritten <em>zum Termin.</em></h2>
+        <p class="lede" data-reveal>Leistung wählen, freie Zeit wählen, Angaben eintragen – fertig. Lieber persönlich? Sie erreichen uns unter <a href="tel:+41447251404">044 725 14 04</a>.</p>
+        <ol class="book-facts" data-reveal><li><b>01</b>Leistungen auswählen, auch kombiniert</li><li><b>02</b>Freien Termin wählen, bei Besart oder egal wem</li><li><b>03</b>Angaben eintragen und bestätigen</li></ol>
+      </div>
+      <aside class="booking" id="termin" data-reveal aria-label="Online-Terminbuchung">
         <div class="bk-head">
           <span class="bk-label">Online-Termin</span>
           <span class="bk-next" id="bkNext"></span>
@@ -1459,7 +1516,6 @@ a.menu-book{text-decoration:none}
         <div class="bk-body" id="bkBody" aria-live="polite"></div>
       </aside>
     </div>
-    <a class="scroll-cue" href="#leistungen" aria-label="Weiter nach unten"><span></span>Scrollen</a>
   </section>
 
   <!-- ============ LEISTUNGEN ============ -->
@@ -2210,15 +2266,26 @@ a.menu-book{text-decoration:none}
   document.fonts && document.fonts.ready.then(moveInd);
 
   /* ---------------- Looks ---------------- */
+  // Lebende Looks: kurze Higgsfield-Clips (Kling) über dem Standbild, nur im Sichtbereich abgespielt
   const LOOKS = [
-    ['img/look-crop.webp', 'Herren', 'Textured Crop', 'Mann mit texturiertem Crop und kurzem Bart'],
-    ['img/look-bob.webp', 'Damen', 'Stumpfer Bob', 'Frau im Profil mit glänzendem Bob'],
-    ['img/barber-fade.webp', 'Barber', 'Skin Fade', 'Barber schneidet einen Skin Fade'],
-    ['img/hero-portrait.webp', 'Farbe', 'Kupfer-Glanz', 'Frau mit langem kupferrotem Haar'],
-    ['img/look-curlfade.webp', 'Herren', 'Curly Taper', 'Mann mit Locken und Taper Fade'],
-    ['img/look-chignon.webp', 'Damen', 'Tiefer Chignon', 'Tiefer Chignon mit Perlennadeln']
+    ['img/look-crop.webp', 'media/looks/look-crop.mp4', 'Herren', 'Textured Crop', 'Mann mit texturiertem Crop und kurzem Bart'],
+    ['img/look-bob.webp', 'media/looks/look-bob.mp4', 'Damen', 'Stumpfer Bob', 'Frau im Profil mit glänzendem Bob'],
+    ['img/barber-fade.webp', 'media/looks/look-fade.mp4', 'Barber', 'Skin Fade', 'Barber schneidet einen Skin Fade'],
+    ['img/hero-portrait.webp', 'media/looks/look-kupfer.mp4', 'Farbe', 'Kupfer-Glanz', 'Frau mit langem kupferrotem Haar'],
+    ['img/look-curlfade.webp', 'media/looks/look-curl.mp4', 'Herren', 'Curly Taper', 'Mann mit Locken und Taper Fade'],
+    ['img/look-chignon.webp', 'media/looks/look-chignon.mp4', 'Damen', 'Tiefer Chignon', 'Tiefer Chignon mit Perlennadeln']
   ];
-  $('#looksGrid').innerHTML = LOOKS.map(([src, tag, t, alt], i) => `<figure class="look" data-reveal style="--d:${(i % 3) * 0.1}s"><div class="look-img"><img src="${src}" alt="${alt}"></div><figcaption><b>${t}</b><span>${tag}</span></figcaption></figure>`).join('');
+  $('#looksGrid').innerHTML = LOOKS.map(([src, vid, tag, t, alt], i) => `<figure class="look" data-reveal style="--d:${(i % 3) * 0.1}s"><div class="look-img"><img src="${src}" alt="${alt}"><video muted playsinline loop preload="none" disablepictureinpicture tabindex="-1" aria-hidden="true" data-src="${vid}"></video></div><figcaption><b>${t}</b><span>${tag}</span></figcaption></figure>`).join('');
+  {
+    const slow = navigator.connection && (navigator.connection.saveData || /(^|-)2g$/.test(navigator.connection.effectiveType || ''));
+    const vids = $$('#looksGrid video');
+    if (!reduce && !slow && 'IntersectionObserver' in window) {
+      const play = v => { if (!v.src) v.src = v.dataset.src; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      vids.forEach(v => v.addEventListener('playing', () => v.classList.add('on'), { once: true }));
+      const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) play(en.target); else en.target.pause(); }), { threshold: .35 });
+      vids.forEach(v => io.observe(v));
+    }
+  }
 
   /* ---------------- Bewertungen ---------------- */
   const REVIEWS = [
@@ -2577,11 +2644,11 @@ a.menu-book{text-decoration:none}
     // Zweites Gespräch (10. November 2026): zeigen, was neu ist, und gemeinsam entscheiden
     const FLOWS = {
       intake: {
-        kicker: 'Gesprächsleitfaden · 2. Termin', side: 'Vor der Präsentation', eyebrow: 'Einstieg',
+        kicker: 'Gesprächsleitfaden · 2. Termin', side: 'Vor der Präsentation', eyebrow: 'Vor der Präsentation',
         steps: [
           { id: 'gespraech', t: 'Begrüssung', h: 'Schön, dass wir <em>weitermachen.</em>',
             lead: 'Heute zeigen wir, was seit dem ersten Gespräch entstanden ist, und treffen gemeinsam die Entscheide für den Start im Januar.',
-            agenda: ['Rückblick: was sich {Name} gewünscht hat', 'Kurz in den Salonkee-Vertrag schauen', 'Die Website: Gold, Bewegung und Video', 'Visitenkarte und Flyer: je drei Varianten', 'Entscheide: Buchung, Zahlgerät, Domain, Preise ab Januar', 'Vertrag, Zahlungsplan und nächste Schritte'],
+            agenda: ['Rückblick: was sich {Name} gewünscht hat', 'Die Website: Gold, Bewegung und Film', 'Visitenkarte und Flyer: je drei Varianten', 'Kurz in den Salonkee-Vertrag schauen, dann Variante 1 oder 2', 'Zahlgerät, Domain und Preise ab Januar', 'Was wir bis zum Vertrag noch fixieren'],
             q: [
               { id: 'partner', l: 'Gesprächspartner', type: 'text', ph: 'Name' },
               { id: 'datum', l: 'Datum', type: 'date' },
@@ -2589,32 +2656,21 @@ a.menu-book{text-decoration:none}
             ] },
           { id: 'rueckblick', t: 'Rückblick', h: 'Was wir <em>mitgenommen haben.</em>',
             lead: 'Kurz zusammenfassen, was {Name} beim ersten Gespräch wichtig war, und nachfragen, ob sich etwas geändert hat.',
-            cue: ['Die Website gefällt bereits, Aufbau und Stil bleiben', 'Logo und «Art» in Gold, dazu edle goldene Akzente', 'Mehr Leben: Video im Startbild, Scroll-Animation, animiertes Logo', 'Start im Januar 2027, zusammen mit den neuen Preisen', 'Das Hosting im ersten Jahr ist geschenkt'],
+            cue: ['Die Website gefällt bereits, Aufbau und Stil bleiben', 'Logo und «Art» in Gold, dazu edle goldene Akzente', 'Mehr Leben: Film im Startbild, lebende Looks, Scroll-Animation, animiertes Logo', 'Start im Januar 2027, zusammen mit den neuen Preisen', 'Das Hosting im ersten Jahr ist geschenkt'],
             q: [
               { id: 'neu', l: 'Gibt es seit dem letzten Gespräch etwas Neues?', type: 'area', ph: 'z. B. Team, Öffnungszeiten, Leistungen, Wünsche' },
-            ] },
-          { id: 'salonkee', t: 'Salonkee prüfen', h: 'Ein Blick <em>in den Vertrag.</em>',
-            lead: 'Die Bedingungen für Salons sind nicht öffentlich. Bevor wir über Variante 1 oder 2 entscheiden, schauen wir sie gemeinsam im Salonkee-Dashboard oder in der Registrierungs-E-Mail an. Bis dahin nichts kündigen.',
-            q: [
-              { id: 'paket', l: 'Welches Paket ist gebucht?', type: 'chips', o: ['Go', 'Smart', 'Pro', 'Weiss nicht'], other: 'Zusatzmodule, z. B. Payments' },
-              { id: 'kosten', l: 'Kosten pro Monat laut letzter Rechnung', type: 'text', ph: 'CHF … (mit oder ohne MwSt.?)' },
-              { id: 'laufzeit', l: 'Laufzeit und Kündigungsfrist', type: 'text', ph: 'z. B. monatlich, 1 Monat auf Monatsende' },
-              { id: 'verlaengerung', l: 'Nächstes Verlängerungs- oder Enddatum', type: 'date' },
-              { id: 'terminal', l: 'Das Adyen-Zahlgerät ist …', type: 'chips', o: ['gekauft', 'gemietet', 'leihweise', 'unklar'] },
-              { id: 'gebuehren', l: 'Gebühren pro Zahlung laut Abrechnung', type: 'text', ph: 'Debit, Kredit, TWINT – Kommission auf Buchungen?' },
-              { id: 'ausfaelle', l: 'Kurzfristige Absagen und Nichterscheinen', type: 'chips', o: ['Kaum', '1–2 pro Monat', 'Mehr als 2 pro Monat'] },
             ] },
         ],
         end: { id: 'bereit', t: 'Präsentation', end: true, h: 'Danke. <em>Jetzt zur Website.</em>',
           lead: 'Alles ist gespeichert. Während der Präsentation lässt sich zu jeder Seite eine Notiz festhalten: mit dem Knopf «Notizen» unten links' + (touch ? '.' : ' oder der Taste N.') },
       },
       closing: {
-        kicker: 'Entscheide', side: 'Nach der Präsentation', eyebrow: 'Entscheide',
+        kicker: 'Entscheide', side: 'Nach der Präsentation', eyebrow: 'Nach der Präsentation',
         steps: [
           { id: 'eindruck', t: 'Eindruck', h: 'Wie wirkt <em>das Neue?</em>', lead: 'Ehrliches Feedback hilft am meisten.',
             q: [
               { id: 'gesamt', l: 'Gesamteindruck', type: 'scale', min: 1, max: 5, lo: 'Eher nicht', hi: 'Begeistert' },
-              { id: 'gefaellt', l: 'Was gefällt am besten?', type: 'multi', o: ['Gold-Logo', 'Video im Startbild', 'Scroll-Animation «Handwerk»', 'Intro mit der Schere', 'Visitenkarten', 'Flyer', 'Bewertungsaufsteller'] },
+              { id: 'gefaellt', l: 'Was gefällt am besten?', type: 'multi', o: ['Gold-Logo', 'Film im Startbild', 'Lebende Looks', 'Scroll-Animation «Handwerk»', 'Intro mit der Schere', 'Visitenkarten', 'Flyer', 'Bewertungsaufsteller'] },
               { id: 'fehlt', l: 'Was soll noch anders werden?', type: 'area' },
             ] },
           { id: 'druck', t: 'Drucksachen', h: 'Welche Variante <em>wird gedruckt?</em>', lead: 'Die Varianten A, B und C lassen sich im Print-Paket umschalten («Weiter» ganz unten auf der Website).',
@@ -2625,6 +2681,17 @@ a.menu-book{text-decoration:none}
               { id: 'karten', l: 'Visitenkarten – Menge', type: 'chips', o: ['250', '500', '1000'] },
               { id: 'flyermenge', l: 'Flyer – Menge', type: 'chips', o: ['500', '1000', '2500'] },
               { id: 'aufsteller', l: 'Bewertungsaufsteller – Anzahl', type: 'chips', o: ['1', '2', '3'] },
+            ] },
+          { id: 'salonkee', t: 'Salonkee prüfen', h: 'Ein Blick <em>in den Vertrag.</em>',
+            lead: 'Bevor wir über Variante 1 oder 2 reden: Die Bedingungen für Salons sind nicht öffentlich. Wir schauen sie gemeinsam im Salonkee-Dashboard oder in der Registrierungs-E-Mail an. Bis dahin nichts kündigen.',
+            q: [
+              { id: 'paket', l: 'Welches Paket ist gebucht?', type: 'chips', o: ['Go', 'Smart', 'Pro', 'Weiss nicht'], other: 'Zusatzmodule, z. B. Payments' },
+              { id: 'kosten', l: 'Kosten pro Monat laut letzter Rechnung', type: 'text', ph: 'CHF … (mit oder ohne MwSt.?)' },
+              { id: 'laufzeit', l: 'Laufzeit und Kündigungsfrist', type: 'text', ph: 'z. B. monatlich, 1 Monat auf Monatsende' },
+              { id: 'verlaengerung', l: 'Nächstes Verlängerungs- oder Enddatum', type: 'date' },
+              { id: 'terminal', l: 'Das Adyen-Zahlgerät ist …', type: 'chips', o: ['gekauft', 'gemietet', 'leihweise', 'unklar'] },
+              { id: 'gebuehren', l: 'Gebühren pro Zahlung laut Abrechnung', type: 'text', ph: 'Debit, Kredit, TWINT – Kommission auf Buchungen?' },
+              { id: 'ausfaelle', l: 'Kurzfristige Absagen und Nichterscheinen', type: 'chips', o: ['Kaum', '1–2 pro Monat', 'Mehr als 2 pro Monat'] },
             ] },
           { id: 'buchung', t: 'Buchung & Zahlung', h: 'Salonkee, Buchung <em>und Zahlgerät.</em>',
             lead: 'Variante 1: Salonkee bleibt, die Website führt mit «Termin buchen» direkt in die Salonkee-Buchung (einbetten lässt Salonkee nicht zu). Variante 2: eigene Online-Buchung, Salonkee wird gekündigt, dazu ein neues Zahlgerät.',
@@ -2645,13 +2712,13 @@ a.menu-book{text-decoration:none}
               { id: 'golive', l: 'Website-Start', type: 'date' },
               { id: 'daten', l: 'Öffnungszeiten, Leistungen, Preise (Datenprüfliste)', type: 'chips', o: ['Geprüft, alles stimmt', 'Geprüft, Änderungen notiert', 'Folgt per E-Mail'] },
             ] },
-          { id: 'entscheid', t: 'Vertrag', h: 'Vertrag und <em>nächste Schritte.</em>', lead: 'Zum Schluss das Wichtigste festhalten.',
+          { id: 'entscheid', t: 'Bis zum Vertrag', h: 'Was wir noch <em>fixieren.</em>', lead: 'Der Vertrag folgt, sobald diese Punkte geklärt sind. Heute halten wir fest, was offen ist und wer was bis wann klärt.',
             q: [
-              { id: 'vertrag', l: 'Vertrag', type: 'chips', o: ['Unterschrieben', 'Geht per E-Mail', 'Bedenkzeit'] },
-              { id: 'zahlung', l: 'Zahlung', type: 'chips', o: ['6 Raten wie vorgeschlagen', 'Anderer Plan'], other: 'Plan' },
-              { id: 'next', l: 'Nächster Schritt', type: 'text', ph: 'z. B. Domain registrieren, Fotos schicken, Salonkee anschreiben' },
-              { id: 'followup', l: 'Nächster Termin am', type: 'date' },
-              { id: 'offen', l: 'Offene Fragen oder Einwände', type: 'area' },
+              { id: 'offen', l: 'Was ist für den Vertrag noch offen?', type: 'multi', o: ['Variante 1 oder 2', 'Buchungssystem und Hosting (Variante 2)', 'Druck inbegriffen oder separat', 'Hosting ab dem 2. Jahr', 'Startdatum der Website', 'Domain und E-Mail'], other: 'Weiteres' },
+              { id: 'zahlung', l: 'Zahlung', type: 'chips', o: ['6 Raten wie vorgeschlagen', 'Anderer Plan', 'Noch offen'], other: 'Plan' },
+              { id: 'next', l: 'Nächster Schritt', type: 'text', ph: 'z. B. Domain registrieren, Salonkee anschreiben, Fotos schicken' },
+              { id: 'followup', l: 'Vertrag bzw. nächster Termin am', type: 'date' },
+              { id: 'fragen', l: 'Offene Fragen oder Einwände', type: 'area' },
             ] },
         ],
         end: { id: 'fertig', t: 'Notizen sichern', end: true, h: 'Vielen Dank <em>für das Gespräch.</em>',
@@ -2662,12 +2729,13 @@ a.menu-book{text-decoration:none}
     Object.values(FLOWS).forEach(f => f.steps.forEach(st => st.q.forEach(q => { Q[st.id + '.' + q.id] = { st, q }; })));
 
     /* ---------- Zustand (lokal gespeichert) ---------- */
-    const fresh = () => ({ v: 3, created: new Date().toISOString(), updated: null, stage: 'intake', step: { intake: 0, closing: 0 },
-      a: { 'gespraech.partner': 'Besart Beka', 'gespraech.datum': dayISO(new Date()) }, n: {}, tip: false });
+    const fresh = () => ({ v: 4, created: new Date().toISOString(), updated: null, stage: 'intake', step: { intake: 0, closing: 0 },
+      a: { 'gespraech.partner': 'Besart Beka', 'gespraech.datum': dayISO(new Date()) < '2026-11-10' ? '2026-11-10' : dayISO(new Date()) }, n: {}, tip: false });
     let S = null, saveT = 0, dead = false;
     try { S = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
     if (S && S.v === 2) { try { if (!localStorage.getItem(KEY + '-1')) localStorage.setItem(KEY + '-1', JSON.stringify(S)); } catch (e) {} }
-    if (!S || S.v !== 3 || typeof S.a !== 'object' || !S.a || typeof S.n !== 'object' || !S.n) S = fresh();
+    if (S && S.v === 3) { try { localStorage.setItem(KEY + '-test', JSON.stringify(S)); } catch (e) {} }
+    if (!S || S.v !== 4 || typeof S.a !== 'object' || !S.a || typeof S.n !== 'object' || !S.n) S = fresh();
     S.step = Object.assign({ intake: 0, closing: 0 }, S.step);
     const savedEl = $('#ptSaved');
     function store() {
@@ -3122,7 +3190,7 @@ a.menu-book{text-decoration:none}
 
     /* ---------- Notizen während der Präsentation ---------- */
     const pv = $('#print'), ctxSel = $('#ptCtx'), noteTA = $('#ptNote'), nlist = $('#ptNList'), nlistH = $('#ptNListH'), follow = $('#ptFollow');
-    const WEB = [['intro', 'Intro mit der Schere'], ['hero', 'Start & Online-Termin'], ['leistungen', 'Leistungen & Preise'], ['handwerk', 'Handwerk (Scroll-Video)'], ['ueber', 'Über den Salon'], ['looks', 'Looks'], ['bewertungen', 'Bewertungen'], ['besuch', 'Besuch & Anfahrt'], ['footer', 'Fusszeile']];
+    const WEB = [['intro', 'Intro mit der Schere'], ['hero', 'Startbild mit Film'], ['buchen', 'Online-Termin'], ['leistungen', 'Leistungen & Preise'], ['handwerk', 'Handwerk (Scroll-Video)'], ['ueber', 'Über den Salon'], ['looks', 'Looks'], ['bewertungen', 'Bewertungen'], ['besuch', 'Besuch & Anfahrt'], ['footer', 'Fusszeile']];
     const CTX = [
       ...WEB.map(([id, l]) => ({ k: 'web:' + id, g: 'Website', l })),
       { k: 'pv:intro', g: 'Print-Paket', l: 'Übersicht' },
@@ -3238,14 +3306,26 @@ a.menu-book{text-decoration:none}
   }
   })();
 
-  /* ---------------- Hero-Video: Salon im wandernden Abendlicht (Higgsfield, nahtlose Schleife) ---------------- */
+  /* ---------------- Hero: Markenfilm (Higgsfield, 3 Einstellungen als nahtlose Schleife) ---------------- */
   {
-    const v = $('.hero-vid'), hero = $('#hero');
+    const v = $('.hero-vid'), hero = $('#hero'), reel = $$('.hero-reel li');
     const slow = navigator.connection && (navigator.connection.saveData || /(^|-)2g$/.test(navigator.connection.effectiveType || ''));
     if (v && !reduce && !slow) {
       const mobile = matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
       v.src = mobile ? v.dataset.srcMobile : v.dataset.src;
-      v.addEventListener('playing', () => v.classList.add('on'), { once: true });
+      const CUTS = [0, 4.05, 8.55];                                    // Beginn der Einstellungen in Sekunden
+      let raf = 0;
+      const tick = () => {
+        raf = 0; if (v.paused) return;
+        const t = v.currentTime, d = v.duration || CUTS[CUTS.length - 1];
+        reel.forEach((li, k) => {
+          const a = CUTS[k], b = CUTS[k + 1] ?? d, on = t >= a && t < b;
+          li.classList.toggle('on', on);
+          li.querySelector('i').style.setProperty('--p', on ? ((t - a) / (b - a)).toFixed(3) : t >= b ? 1 : 0);
+        });
+        raf = requestAnimationFrame(tick);
+      };
+      v.addEventListener('playing', () => { v.classList.add('on'); hero.classList.add('has-film'); if (!raf) raf = requestAnimationFrame(tick); });
       const play = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
       if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) play(); else v.pause(); }), { threshold: 0 }).observe(hero);
       else play();
