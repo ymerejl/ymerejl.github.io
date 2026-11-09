@@ -1,0 +1,5 @@
+mac {"vt":12.1,"on":true,"src":"media/hero-film.mp4","booking":true,"marquee":true}
+mac looks ["on","on","on","on","on","on"]
+phone {"vt":12,"on":true,"src":"media/hero-film-mobil.mp4","booking":true,"marquee":true}
+phone looks ["on","on","on","on","on","on"]
+errors []
