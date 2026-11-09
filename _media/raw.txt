@@ -20,3 +20,9 @@ l-fade.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq
 l-kupfer.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_223414_70ec2ee3-3483-4806-9804-2844c84421d2.mp4
 l-curl.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_223414_0ea8637b-acbd-43ef-9104-1157a9fd03a9.mp4
 l-chignon.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_223414_1cbcb1e6-1abe-430a-8a12-5a66b66a4d2e.mp4
+k-crop.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_224357_50408f4a-8c58-4df7-bb49-0fc221478141.mp4
+k-bob.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_224400_a5e8f100-f174-4a3f-a065-ae947b9ed799.mp4
+k-fade.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_224357_199f9cfa-d024-456f-aecd-069662e61dd0.mp4
+k-kupfer.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_224357_57d52e65-1741-4d19-80e4-0c4999fefdfd.mp4
+k-curl.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_224357_ca81ee09-e1f9-4304-9b35-54172f79cb1c.mp4
+k-chignon.mp4 https://d8j0ntlcm91z4.cloudfront.net/user_3FQoLppzrtiwgQavfPKz52qN0Lq/hf_20261109_224357_2d39d5d7-0262-43f0-908b-d8fd9e3e7bdc.mp4
