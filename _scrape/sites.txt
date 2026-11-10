@@ -1,0 +1,26 @@
+# slug url ort
+haircreation https://haircreation-by-gabriele.ch Oberrieden
+hairstyling-au https://hairstyling-au.ch Au
+acquaverde https://www.acquaverde.ch/ Waedenswil
+carina https://www.coiffeur-carina.ch Waedenswil
+corner https://www.coiffeur-corner.ch Waedenswil
+dannecker https://www.coiffure-dannecker.ch Oberrieden
+gluecksstraehne https://www.gluecksstraehne-coiffure.ch/ Waedenswil
+lesartistes https://www.intercoiffure-lesartistes.ch Waedenswil
+lesartistes2 https://www.lesartistes.ch Waedenswil
+passion https://www.p-buergler.ch/ Au
+schnittpunkt https://www.schnittpunkthorgen.ch/ Horgen
+washandstyle https://www.washandstyle.ch Horgen
+zabeni https://www.zabeni.com Waedenswil
+gyr https://gyr-kathrin.digitalone.site Horgen
+beautyfeelings https://www.beautyfeelings.ch Horgen
+christener https://www.coiffeurchristener.ch Waedenswil
+lauraadamo https://www.coiffeurlauraadamo.ch/ Horgen
+hauszurtreu https://www.coiffure-hauszurtreu.ch Waedenswil
+gidor https://www.gidor.ch Waedenswil
+kunz https://www.kunzcoiffeur.ch Waedenswil
+profistylistin https://www.profi-stylistin.ch/ Waedenswil
+datwyler https://www.daetwyler-intercoiffure.ch Horgen
+timodella https://www.timodella.ch Horgen
+ddbarber https://www.dd-barber.ch Horgen
+stbatelier https://www.stb-atelier.ch Horgen

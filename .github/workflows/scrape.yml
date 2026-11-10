@@ -1,0 +1,29 @@
+# Temporary helper: reads competitor price pages and checks domain availability via RDAP (removed afterwards).
+name: scrape
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [_scrape/sites.txt, _scrape/scrape.js, _scrape/rdap.sh, .github/workflows/scrape.yml]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-deu poppler-utils whois >/dev/null
+      - run: bash _scrape/rdap.sh | tee _scrape/rdap.txt
+      - run: npm i --no-save playwright@1.49.1 && npx playwright install chrome
+      - run: node _scrape/scrape.js
+        timeout-minutes: 25
+      - name: OCR und PDF-Text
+        run: |
+          for f in _scrape/files/*; do case "$f" in
+            *.pdf) pdftotext -layout "$f" "$f.txt" ;;
+            *.png|*.jpg|*.jpeg|*.webp) tesseract "$f" "$f" -l deu >/dev/null 2>&1 || true ;;
+          esac; done
+          find _scrape/files -type f ! -name '*.txt' -delete
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add _scrape && git commit -m "Scrape results (temporary)" && git pull --rebase && git push
