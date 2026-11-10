@@ -1,0 +1,26 @@
+besart.ch rdap.nic.ch 200 200 2026-11-10T07:13:41Z ['2002-04-15']
+besart-hairsalon.ch rdap.nic.ch 404 404 2026-11-10T07:13:43Z 
+besarthairsalon.ch rdap.nic.ch 404 404 2026-11-10T07:13:45Z 
+besart-horgen.ch rdap.nic.ch 404 404 2026-11-10T07:13:46Z 
+besarthorgen.ch rdap.nic.ch 404 404 2026-11-10T07:13:48Z 
+haarmitart.ch rdap.nic.ch 404 404 2026-11-10T07:13:50Z 
+haar-mit-art.ch rdap.nic.ch 404 404 2026-11-10T07:13:51Z 
+besart-coiffeur.ch rdap.nic.ch 404 404 2026-11-10T07:13:53Z 
+besartcoiffeur.ch rdap.nic.ch 404 404 2026-11-10T07:13:55Z 
+besart-coiffure.ch rdap.nic.ch 404 404 2026-11-10T07:13:56Z 
+besart-hair.ch rdap.nic.ch 404 404 2026-11-10T07:13:58Z 
+besarthair.ch rdap.nic.ch 404 404 2026-11-10T07:14:00Z 
+besart-barber.ch rdap.nic.ch 404 404 2026-11-10T07:14:02Z 
+besart-salon.ch rdap.nic.ch 404 404 2026-11-10T07:14:03Z 
+besart-haarsalon.ch rdap.nic.ch 404 404 2026-11-10T07:14:05Z 
+hairsalon-besart.ch rdap.nic.ch 404 404 2026-11-10T07:14:07Z 
+coiffeur-besart.ch rdap.nic.ch 404 404 2026-11-10T07:14:08Z 
+besart.li rdap.nic.ch 404 404 2026-11-10T07:14:10Z 
+besart.com rdap.verisign.com 200 - 2026-11-10T07:14:10Z
+besarthairsalon.com rdap.verisign.com 404 - 2026-11-10T07:14:10Z
+besart.swiss rdap.nic.swiss 404 - 2026-11-10T07:14:11Z
+The queried object does not exist: no matching objects found
+>>> Last update of Whois database: 2026-11-10T07:13:51.810Z <<<
+
+For more information on domain status codes, please visit https://icann.org/epp
+

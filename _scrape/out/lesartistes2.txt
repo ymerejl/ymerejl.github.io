@@ -1,0 +1,2 @@
+### lesartistes2 Waedenswil https://www.lesartistes.ch
+ERROR page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.lesartistes.ch/
