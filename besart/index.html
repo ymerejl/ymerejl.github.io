@@ -1185,7 +1185,7 @@ a.menu-book{text-decoration:none}
 .pt-two p{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--ivory-2)}
 .pt-reco{display:flex;gap:14px;align-items:flex-start;margin-top:14px;padding:16px 20px;border-radius:12px;background:rgba(217,188,124,.07);box-shadow:inset 0 0 0 1px rgba(217,188,124,.3)}
 .pt-reco p{margin:0;font-size:14px;line-height:1.6;color:var(--ivory-2)}.pt-reco b{color:var(--ivory);font-weight:500}
-.pt-opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.pt-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
 .pt-opts article{padding:20px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--line-2)}
 .pt-opts h3{margin:12px 0 0;font:500 22px/1.15 var(--serif)}
 .pt-opts p{margin:8px 0 0;font-size:13.5px;line-height:1.55;color:var(--ivory-2)}
@@ -2934,7 +2934,7 @@ a.menu-book{text-decoration:none}
           { id: 'ausfall', t: 'Absagen & Kollegen', h: 'Absagen, Ausfälle <em>und Freunde.</em>', block: 'ausfall',
             lead: 'Wie kurzfristige Absagen geregelt werden und wie der Kollegenpreis mit beiden Geräten funktioniert.',
             q: [
-              { id: 'storno', l: 'Absagen unter 24 Stunden', type: 'chips', o: ['Karte hinterlegen (Stripe über Cal.com)', 'Rechnung mit QR-Code', 'Regel nur kommunizieren', 'Keine Regel'], other: 'Gebühr, z. B. 50 % / 100 % bei Nichterscheinen' },
+              { id: 'storno', l: 'Absagen unter 24 Stunden', type: 'chips', o: ['Karte hinterlegen (Stripe über Cal.com)', 'Zahlungslink (Worldline Pay by Link)', 'Rechnung mit QR-Code', 'Regel nur kommunizieren', 'Keine Regel'], other: 'Gebühr, z. B. 50 % / 100 % bei Nichterscheinen' },
               { id: 'erinnerung', l: 'Erinnerung vor dem Termin', type: 'chips', o: ['E-Mail 24 Stunden vorher', 'E-Mail und SMS', 'Keine'] },
               { id: 'kollegen', l: 'Kollegenpreis für enge Freunde', type: 'multi', o: ['Betrag frei eintippen', 'Versteckter Termin-Typ online', 'Kein Thema'] },
             ] },
@@ -3090,11 +3090,11 @@ a.menu-book{text-decoration:none}
       },
       geraete() {
         const D = [
-          { b: 'Worldline', n: 'EX4000 «All-in-One»', img: '', p: 'CHF 199.–', ps: 'einmalig · Aktion, gesehen 149.– bis 249.–', mo: 'CHF 0.– pro Monat', fee: '1,29 % + CHF 0.15', tw: 1,
+          { b: 'Worldline', n: 'EX4000 «All-in-One»', img: 'private/terminals/ex4000.webp', p: 'CHF 199.–', ps: 'einmalig · Aktion, gesehen 149.– bis 249.–', mo: 'CHF 0.– pro Monat', fee: '1,29 % + CHF 0.15', tw: 1,
             plus: ['Debit, Kredit und TWINT in einem Gerät', 'Eigenständig, kein Handy nötig', 'Telefon-Support in der Schweiz', 'Eine einzige Abrechnung'],
             minus: ['Online-Zahlung ist ein eigenes Produkt', 'Auslandkarten +1,5 %', 'Kündigungsfrist 3 Monate'] },
-          { b: 'Worldline', n: 'Saturn 1000F2', img: '', p: 'CHF 349.–', ps: 'Winter-Deal statt 699.– · oder CHF 19.– Miete pro Monat statt 35.–', mo: 'Kauf: CHF 0.– pro Monat', fee: '1,29 % + CHF 0.15', tw: 1,
-            plus: ['Eingebauter Belegdrucker', 'Alle Zahlarten inklusive TWINT', 'Bewährtes Profi-Terminal'],
+          { b: 'Worldline', n: 'Saturn 1000F2', img: 'private/terminals/saturn.webp', p: 'CHF 349.–', ps: 'Winter-Deal statt 699.– · oder CHF 19.– Miete pro Monat statt 35.–', mo: 'Kauf: CHF 0.– pro Monat', fee: '1,29 % + CHF 0.15', tw: 1,
+            plus: ['Eingebauter Belegdrucker', 'Alle Zahlarten inklusive TWINT', 'Bewährtes Profi-Terminal (Gerät von Castles)'],
             minus: ['Teurer als das EX4000', 'Preis ist ein Winter-Deal', 'Online-Zahlung ist ein eigenes Produkt'] },
           { b: 'Stripe', n: 'Terminal S700', img: 'private/terminals/s700.webp', p: 'CHF 239.–', ps: 'zzgl. MwSt. · ähnlich: WisePOS E 199.–, T600 269.–', mo: 'CHF 0.– pro Monat', fee: '1,4 % + CHF 0.10', tw: 0,
             plus: ['Richtiges Terminal mit Bildschirm, über WLAN', 'Gleiches Konto wie Online-Buchung und Ausfallgebühr'],
@@ -3122,17 +3122,18 @@ a.menu-book{text-decoration:none}
         </tbody></table></div>
         <p class="pt-small">Annahme wie in der Recherche: CHF 40'000.– Kartenumsatz und rund 800 Zahlungen pro Jahr, Gerät auf 3 Jahre verteilt. Solche Gebühren fallen bei jedem Anbieter an, auch heute bei Salonkee. Offen bei Worldline: ob die Auszahlung aufs Bankkonto etwas kostet.</p>
         <div class="pt-ans"><p class="pt-ans-q">Lässt sich das Worldline-Gerät mit der Website verbinden?</p>
-          <p><b>Nicht direkt.</b> Das EX4000 und der Saturn sind eigenständige Kassengeräte: Sie kassieren im Salon, wissen aber nichts von Online-Terminen. Online-Zahlungen sind bei Worldline ein eigenes Produkt mit eigenem Vertrag und eigenen Gebühren. Die Online-Buchung (Cal.com) arbeitet mit Stripe zusammen, nicht mit Worldline.</p>
-          <p>Darum zwei Wege: <b>Worldline an der Kasse und Stripe nur für die Ausfallgebühr</b> (zwei Konten, an der Kasse aber alles in einem Gerät). Oder <b>ohne Stripe</b>: Die Ausfallgebühr geht als Rechnung mit QR-Code raus. Dafür baue ich einen einfachen Rechnungsaussteller (nächster Schritt).</p></div>
+          <p><b>Nicht direkt.</b> Das EX4000 und der Saturn sind eigenständige Kassengeräte: Sie kassieren im Salon, wissen aber nichts von Online-Terminen. Cal.com bietet als Zahlungsanbieter Stripe, PayPal und das eigene «Cal Pay» an, Worldline nicht (App-Store, heute geprüft).</p><p><b>Worldline online: «Pay by Link».</b> Besart erstellt einen Zahlungslink und schickt ihn per WhatsApp, E-Mail oder SMS, ohne Webshop. 1,7 % + CHF 0.19 pro Zahlung, keine Monats- und keine Aufschaltgebühr (Angebot laut Basler Kantonalbank, heute abgerufen). Der Link läuft nicht automatisch mit der Buchung, Besart verschickt ihn von Hand.</p>
+          <p>Darum zwei Wege: <b>Worldline an der Kasse und Stripe nur für die Ausfallgebühr</b> (zwei Konten, an der Kasse aber alles in einem Gerät). Oder <b>alles bei Worldline</b>: Die Ausfallgebühr geht als Zahlungslink (Pay by Link) oder als Rechnung mit QR-Code raus. Für die Rechnung baue ich einen einfachen Rechnungsaussteller (nächster Schritt).</p></div>
         <div class="pt-two"><div><h4>Worldline</h4><ul class="pt-li">${li(1, 'Schweizer Marktführer, gebaut für die Kasse')}${li(1, 'TWINT direkt am Gerät; rund ein Viertel von Besarts Kartenumsatz läuft über TWINT')}${li(1, 'Man erreicht jemanden am Telefon')}${li(1, 'Ausser dem Gerät keine Fixkosten')}${li(0, 'Keine Verbindung zu Cal.com')}${li(0, 'Für die 24-Stunden-Regel braucht es Stripe oder eine Rechnung')}</ul></div>
           <div><h4>Stripe</h4><ul class="pt-li">${li(1, 'Ein Konto für Laden und online, auch für Anzahlung und Ausfallgebühr')}${li(1, 'Keine Grundgebühr, tiefste Kosten')}${li(1, 'Rabatte an der Kasse möglich')}${li(0, 'Kein TWINT am Gerät: TWINT-QR separat, zwei Abrechnungen')}${li(0, 'Konten werden gelegentlich nach automatischer Prüfung gesperrt')}${li(0, 'Support nur per Chat oder E-Mail, Einrichtung eher technisch')}</ul></div></div>
         <div class="pt-reco"><span class="pt-tag">Für Besart</span><p><b>Einfachheit zuerst:</b> Worldline EX4000 an der Kasse, Stripe nur für Ausfallgebühren über Cal.com. <b>Möglichst wenig Konten:</b> Stripe S700 plus TWINT-QR, sobald klar ist, dass der S700 in der Schweiz ohne eigene Software läuft. Tap to Pay nur als Notlösung.</p></div>
-        <p class="pt-small">Quellen: Worldline-Website (Saturn-Deal, heute), Suchergebnisse zu Worldline (EX4000, Seite für die Recherche gesperrt), stripe.com/de-ch/pricing und /terminal, Apple (Tap to Pay Schweiz, März 2025).</p>`;
+        <p class="pt-small">Quellen: Worldline-Website (Saturn-Deal, heute), EX4000 laut Worldline-Händlern und Suchergebnissen (Worldline-Seite für automatische Abrufe gesperrt), Pay by Link laut bkb.ch, Cal.com App-Store, stripe.com/de-ch/pricing und /terminal, Apple (Tap to Pay Schweiz, März 2025). Fotos: Hersteller und Händler.</p>`;
       },
       ausfall() {
         return `<div class="pt-opts">
           <article><span class="pt-tag">Variante 2</span><h3>Karte hinterlegen</h3><p>Eigenes, kostenloses Stripe-Konto, in Cal.com mit der Stripe-App verbunden (die App ist gratis).</p><ul class="pt-li">${li(1, 'Karte hinterlegen kostet nichts')}${li(1, '2,9 % + CHF 0.30 nur, wenn wirklich eine Ausfallgebühr belastet wird')}${li(1, 'Geld geht direkt aufs Bankkonto')}${li(2, 'Eine eigene Gebühr von Cal.com ist auf der App-Seite nicht genannt')}</ul></article>
           <article><span class="pt-tag">Ohne Stripe</span><h3>Rechnung mit QR-Code</h3><p>Wenn keine Karte hinterlegt ist: Die Ausfallgebühr geht als Rechnung raus. Ich baue dafür einen einfachen Rechnungsaussteller.</p><ul class="pt-li">${li(1, 'Name, Betrag und Grund eintippen')}${li(1, 'PDF mit Schweizer QR-Einzahlungsschein')}${li(1, 'Per E-Mail oder WhatsApp senden')}${li(1, 'Funktioniert mit jedem Zahlgerät, auch mit Worldline')}</ul></article>
+          <article><span class="pt-tag">Worldline</span><h3>Zahlungslink</h3><p>Mit «Pay by Link» von Worldline: Besart schickt nach einem Ausfall einen Zahlungslink per WhatsApp oder E-Mail.</p><ul class="pt-li">${li(1, '1,7 % + CHF 0.19 pro Zahlung')}${li(1, 'Keine Monats- und keine Aufschaltgebühr')}${li(0, 'Von Hand, nicht automatisch mit der Buchung')}</ul></article>
           <article><span class="pt-tag">Einfach</span><h3>Nur kommunizieren</h3><p>Die Regel steht bei der Buchung und auf der Website, ohne Gebühr. Gut als Start, um zu sehen, wie oft es vorkommt.</p></article>
         </div>
         <div class="pt-ans"><p class="pt-ans-q">Erinnerungen</p><p>SMS sind freiwillig und nicht automatisch an. Sie laufen nur, wenn man in Cal.com bewusst einen Ablauf mit SMS einrichtet, und brauchen SMS-Guthaben. Gratis geht eine <b>E-Mail-Erinnerung</b>, z. B. 24 Stunden vorher, auch im Gratis-Plan. Deren Text ist fest vorgegeben. Dass E-Mails nichts kosten, prüfen wir im Testkonto.</p></div>
