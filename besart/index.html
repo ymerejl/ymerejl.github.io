@@ -1130,6 +1130,102 @@ a.menu-book{text-decoration:none}
 .intro-fly{position:fixed;height:auto;transform-origin:0 0;fill:url(#auG);overflow:visible;pointer-events:none}
 .intro-on .logo{opacity:0}
 .intro-on .logo .l,.intro-on .logo .wr,.intro-played .logo .l,.intro-played .logo .wr{animation:none}
+
+/* ---------- Gesprächsleitfaden: Bausteine im Abschluss ---------- */
+.pt-tag{flex:none;white-space:nowrap;display:inline-flex;align-items:center;height:22px;padding:0 10px;border-radius:11px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#1a1612;background:linear-gradient(135deg,#E6CB86,#B8893E)}
+.pt-li{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.pt-li li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;align-items:start;font-size:14px;line-height:1.5;color:var(--ivory-2)}
+.pt-li svg{width:16px;height:16px;margin-top:3px}
+.pt-li .ok svg{color:#9FCDAE}.pt-li .no svg{color:#D08A76}.pt-li .plus svg{color:var(--sand)}
+.pt-price{margin:12px 0 0;font:500 34px/1 var(--serif);color:var(--ivory)}
+.pt-sub{margin:6px 0 0;font-size:12.5px;color:var(--ivory-3)}
+.pt-small{margin:12px 0 0;font-size:12px;line-height:1.6;color:var(--ivory-3)}
+.pt-h3{margin:34px 0 0;font:500 26px/1.15 var(--serif);color:var(--ivory)}
+.pt-h3 small{display:block;margin-top:6px;font:400 12.5px/1.4 var(--sans);color:var(--ivory-3)}
+.pt-vars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
+.pt-var{padding:22px 22px 20px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--line-2);background:rgba(237,230,218,.025);transition:box-shadow .3s}
+.pt-var.on{box-shadow:inset 0 0 0 1px var(--gold),0 0 0 3px rgba(217,188,124,.12)}
+.pt-var h3{margin:12px 0 0;font:500 24px/1.1 var(--serif)}.pt-var h3 em{color:var(--sand)}
+.pt-diff{display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:6px 18px;margin-top:14px;padding:16px 20px;border-radius:12px;background:rgba(217,188,124,.07);box-shadow:inset 0 0 0 1px rgba(217,188,124,.25)}
+.pt-diff span{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+.pt-diff>b{font:500 28px/1 var(--serif);color:var(--ivory)}
+.pt-diff p{margin:0;font-size:13.5px;line-height:1.55;color:var(--ivory-2)}
+.pt-devs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
+.pt-dev{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding:18px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--line-2);background:rgba(237,230,218,.02)}
+.pt-dev.wl{box-shadow:inset 0 0 0 1px rgba(217,188,124,.45);background:rgba(217,188,124,.04)}
+.pt-dev-img{position:relative;aspect-ratio:3/4;border-radius:10px;overflow:hidden;background:#EFEBE4;display:grid;place-items:center}
+.pt-dev-img img{width:100%;height:100%;object-fit:contain;padding:8px;box-sizing:border-box}
+.pt-dev-ph{display:none;font:italic 400 18px/1 var(--serif);color:#6b5a3e}
+.pt-dev-img.none img{display:none}.pt-dev-img.none .pt-dev-ph{display:block}
+.pt-dev-brand{display:flex;align-items:center;gap:10px;margin:0;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--sand)}
+.pt-dev-brand .tw{height:20px;padding:0 8px;border-radius:10px;font-size:9.5px;letter-spacing:.12em;line-height:20px;color:#0f0e0d;background:#9FCDAE}
+.pt-dev-brand .tw.no{color:var(--ivory-3);background:none;box-shadow:inset 0 0 0 1px var(--line-2)}
+.pt-dev h3{margin:8px 0 0;font:500 22px/1.15 var(--serif)}
+.pt-dev .pt-price{font-size:28px}
+.pt-kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;margin:12px 0 0;font-size:13px}
+.pt-kv dt{color:var(--ivory-3)}.pt-kv dd{margin:0;color:var(--ivory)}
+.pt-tw{margin-top:14px;overflow-x:auto;border-radius:12px;box-shadow:inset 0 0 0 1px var(--line)}
+.pt-tab{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+.pt-tab th{padding:12px 14px;text-align:left;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-3);border-bottom:1px solid var(--line);white-space:nowrap}
+.pt-tab td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--ivory-2);white-space:nowrap}
+.pt-tab td:first-child{color:var(--ivory);white-space:normal;min-width:11em}
+.pt-tab tr:last-child td{border-bottom:0}
+.pt-tab tr.hl td{background:rgba(217,188,124,.06)}
+.pt-tab td.sel{color:#0f0e0d;background:linear-gradient(135deg,#E6CB86,#C9A55C);font-weight:500}
+.pt-tab td.warn{color:#E3A08C}.pt-tab td.good{color:#9FCDAE}
+.pt-tab small{color:var(--ivory-3)}
+.pt-ans{margin-top:22px;padding:18px 20px;border-radius:12px;background:rgba(237,230,218,.035);box-shadow:inset 0 0 0 1px var(--line-2)}
+.pt-ans p{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--ivory-2)}
+.pt-ans b{color:var(--ivory);font-weight:500}
+.pt-ans .pt-ans-q{margin:0;font:500 20px/1.2 var(--serif);color:var(--ivory)}
+.pt-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.pt-two.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pt-two>div{padding:18px 20px;border-radius:12px;box-shadow:inset 0 0 0 1px var(--line)}
+.pt-two h4{margin:0;font:500 20px/1.2 var(--serif);color:var(--ivory)}
+.pt-two p{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--ivory-2)}
+.pt-reco{display:flex;gap:14px;align-items:flex-start;margin-top:14px;padding:16px 20px;border-radius:12px;background:rgba(217,188,124,.07);box-shadow:inset 0 0 0 1px rgba(217,188,124,.3)}
+.pt-reco p{margin:0;font-size:14px;line-height:1.6;color:var(--ivory-2)}.pt-reco b{color:var(--ivory);font-weight:500}
+.pt-opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.pt-opts article{padding:20px;border-radius:14px;box-shadow:inset 0 0 0 1px var(--line-2)}
+.pt-opts h3{margin:12px 0 0;font:500 22px/1.15 var(--serif)}
+.pt-opts p{margin:8px 0 0;font-size:13.5px;line-height:1.55;color:var(--ivory-2)}
+.pt-doms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:28px 0 24px}
+.pt-dom{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:20px;border:0;border-radius:14px;background:rgba(237,230,218,.025);box-shadow:inset 0 0 0 1px var(--line-2);color:var(--ivory);text-align:left;font:inherit;cursor:pointer;transition:box-shadow .3s,background-color .3s}
+.pt-dom:hover{box-shadow:inset 0 0 0 1px var(--ivory-3)}
+.pt-dom.on{background:rgba(217,188,124,.06);box-shadow:inset 0 0 0 1px var(--gold),0 0 0 3px rgba(217,188,124,.12)}
+.pt-dom-n{font:500 23px/1.1 var(--serif);overflow-wrap:anywhere}
+.pt-dom-why{font-size:13px;line-height:1.5;color:var(--ivory-2)}
+.pt-ex{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;width:100%;margin-top:4px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px}
+.pt-ex i{font-style:normal;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-3);margin-top:8px}.pt-ex i:first-child{margin-top:0}
+.pt-ex span{color:var(--ivory);overflow-wrap:anywhere}
+.pt-dom-p{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--ivory-3)}
+.pt-dom-p .ok{color:#9FCDAE;font-weight:500}
+.pt-keys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.pt-keys div{padding:16px 18px;border-radius:12px;box-shadow:inset 0 0 0 1px var(--line-2)}
+.pt-keys b{display:block;font:500 30px/1 var(--serif);color:var(--gold)}
+.pt-keys span{display:block;margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--ivory-2)}
+.pt-actions.inline{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:18px}
+.pt-board{margin-top:26px}
+.pt-board-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 12px;font-size:13px;color:var(--ivory-2)}
+.pt-board-h b{font:500 28px/1 var(--serif);color:var(--gold)}
+.pt-bar{flex:1 1 160px;height:3px;border-radius:2px;background:var(--line)}.pt-bar i{display:block;height:100%;border-radius:2px;background:var(--gold)}
+.pt-board ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.pt-board button{display:grid;grid-template-columns:24px minmax(0,13em) minmax(0,1fr) 18px;align-items:center;gap:12px;width:100%;padding:13px 6px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ivory);font:inherit;text-align:left;cursor:pointer}
+.pt-board button:hover{background:rgba(237,230,218,.03)}
+.pt-board button>svg{width:16px;height:16px;color:var(--ivory-3)}
+.pt-dot{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line-2)}
+.pt-dot svg{width:14px;height:14px}
+.pt-board .done .pt-dot{background:linear-gradient(135deg,#E6CB86,#B8893E);box-shadow:none;color:#0f0e0d}
+.pt-bl{font-size:14px}
+.pt-bv{font-size:13.5px;color:var(--ivory-2);overflow-wrap:anywhere}
+.pt-board .open .pt-bv{color:#E3A08C;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+@media (max-width:760px){
+  .pt-vars,.pt-devs,.pt-opts,.pt-doms,.pt-two,.pt-two.three,.pt-keys{grid-template-columns:minmax(0,1fr)}
+  .pt-dev{grid-template-columns:92px minmax(0,1fr);gap:14px;padding:14px}
+  .pt-diff{grid-template-columns:auto minmax(0,1fr)}.pt-diff p{grid-column:1/-1}
+  .pt-board button{grid-template-columns:22px minmax(0,1fr) 16px;grid-template-areas:"d l a" "d v a";row-gap:2px}
+  .pt-board .pt-dot{grid-area:d}.pt-board .pt-bl{grid-area:l}.pt-board .pt-bv{grid-area:v}.pt-board button>svg{grid-area:a}
+}
 </style>
 </head>
 <body>
@@ -1827,7 +1923,7 @@ a.menu-book{text-decoration:none}
         </ol>
         <div class="pv-price">
           <p class="eyebrow">Komplettpaket</p>
-          <p class="pv-amount"><small>CHF</small>1'920.–</p>
+          <p class="pv-amount"><small>CHF</small><span id="pvAmount">–</span></p>
           <p class="pv-price-note">Alle vier Teile zusammen.</p>
           <div class="btns">
             <button type="button" class="btn btn-primary" data-pv-next>Weiter: Domain &amp; Markt<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
@@ -2502,6 +2598,8 @@ a.menu-book{text-decoration:none}
       const dtCH = iso => { const d = new Date(iso); return d.toLocaleDateString('de-CH', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Zurich' }) + ', ' + d.toLocaleTimeString('de-CH', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Zurich' }) + ' Uhr'; };
       const load = host && host.dataset.src ? fetch(host.dataset.src).then(r => r.json()) : Promise.reject();
       load.then(D => {
+        window.__praes = D;
+        { const am = $('#pvAmount'), v = D.angebot && D.angebot.v.find(x => x.n === 2); if (am && v) am.textContent = String(v.price).replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.–'; }
         /* ---- Domain ---- */
         const dm = D.domains, picks = $('#dmPicks');
         const byName = n => dm.list.find(x => x.domain === n);
@@ -2798,7 +2896,7 @@ a.menu-book{text-decoration:none}
               { id: 'gefaellt', l: 'Was gefällt am besten?', type: 'multi', o: ['Gold-Logo', 'Intro mit der Schere', 'Online-Termin', 'Visitenkarten', 'Flyer', 'Bewertungsaufsteller'] },
               { id: 'fehlt', l: 'Was soll noch anders werden?', type: 'area' },
             ] },
-          { id: 'druck', t: 'Drucksachen', h: 'Welche Variante <em>wird gedruckt?</em>', lead: 'Die Varianten A, B und C lassen sich im Print-Paket umschalten («Weiter» ganz unten auf der Website).',
+          { id: 'druck', t: 'Drucksachen', h: 'Welche Variante <em>wird gedruckt?</em>', lead: 'Visitenkarte, Flyer und Bewertungsaufsteller gehören zu Variante 2. Die Varianten A, B und C lassen sich im Print-Paket umschalten.',
             q: [
               { id: 'karte', l: 'Visitenkarte', type: 'chips', o: ['A · Noir & Gold', 'B · Ivoire', 'C · Monogramm'] },
               { id: 'flyer', l: 'Flyer A5', type: 'chips', o: ['A · Bogen', 'B · Vollbild', 'C · Typografie'] },
@@ -2818,30 +2916,44 @@ a.menu-book{text-decoration:none}
               { id: 'gebuehren', l: 'Gebühren pro Zahlung laut Abrechnung', type: 'text', ph: 'Debit, Kredit, TWINT – Kommission auf Buchungen?' },
               { id: 'ausfaelle', l: 'Kurzfristige Absagen und Nichterscheinen', type: 'chips', o: ['Kaum', '1–2 pro Monat', 'Mehr als 2 pro Monat'] },
             ] },
-          { id: 'buchung', t: 'Buchung & Zahlung', h: 'Salonkee, Buchung <em>und Zahlgerät.</em>',
-            lead: 'Variante 1: Salonkee bleibt, die Website führt mit «Termin buchen» direkt in die Salonkee-Buchung (einbetten lässt Salonkee nicht zu). Variante 2: eigene Online-Buchung, Salonkee wird gekündigt, dazu ein neues Zahlgerät.',
+          { id: 'buchung', t: 'Variante & Preis', h: 'Zwei Varianten, <em>zwei Preise.</em>', block: 'varianten',
+            lead: 'Variante 1 ist die schlanke Lösung: Die Website führt zur Salonkee-Buchung, dafür ohne Werbematerial und ohne Hosting. Variante 2 bringt die eigene Buchung im BesArt-Stil und das ganze Paket.',
             q: [
               { id: 'variante', l: 'Welche Variante?', type: 'chips', o: ['Variante 1 · Salonkee bleibt', 'Variante 2 · Eigene Buchung', 'Noch offen'] },
-              { id: 'terminal', l: 'Zahlgerät', type: 'chips', o: ['Salonkee-Terminal behalten', 'Worldline All-in-One (inkl. TWINT)', 'Stripe + TWINT-Sticker', 'SumUp + TWINT-Sticker', 'Noch offen'] },
-              { id: 'storno', l: 'Absagen unter 24 Stunden', type: 'chips', o: ['Regel nur kommunizieren', 'Karte hinterlegen (Neukunden)', 'Anzahlung bei Wiederholung', 'Keine Regel'], other: 'Gebühr, z. B. 50 % / 100 % bei Nichterscheinen' },
-              { id: 'kollegen', l: 'Kollegenpreis für enge Freunde', type: 'chips', o: ['Betrag frei eintippen', 'Fester Rabatt im Gerät', 'Kein Thema'] },
+              { id: 'hosting', l: 'Hosting bei Variante 1 (pro Jahr)', type: 'text', ph: 'CHF … oder «folgt»' },
             ] },
-          { id: 'start', t: 'Start im Januar', h: 'Domain, Preise <em>und Daten.</em>',
-            lead: 'besart.ch ist vergeben. Frei sind unter anderem besart-hairsalon.ch, besart-horgen.ch und haarmitart.ch (heute früh zweimal bei SWITCH geprüft). Später kommt die Website auch auf Englisch und Italienisch – heute noch kein Thema.',
+          { id: 'zahlung', t: 'Zahlgerät', h: 'Welches Gerät <em>an die Kasse?</em>', block: 'geraete',
+            lead: 'Nur Geräte, die in der Schweiz erhältlich sind. Kurz gesagt: Worldline ist das einfache, robuste Gerät für die Kasse mit TWINT. Stripe ist stark online, also bei Buchung und hinterlegter Karte.',
             q: [
-              { id: 'domain', l: 'Hauptadresse', type: 'chips', o: ['besart-hairsalon.ch', 'besart-horgen.ch', 'haarmitart.ch'], other: 'Andere Adresse' },
-              { id: 'weiter', l: 'Zusätzlich als Weiterleitung sichern', type: 'multi', o: ['besart-hairsalon.ch', 'besart-horgen.ch', 'haarmitart.ch', 'besarthairsalon.ch'] },
+              { id: 'terminal', l: 'Zahlgerät', type: 'chips', o: ['Worldline EX4000', 'Worldline Saturn 1000F2', 'Stripe Terminal S700', 'Stripe Tap to Pay (Notlösung)', 'Salonkee-Terminal behalten', 'Noch offen'] },
+            ] },
+          { id: 'ausfall', t: 'Absagen & Kollegen', h: 'Absagen, Ausfälle <em>und Freunde.</em>', block: 'ausfall',
+            lead: 'Wie kurzfristige Absagen geregelt werden und wie der Kollegenpreis mit beiden Geräten funktioniert.',
+            q: [
+              { id: 'storno', l: 'Absagen unter 24 Stunden', type: 'chips', o: ['Karte hinterlegen (Stripe über Cal.com)', 'Rechnung mit QR-Code', 'Regel nur kommunizieren', 'Keine Regel'], other: 'Gebühr, z. B. 50 % / 100 % bei Nichterscheinen' },
+              { id: 'erinnerung', l: 'Erinnerung vor dem Termin', type: 'chips', o: ['E-Mail 24 Stunden vorher', 'E-Mail und SMS', 'Keine'] },
+              { id: 'kollegen', l: 'Kollegenpreis für enge Freunde', type: 'multi', o: ['Betrag frei eintippen', 'Versteckter Termin-Typ online', 'Kein Thema'] },
+            ] },
+          { id: 'start', t: 'Domain & Start', h: 'Eine Adresse <em>für alles.</em>', block: 'domain',
+            lead: 'Eine Hauptadresse, ohne zusätzliche Weiterleitungen. So sieht sie im Alltag aus. Antippen wählt sie aus.',
+            q: [
+              { id: 'domain', l: 'Hauptadresse', type: 'chips', hide: true, o: ['besart-hairsalon.ch', 'besart-horgen.ch', 'haarmitart.ch'], other: 'Andere Adresse' },
               { id: 'mail', l: 'E-Mail-Adresse auf der neuen Domain', type: 'text', ph: 'z. B. info@…' },
-              { id: 'preise', l: 'Preise ab Januar', type: 'chips', o: ['Zurückhaltend', 'Mittel (Empfehlung)', 'Ambitioniert', 'Eigene Preise'], other: 'Notiz zu den Preisen' },
-              { id: 'preisdatum', l: 'Neue Preise gelten ab', type: 'date' },
               { id: 'golive', l: 'Website-Start', type: 'date' },
               { id: 'daten', l: 'Öffnungszeiten, Leistungen, Preise (Datenprüfliste)', type: 'chips', o: ['Geprüft, alles stimmt', 'Geprüft, Änderungen notiert', 'Folgt per E-Mail'] },
             ] },
-          { id: 'entscheid', t: 'Bis zum Vertrag', h: 'Was wir noch <em>fixieren.</em>', lead: 'Der Vertrag folgt, sobald diese Punkte geklärt sind. Heute halten wir fest, was offen ist und wer was bis wann klärt.',
+          { id: 'preise', t: 'Preise ab Januar', h: 'Preise <em>ab Januar.</em>', block: 'preise',
+            lead: 'Was die Konkurrenz online verlangt und wo BesArt heute steht. Grundlage: die Online-Preise von 19 Salons, Stand 10. November. Markt = Median im Kerngebiet, ohne Billig-Anbieter.',
             q: [
-              { id: 'offen', l: 'Was ist für den Vertrag noch offen?', type: 'multi', o: ['Variante 1 oder 2', 'Buchungssystem und Hosting (Variante 2)', 'Druck inbegriffen oder separat', 'Hosting ab dem 2. Jahr', 'Startdatum der Website', 'Domain und E-Mail'], other: 'Weiteres' },
-              { id: 'zahlung', l: 'Zahlung', type: 'chips', o: ['6 Raten wie vorgeschlagen', 'Anderer Plan', 'Noch offen'], other: 'Plan' },
-              { id: 'next', l: 'Nächster Schritt', type: 'text', ph: 'z. B. Domain registrieren, Salonkee anschreiben, Fotos schicken' },
+              { id: 'wahl', l: 'Herren, Kinder und Pensionäre ab Januar', type: 'chips', o: ['Zurückhaltend', 'Mittel (Empfehlung)', 'Ambitioniert', 'Eigene Preise'], other: 'Notiz zu den Preisen' },
+              { id: 'damen', l: 'Damen: was ändern?', type: 'area', ph: 'z. B. Ansatz gleich lassen, Balayage anheben, Cut & Go prüfen' },
+              { id: 'datum', l: 'Neue Preise gelten ab', type: 'date' },
+            ] },
+          { id: 'entscheid', t: 'Bis zum Vertrag', h: 'Was wir noch <em>fixieren.</em>', block: 'board',
+            lead: 'Auf einen Blick: was entschieden ist und was noch offen ist. Ein Punkt antippen springt dorthin.',
+            q: [
+              { id: 'zahlung', l: 'Zahlungsplan', type: 'chips', o: ['6 Raten wie vorgeschlagen', 'Anderer Plan', 'Noch offen'], other: 'Plan' },
+              { id: 'next', l: 'Nächste Schritte: wer macht was bis wann?', type: 'area', ph: 'z. B. Domain registrieren (ich, heute) · Salonkee-Vertrag schicken (Besart, Freitag)' },
               { id: 'followup', l: 'Vertrag bzw. nächster Termin am', type: 'date' },
               { id: 'fragen', l: 'Offene Fragen oder Einwände', type: 'area' },
             ] },
@@ -2954,6 +3066,129 @@ a.menu-book{text-decoration:none}
       const sw = o => Array.isArray(o) ? `<span class="pt-sw" aria-hidden="true">${o[1].map(c => `<i style="background:${c}"></i>`).join('')}</span>` : '';
       return `<div class="pt-q" role="group" aria-labelledby="${id}"><p class="pt-l" id="${id}">${esc(L)}${multi ? '<span class="sr"> (mehrere möglich)</span>' : ''}</p><div class="pt-chips${multi ? ' multi' : ''}">${q.o.map(o => `<button type="button" class="pt-chip" data-k="${k}" data-v="${esc(optV(o))}" aria-pressed="${on(optV(o))}">${multi ? I.check : ''}${sw(o)}${esc(optV(o))}</button>`).join('')}</div>${other}</div>`;
     }
+
+    /* ---------- Bausteine im Abschluss (Varianten, Geräte, Absagen, Domain, Preise, Übersicht) ---------- */
+    const CHF = n => n == null ? '–' : (Math.round(n * 100) % 100 ? n.toFixed(2) : String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, "'") + '.–');
+    const OK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+    const NO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 12h12"/></svg>';
+    const li = (ok, t) => `<li class="${ok === 1 ? 'ok' : ok === 0 ? 'no' : 'plus'}">${ok === 1 ? OK : ok === 0 ? NO : I.plus}<span>${t}</span></li>`;
+    const stepIdx = id => FLOWS.closing.steps.findIndex(x => x.id === id);
+    const v1 = () => String(S.a['buchung.variante'] || '').startsWith('Variante 1'), v2 = () => String(S.a['buchung.variante'] || '').startsWith('Variante 2');
+    const BLOCKS = {
+      varianten() {
+        const A = window.__praes && window.__praes.angebot;
+        if (!A) return '<p class="pt-small">Das Angebot ist in dieser Fassung nicht enthalten.</p>';
+        const sel = S.a['buchung.variante'] || '';
+        const m = /(\d+(?:[.,]\d+)?)/.exec(String(S.a['salonkee.kosten'] || '').replace(/'/g, '')), mon = m ? parseFloat(m[1].replace(',', '.')) : null;
+        const card = x => `<article class="pt-var${sel.startsWith('Variante ' + x.n) ? ' on' : ''}"><header><span class="pt-tag">${esc(x.tag)}</span><h3>Variante ${x.n} <em>${esc(x.name)}</em></h3><p class="pt-price">CHF ${CHF(x.price)}</p><p class="pt-sub">${esc(x.sub)}</p></header><ul class="pt-li">${x.items.map(([k, t]) => li(k, esc(t))).join('')}</ul></article>`;
+        return `<div class="pt-vars">${A.v.map(card).join('')}</div>
+        <div class="pt-diff"><span>Unterschied</span><b>CHF ${CHF(A.diff)}</b><p>${mon ? `Salonkee kostet laut Rechnung rund CHF ${CHF(mon)} pro Monat, also <b>CHF ${CHF(mon * 12)} pro Jahr</b>. Mit Variante 2 fällt das weg. Dazu kommen dort das Zahlgerät und ab dem 2. Jahr das Hosting.` : 'Trägt man in Schritt 03 die Salonkee-Kosten pro Monat ein, steht hier, was Salonkee pro Jahr kostet.'}</p></div>`;
+      },
+      geraete() {
+        const D = [
+          { b: 'Worldline', n: 'EX4000 «All-in-One»', img: '', p: 'CHF 199.–', ps: 'einmalig · Aktion, gesehen 149.– bis 249.–', mo: 'CHF 0.– pro Monat', fee: '1,29 % + CHF 0.15', tw: 1,
+            plus: ['Debit, Kredit und TWINT in einem Gerät', 'Eigenständig, kein Handy nötig', 'Telefon-Support in der Schweiz', 'Eine einzige Abrechnung'],
+            minus: ['Online-Zahlung ist ein eigenes Produkt', 'Auslandkarten +1,5 %', 'Kündigungsfrist 3 Monate'] },
+          { b: 'Worldline', n: 'Saturn 1000F2', img: '', p: 'CHF 349.–', ps: 'Winter-Deal statt 699.– · oder CHF 19.– Miete pro Monat statt 35.–', mo: 'Kauf: CHF 0.– pro Monat', fee: '1,29 % + CHF 0.15', tw: 1,
+            plus: ['Eingebauter Belegdrucker', 'Alle Zahlarten inklusive TWINT', 'Bewährtes Profi-Terminal'],
+            minus: ['Teurer als das EX4000', 'Preis ist ein Winter-Deal', 'Online-Zahlung ist ein eigenes Produkt'] },
+          { b: 'Stripe', n: 'Terminal S700', img: 'private/terminals/s700.webp', p: 'CHF 239.–', ps: 'zzgl. MwSt. · ähnlich: WisePOS E 199.–, T600 269.–', mo: 'CHF 0.– pro Monat', fee: '1,4 % + CHF 0.10', tw: 0,
+            plus: ['Richtiges Terminal mit Bildschirm, über WLAN', 'Gleiches Konto wie Online-Buchung und Ausfallgebühr'],
+            minus: ['Kein TWINT am Gerät (TWINT-QR separat)', 'Ohne eigene Kassen-Software noch Vorabversion, für die Schweiz nicht bestätigt'] },
+          { b: 'Stripe', n: 'WisePad 3', img: 'private/terminals/wisepad3.webp', p: 'CHF 59.–', ps: 'zzgl. MwSt.', mo: 'CHF 0.– pro Monat', fee: '1,4 % + CHF 0.10', tw: 0,
+            plus: ['Günstig und klein'],
+            minus: ['Läuft per Bluetooth mit einer App auf dem Handy', 'Kein TWINT', 'Betrieb ohne eigene Software nicht bestätigt'] },
+          { b: 'Stripe', n: 'Tap to Pay auf dem iPhone', img: 'private/terminals/taptopay.webp', p: 'CHF 0.–', ps: 'kein Gerät, iPhone XS oder neuer', mo: 'CHF 0.– pro Monat', fee: '1,4 % + CHF 0.10, plus CHF 0.10', tw: 0,
+            plus: ['Günstigste Variante', 'Läuft in der normalen Stripe-App'],
+            minus: ['Kein TWINT', 'Kundin tippt auf Besarts Handy', 'Nur als Notlösung'] },
+        ];
+        const card = d => `<article class="pt-dev${d.b === 'Worldline' ? ' wl' : ''}"><div class="pt-dev-img${d.img ? '' : ' none'}"><img src="${d.img || 'data:,'}" alt="${esc(d.b + ' ' + d.n)}" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('none')"><span class="pt-dev-ph" aria-hidden="true">${esc(d.b)}</span></div>
+          <div class="pt-dev-b"><p class="pt-dev-brand">${d.b}${d.tw ? '<span class="tw">TWINT</span>' : '<span class="tw no">ohne TWINT</span>'}</p><h3>${esc(d.n)}</h3>
+          <p class="pt-price">${d.p}</p><p class="pt-sub">${esc(d.ps)}</p>
+          <dl class="pt-kv"><dt>Fixkosten</dt><dd>${esc(d.mo)}</dd><dt>Pro Zahlung</dt><dd>${esc(d.fee)}</dd></dl>
+          <ul class="pt-li">${d.plus.map(x => li(1, esc(x))).join('')}${d.minus.map(x => li(0, esc(x))).join('')}</ul></div></article>`;
+        return `<div class="pt-devs">${D.map(card).join('')}</div>
+        <p class="pt-small">Nicht in der Schweiz erhältlich und darum weggelassen: Stripe Reader M2, Verifone UX700, Square, Zettle, Teya. Gebühren gelten für Karten aus der Schweiz, dem EWR und Grossbritannien.</p>
+        <h3 class="pt-h3">Kosten pro Jahr im Vergleich</h3>
+        <div class="pt-tw"><table class="pt-tab"><thead><tr><th>Gerät</th><th>Gerät pro Jahr</th><th>Monatsgebühr</th><th>Gebühren pro Jahr</th><th>Total pro Jahr</th></tr></thead><tbody>
+          <tr class="hl"><td>Worldline EX4000</td><td>ca. 66.–</td><td>0.–</td><td>ca. 636.–</td><td><b>ca. 702.–</b></td></tr>
+          <tr><td>Worldline Saturn, Kauf</td><td>ca. 116.–</td><td>0.–</td><td>ca. 636.–</td><td><b>ca. 752.–</b></td></tr>
+          <tr><td>Worldline Saturn, Miete</td><td>–</td><td>19.– (228.– pro Jahr)</td><td>ca. 636.–</td><td><b>ca. 864.–</b></td></tr>
+          <tr><td>Stripe (Terminal, ohne TWINT)</td><td colspan="3">laut Recherche, je nach Gerät</td><td><b>ca. 670.– bis 690.–</b></td></tr>
+        </tbody></table></div>
+        <p class="pt-small">Annahme wie in der Recherche: CHF 40'000.– Kartenumsatz und rund 800 Zahlungen pro Jahr, Gerät auf 3 Jahre verteilt. Solche Gebühren fallen bei jedem Anbieter an, auch heute bei Salonkee. Offen bei Worldline: ob die Auszahlung aufs Bankkonto etwas kostet.</p>
+        <div class="pt-ans"><p class="pt-ans-q">Lässt sich das Worldline-Gerät mit der Website verbinden?</p>
+          <p><b>Nicht direkt.</b> Das EX4000 und der Saturn sind eigenständige Kassengeräte: Sie kassieren im Salon, wissen aber nichts von Online-Terminen. Online-Zahlungen sind bei Worldline ein eigenes Produkt mit eigenem Vertrag und eigenen Gebühren. Die Online-Buchung (Cal.com) arbeitet mit Stripe zusammen, nicht mit Worldline.</p>
+          <p>Darum zwei Wege: <b>Worldline an der Kasse und Stripe nur für die Ausfallgebühr</b> (zwei Konten, an der Kasse aber alles in einem Gerät). Oder <b>ohne Stripe</b>: Die Ausfallgebühr geht als Rechnung mit QR-Code raus. Dafür baue ich einen einfachen Rechnungsaussteller (nächster Schritt).</p></div>
+        <div class="pt-two"><div><h4>Worldline</h4><ul class="pt-li">${li(1, 'Schweizer Marktführer, gebaut für die Kasse')}${li(1, 'TWINT direkt am Gerät; rund ein Viertel von Besarts Kartenumsatz läuft über TWINT')}${li(1, 'Man erreicht jemanden am Telefon')}${li(1, 'Ausser dem Gerät keine Fixkosten')}${li(0, 'Keine Verbindung zu Cal.com')}${li(0, 'Für die 24-Stunden-Regel braucht es Stripe oder eine Rechnung')}</ul></div>
+          <div><h4>Stripe</h4><ul class="pt-li">${li(1, 'Ein Konto für Laden und online, auch für Anzahlung und Ausfallgebühr')}${li(1, 'Keine Grundgebühr, tiefste Kosten')}${li(1, 'Rabatte an der Kasse möglich')}${li(0, 'Kein TWINT am Gerät: TWINT-QR separat, zwei Abrechnungen')}${li(0, 'Konten werden gelegentlich nach automatischer Prüfung gesperrt')}${li(0, 'Support nur per Chat oder E-Mail, Einrichtung eher technisch')}</ul></div></div>
+        <div class="pt-reco"><span class="pt-tag">Für Besart</span><p><b>Einfachheit zuerst:</b> Worldline EX4000 an der Kasse, Stripe nur für Ausfallgebühren über Cal.com. <b>Möglichst wenig Konten:</b> Stripe S700 plus TWINT-QR, sobald klar ist, dass der S700 in der Schweiz ohne eigene Software läuft. Tap to Pay nur als Notlösung.</p></div>
+        <p class="pt-small">Quellen: Worldline-Website (Saturn-Deal, heute), Suchergebnisse zu Worldline (EX4000, Seite für die Recherche gesperrt), stripe.com/de-ch/pricing und /terminal, Apple (Tap to Pay Schweiz, März 2025).</p>`;
+      },
+      ausfall() {
+        return `<div class="pt-opts">
+          <article><span class="pt-tag">Variante 2</span><h3>Karte hinterlegen</h3><p>Eigenes, kostenloses Stripe-Konto, in Cal.com mit der Stripe-App verbunden (die App ist gratis).</p><ul class="pt-li">${li(1, 'Karte hinterlegen kostet nichts')}${li(1, '2,9 % + CHF 0.30 nur, wenn wirklich eine Ausfallgebühr belastet wird')}${li(1, 'Geld geht direkt aufs Bankkonto')}${li(2, 'Eine eigene Gebühr von Cal.com ist auf der App-Seite nicht genannt')}</ul></article>
+          <article><span class="pt-tag">Ohne Stripe</span><h3>Rechnung mit QR-Code</h3><p>Wenn keine Karte hinterlegt ist: Die Ausfallgebühr geht als Rechnung raus. Ich baue dafür einen einfachen Rechnungsaussteller.</p><ul class="pt-li">${li(1, 'Name, Betrag und Grund eintippen')}${li(1, 'PDF mit Schweizer QR-Einzahlungsschein')}${li(1, 'Per E-Mail oder WhatsApp senden')}${li(1, 'Funktioniert mit jedem Zahlgerät, auch mit Worldline')}</ul></article>
+          <article><span class="pt-tag">Einfach</span><h3>Nur kommunizieren</h3><p>Die Regel steht bei der Buchung und auf der Website, ohne Gebühr. Gut als Start, um zu sehen, wie oft es vorkommt.</p></article>
+        </div>
+        <div class="pt-ans"><p class="pt-ans-q">Erinnerungen</p><p>SMS sind freiwillig und nicht automatisch an. Sie laufen nur, wenn man in Cal.com bewusst einen Ablauf mit SMS einrichtet, und brauchen SMS-Guthaben. Gratis geht eine <b>E-Mail-Erinnerung</b>, z. B. 24 Stunden vorher, auch im Gratis-Plan. Deren Text ist fest vorgegeben. Dass E-Mails nichts kosten, prüfen wir im Testkonto.</p></div>
+        <h3 class="pt-h3">Kollegenpreis mit beiden Geräten</h3>
+        <div class="pt-two three">
+          <div><h4>Worldline</h4><p>Das Gerät fragt nur den Betrag. Für den Kollegen tippt Besart einfach den tieferen Betrag ein, z. B. 30.– statt 42.–. Kein Rabatt-Menü nötig, im Kassenbuch als «Kollegenpreis» vermerken.</p></div>
+          <div><h4>Stripe</h4><p>In der Stripe-App den Betrag frei eingeben oder einen Rabatt anwenden. Rabatte an der Kasse sind bei Stripe möglich.</p></div>
+          <div><h4>Online (Variante 2)</h4><p>Ein versteckter Termin-Typ «Kollegen» mit eigenem Link: Er erscheint nicht auf der Website und verlangt keine Karte.</p></div>
+        </div>`;
+      },
+      domain() {
+        const sel = S.a['start.domain'] || '';
+        const P = [['besart-hairsalon.ch', 'Empfehlung', 'Wie auf Salonkee, Google und dem Schild.'], ['besart-horgen.ch', 'Alternative', 'Kurz und lokal, stärkt «Coiffeur Horgen».'], ['haarmitart.ch', 'Alternative', 'Spielt mit dem Namen: Haar mit Art.']];
+        return `<div class="pt-doms" role="radiogroup" aria-label="Hauptadresse">${P.map(([d, tag, why]) => `<button type="button" class="pt-dom${sel === d ? ' on' : ''}" role="radio" aria-checked="${sel === d}" data-pk="start.domain" data-pick="${d}">
+            <span class="pt-tag">${tag}</span><span class="pt-dom-n">${d}</span><span class="pt-dom-why">${why}</span>
+            <span class="pt-ex"><i>Browser</i><span>www.${d}</span><i>E-Mail</i><span>info@${d}</span><i>Visitenkarte</i><span>${d}</span><i>Google</i><span>BesArt Hairsalon · ${d}</span></span>
+            <span class="pt-dom-p"><span class="ok">frei</span>CHF 5.– im 1. Jahr · danach 10.70</span></button>`).join('')}</div>
+          <div class="pt-q"><label class="pt-l" for="pt_dom_other">Andere Adresse</label><input class="pt-in sm" id="pt_dom_other" type="text" data-k="start.domain~" value="${esc(S.a['start.domain~'] || '')}" placeholder="nur falls keine der drei …" autocomplete="off"></div>
+          <p class="pt-small">Alle drei heute zweimal direkt bei SWITCH geprüft. besart.ch (seit 2002) und besart.com sind vergeben. Registrierung direkt nach dem Gespräch.</p>`;
+      },
+      preise() {
+        const D = window.__praes, E = D && D.empfehlung;
+        if (!E) return '<p class="pt-small">Die Marktdaten sind in dieser Fassung nicht enthalten.</p>';
+        const stat = (cat, b) => { const per = {}; D.markt.rows.forEach(r => { if (r.kat !== cat || r.gebiet !== 'kern' || r.billig) return; if (!(r.salon in per) || r.preis < per[r.salon]) per[r.salon] = r.preis; });
+          const a = Object.values(per).sort((x, y) => x - y), n = a.length; if (!n) return null; const med = n % 2 ? a[(n - 1) / 2] : (a[n / 2 - 1] + a[n / 2]) / 2;
+          return { med, n, hi: b == null ? null : a.filter(p => p > b).length, lo: b == null ? null : a.filter(p => p < b).length }; };
+        const wahl = S.a['preise.wahl'] || '', col = { 'Zurückhaltend': 4, 'Mittel (Empfehlung)': 5, 'Ambitioniert': 6 }[wahl] || 5;
+        const hRows = E.herren.map(r => { const st = r[2] ? stat(r[2]) : null; return `<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${st ? CHF(st.med) + ` <small>(${st.n})</small>` : '–'}</td>${[4, 5, 6].map(k => `<td${k === col ? ' class="sel"' : ''}>${esc(r[k])}</td>`).join('')}</tr>`; }).join('');
+        const dRows = E.damen.map(([l, cat, b, ab]) => { const st = stat(cat, b); const pos = st ? (st.hi >= st.lo ? `günstiger als ${st.hi} von ${st.n}` : `teurer als ${st.lo} von ${st.n}`) : '–';
+          return `<tr><td>${esc(l)}</td><td>${ab ? 'ab ' : ''}${b}.–</td><td>${st ? CHF(st.med) + ` <small>(${st.n})</small>` : '–'}</td><td class="${st && st.lo > st.hi ? 'warn' : st ? 'good' : ''}">${pos}</td></tr>`; }).join('');
+        const ws = E.herren[0], k = stat(ws[2], ws[3]);
+        return `<div class="pt-keys"><div><b>${k ? k.hi + ' von ' + k.n : '–'}</b><span>Salons im Kerngebiet sind beim Herrenschnitt teurer als BesArt (ohne Billig-Anbieter)</span></div><div><b>CHF ${k ? CHF(k.med) : '–'}</b><span>Median Herrenschnitt im Kerngebiet</span></div><div><b>CHF ${CHF(E.billig_grenze)}</b><span>Billig-Grenze, BesArt liegt heute mit ${esc(ws[1].replace('ab ', ''))} darunter</span></div></div>
+          <h3 class="pt-h3">Herren, Kinder, Pensionäre <small>Empfehlung aus der Recherche, die gewählte Variante ist hervorgehoben</small></h3>
+          <div class="pt-tw"><table class="pt-tab prices"><thead><tr><th>Leistung</th><th>heute</th><th>Markt</th><th>zurückhaltend</th><th>mittel</th><th>ambitioniert</th></tr></thead><tbody>${hRows}</tbody></table></div>
+          <h3 class="pt-h3">Damen <small>Position heute, eine Empfehlung legen wir gemeinsam fest</small></h3>
+          <div class="pt-tw"><table class="pt-tab"><thead><tr><th>Leistung</th><th>heute</th><th>Markt</th><th>Position BesArt</th></tr></thead><tbody>${dRows}</tbody></table></div>
+          <p class="pt-small">Markt: Median der Online-Preise im Kerngebiet (Horgen, Oberrieden, Wädenswil, Au ZH), ohne Billig-Anbieter; in Klammern die Anzahl Salons. Je Salon zählt der Einstiegspreis. Von rund 60 Salons im Gebiet haben nur wenige Preise online, die Werte sind Richtwerte.</p>
+          <div class="pt-actions inline"><button type="button" class="btn btn-ghost" data-slide="8">Ganzen Marktvergleich öffnen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button><span class="pt-small">Zurück hierher über den Navigator links: «Entscheide».</span></div>`;
+      },
+      board() {
+        const has = k => answered(k), val = k => has(k) ? fmt(k) : '';
+        const R = [
+          ['Website-Version', 'eindruck', val('eindruck.version')],
+          ['Variante und Preis', 'buchung', val('buchung.variante') === 'Noch offen' ? '' : val('buchung.variante')],
+          ['Hosting', 'buchung', v2() ? 'Erstes Jahr geschenkt, danach offen' : v1() ? (val('buchung.hosting') ? 'Variante 1: ' + val('buchung.hosting') : '') : ''],
+          ['Drucksachen', 'druck', v1() ? 'Entfällt bei Variante 1' : [val('druck.karte') && 'Karte ' + val('druck.karte'), val('druck.flyer') && 'Flyer ' + val('druck.flyer')].filter(Boolean).join(' · ')],
+          ['Zahlgerät', 'zahlung', val('zahlung.terminal') === 'Noch offen' ? '' : val('zahlung.terminal')],
+          ['Absagen unter 24 Stunden', 'ausfall', val('ausfall.storno')],
+          ['Kollegenpreis', 'ausfall', val('ausfall.kollegen')],
+          ['Domain', 'start', val('start.domain')],
+          ['E-Mail', 'start', val('start.mail')],
+          ['Website-Start', 'start', val('start.golive')],
+          ['Preise ab Januar', 'preise', [val('preise.wahl'), val('preise.datum') && 'ab ' + val('preise.datum')].filter(Boolean).join(', ')],
+          ['Daten geprüft', 'start', val('start.daten')],
+        ];
+        const done = R.filter(r => r[2]).length;
+        return `<div class="pt-board"><p class="pt-board-h"><b>${done}</b> von ${R.length} Punkten entschieden<span class="pt-bar"><i style="width:${(done / R.length * 100).toFixed(0)}%"></i></span></p>
+          <ul>${R.map(([l, st, v]) => `<li class="${v ? 'done' : 'open'}"><button type="button" data-go="${stepIdx(st)}"><span class="pt-dot" aria-hidden="true">${v ? OK : ''}</span><span class="pt-bl">${l}</span><span class="pt-bv">${v ? esc(v) : 'offen'}</span>${ARROW}</button></li>`).join('')}</ul></div>`;
+      },
+    };
     function noteHTML(st) {
       const k = 'step:' + st.id, v = S.n[k] || '', open = !!v.trim();
       return `<div class="pt-notebox"><button type="button" class="pt-addnote" data-act="note"${open ? ' hidden' : ''}>${I.plus}Notiz zu diesem Punkt</button><div${open ? '' : ' hidden'}><label class="pt-l" for="pt_note_${st.id}">Notiz zu «${esc(st.t)}»</label><textarea class="pt-ta" id="pt_note_${st.id}" data-note="${k}" rows="3" placeholder="Was ist sonst noch wichtig?">${esc(v)}</textarea></div></div>`;
@@ -2987,8 +3222,9 @@ a.menu-book{text-decoration:none}
       const mtop = `<div class="pt-mtop"><p><span>Schritt ${i + 1} von ${all.length}</span><span>${esc(st.t)}</span></p><div class="pt-seg">${all.map((x, n) => `<button type="button" data-go="${n}" aria-label="Schritt ${n + 1}: ${esc(x.t)}"${n === i ? ' aria-current="step"' : ''}${n <= i ? ' class="on"' : ''}></button>`).join('')}</div></div>`;
       const agenda = st.agenda ? `<ol class="pt-agenda">${st.agenda.map((x, n) => `<li><b>${n + 1}</b>${esc(nm(x))}</li>`).join('')}</ol>` : '';
       const cue = st.cue ? `<ol class="pt-cue">${st.cue.map((x, n) => `<li><b>${n + 1}</b><span>${esc(nm(x))}</span></li>`).join('')}</ol>` : '';
-      const qs = st.q && st.q.length ? `<div class="pt-qs">${st.q.map(q => qHTML(st, q)).join('')}</div>` : '';
-      const body = st.end ? endHTML() : cue + (st.offer ? offerHTML() : '') + qs + (st.nonote ? '' : noteHTML(st));
+      const vq = (st.q || []).filter(q => !q.hide);
+      const qs = vq.length ? `<div class="pt-qs">${vq.map(q => qHTML(st, q)).join('')}</div>` : '';
+      const body = st.end ? endHTML() : cue + (st.offer ? offerHTML() : '') + (st.block && BLOCKS[st.block] ? `<div class="pt-blk" data-block="${st.block}">${BLOCKS[st.block](st)}</div>` : '') + qs + (st.nonote ? '' : noteHTML(st));
       const back = `<button type="button" class="btn btn-text" data-dir="-1"${i === 0 ? ' disabled' : ''}>${ARROW}Zurück</button>`;
       const nav = st.end ? `<div class="pt-nav">${back}</div>`
         : `<div class="pt-nav">${back}${touch ? '' : `<p class="pt-kbd"><kbd>${mac ? '⌘' : 'Ctrl'}</kbd> + <kbd>Enter</kbd> weiter</p>`}<button type="button" class="btn btn-primary" data-dir="1">Weiter${ARROW}</button></div>`;
@@ -3057,7 +3293,9 @@ a.menu-book{text-decoration:none}
       if (!t || !ov.contains(t) || t.disabled) return;
       if (t.dataset.go != null) return go(+t.dataset.go);
       if (t.dataset.dir) return go(S.step[mode] + +t.dataset.dir);
-      if (t.classList.contains('pt-chip')) return toggleChip(t);
+      if (t.classList.contains('pt-chip')) { toggleChip(t); const bk = $('.pt-blk', main); if (bk && BLOCKS[bk.dataset.block]) bk.innerHTML = BLOCKS[bk.dataset.block](); return; }
+      if (t.dataset.pick) { const k = t.dataset.pk; S.a[k] = S.a[k] === t.dataset.pick ? null : t.dataset.pick; save(); const bk = $('.pt-blk', main); if (bk) bk.innerHTML = BLOCKS[bk.dataset.block](); renderSide(); const f = $(`[data-pick="${t.dataset.pick}"]`, main); if (f) f.focus({ preventScroll: true }); return; }
+      if (t.dataset.slide) { closeOverlay(); document.dispatchEvent(new CustomEvent('nav:print', { detail: { i: +t.dataset.slide } })); return; }
       if (t.dataset.warm) {
         const ta = document.getElementById(t.dataset.for); if (!ta) return;
         const v = ta.value.replace(/\s+$/, '');
