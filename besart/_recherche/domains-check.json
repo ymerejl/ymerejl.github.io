@@ -1,0 +1,308 @@
+[
+  {
+    "domain": "besart.ch",
+    "status": "vergeben",
+    "checked_utc": [
+      "2026-11-10T07:12:26Z",
+      "2026-11-10T07:12:43Z"
+    ],
+    "http": [
+      200,
+      200
+    ],
+    "registered_since": "2002-04-15",
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-hairsalon.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:27Z",
+      "2026-11-10T07:12:43Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besarthairsalon.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:28Z",
+      "2026-11-10T07:12:44Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-horgen.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:28Z",
+      "2026-11-10T07:12:44Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besarthorgen.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:28Z",
+      "2026-11-10T07:12:45Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "haarmitart.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:29Z",
+      "2026-11-10T07:12:45Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "haar-mit-art.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:29Z",
+      "2026-11-10T07:12:46Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-coiffeur.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:30Z",
+      "2026-11-10T07:12:46Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besartcoiffeur.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:30Z",
+      "2026-11-10T07:12:46Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-coiffure.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:31Z",
+      "2026-11-10T07:12:47Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-hair.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:31Z",
+      "2026-11-10T07:12:47Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besarthair.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:31Z",
+      "2026-11-10T07:12:48Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-barber.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:32Z",
+      "2026-11-10T07:12:48Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-salon.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:32Z",
+      "2026-11-10T07:12:48Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart-haarsalon.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:33Z",
+      "2026-11-10T07:12:49Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "hairsalon-besart.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:33Z",
+      "2026-11-10T07:12:49Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "coiffeur-besart.ch",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:33Z",
+      "2026-11-10T07:12:50Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.0,
+    "price_renew_chf": 10.7
+  },
+  {
+    "domain": "besart.li",
+    "status": "frei",
+    "checked_utc": [
+      "2026-11-10T07:12:34Z",
+      "2026-11-10T07:12:50Z"
+    ],
+    "http": [
+      404,
+      404
+    ],
+    "registered_since": null,
+    "price_first_chf": 5.5,
+    "price_renew_chf": 8.9
+  },
+  {
+    "domain": "besart.com",
+    "status": "nicht prüfbar",
+    "checked_utc": [
+      "2026-11-10T07:12:51Z"
+    ],
+    "http": null,
+    "registered_since": null,
+    "price_first_chf": 10.25,
+    "price_renew_chf": 15.7,
+    "note": "rdap.verisign.com vom Proxy der Umgebung blockiert (CONNECT 403), keine Antwort der Registry"
+  },
+  {
+    "domain": "besarthairsalon.com",
+    "status": "nicht prüfbar",
+    "checked_utc": [
+      "2026-11-10T07:12:51Z"
+    ],
+    "http": null,
+    "registered_since": null,
+    "price_first_chf": 10.25,
+    "price_renew_chf": 15.7,
+    "note": "rdap.verisign.com vom Proxy der Umgebung blockiert (CONNECT 403), keine Antwort der Registry"
+  },
+  {
+    "domain": "besart.swiss",
+    "status": "nicht prüfbar",
+    "checked_utc": [
+      "2026-11-10T07:12:51Z"
+    ],
+    "http": null,
+    "registered_since": null,
+    "price_first_chf": 89.0,
+    "price_renew_chf": 115.45,
+    "note": "rdap.nic.swiss vom Proxy der Umgebung blockiert (CONNECT 403), keine Antwort der Registry"
+  }
+]
