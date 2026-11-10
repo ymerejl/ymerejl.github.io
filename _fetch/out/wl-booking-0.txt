@@ -1,0 +1,7 @@
+URL https://worldline.com/en-ch/home/top-navigation/developers/e-commerce-developer/integration STATUS 406
+
+Error 406 Not Acceptable
+
+Not Acceptable
+
+Trace-id: 9f53129f-47ad-4cd6-a867-e8049159dd0c

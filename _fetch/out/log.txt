@@ -1,0 +1,26 @@
+OK stripe-pricing https://stripe.com/de-ch/pricing imgs 49 saved 14
+OK stripe-terminal https://stripe.com/de-ch/terminal imgs 66 saved 14
+OK stripe-wisepad3 https://docs.stripe.com/terminal/readers/bbpos-wisepad3 imgs 1 saved 1
+OK stripe-s700 https://docs.stripe.com/terminal/readers/stripe-reader-s700-s710 imgs 1 saved 1
+OK stripe-wiseposE https://docs.stripe.com/terminal/readers/bbpos-wisepos-e imgs 1 saved 1
+OK stripe-readers https://docs.stripe.com/terminal/payments/setup-reader imgs 2 saved 2
+OK stripe-taptopay https://docs.stripe.com/terminal/payments/setup-reader/tap-to-pay imgs 0 saved 0
+OK stripe-dashboard-terminal https://docs.stripe.com/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven imgs 0 saved 0
+OK cal-payment-apps https://cal.com/apps/categories/payment imgs 3 saved 3
+OK cal-stripe https://cal.com/apps/stripe imgs 5 saved 5
+SEARCH wl-ex4000 https://worldline.com/en-ch/campaigns/ms/ex4000-all-in-one | https://worldline.com/de-ch/campaigns/ms/ex4000-all-in-one | https://www.bcv.ch/en/home/corporate-banking/for-your-core-banking-needs/bcv-business-plus/axium-ex4000-portable.html | https://support.worldline.com/en-ch/home/merchants/in-store-payments/terminals/axium-ex4000-portable-flex | https://www.ejost.ch/axium-ex4000/ | https://www.ubs.com/ch/en/services/digital-banking/marketplace/worldline.html
+OK wl-ex4000-0 https://worldline.com/en-ch/campaigns/ms/ex4000-all-in-one imgs 0 saved 0
+OK wl-ex4000-1 https://worldline.com/de-ch/campaigns/ms/ex4000-all-in-one imgs 0 saved 0
+OK wl-ex4000-2 https://support.worldline.com/en-ch/home/merchants/in-store-payments/terminals/axium-ex4000-portable-flex imgs 0 saved 0
+SEARCH wl-saturn https://worldline.com/en/home/main-navigation/solutions/merchants/terminals/saturn-1000f2 | https://worldline.com/en-ch/campaigns/ms/saturn-1000f2-all-in-one | https://www.castlestechsupport.com/terminals/saturn | https://www.manualslib.com/manual/2963264/Worldline-Saturn-1000f2-Portable.html | https://www.manualslib.com/manual/4174775/Worldline-Saturn-1000f2-Portable-Flex.html | https://manuals.plus/worldline/saturn-1000f2-portable-digital-payments-device-manual
+OK wl-saturn-0 https://worldline.com/en/home/main-navigation/solutions/merchants/terminals/saturn-1000f2 imgs 0 saved 0
+OK wl-saturn-1 https://worldline.com/en-ch/campaigns/ms/saturn-1000f2-all-in-one imgs 0 saved 0
+OK wl-saturn-2 https://manuals.plus/worldline/saturn-1000f2-portable-digital-payments-device-manual imgs 0 saved 0
+SEARCH wl-online https://worldline.com/en-ch/campaigns/ms/worldline-pay-by-link | https://worldline.com/de-ch/home/main-navigation/solutions/merchants/solutions-and-services/e-commerce/pay-by-link | https://www.bkb.ch/de/geschaeftskunden/zahlungsloesungen/zahlungsverkehr/leistungen-fuer-rechnungssteller/bezahlloesungen/e-commerce-bezahlloesungen/worldline-pay-by-link | https://docs.direct.worldline-solutions.com/en/design-and-test-tools/applications/merchant-portal/pay-by-link | https://www.ubs.com/ch/de/services/digital-banking/marketplace/worldline.html | https://www.ubs.com/ch/en/services/digital-banking/marketplace/worldline.html
+OK wl-online-0 https://worldline.com/en-ch/campaigns/ms/worldline-pay-by-link imgs 0 saved 0
+OK wl-online-1 https://worldline.com/de-ch/home/main-navigation/solutions/merchants/solutions-and-services/e-commerce/pay-by-link imgs 0 saved 0
+OK wl-online-2 https://www.bkb.ch/de/geschaeftskunden/zahlungsloesungen/zahlungsverkehr/leistungen-fuer-rechnungssteller/bezahlloesungen/e-commerce-bezahlloesungen/worldline-pay-by-link imgs 3 saved 3
+SEARCH wl-booking https://worldline.com/en-ch/home/top-navigation/developers/e-commerce-developer/integration | https://worldline.com/en-lu/home/top-navigation/developers/e-commerce-developer/integration | https://docs.saferpay.com/home/master/payment-methods-and-acquirers | https://docs.connect.worldline-solutions.com/ | https://docs.saferpay.com/home/integration-guide/payment-methods/account-to-account-payments | https://support.azavista.com/hc/en-us/articles/24096610070812-How-do-I-Configure-and-Manage-SaferPay-Worldline-Integration
+OK wl-booking-0 https://worldline.com/en-ch/home/top-navigation/developers/e-commerce-developer/integration imgs 0 saved 0
+OK wl-booking-1 https://worldline.com/en-lu/home/top-navigation/developers/e-commerce-developer/integration imgs 0 saved 0
+OK wl-booking-2 https://docs.saferpay.com/home/master/payment-methods-and-acquirers imgs 4 saved 4

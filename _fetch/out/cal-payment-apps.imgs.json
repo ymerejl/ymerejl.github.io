@@ -1,0 +1,20 @@
+[
+ {
+  "src": "https://cal.com/app-store/cal-payments/icon.svg",
+  "alt": "Cal Pay Logo",
+  "w": 395,
+  "h": 401
+ },
+ {
+  "src": "https://cal.com/app-store/hitpay/icon.svg",
+  "alt": "HitPay Logo",
+  "w": 600,
+  "h": 600
+ },
+ {
+  "src": "https://cal.com/app-store/btcpayserver/icon.svg",
+  "alt": "BTCPayServer Logo",
+  "w": 1707,
+  "h": 1067
+ }
+]

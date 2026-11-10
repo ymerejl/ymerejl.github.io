@@ -1,0 +1,29 @@
+URL https://cal.com/apps/categories/payment STATUS 200
+
+App Store / Payment Apps
+Stripe
+
+A Saas company a payment processing software, and application programming interfaces for e-commerce websites and mobile applications.
+
+Details
+Paypal
+
+Use PayPal to charge for your bookings.
+
+Details
+Cal Pay
+
+Accept payments directly within Cal.com.
+
+Details
+Standard
+HitPay
+
+HitPay's Cal.com payment integration combines powerful scheduling with seamless local payment acceptance. Our online scheduling software integration is built for customers in APAC, supporting their favorite e-wallets and banking apps.
+
+Details
+BTCPayServer
+
+BTCPay Server is a self-hosted open source Bitcoin payment processor. Start receiving bitcoin payments for your events and bookings.
+
+Details

@@ -1,0 +1,1484 @@
+URL https://stripe.com/de-ch/pricing STATUS 200
+
+Produkte
+Lösungen
+Entwickler/innen
+Ressourcen
+Preisgestaltung
+Anmelden
+ 
+Sales-Team kontaktieren
+ 
+Payments
+Payments  
+
+Online-Zahlungen
+
+Managed Payments  
+
+Lösung für eingetragene Händler/innen
+
+Payment links  
+
+No-Code-Zahlungen
+
+Checkout  
+
+Vorgefertigte Zahlungs-UIs
+
+Elements  
+
+Flexible UI-Komponenten
+
+Zahlungsmethoden  
+
+Zugriff auf mehr als 125
+
+Terminal  
+
+Zahlungen vor Ort
+
+Authorization Boost  
+
+Optimierung der Autorisierungsraten
+
+Link  
+
+Beschleunigter Bezahlvorgang
+
+Financial Connections  
+
+Verbundene Finanzdaten
+
+Umsatz
+Billing  
+
+Wiederkehrender Umsatz
+
+Metronome  
+
+Nutzungsbasierte Abrechnung
+
+Abonnements  
+
+Abonnementverwaltung
+
+Invoicing  
+
+Einmalig oder wiederkehrend
+
+Tax  
+
+Verkaufs- und USt.-Optimierung
+
+Revenue Recognition  
+
+Buchhaltungsautomatisierung
+
+Stripe Sigma  
+
+Benutzerdefinierte Berichte
+
+Data Pipeline  
+
+Datensynchronisierung
+
+Geldmanagement
+Globale Auszahlungen  
+
+Auszahlungen an Dritte
+
+Crypto  
+
+Wallet, Ausstellung von Stablecoin und Karteninfrastruktur
+
+Crypto Onramp  
+
+Einbettbare Krypto-Käufe
+
+Embedded Finance
+Connect  
+
+Zahlungen für Plattformen
+
+Alle Produkte anzeigen  
+Mehr
+Produkt-Roadmap  
+
+Ausblick
+
+Radar  
+
+Betrugsprävention
+
+Atlas  
+
+Start-up-Gründung
+
+Climate  
+
+CO₂-Entnahme
+
+Identity  
+
+Online-Identitätsprüfung
+
+Stripe-Sessions 2026
+Erfahren Sie, wie Stripe Lösungen für die Wirtschaftsinfrastruktur für KI aufbaut.
+Jetzt ansehen 
+Nach Phase
+Unternehmen  
+Start-ups  
+Nach Use Case
+Agentenbasierter Handel  
+Crypto  
+E-Commerce  
+Embedded Finance  
+Finanzautomatisierung  
+Globale Unternehmen  
+In-App-Zahlungen  
+Marktplätze  
+Geldmanagement  
+Plattformen  
+SaaS  
+Nach Branche
+KI-Unternehmen  
+Creator Economy  
+FinTech  
+Gaming  
+Bewirtung, Reisen und Freizeit  
+Versicherungen  
+Medien und Unterhaltung  
+Gemeinnützige Organisationen  
+Fachdienstleistungen  
+Öffentlicher Sektor  
+Einzelhandel  
+Ecosystem
+Partner  
+Stripe App-Marktplatz  
+Dokumentation
+Stripe-Dokumentation  
+API-Referenz  
+Bibliotheken und SDKs  
+Stripe Apps  
+Leitfäden
+Grundlagen: Online-Zahlungen akzeptieren  
+So integrieren Sie einen vorkonfigurierten Bezahlvorgang  
+So bauen Sie eine Plattform oder einen Marktplatz auf  
+Grundlagen der Abonnementverwaltung  
+So setzen Sie nutzungsbasierte Abrechnung um  
+Stablecoin-gestützte Karten ausgeben: So geht´s  
+Bereitstellung und Verwaltung von Diensten mit Agenten  
+Ressourcen
+App-Integrationen  
+Code-Beispiele  
+Entwickler-Blog  
+API-Status  
+Wissenswertes
+Blog  
+Kundenstories  
+Leitfäden  
+Support
+Support anfordern  
+Verwaltete Support-Pläne  
+Fachdienstleistungen  
+Unternehmen
+Produkt-Roadmap  
+Stripe Sessions  
+Karriere  
+Newsroom  
+Stripe Press  
+Über Stripe  
+Kontakt
+Sales-Team kontaktieren  
+Partner werden  
+Passende Tarife für Unternehmen jeder Größenordnung
+Standard
+Greifen Sie auf eine All-in-one-Zahlungsplattform mit Pay-as-you-go-Preisen zu: Keine Einrichtungsgebühren, monatlichen Gebühren oder versteckten Gebühren.
+Jetzt starten 
+2,9 % + 0,30 CHF
+
+für Karten aus der Schweiz
+
+3,25 % + 0,30 CHF
+
+für ausländische Karten
+
+Benutzerdefiniert
+Stellen Sie sich Ihr Wunschpaket zusammen – nur für große Zahlungsvolumina und bestimmte Geschäftsmodelle.
+Sales-Team kontaktieren 
+IC+-Preisgestaltung
+Volumenrabatte
+Rabatte für mehrere Produkte
+Länderspezifische Preise
+Standardtarif
+Individualtarif
+FAQ
+Sofort verfügbare Funktionen:
+Globaler Zugang
+195 Länder
+Über 135 Währungen
+
+Erhöhen Sie die Konversionsrate, indem Sie Ihrer Kundschaft Preise und Zahlungsabwicklung in ihrer bevorzugten Währung präsentieren.
+
+Über 100 Zahlungsmethoden
+
+Bieten Sie von Alipay bis iDEAL eine nahtlose Unterstützung beliebter Zahlungsmethoden.
+
+1 Integration
+
+Akzeptieren Sie weltweit Zahlungen durch eine einzige Integration.
+
+Integrierte Betrugsprävention
+Leistungsstarkes maschinelles Lernen
+
+Erkennen und blockieren Sie betrügerische Aktivitäten mithilfe von maschinellem Lernen, das auf Daten von Millionen von Unternehmen trainiert wurde.
+
+Anpassung an neue Betrugsmuster
+
+Passen Sie sich mit dem maschinellen Lernen von Radar schneller an neueste Trends an.
+
+Keine Integration erforderlich
+
+Mit der integrierten Betrugsvorbeugung von Stripe können Sie ohne Code loslegen.
+
+Betrugsanalyse
+
+Überwachen Sie Ihre Performance bei der Betrugserkennung mit modernen Analysen und Warnmeldungen.
+
+Tools zur Optimierung Ihres Bezahlvorgangs
+Flexible Nutzeroberflächen-Komponenten
+
+Verwenden Sie Bausteine für die Nutzeroberfläche, um eine sichere Zahlungserfahrung zu gestalten, die perfekt zu Ihrer Website passt.
+
+Vordefinierte Zahlungsformulare
+
+Betten Sie ein vordefiniertes Zahlungsformular in Ihre Website ein oder leiten Sie Ihre Kundschaft auf eine von Stripe gehostete Seite weiter.
+
+Beschleunigter Bezahlvorgang
+
+Lassen Sie die gespeicherten Kartenangaben Ihrer Kundinnen und Kunden automatisch ausfüllen, um den Bezahlvorgang so einfach wie möglich zu gestalten.
+
+Zahlungen ohne Code
+
+Akzeptieren Sie mithilfe von No-Code-Links Zahlungen innerhalb von Minuten.
+
+Zahlungsoptimierungen zur Steigerung des Umsatzes
+Wiederholungen in Echtzeit
+
+Steigern Sie Ihren Umsatz mit gezielten, auf maschinellem Lernen basierenden Wiederholungsversuchen.
+
+Automatisch aktualisierte Karten
+
+Aktualisieren Sie Kartendaten in Echtzeit, um die Kundenerfahrung zu verbessern und den Umsatz zu steigern.
+
+Kundenauthentifizierung
+
+Überprüfen Sie die Identität Ihrer Kundinnen und Kunden mit 3D Secure, einer Authentifizierungsmethode für Kartentransaktionen
+
+Integrierte Zahlungen für Plattformen und Marktplätze
+Nahtloses Onboarding
+
+Nutzen Sie für Onboarding und Verifizierung von Nutzerinnen und Nutzern konversionsoptimierte Nutzeroberflächen.
+
+Plattformmanagement
+
+Verwalten Sie Zahlungen mit Tools für Ihre Plattform und Ihre Nutzer/innen.
+
+Eingebettete Komponenten
+
+Bieten Sie eingebettete und White-Label-Zahlungsworkflows für Ihre Nutzer/innen.
+
+Risikomanagement-Tools
+
+Erhalten Sie Zugriff auf Tools, mit denen Sie das Risiko für Ihre verbundenen Konten minimieren können.
+
+Schnelle, planbare Auszahlungen auf Ihre Bankkonten
+Flexible Auszahlungsmöglichkeiten
+
+Entscheiden Sie sich für rollierende, wöchentliche oder monatliche Übertragungen.
+
+Bereinigte Zahlungsabwicklung
+
+Lassen Sie sich in ausgewählten Regionen in Ihren bevorzugten Währungen auszahlen.
+
+Transparente Auszahlungen
+
+Im Dashboard sehen Sie anstehende Auszahlungen, voraussichtliche Einzahlungstermine, den Auszahlungsverlauf und vieles mehr.
+
+Support per Telefon, Chat und E-Mail
+Support rund um die Uhr
+
+Unser Team unterstützt Sie gerne per E-Mail, Telefon oder Chat. Sie erhalten E-Mail-Support in sechs verschiedenen Sprachen.
+
+Branchenführende Dokumentation
+
+Entwickeln Sie mithilfe unserer soliden technischen Dokumentation. Beispielcode in mehr als acht Sprachen.
+
+Technischer Support über Discord
+
+Tauschen Sie sich mit unserem technischen Team auf dem offiziellen Discord-Server für Stripe-Entwickler/innen aus.
+
+Sicherheit, Verlässlichkeit und Konformität
+99,999 % durchschnittliche Verfügbarkeit
+
+Maximieren Sie Ihren Umsatz mit einer Plattform, die bei über 250 Mio. täglichen API-Anfragen eine Erreichbarkeit von 99,999 % bietet.
+
+PCI-Konformität
+
+Nutzen Sie unsere Bibliotheken, um Zahlungsinformationen zu erfassen, ohne dass jemals sensible Daten auf Ihre Server gelangen.
+
+Regulatorische Lizenzen – weltweit
+
+Stripe ist nach höchsten Branchenstandards zertifiziert und verfügt über alle globalen Lizenzen zur Zahlungsabwicklung.
+
+Standardtarif
+Individualtarif
+FAQ
+Sales-Team kontaktieren 
+Standardpreise für alle Produkte
+Preisübersicht für die gesamte Stripe-Plattform
+
+Online- und Präsenzzahlungen, wiederkehrende Abrechnungen, integrierte Zahlungen und vieles mehr.
+
+Globale Zahlungen
+Payments
+Payment Links
+Checkout
+Managed Payments
+Terminal
+Financial Connections
+Geldmanagement
+Connect
+Umsatz- und Finanzautomatisierung
+Billing
+Metronome
+Rechnungsstellung
+Steuer
+Stripe Sigma
+Data Pipeline
+Revenue Recognition
+Weitere Lösungen und Funktionen
+Radar
+Atlas
+Identity
+Workflows
+Individualtarif
+Globale Zahlungen
+
+Optimieren Sie die Konversionsraten im Bezahlvorgang, akzeptieren Sie lokale Zahlungsmethoden und steigern Sie die Akzeptanzquote.
+
+Payments
+
+Eine Online-Zahlungsplattform, die ganz auf Wachstum ausgerichtet ist
+
+Jetzt loslegen 
+Verbessern Sie die Kundenakquise mit über 100 Zahlungsmethoden.
+
+Steigern Sie Ihre Konversionsrate mit Link, dem beschleunigten Bezahlvorgang von Stripe.
+
+Erhalten Sie KI-gestützte Betrugsvorbeugung für Kartenzahlungen mit Radar Lite.
+
+Reduzieren Sie Ihren Entwicklungsaufwand mit vordefinierten Nutzeroberflächen. 
+
+Inländische Karten
+
+Akzeptieren Sie weitverbreitete Kredit-, Debit- und Prepaid-Karten sowie Digital Wallets für im Inland ausgestellte Karten.
+
+Weitere Informationen hier zu unseren verschiedenen Kartentypen.
+
+2,9 % + 0,30 CHF
+
+für Karten aus der Schweiz
+
+Internationale Karten
+
+Akzeptieren Sie gängige Kredit- und Debitkarten, Prepaidkarten und Digital Wallets für international ausgestellte Karten.
+
+3,25 % + 0,30 CHF
+
+für ausländische Karten
+
++ 2 % 
+
+sofern eine Währungsumrechnung erforderlich ist
+
+Mehr erfahren 
+Link
+
+Lassen Sie die bevorzugten Zahlungsdetails Ihrer Kundinnen und Kunden automatisch ausfüllen, um den Bezahlvorgang so einfach wie möglich zu gestalten.
+
+2,9 % + 0,30 CHF
+
+für Karten aus der Schweiz
+
+Bankbasierte und andere Zahlungsmethoden
+
+Bieten Sie Banklastschriften, Banküberweisungen und weitere regional gängige Zahlungsmethoden an.
+
+0,40 CHF
+
+SEPA-Lastschriftverfahren
+
+Weitere Zahlungsmethoden ansehen 
+Zahlungsanfechtungen
+
+Antworten Sie auf Zahlungsanfechtungen bei Kartenzahlungen, auch bekannt als Rückbuchungen.
+
+Mehr erfahren
+
+Gebühr für eingegangene Zahlungsanfechtung
+20,00 CHF
+
+für jede Zahlungsanfechtung, die Sie erhalten.
+
+In seltenen Fällen fallen auch Netzwerkgebühren an.
+
+Gebühr für den Widerspruch gegen eine angefochtene Zahlung
+20,00 CHF
+
+für jede Zahlungsanfechtung, auf die Sie manuell antworten.
+
+Bei erfolgreichen Zahlungsanfechtungen erhalten Sie diese Gebühr zurück. Bei verlorenen Zahlungsanfechtungen erhalten Sie diese Gebühr nicht zurück.
+
+Mehr erfahren 
+Dispute appealed fee
+20,00 CHF
+
+for each dispute you appeal.
+
+You don't get this fee back, even if you win. Additional network fees apply.
+
+Learn more 
+Smart Disputes
+
+Reagieren Sie auf Streitfälle mit Beweisen, die die KI von Stripe für Sie vorbereitet. Sie können auch Ihre eigenen Beweise hinzufügen.
+
+Transaktionsgebühr für Smart Disputes
+30 %
+
+des angefochtenen Betrags für jede erfolgreiche Zahlungsanfechtung.
+
+Für verlorene Zahlungsanfechtungen fällt keine Smart Dispute-Gebühr an. Die Gebühr für eine eingegangene Zahlungsanfechtung gilt weiterhin.
+
+Mehr erfahren 
+Anfechtungsprävention
+
+Helfen Sie, die Streitfallquoten zu senken, mit Tools zur Vorbeugung von Streitfällen, die von Verifi von Visa und Ethoca von Mastercard unterstützt werden.
+
+Inbegriffen
+
+Informationen zur Anfechtungsvermeidung
+
+20,00 CHF
+
+per Visa-Schlichtungsverfahren
+
+20,00 CHF
+
+mit Visa Compelling Evidence 3.0
+
+40,00 CHF
+
+per Mastercard-Schlichtungsverfahren
+
+Zahlungsoptimierungen
+In Stripe Payments inbegriffen
+ 
+
+Für Unternehmen im Standardtarif inbegriffen
+
+Weitere Funktionen
+Payment Links
+
+Programmierfreie Links für den Verkauf auch ohne eigene Website
+
+Jetzt loslegen 
+Nehmen Sie mit programmierfreien Links schon nach wenigen Minuten erste Zahlungen an.
+
+Verkaufen Sie Produkte, Abonnements und vieles mehr.
+
+Erstellen Sie passende Marketingkampagnen und Vertriebsabläufe automatisch über die API.
+
+Zahlungen annehmen
+
+Akzeptieren Sie Zahlungen über Zahlungslinks.
+
+Inbegriffen
+
+mit Payments
+
+ 
+
+Für Unternehmen im Standardtarif inbegriffen
+
+Benutzerdefinierte Domain
+
+Verwenden Sie Ihre eigene Domain und hosten Sie Ihre Bezahlseite oder Ihr Kundenportal bei Stripe.
+
+10,00 $
+
+pro Monat
+
+Mehr erfahren 
+Rechnungen nach der Zahlung
+
+Erstellen Sie Rechnungen auch nach Einmalkäufen automatisch.
+
+0,4 %
+
+auf die Transaktionssumme
+
+2,00 $
+
+Obergrenze für jede Rechnung
+
+Mehr erfahren 
+Checkout
+
+Ein vorgefertigtes Bezahlformular für maximale Konversion
+
+Jetzt loslegen 
+Sparen Sie Entwicklungsaufwand und legen Sie direkt los.
+
+Vermeiden Sie Komplikationen mit konversionsoptimierten Funktionen.
+
+Passen Sie das Design an Ihre Marke an.
+
+Zahlungen annehmen
+
+Akzeptieren Sie Zahlungen mit Stripe Checkout.
+
+Inbegriffen
+
+mit Payments
+
+ 
+
+Für Unternehmen im Standardtarif inbegriffen
+
+Benutzerdefinierte Domain
+
+Verwenden Sie Ihre eigene Domain und hosten Sie Ihre Bezahlseite oder Ihr Kundenportal bei Stripe.
+
+10,00 $
+
+pro Monat
+
+Mehr erfahren 
+Rechnungen nach der Zahlung
+
+Erstellen Sie Rechnungen auch nach Einmalkäufen automatisch.
+
+0,4 %
+
+auf die Transaktionssumme
+
+2,00 $
+
+Obergrenze für jede Rechnung
+
+Mehr erfahren 
+Managed Payments
+
+Lösung für eingetragene Händler/innen von Stripe, die den globalen Verkauf vereinfacht.
+
+Jetzt loslegen 
+Starten oder expandieren Sie Ihre Unternehmen schnell und ohne zusätzliche Einrichtung weltweit.
+
+Übertragen Sie die Verantwortlichkeiten für die Steuerkonformität, betrügerische Aktivitäten, Zahlungsanfechtungen und den Kundensupport auf einen vertrauenswürdigen Partner.
+
+Verwenden Sie Managed Payments für alle Ihre Transaktionen oder nur für bestimmte Märkte und Produkte.
+
+Merchant-of-Record-Dienste
+
+Eine Komplettlösung für eingetragene Händler/innen für den globalen digitalen Handel. Umfasst die Konformität mit den Vorgaben für indirekte Steuern (Verkaufssteuer, Umsatzsteuer, GST) und die Abführung in mehr als 75 Ländern sowie Betrugsprävention, Management von Anfechtungen, Rechnungsstellung und Kundensupport
+
+3,5 %
+
+pro erfolgreicher Transaktion mit Managed Payments zusätzlich zu Zahlungsgebühren
+
+Mehr erfahren 
+Terminal
+
+Tools für Präsenzzahlungen und Einheitlichkeit
+
+Jetzt loslegen 
+Erstellen Sie eine eigene Bezahlseite oder binden Sie Hunderte externe POS-Systeme ein.
+
+Rationalisieren Sie Ihre Hardware mit vorzertifizierten Kartenlesegeräten von Stripe oder Drittanbietern.
+
+Stimmen Sie Online- und Präsenzzahlungen für ein einheitliches Kundenerlebnis aufeinander ab.
+
+Karten und Digital Wallets
+
+Akzeptieren Sie persönliche Zahlun­gen mit gängigen Kreditkarten, Debitkarten und Digital Wallets.
+
+1,4 % + 0,10 CHF
+
+pro erfolgreicher Zahlung für Karten aus der Schweiz, dem EWR und dem Vereinigten Königreich
+
+2,9 % + 0,10 CHF
+
+pro erfolgreicher Zahlung für alle anderen Karten
+
++ 0,10 CHF 
+
+pro Autorisierung für Tap to Pay
+
+ 
+
+Akzeptieren Sie kontaktlose Zahlungen ohne zusätzliche Hardware mit kompatiblen iPhones oder Android-Geräten.
+
++ 0,05 CHF 
+
+je Autorisierung bei optionaler Punkt-zu-Punkt-Verschlüsselung
+
+ 
+
+Zugang zu PCI-zertifizierter Punkt-zu-Punkt-Verschlüsselung (P2PE), die in bestimmten Branchen verpflichtend ist. Alle Terminal-Transaktionen sind standardmäßig Ende-zu-Ende-verschlüsselt.
+
+Kartenlesegeräte
+
+Profitieren Sie von vorzertifizierten Kartenlesegeräten und einem cloudbasierten Gerätemanagement, das Logistik und Verwaltung effizienter macht.
+
+59,00 CHF
+
+BBPOS WisePad 3
+
+zzgl. Mwst.
+
+239,00 CHF
+
+Stripe Reader S710
+
+zzgl. Mwst.
+
+239,00 CHF
+
+Stripe Reader S700
+
+zzgl. Mwst.
+
+199,00 CHF
+
+BBPOS WisePOS E
+
+zzgl. Mwst.
+
+269,00 CHF
+
+Stripe Reader T600
+
+zzgl. Mwst.
+
+Mobile Daten
+
+Unbegrenzte Nutzung von Mobilfunkdaten auf aktivierten Lesegeräten. Die Nutzung von Apps auf Geräten ist beschränkt auf 10 GB pro Lesegerät und Monat.
+
+8,00 CHF
+
+pro Lesegerät und Monat
+
+Preisübersicht anzeigen 
+Financial Connections
+
+Sicherer Zugriff auf Nutzerfinanzkonten
+
+Jetzt loslegen 
+Steigern Sie die Konversionsrate mit einer eingebetteten Authentifizierung.
+
+Verifizieren Sie unmittelbar Kontoverbindungen von 5.000 Geldinstituten.
+
+Verkürzen Sie die Entwicklungsphase mit einer einzigen Integration.
+
+Sofortbestätigung des Bankkontos
+
+Rufen Sie tokenisierte Kontonummern ab, um Bankkonten für ACH Direct Debit, Auszahlungen und andere Geldbewegungen sofort zu verifizieren.
+
+1,25 CHF
+
+pro erfolgreicher Sofortverifizierung
+
+Bestätigung per Testeinzahlung kostenfrei
+
+Salden
+
+Rufen Sie Kontostände für Risikoevaluation, Finanzmanagement oder die Verhinderung von fehlgeschlagenen Zahlungen aufgrund unzureichender Deckung ab.
+
+0,10 CHF
+
+je abgeschlossenem API-Aufruf
+
+Kontoinhaber/innen
+
+Verifizieren Sie die Bankkontoinhaberschaft, um Betrug zu minimieren, wenn Sie Auszahlungen machen oder Zahlungen annehmen.
+
+1,25 CHF
+
+je abgeschlossenem API-Aufruf
+
+Transaktionen
+
+Abonnieren Sie einen automatisch aktualisierten Feed Ihrer Kontotransaktionen.
+
+0,35 CHF
+
+je Einrichtung, Kontoinhaber/in und Monat
+
+Preisübersicht anzeigen 
+Geldmanagement
+
+Bieten Sie integrierte Finanzdienstleistungen direkt über Ihre Plattform an ‒ richten Sie Finanzkonten ein, stellen Sie Karten aus und bieten Sie Finanzierungen an.
+
+Connect
+
+Integrierte Zahlungen für Plattformen und Marktplätze
+
+Jetzt loslegen 
+Starten Sie schneller mit von Stripe gehosteten oder vorgefertigten eingebetteten Komponenten.
+
+Sparen Sie Zeit mit Tools von Stripe für Onboarding, Risikomanagement, Steuerformulare und mehr.
+
+Generieren Sie Umsatz durch die Monetarisierung von Zahlungen.
+
+Stripe übernimmt die Preisgestaltung für Nutzer/innen.
+
+Stripe berechnet und erhebt Abwicklungsgebühren von Ihren Nutzerinnen und Nutzern, um Sie zu entlasten. Wie genau die Umsatzbeteiligung funktioniert, erfahren Sie hier.
+
+Inbegriffen
+
+mit Payments
+
+ 
+
+Für Unternehmen im Standardtarif inbegriffen
+
+0,25 % 
+
+Startgebühr für Plattformen, die ihre eigene Preisgestaltung für Zahlungen anwenden, um mit jeder Transaktion Umsatz zu erzielen.
+
+Preisübersicht anzeigen 
+Umsatz- und Finanzautomatisierung
+
+Optimieren Sie zentrale Geschäftsprozesse mit modularen Tools für Abrechnung, Steuern, Umsatzberichterstattung und Datenanalyse, die perfekt aufeinander abgestimmt sind.
+
+Billing
+
+Abonnementverwaltungssoftware für Modelle mit wiederkehrendem Umsatz² und einmalige Abrechnung.
+
+Jetzt loslegen 
+Reagieren Sie schneller auf die Anforderungen Ihrer Kundinnen und Kunden mit flexiblen Tarifmodellen.
+
+Steigern Sie Ihren Umsatz und reduzieren Sie die Kundenabwanderung mit Smart Retries und automatisierten Mahnabläufen.
+
+Sparen Sie Entwicklungszeit mit No-Code-Tools und unseren modularen APIs.
+
+Tarif auswählen
+Monatlich zahlen
+
+Jahresabonnement. Monatliche Zahlung auf Grundlage einer Volumenstaffelung, die auf Ihr Unternehmen abgestimmt ist.
+
+Ab 570,00 CHF
+
+Jahresvertrag, monatlich
+
+ 
+
+Abonnements und Stornierungen unterliegen Bedingungen.
+
+Pay-as-you-go
+
+Sie zahlen nur für Ihre tatsächliche Nutzung – ohne regelmäßige Gebühren. Optimal für geringe und schwankende Volumina.
+
+0,7 %
+
+des Billing-Volumens
+
+ 
+
+Enthält Billing-Transaktionen, die innerhalb und außerhalb von Stripe abgewickelt werden. Ohne einmalige Rechnungen.
+
+Tarifvergleich 
+Metronome
+
+Nutzungsmessung in Echtzeit, Preisgestaltung und Analysen für nutzungsbasierte Abrechnung.
+
+Mit Metronome registrieren 
+Führen Sie jedes nutzungsbasierte oder hybride Preismodell schnell ein.
+
+Passen Sie die Preisgestaltung ohne Entwicklungsaufwand an.
+
+Erhalten Sie Echtzeit-Einblick in Nutzung und Umsatz.
+
+Tarif auswählen
+Start-up
+
+Für Teams, die nutzungsbasierte Produkte auf den Markt bringen. Zahlen Sie Ihrem Unternehmenswachstum entsprechend.
+
+0,04 $
+
+pro 1.000 Erfassungsereignisse
+
+0,8 %
+
+des Abrechnungsvolumens
+
+Mehr erfahren 
+Benutzerdefiniert
+
+Für Unternehmen, die ihren Umsatz steigern oder ihre Preisgestaltung umstellen. Auf Ihren Bedarf abgestimmte Preisgestaltung.
+
+Individuelle Preisgestaltung
+
+Daten-Export nur in benutzerdefinierten Plänen verfügbar:
+
+0,03 $ 
+
+pro Export von 1.000 Standarddaten
+
+0,05 $ 
+
+pro Export von 1.000 Premiumdaten
+
+Metronome kontaktieren 
+Rechnungsstellung
+
+Internationale Abrechnungssoftware
+
+Jetzt loslegen 
+Erstellen, individualisieren und versenden Sie Rechnungen innerhalb weniger Minuten ganz ohne Programmieraufwand.
+
+Sparen Sie Zeit mit automatisierten Workflows für Debitorenbuchhaltung und Rechnungsstellung.
+
+Erstellen Sie Rechnungen für unterschiedlichste Anwendungsfälle.
+
+Starter
+
+Hilfreiche Abrechnungsfunktionen erleichtern Ihnen den Einstieg.
+
+0,4 %
+
+pro bezahlter Rechnung
+
+Siehe Preisübersicht 
+Steuer
+
+Wachsen Sie schneller dank globaler All-in-One-Steuerkonformität
+
+Jetzt loslegen 
+Erreichen Sie rasch Konformität mit No-Code- und Low-Code-Setups.
+
+Erhalten Sie Warnungen, wenn Sie einen Schwellenwert für Verkaufssteuer, USt. oder GST erreichen und Steuern einziehen müssen.
+
+Skalieren Sie problemlos durch Automatisierung von Steuerberechnung und -einzug in über 100 Ländern.
+
+Steigern Sie die Effizienz Ihres Finanzteams durch einfache Steuerregistrierung und die Einreichung von Steuererklärungen in mehr als 90 Ländern.
+
+Tarif auswählen
+Tax Complete
+
+All-in-One-Steuerkonformität – einschließlich automatischer Überwachung von Schwellenwerten, Registrierungen, Berechnungen und Einreichungen.
+
+Ab 80,00 CHF
+
+Jahresvertrag, monatlich
+
+ 
+
+Abonnements und Stornierungen unterliegen Bedingungen.
+
+Tax Basic
+
+In diesem Plan ist die automatische Steuerberechnung nur in bestimmten Regionen enthalten.
+
+Integration ohne Code
+0,5 %
+
+je Transaktion, am Ort der Meldung bei der Steuerbehörde
+
+ 
+
+Steuern, die bei der Integration von Billing, Checkout, Invoicing und Payment Links berechnet und erhoben werden. Mehr erfahren.
+
+API-Integration
+0,50 CHF
+
+je Transaktion, am Ort der Meldung bei der Steuerbehörde
+
+ 
+
+Steuern auf Transaktionen über Stripe Payment APIs oder andere Zahlungsabwickler. Jede Transaktion beinhaltet 10 API-Aufrufe zu Berechnungszwecken; anschließend 0,05 CHF für jeden weiteren Aufruf. Weitere Informationen.
+
+Tarifvergleich 
+Stripe Sigma
+
+Eine interaktive SQL-Umgebung zur Analyse Ihrer Stripe-Daten und zur Erstellung benutzerdefinierter Berichte.
+
+Jetzt loslegen 
+Erhalten Sie schnellere und umfassendere Einblicke mithilfe von SQL oder KI-gestützten Eingabeaufforderungen in natürlicher Sprache.
+
+Treffen Sie fundierte, datengestützte Entscheidungen mit vollständig anpassbaren Berichten.
+
+Sorgen Sie für eine effiziente Zusammenarbeit Ihrer Teams und sparen Sie Zeit mit geplanten Berichten.
+
+Monatsabo
+
+Flexible monatliche Pläne – jederzeit kündbar.
+
+30 Tage lang kostenlos testen
+12,00 CHF
+
+pro Monat
+
+ 
+
+Es gelten Abo- und Kündigungsbedingungen.
+
+Jahresabo
+
+Sparen Sie mehr mit einem Jahresplan, der monatlich bezahlt wird.
+
+30 Tage lang kostenlos testen
+Ab 8,00 CHF
+
+Jahresvertrag, monatlich
+
+ 
+
+Es gelten Abo- und Kündigungsbedingungen.
+
+Pläne vergleichen 
+Data Pipeline
+
+Streamen Sie Stripe-Echtzeitdaten zu Postgres oder synchronisieren Sie Stripe-Daten mit Ihrem Data Warehouse oder Cloud-Speicher.
+
+Jetzt loslegen 
+Richten Sie Ihre Pipeline in wenigen Minuten ein und automatisieren Sie die Datenbereitstellung.
+
+Erstellen Sie Anwendungen mit Stripe-Echtzeitdaten in Postgres, ohne APIs oder Webhooks zu verwalten
+
+Schließen Sie die Bücher schneller und erhalten Sie tiefere Einblicke in Umsatz und Abwanderung
+
+Tarif auswählen
+Postgres-Datenbanksynchronisierung
+
+Betreiben Sie Anwendungen mit Echtzeitdaten. Synchronisieren Sie Stripe-API-Echtzeitdaten, einschließlich Zahlungen, Abbuchungen, Abonnements und mehr.
+
+Nutzungsbasierte Abrechnung (Pay-as-you-go)
+0,002 CHF
+
+pro synchronisierter Zeile
+
+ 
+
+A row synced is counted each time Stripe creates, updates, or deletes a row in your destination. Updating multiple fields in one row at once counts as one row synced.
+
+5.000 synchronisierte Zeilen kostenlos pro Monat
+
+Monatliches Abonnement
+Ab 80,00 CHF
+
+pro Monat, beinhaltet bis zu 50.000 synchronisierte Zeilen
+
+ 
+
+Eine synchronisierte Zeile wird jedes Mal gezählt, wenn Stripe eine Zeile an Ihrem Zielort erstellt, aktualisiert oder löscht. Die gleichzeitige Aktualisierung mehrerer Felder in einer Zeile zählt als eine synchronisierte Zeile.
+
+Data-Warehouse- und Cloud-Speicher-Synchronisierung
+
+Erhalten Sie tiefere Einblicke und schnellere Berichte. Synchronisieren Sie angereicherte Datensätze, vorgefertigte Berichte und Stripe-API-Daten in einem festgelegten Rhythmus mit Snowflake, Google BigQuery, Databricks und mehr. Beinhaltet Stripe Sigma.
+
+30 Tage lang kostenlos testen
+Monatliches Abonnement
+Ab 53,00 CHF
+
+pro Monat, beinhaltet bis zu 1.000 Abbuchungen
+
+ 
+
+Es gelten Abo- und Kündigungsbedingungen.
+
+Jährliches Abonnement
+Ab 41,00 CHF
+
+pro Monat, 1-Jahres-Vertrag, beinhaltet bis zu 1.000 Abbuchungen
+
+ 
+
+Es gelten Abo- und Kündigungsbedingungen.
+
+Preisinformationen anzeigen 
+Revenue Recognition
+
+Automatische Umsatzberichterstattung zur Vereinfachung der Periodenrechnung
+
+Jetzt loslegen 
+Erstellen Sie Abschlüsse mit automatischen Berichten und Dashboards zügig und präzise.
+
+Behalten Sie Ihre Finanzen im Blick und erstellen Sie Audits in Echtzeit.
+
+Erfüllen Sie ASC 606 und IFRS 15.
+
+Tarif auswählen
+Monatsabo
+
+Flexibles Monatsabo – jederzeit kündbar. Am besten geeignet für Unternehmen mit niedrigem oder unvorhersehbarem Zahlungsvolumen.
+
+30 Tage lang kostenlos testen
+20,00 CHF
+
+pro Monat
+
+ 
+
+Es gelten Abo- und Kündigungsbedingungen.
+
+Jahresabo
+
+Jahresabo, monatlich bezahlt. Am besten geeignet für Unternehmen mit höherem Zahlungsvolumen, die ihre Einsparungen maximieren möchten.
+
+30 Tage lang kostenlos testen
+Ab 165,00 CHF
+
+Jahresvertrag, monatlich
+
+ 
+
+Es gelten Abo- und Kündigungsbedingungen.
+
+Pläne vergleichen 
+Weitere Lösungen und Funktionen
+Radar
+
+KI-gestützte Betrugs- und Missbrauchsvorbeugung.
+
+Jetzt loslegen 
+Reduzieren Sie Betrug über alle Zahlungsmethoden hinweg mit KI, die vom Stripe-Netzwerk unterstützt wird.
+
+Markieren und verhindern Sie, dass verdächtige Konten Ihrer Plattform beitreten.
+
+Bleiben Sie aufkommendem Betrug einen Schritt voraus und stoppen Sie Missbrauch über den gesamten Kunden-Lifecycle.
+
+Starten Sie ohne jegliche Integration oder greifen Sie über die API auf die Daten von Radar zu.
+
+Tarif auswählen
+Monatlich zahlen
+
+Monatliches Abonnement für eine besser kalkulierbare Preisgestaltung. Optimal für Unternehmen mit höheren Zahlungsvolumina, die ihre Einsparungen maximieren möchten.
+
+Ab 10,00 CHF
+
+pro Monat, jederzeit kündbar
+
+Nutzungsbasierte Abrechnung
+
+Zahlen Sie nur für das, was Sie nutzen. Keine wiederkehrenden Gebühren. Optimal für niedrige oder unvorhersehbare Volumina.
+
+Ab 0,05 CHF
+
+pro überprüfter Transaktion
+
+Pläne vergleichen 
+Atlas
+
+Software für die Unternehmensgründung
+
+Jetzt loslegen 
+Gründen Sie Ihre Firma innerhalb von Minuten.
+
+Nutzen Sie Dokumente, denen Anwaltskanzleien, Steuerbüros und Risikokapitalgeber vertrauen.
+
+Sichern Sie sich Rabatte und Prämien im Wert von über 50.000 USD.
+
+Firmengründung
+
+Gründen Sie Ihr Unternehmen, erhalten Sie eine EIN, geben Sie Firmenanteile aus und reichen Sie Ihren 83(b)-Steuerantrag ein.
+
+500,00 $
+
+einmalige Einrichtungsgebühr (enthält behördliche Gebühren sowie die Dienste eines registrierten Vertreters für eine Laufzeit von einem Jahr)
+
+Siehe Preisübersicht 
+Identity
+
+Verifizierungstools, die die Identität von Nutzerinnen und Nutzern weltweit bestätigen
+
+Jetzt loslegen 
+Reduzieren Sie Betrugsverluste durch die Identifizierung von Nutzerinnen und Nutzern mit hohem Risiko.
+
+Vereinfachen Sie einen wesentlichen Teil Ihrer KYC-Compliance-Anforderungen.
+
+Sparen Sie Zeit in Entwicklung und Betrieb mit einer zentralisierten Identitätsprüfung.
+
+Ausweisdokument und Selfie-Verifizierung
+
+Erfassen Sie weltweite Ausweisdokumente und überprüfen Sie ihre Echtheit. Setzen Sie dabei auf biometrische Verifizierungsverfahren, um Ausweisfotos und Selfies des Ausweisbesitzers/der Ausweisbesitzerin miteinander zu vergleichen.
+
+1,25 CHF
+
+je Verifizierung
+
+ 
+
+Die Abbuchung erfolgt nach der nutzerseitigen Verifizierung. Weitere Informationen
+
+Ausweisnummern-Abfrage
+
+Erlauben Sie Nutzerinnen und Nutzern, den Namen, das Geburtsdatum und die lokale Ausweisnummer einzugeben. Gleichen Sie sie mit Datenbanken von Behörden und Drittparteien ab (nur für US-Sozialversicherungsnummern verfügbar).
+
+0,50 CHF
+
+je Validierung
+
+Preisübersicht anzeigen 
+Workflows
+
+Automatisieren Sie Aufgaben und erstellen Sie individuell angepasste Abläufe, ohne Code schreiben zu müssen.
+
+Jetzt loslegen 
+Automatisieren Sie Geschäftsprozesse mit mehr als 600 Ereignisauslösern.
+
+Reduzieren Sie Boilerplate-Code mit einem visuellen Workflow-Builder.
+
+Erweitern Sie die Funktionen von Stripe durch die Integration von Anwendungen von Drittanbietern.
+
+Vereinfachen Sie die Überwachung und Fehlerbehebung mit integriertem Logging und Versionierung.
+
+Nutzungsbasierte Abrechnung
+
+Keine Verpflichtung, keine wiederkehrenden Gebühren. Beginnen Sie noch heute mit der Entwicklung von Workflows.
+
+Inbegriffen
+
+10.000 Schritte pro Monat
+
+0,014 CHF
+
+pro zusätzlichem Schritt
+
+Mehr erfahren 
+Individuelle Preisgestaltung
+Setzen Sie auf Stripe – wie führende Unternehmen weltweit
+
+Erstellen Sie maßgeschneiderte Lösungen, um in neue Märkte zu expandieren, die Zahlungs-Performance zu optimieren, Umsatz- und Finanz-Workflows zu automatisieren, Finanzdienstleistungen zu monetarisieren und mehr.
+
+Sales-Team kontaktieren 
+Erstellen Sie Ihr individuelles Paket
+
+Entwickeln Sie gemeinsam mit unserem Sales-Team eine Lösung, die Ihren Ansprüchen gerecht wird:
+
+Payments
+Radar
+Connect
+Invoicing
+Billing
+und vieles mehr
+Erhalten Sie den Support, den Sie benötigen
+Technische Kontoführung
+Fachdienstleistungen
+Zertifizierte Implementierungspartner
+Flexible Strukturen
+
+IC+-Preise, rabattierte Flatrates, Abonnements und Transaktionsgebühren für Plattformen.
+
+Volumenabhängige Rabatte
+
+Rabatte basierend auf Volumenstufen, Verpflichtungen und Produktnutzung.
+
+Globale Einheitstarife
+
+Optionale aggregierte Preisgestaltung für alle Märkte, mit deren Hilfe Sie problemlos global agieren können.
+
+Kostentransparenz
+
+Dashboards, Tools und APIs, die Transparenz über Ihre Kosten bieten.
+
+Die Integration von Stripe ermöglicht einen ROI von 326 %.
+
+Die Forrester-Studie „Total Economic Impact“ geht von einem dreifachen Return on Investment für Unternehmen aus, die Stripe nutzen.
+
+Bericht lesen 
+Bericht
+The Total Economic Impact™ Of Stripe
+Über 100 Branchenführer wickeln jeweils mehr als 1 Mrd. $ über Stripe ab.
+Millionen
+BMW-Besitzer/innen nutzen den ConnectedDrive Store
+Mehr als 350
+US-Autohändler
+Genutzte Produkte
+Payments
+Connect
+Mehr als 5
+Amazon-Geschäfte auf Stripe, darunter Prime, Audible und Amazon Pay.
+Mehr als 50
+auf Stripe verfügbare Zahlungsmethoden
+Genutzte Produkte
+Payments
+Connect
+130
+Länder im Logistiknetzwerk
+Über 10 Mrd. $
+Wert der Waren, die im Jahr um die Welt transportiert werden
+Genutzte Produkte
+Payments
+Connect
+Mehr als 5,5 %
+Steigerung durch die globale Zahlungs- und Finanzinfrastruktur von Stripe
+Mehr als­ 1⁠ ⁠%
+Steigerung durch Adaptive Acceptance
+Genutzte Produkte
+Payments
+Stripe Sigma
+Kundenstory lesen 
+Deshalb wählt BMW Stripe für sein E-Commerce-Geschäft und die Zahlungsabwicklung
+Kundenstory lesen 
+Erfahren Sie, wie Amazon internationale Zahlungen mit Stripe vereinfacht hat
+Kundenstory lesen 
+Erfahren Sie, wie Maersk neue Technologien einsetzt, um den Transport rund um den Globus zu vereinfachen
+Kundenstory lesen 
+Erfahren Sie, wie Twilio mit Stripe seine Autorisierungsquote um 10 % steigern konnte.
+FAQs
+Wie werden Transaktionsgebühren für Zahlungen berechnet?
+Wird mein Konto mit Steuern belastet?
+Fallen für Rückerstattungen zusätzliche Gebühren an?
+Fallen Einrichtungs- oder monatliche Gebühren an?
+Gewähren Sie Preisnachlässe?
+Startklar? Kontaktieren Sie uns oder erstellen Sie ein Konto
+
+Es erwartet Sie eine umfassende Zahlungsplattform mit klar strukturiertem Pay-As-You-Go-Preismodell. Gerne gestalten wir auf Anfrage auch ein individuelles Angebot, das ganz auf die Bedürfnisse Ihres Unternehmens abgestimmt ist.
+
+Jetzt starten 
+Sales-Team kontaktieren 
+Unsere Kundschaft
+
+Von Start-ups bis hin zu börsennotierten Unternehmen: Erfahren Sie, wie Millionen von Unternehmen Stripe für den Aufbau und die Skalierung ihres Geschäfts nutzen.
+
+Mehr erfahren 
+Dokumentation im Detail
+
+Integrieren Sie Stripe und akzeptieren Sie Zahlungen innerhalb weniger Minuten. Stripe-Bibliotheken sind für alle Programmiersprachen von Ruby bis Go verfügbar.
+
+Dokumentation lesen 
+
+¹ Stripe Radar for Fraud Teams und Stripe Connect mit plattformbasierter Preisgestaltung werden separat abgerechnet.
+² Funktionen für die grundlegende nutzungsbasierte Abrechnung werden als Teil der Preise für Billing weiterhin über die Meters-API von Stripe verfügbar sein, wobei bis zu 100 Mio. Ereignisse pro Monat inbegriffen sind.
+
+Schweiz (Deutsch)
+Australien
+English
+Belgien
+Nederlands
+Français
+Deutsch
+English
+Brasilien
+Português
+English
+Bulgarien
+English
+Dänemark
+English
+Deutschland
+Deutsch
+English
+Estland
+English
+Festlandchina
+简体中文
+English
+Finnland
+English
+Svenska
+Frankreich
+Français
+English
+Gibraltar
+English
+Griechenland
+English
+Indien
+English
+Irland
+English
+Italien
+Italiano
+English
+Japan
+日本語
+English
+Kanada
+English
+Français
+Kroatien
+English
+Italiano
+Lettland
+English
+Liechtenstein
+Deutsch
+English
+Litauen
+English
+Luxemburg
+Français
+Deutsch
+English
+Malaysia
+English
+简体中文
+Malta
+English
+Mexiko
+Español
+English
+Neuseeland
+English
+Niederlande
+Nederlands
+English
+Norwegen
+English
+Österreich
+Deutsch
+English
+Polen
+English
+Portugal
+Português
+English
+Rumänien
+English
+Schweden
+Svenska
+English
+Schweiz
+Deutsch
+Français
+Italiano
+English
+Singapur
+English
+简体中文
+Slowakei
+English
+Slowenien
+English
+Italiano
+Sonderverwaltungsregion Hongkong, China
+English
+简体中文
+Spanien
+Español
+English
+Thailand
+ไทย
+English
+Tschechische Republik
+English
+Ungarn
+English
+Vereinigte Arabische Emirate
+English
+Vereinigte Staaten
+English
+Español
+简体中文
+Vereinigtes Königreich
+English
+Zypern
+English
+Produkte und Preisinformationen
+Preisinformationen
+Atlas
+Authorization Boost
+Billing
+Capital
+Checkout
+Climate
+Connect
+Krypto
+Data Pipeline
+Elements
+Financial Connections
+Identity
+Invoicing
+Issuing
+Link
+Managed Payments
+Zahlungslinks
+Payments
+Payouts
+Radar
+Revenue Recognition
+Stripe Sigma
+Tax
+Terminal
+Treasury
+Lösungen
+Unternehmen
+Start-ups
+Agentenbasierter Handel
+Krypto
+E-Commerce
+Embedded Finance
+Finanzautomatisierung
+Globale Unternehmen
+In-App-Zahlungen
+Marktplätze
+Geldmanagement
+Plattformen
+SaaS
+KI-Unternehmen
+Creator Economy
+FinTech
+Gaming
+Bewirtung, Reisen und Freizeit
+Versicherungen
+Medien und Unterhaltung
+Gemeinnützige Organisationen
+Fachdienstleistungen
+Öffentlicher Sektor
+Einzelhandel
+Integrationen und Custom-Lösungen
+Stripe App-Marktplatz
+Stripe Partner Ecosystem
+Fachdienstleistungen
+Entwickler/innen
+Dokumentation
+API-Referenz
+API-Status
+API-Änderungsprotokoll
+Bibliotheken und SDKs
+Stripe Projects
+Entwickler-Blog
+Ressourcen
+Leitfäden
+Kundenstories
+Blog
+Community
+Stripe Sessions
+Datenschutz und AGB
+Eingeschränkte und nicht zugelassene Geschäfte
+Lizenzen
+Sitemap
+Cookie-Einstellungen
+Weitere Ressourcen
+Unternehmen
+Über Stripe
+Produkt-Roadmap
+Karriere
+Newsroom
+Stripe Press
+Sales-Team kontaktieren
+Support
+Support anfordern
+Verwaltete Supportpläne
+Anmelden 
+Erhalten Sie Branchen-Einblicke und Updates von Stripe
+Weiter
+Bitte geben Sie eine gültige Arbeits-E-Mail-Adresse ein
+Erhalten Sie Marketingmitteilungen von Stripe (einschließlich über automatisierte Systeme) zu Produktaktualisierungen, Branchennachrichten und Veranstaltungseinladungen. Sie können sich jederzeit abmelden. Datenschutzerklärung.
+© 2026 Stripe, LLC
+You’re viewing our website for Switzerland, but it looks like you’re in the United States.
+Switch to the United States site 

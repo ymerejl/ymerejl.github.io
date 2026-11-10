@@ -1,0 +1,17 @@
+URL https://cal.com/apps/stripe STATUS 200
+
+App Store
+Stripe
+Payment • Veröffentlicht von Cal.com
+App installieren
+
+Stripe provides payment infrastructure for everyone from startups to Fortune 500 companies. They provide payment processing software as well as application programming interfaces (APIs) for mobile applications as well as e-commerce websites processing payments from (but not limited to) credit cards, debit cards, digital wallets, Google Pay, Apple Pay, Bank Transfers, Alipay and WeChat.
+
+Preise
+Kostenlos
+Kontaktieren Sie
+Dokumentation
+cal.com/
+help@cal.com
+Jede App, die im Cal.com App Store veröffentlicht wird, ist Open Source und gründlich durch Peer Reviews getestet. Cal.com, Inc. unterstützt oder zertifiziert diese Apps jedoch nicht, es sei denn, sie werden von Cal.com selbst veröffentlicht. Wenn Sie auf unangemessene Inhalte oder Verhaltensweisen stoßen, melden Sie diese bitte.
+ App melden

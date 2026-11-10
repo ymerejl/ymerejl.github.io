@@ -1,0 +1,7 @@
+URL https://worldline.com/en/home/main-navigation/solutions/merchants/terminals/saturn-1000f2 STATUS 406
+
+Error 406 Not Acceptable
+
+Not Acceptable
+
+Trace-id: 7e15e02a-0605-4a90-889d-2a127b52b840

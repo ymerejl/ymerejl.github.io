@@ -1,0 +1,398 @@
+[
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/2IuqN8DySO7Nasa3trUCdb/2ecd0e0c27a1dad57a44d4da4f441bb6/S700-knockout.png?q=80&fm=webp&w=360",
+  "alt": "",
+  "w": 360,
+  "h": 720
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/2SRocLBDullWbnlouNA2Ch/f7b4bfca84cfa93ad7c985610728136d/S700_Splash.png?q=80&fm=webp&w=360",
+  "alt": "",
+  "w": 360,
+  "h": 660
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/5nNzyBNXLAusCa17QpZXYs/006453b466fb4f56dbeacea8fc875a5c/M2-Top-004.png?q=80&fm=webp&w=308",
+  "alt": "",
+  "w": 308,
+  "h": 336
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/4Gra7tqnmEBz8AMgqR3Hzy/9c9d97785963329e7ecd98c5ce08e7e0/WisePad-top-002.png?q=80&fm=webp&w=469",
+  "alt": "",
+  "w": 469,
+  "h": 831
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/1jyxyIQs1mdBm2WVHLNfKZ/0f5d387457b828691d5cbd503e120c1d/S700_top_screen.png?q=80&fm=webp&w=230",
+  "alt": "",
+  "w": 230,
+  "h": 429
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6vgZtvo3zgb1lJCT7rmZ24/240047aa9165d104af17cccba5541e0f/S700_background.png?q=80&fm=webp&w=230",
+  "alt": "",
+  "w": 230,
+  "h": 457
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/7o0zi4xyVginHCOZ8WoPxL/7702c7c2519c650d017881ee5f5602f2/S700_card.png?q=80&fm=webp&w=321",
+  "alt": "",
+  "w": 321,
+  "h": 434
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6Kz6W1od2SG1K9Gtiie0h3/7aa5a6177ad3ed4debc8724fb7fc7f7a/terminal_roastery_cart-de-DE_2x.png?q=80&fm=webp&w=380",
+  "alt": "",
+  "w": 380,
+  "h": 376
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/76Ji7uxICCBQCoJ0NIgYo6/23c811031ca4470ad88ad71b77e70d64/terminal_roastery_dashboard-de-DE_2x.png?q=80&fm=webp&w=760",
+  "alt": "",
+  "w": 760,
+  "h": 672
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/3fFobFbTyXueMGNmKDECxp/4349382b59d14f8db7707e1162f85dcc/Property_1_S700.png",
+  "alt": "",
+  "w": 672,
+  "h": 540
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/mnfl223akEEJrvfGQriXT/14092881b660553efa84a3e40bf661f8/Property_1_M2.png",
+  "alt": "",
+  "w": 672,
+  "h": 540
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/3zzrFKv3eLgQV9VBQSvwRL/5013801b74de5fd66ca34009e030db16/Tap_to_Pay_iOS_DE.png",
+  "alt": "",
+  "w": 1344,
+  "h": 1080
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/4Rwmn1Cxvl2OnxS47zqOyd/a62417f492bc37b7393afcdd4d59b0d0/Property_1_UX700.png",
+  "alt": "",
+  "w": 672,
+  "h": 540
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/3ywge4aKzsVRNFLu43sUKZ/ffc0c56ccfaa227a85a1691f1928f11e/Property_1_WisePOS-E.png",
+  "alt": "",
+  "w": 672,
+  "h": 540
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/45Hfm1D1qcdrXX4k8uog4x/842fb953c0c25d2e7bebe69d11ce41a0/furni-white-label-en-jp.png?q=80&fm=webp&w=522",
+  "alt": "Stilisiertes Produktlayout, das zwei Geräte und viermal Zubehör anzeigt",
+  "w": 522,
+  "h": 400
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/2llp4uLkmHjmPBb42wnfyM/2f1b5b975f3160232208be8cb989b2df/device_management_de.png?q=80&fm=webp&w=810",
+  "alt": "Screenshot des Stripe-Dashboards mit einer Präsentation des Gerätemanagements nach Ort",
+  "w": 810,
+  "h": 432
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/2J4Jp5MRKfnyXMWmTCTlDN/b036e1252db13c271e07ecbf127b0f64/eatme_alt_cover_landscape.png?q=80&fm=webp&w=810",
+  "alt": "",
+  "w": 810,
+  "h": 421
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6nzz5uFTit8MNaOqXLVUEj/09e3fe387f028ebc3c839e7240f15a92/dripos_videostill.png?fm=webp&q=80",
+  "alt": "",
+  "w": 1668,
+  "h": 866
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/11212qGr5T3awfCJiwZ5bM/119ba050a02e9e03064a92823ce27ccd/WisePad3.png",
+  "alt": "",
+  "w": 291,
+  "h": 506
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/1xgGlsyIDeAmReMW2tLzpI/0b331b9b254a8f6a335f30cf1ada715b/WisePosE.png",
+  "alt": "",
+  "w": 291,
+  "h": 690
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/2FyJKTbcmF46RksvNnmKfZ/d3c84ca04210fcbb2d4563f2a074d83a/StripeReaderS700.png",
+  "alt": "",
+  "w": 283,
+  "h": 551
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "AU",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "BE",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "BR",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "BG",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "DK",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "DE",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "EE",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "CN",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "FI",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "FR",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "GI",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "GR",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "IN",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "IE",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "IT",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "JP",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "CA",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "HR",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "LV",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "LI",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "LT",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "LU",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "MY",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "MT",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "MX",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "NZ",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "NL",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "NO",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "AT",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "PL",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "PT",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "RO",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "SE",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "SG",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "SK",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "SI",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "HK",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "ES",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "TH",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "CZ",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "HU",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "AE",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "US",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "GB",
+  "w": 530,
+  "h": 348
+ },
+ {
+  "src": "https://images.stripeassets.com/fzn2n1nzq965/6NuF1mvaIeEQbkEzqr5ri7/b4adfbc07d16fa159404eca23c2ab99a/flags.svg",
+  "alt": "CY",
+  "w": 530,
+  "h": 348
+ }
+]

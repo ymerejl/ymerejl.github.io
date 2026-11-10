@@ -1,0 +1,768 @@
+URL https://stripe.com/de-ch/terminal STATUS 200
+
+Produkte
+Lösungen
+Entwickler/innen
+Ressourcen
+Preisgestaltung
+Anmelden
+ 
+Sales-Team kontaktieren
+ 
+Payments
+Payments  
+
+Online-Zahlungen
+
+Managed Payments  
+
+Lösung für eingetragene Händler/innen
+
+Payment links  
+
+No-Code-Zahlungen
+
+Checkout  
+
+Vorgefertigte Zahlungs-UIs
+
+Elements  
+
+Flexible UI-Komponenten
+
+Zahlungsmethoden  
+
+Zugriff auf mehr als 125
+
+Terminal  
+
+Zahlungen vor Ort
+
+Authorization Boost  
+
+Optimierung der Autorisierungsraten
+
+Link  
+
+Beschleunigter Bezahlvorgang
+
+Financial Connections  
+
+Verbundene Finanzdaten
+
+Umsatz
+Billing  
+
+Wiederkehrender Umsatz
+
+Metronome  
+
+Nutzungsbasierte Abrechnung
+
+Abonnements  
+
+Abonnementverwaltung
+
+Invoicing  
+
+Einmalig oder wiederkehrend
+
+Tax  
+
+Verkaufs- und USt.-Optimierung
+
+Revenue Recognition  
+
+Buchhaltungsautomatisierung
+
+Stripe Sigma  
+
+Benutzerdefinierte Berichte
+
+Data Pipeline  
+
+Datensynchronisierung
+
+Geldmanagement
+Globale Auszahlungen  
+
+Auszahlungen an Dritte
+
+Crypto  
+
+Wallet, Ausstellung von Stablecoin und Karteninfrastruktur
+
+Crypto Onramp  
+
+Einbettbare Krypto-Käufe
+
+Embedded Finance
+Connect  
+
+Zahlungen für Plattformen
+
+Alle Produkte anzeigen  
+Mehr
+Produkt-Roadmap  
+
+Ausblick
+
+Radar  
+
+Betrugsprävention
+
+Atlas  
+
+Start-up-Gründung
+
+Climate  
+
+CO₂-Entnahme
+
+Identity  
+
+Online-Identitätsprüfung
+
+Stripe-Sessions 2026
+Erfahren Sie, wie Stripe Lösungen für die Wirtschaftsinfrastruktur für KI aufbaut.
+Jetzt ansehen 
+Nach Phase
+Unternehmen  
+Start-ups  
+Nach Use Case
+Agentenbasierter Handel  
+Crypto  
+E-Commerce  
+Embedded Finance  
+Finanzautomatisierung  
+Globale Unternehmen  
+In-App-Zahlungen  
+Marktplätze  
+Geldmanagement  
+Plattformen  
+SaaS  
+Nach Branche
+KI-Unternehmen  
+Creator Economy  
+FinTech  
+Gaming  
+Bewirtung, Reisen und Freizeit  
+Versicherungen  
+Medien und Unterhaltung  
+Gemeinnützige Organisationen  
+Fachdienstleistungen  
+Öffentlicher Sektor  
+Einzelhandel  
+Ecosystem
+Partner  
+Stripe App-Marktplatz  
+Dokumentation
+Stripe-Dokumentation  
+API-Referenz  
+Bibliotheken und SDKs  
+Stripe Apps  
+Leitfäden
+Grundlagen: Online-Zahlungen akzeptieren  
+So integrieren Sie einen vorkonfigurierten Bezahlvorgang  
+So bauen Sie eine Plattform oder einen Marktplatz auf  
+Grundlagen der Abonnementverwaltung  
+So setzen Sie nutzungsbasierte Abrechnung um  
+Stablecoin-gestützte Karten ausgeben: So geht´s  
+Bereitstellung und Verwaltung von Diensten mit Agenten  
+Ressourcen
+App-Integrationen  
+Code-Beispiele  
+Entwickler-Blog  
+API-Status  
+Wissenswertes
+Blog  
+Kundenstories  
+Leitfäden  
+Support
+Support anfordern  
+Verwaltete Support-Pläne  
+Fachdienstleistungen  
+Unternehmen
+Produkt-Roadmap  
+Stripe Sessions  
+Karriere  
+Newsroom  
+Stripe Press  
+Über Stripe  
+Kontakt
+Sales-Team kontaktieren  
+Partner werden  
+Terminal
+Übersicht
+Geräte
+Preisinformationen
+Dokumentation
+Online- und Präsenzzahlungen zentral konsolidiert
+
+Führende Unternehmen und Plattformen nutzen Stripe, um Unified Commerce über verschiedene Kanäle hinweg zu bieten, Zahlungen nahtlos in ihren Point of Sale zu integrieren und ihren Hardware-Bedarf zu reduzieren.
+
+Jetzt starten 
+Sales-Team kontaktieren 
+Summe
+173,88 CHF
+Zum Bezahlen Karte auflegen, einführen oder durchziehen
+Rocket Rental
+125,00 CHF
+Versicherung
+36,00 CHF
+Steuern
+12,88 CHF
+Summe
+173,88 CHF
+Vereinheitlichen Sie den Handel
+
+Führen Sie Online- und Präsenzzahlungen an einem Ort durch, um die Berichterstattung zu vereinfachen und eine vereinheitlichte Kundenansicht zu bieten.
+
+Integrieren Sie, wie Sie es für richtig halten
+
+Entwickeln Sie Ihre eigene benutzerdefinierte POS-App, wählen Sie aus Hunderten von Drittanbieterintegrationen für POS und Handel oder nutzen Sie die No-Code-Lösung von Stripe.
+
+Bieten Sie beliebte Zahlungsmethoden an
+
+Ermöglichen Sie Ihrer Kundschaft in 39 Ländern flexibles Bezahlen mit verschiedenen Kartenmarken und Digital Wallets.
+
+Vereinfachen Sie die Hardware-Logistik
+
+Automatisieren Sie Bestellung, Abwicklung und Verwaltung mit Lesegeräten – oder akzeptieren Sie Zahlungen ohne Extra-Hardware mit Tap to Pay.
+
+Unified Commerce
+Schaffen Sie ein einheitliches Kundenerlebnis
+
+Durch die Konsolidierung der Zahlungsdaten auf einer Unified-Commerce-Plattform können Sie Stammkundschaft erkennen, personalisierten Service wie Produktempfehlungen anbieten und reibungslose Abläufe ermöglichen (z. B. Abholung von Online-Bestellungen im Geschäft).
+
+Summe
+6,88 CHF
+Zum Bezahlen Karte auflegen, einführen oder durchziehen
+Mokka Latte
+6,32 CHF
+Treuepunkte (10 % Rabatt)
+-0,63 CHF
+Tax
+1,19 CHF
+Summe
+6,88 CHF
+Weiter zum Trinkgeld
+Rösterei
+@roastery
+
+Feiern Sie mit uns den internationalen Tag des Kaffees 
+
+Sichern Sie sich zur Feier des Tages 50 % Rabatt auf unseren Signature Blend!
+
+Rabatt auf unseren Signature Blend
+https://roastery.com/q8GljssfF1
+11:47
+1. Oktober 2025
+1,2k
+Likes
+Lesegeräte
+Akzeptieren Sie Zahlungen an mehr Orten als zuvor
+
+Nehmen Sie Präsenzzahlungen mit Geräten an, die von Stripe oder anderen Anbietern entwickelt und hergestellt werden. Alle Lesegeräte unterstützen E2E- oder P2P-Verschlüsselung und sind EMV-zertifiziert. Auf einigen Lesegeräten können Sie außerdem den Begrüßungsbildschirm anpassen, Kundeneingaben erfassen oder Ihre eigene POS-App ausführen. Alternativ bzw. ergänzend können Sie mit Tap to Pay kontaktlose Zahlungen direkt mit kompatiblen iPhones oder Android-Geräten annehmen.
+
+Alle Geräte anzeigen 
+Stripe Reader S710
+Stripe Reader M2
+Tap to Pay auf dem iPhone
+Verifone UX700
+BBPOS WisePOS E
+Gerätebestellung und -verwaltung
+Vereinfachen Sie Ihre Hardware-Logistik
+
+Mit Stripe können Sie Ihre Lesegeräte einfach bestellen, verwalten und überwachen, ganz gleich wo diese sich befinden.
+
+Gerätebestellung
+Bestellen Sie Lesegeräte über das Stripe-Dashboard oder bieten Sie eigene Bestelloptionen mit der Terminal Hardware Orders API (Preview) an – wir übernehmen Lagerung und Lieferung.
+So geben Sie Ihre Bestellungen auf 
+Geräteverwaltung
+Verwalten Sie Ihre Lesegeräte ganz einfach an verschiedenen Standorten. Registrieren und konfigurieren Sie Ihre Geräte und überwachen Sie ihren Status in Echtzeit, um Fehler schnell beheben zu können.
+Verwaltungsfunktionen anzeigen 
+Gerätebestellung
+Geräteverwaltung
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+curl https://api.stripe.com/v1/terminal/hardware_orders \
+  -u [redacted]: \
+  -H "Stripe-Version: 2023-08-16;terminal_hardware_orders_beta=v4" \
+  -d "shipping[name]"="Jenny Rosen" \
+  -d "shipping[address][line1]"="1234 Main Street" \
+  -d "shipping[address][line2]"="Apt. 123" \
+  -d "shipping[address][city]"="San Francisco" \
+  -d "shipping[address][state]"="CA" \
+  -d "shipping[address][country]"="US" \
+  -d "shipping[address][postal_code]"="94111" \
+  -d "shipping[company]"="Rocket Rides" \
+  -d "shipping[phone]"="15555555555" \
+  -d "shipping[email]"="test@example.com" \
+  -d "hardware_order_items[][terminal_hardware_sku]"="thsku_JokaJ6KpLMlDID" \
+  -d "hardware_order_items[][quantity]"="2" \
+  -d shipping_method="thsm_MfuTjLaPEgXMa4" \
+  -d payment_type="monthly_invoice"
+Für Plattformen
+Steigern Sie Umsatz und Reichweite Ihrer Plattform
+
+Bieten Sie eine einheitliche Zahlungslösung an, die tief in Ihre Plattform integriert ist. Terminal arbeitet nahtlos mit Stripe Payments und Connect zusammen, mit einem einzigen Onboarding-Prozess, der einen schnellen Einstieg ermöglicht.
+
+Erfahren Sie, wie Terminal mit Connect funktioniert. 
+Monetarisieren Sie Präsenzzahlungen
+
+Steigern Sie Ihren Umsatz, indem Sie jede Zahlung akzeptieren.
+
+Gewinnen Sie neue Nutzer/innen und steigern Sie die Nutzerbindung
+
+Werden Sie zur zentralen Anlaufstelle für das Unternehmen.
+
+Senken Sie den Entwicklungsaufwand
+
+Entwickeln Sie mit modernen Tools und klarer Dokumentation.  
+
+Video ansehen 
+EatMe steigert seinen Umsatz wegen höheren Mehrwerts für Gäste und Restaurants um das Zehnfache
+Für Großunternehmen
+Machen Sie Ihren bestehenden Zahlungs-Stack zukunftssicher
+
+Profitieren Sie von branchenführender Zuverlässigkeit und modernsten Zahlungsfunktionen, die mit den meisten POS-Systemen und zahlreichen Kreditkartenlesern von Drittanbietern kompatibel sind.
+
+Hunderte Integrationen für POS und Handel
+
+Kombinieren Sie die Zahlungsfunktionen von Stripe ganz einfach mit unterstützten POS, Kartenlesegeräten, Geschenkkarten und vielem mehr – alles aus einer Hand.
+
+Weitere Integrationen 
+Funktionen für Großunternehmen
+
+Gestalten Sie Ihre Zahlungsabläufe mit lokalen Zahlungsmethoden, erweiterten Acquiring-Funktionen sowie Unterstützung für mehrere Abwickler.
+
+Zuverlässige Plattform
+
+Profitieren Sie von der branchenführenden Zuverlässigkeit von Stripe und wickeln Sie Ihre Transaktionen mit verschlüsselten Point-to-Point- oder End-to-End-Lösungen ab.
+
+Einheitliche Zahlungsdaten
+
+Gewinnen Sie bessere Informationen und optimieren Sie Ihre Berichterstattung mit konsolidierten Ansichten über Ihre Kanäle, Geschäftsbereiche und Abwickler hinweg.
+
+Flexible Integration
+
+Kombinieren Sie die Zahlungsfunktionen von Stripe ganz einfach mit unterstützten POS-Systemen, Kartenlesegeräten, Geschenkkarten und vielem mehr.
+
+Stripe ermöglicht uns die Konzentration auf die bestmögliche Unified-Commerce-Erfahrung, indem es die Komplexität der Zahlungen über alle Marken hinweg beseitigt.
+
+Dave Hayne, Chief Technology Officer bei URBN
+
+Stripe erspart uns die monatelange Entwicklungszeit und massiven Kosten, mit denen wir rechnen müssten, wenn wir diese Zahlungslösungen selbst entwickeln würden. Stattdessen können wir sofort eine neue Zahlungsmethode testen.
+
+Layne Moseley, Director of Engineering
+
+Unsere oberste Priorität ist es, unsere Kundschaft mit einem herausragenden Service schnell ans Ziel zu bringen. Unsere Partnerschaft mit Stripe ist ein Beispiel dafür, wie wir dies mit fortschrittlicher Technologie erreichen.
+
+Tim Langley-Hawthorne, Chief Information Officer bei Hertz
+
+Wir haben uns für die Zusammenarbeit mit Stripe entschieden, weil Stripe moderne Lesegeräte, zuverlässige Zahlungen und eine direkte Integration in Cegid bietet. Der Integrationsprozess verlief schnell und unproblematisch. Durch den Wechsel zu Stripe ist der Prozess sowohl für unsere Kundschaft als auch für unser Vertriebspersonal erheblich reibungsloser geworden.
+
+José Fernando Arango Jiménez, IT Director bei Tennis
+Integrationsoptionen
+Integrieren Sie persönliche Zahlungen auf einfache Weise
+
+Erstellen Sie innerhalb weniger Wochen eine individuelle POS-Integration für einen Bezahlvorgang, der ganz auf Ihr Unternehmen zugeschnitten ist. Oder gehen Sie mit der No-Code-Lösung von Stripe innerhalb von Minuten live. Terminal arbeitet nahtlos mit anderen Stripe-APIs zusammen und unterstützt eine API-basierte Integration zusätzlich zu SDKs für Android, iOS, JavaScript und React Native.
+
+Zudem können Sie die Entwicklungszeit verkürzen und schneller live gehen, indem Sie die große Auswahl an Drittanbieter-POS-Integrationen und -Kreditkarten-Lesegeräten nutzen.
+
+Dokumentation lesen 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+const terminal = StripeTerminal.create({ 
+     onFetchConnectionToken:    
+     server.fetchConnectionToken,
+});
+
+const result = await terminal.discoverReaders();
+const reader = result.discoveredReaders[0];
+await terminal.connectReader(reader);
+
+const item = {  
+     description: 'High Growth Handbook', 
+     amount: 2000,  
+     quantity: 1,
+};
+
+const cart = {  
+     lineItems: [item],  
+     currency: 'usd',
+};
+
+terminal.setReaderDisplay({ type: 'cart', cart });
+Erfolgsgeschichten unserer Kundschaft
+Dripos vereinheitlicht den Handel mit Stripe Terminal und dem Stripe Reader S700
+
+Der Softwareanbieter Dripos unterstützt mehr als 100.000 Coffeeshops und Cafés in den USA.
+
+Herausforderung
+
+Coffeeshop-Betreiber wie Revolución, die Dripos einsetzen, wollen ihren Kundinnen und Kunden eine nahtlose Erfahrung bieten – ganz gleich, ob diese an der Theke, am Tisch oder bei einem Pop-up-Event bestellen.
+
+Lösung
+
+Der Stripe Reader S700 ermöglichte die Ausführung einer Custom-POS-App wie Dripos direkt auf dem Gerät.
+
+Ergebnis
+
+„Wir können nun alles, was wir haben, wie Treueprogramme, Quittungen und Trinkgeld, auf das Lesegerät bringen. Genau wie eine Kasse, aber für unterwegs“, sagt Avery Durrant, Cofounder und Co-CEO von Dripos.
+
+SQUIRE nutzt Tap to Pay, um Friseurbetrieben das schnelle Akzeptieren von Zahlungen vor Ort zu ermöglichen
+
+SQUIRE ist ein einfach zu bedienendes All-in-One-Business-Management-System für Friseurbetriebe.
+
+Herausforderung
+
+Angesichts der zunehmenden Abkehr vom Bargeld hin zu Karten und mobilen Zahlungen brauchte SQUIRE eine Möglichkeit, alternative Zahlungsmethoden anzubieten.
+
+Lösung
+
+SQUIRE bietet mit Tap to Pay und dem Stripe-Terminal-SDK die Möglichkeit, dass Friseurbetriebe mit einem kompatiblen Smartphone oder Tablet und dem Stripe Terminal SDK kontaktlose Zahlungen akzeptieren können.
+
+Ergebnis
+
+Mit Tap to Pay können Friseurbetriebe Zahlungen direkt über Geräte abwickeln, die sie ohnehin schon nutzen.
+
+Dines steigert den Umsatz pro Lokal mit Stripe Terminal um 150 %
+
+Dines ist eine All-in-One-Plattform für Gastronomiebetriebe im Vereinigten Königreich.
+
+Herausforderung
+
+Dines erkannte, dass Unternehmen, die Systeme von Drittanbietern für Bestellungen im Lokal verwenden, mit einer Reihe von Problemen zu kämpfen hatten, wie z. B. längeren Wartezeiten für Bestellungen und mehr Beschwerden der Kundschaft.
+
+Lösung
+
+Dines war davon überzeugt, dass der beste Weg zur Optimierung des Betriebs und zur Arbeitsentlastung der Mitarbeiter/innen darin bestand, alle Zahlungen über einen Service abzuwickeln.
+
+Ergebnis
+
+Nach Einführung von Stripe Terminal konnte Dines den Umsatz pro Lokal um 150 % steigern und ist auf dem besten Weg, das Transaktionsvolumen im Vergleich zum Vorjahr zu vervierfachen.
+
+atVenu optimiert mit Stripe den Verkauf von Merchandise bei Live-Veranstaltungen
+
+atVenu zählt zu den weltweit führenden Plattformen für Live-Events.
+
+Herausforderung
+
+atVenu bemerkte, dass das bestehende Hardware-Angebot für die temporären und zeitlich befristeten Einsatzbereiche, in denen sich die Anbieter oft bewegen, nicht besonders geeignet war.
+
+Lösung
+
+Stripe Terminal bietet eine zuverlässige Möglichkeit, Zahlungen kontaktlos oder mit Karte an Standorten im Freien oder ohne stabile Internetverbindung so reibungslos wie möglich zu gestalten.
+
+Ergebnis
+
+„Die API ist definitiv in der Lage, unser Transaktionsvolumen zu bewältigen“, sagt Derek Ball, Cofounder und CEO von atVenu. „An einem Abend wickeln wir über Stripe ein Volumen von mehr als 10 Millionen Dollar ab, ohne dass es irgendwelche Probleme gibt.“
+
+Preisinformationen
+Einfache, transparente Preisgestaltung
+Geräte
+Alle Lesegeräte unterstützen die Ende-zu-Ende- oder Punkt-zu-Punkt-Verschlüsselung und sind EMV-zertifiziert.
+BBPOS WisePad 3
+59 CHF
+zzgl. MwSt.
+Mehr erfahren 
+BBPOS WisePOS E
+199 CHF
+zzgl. MwSt.
+Mehr erfahren 
+Stripe Reader S700
+239 CHF
+zzgl. MwSt.
+Mehr erfahren 
+Zahlungen
+Inklusive Ende-zu-Ende-Verschlüsselung, Netzwerkkosten, Hardware-Management, Berichterstellung und Entwickler-Tools zur Unterstützung Ihrer Integration.
+1,4 % + 0,10 CHF
+pro erfolgreiche Zahlung für EWR-Karten
+2,9 % + 0,10 CHF
+pro erfolgreiche Zahlung für Nicht-EWR-Karten
++ 0,10 CHF pro Autorisierung für Tap to Pay 
++ 0,05 CHF pro Autorisierung für optionale Punkt-zu-Punkt-Verschlüsselung 
+In bestimmten Branchen kann eine Punkt-zu-Punkt-Verschlüsselung (P2PE) erforderlich sein.
+Individuelle Preisgestaltung
+Individuelle Preise sind bei hohen Zahlungsvolumina oder für Unternehmen, die Unterstützung für mehrere Abwickler, POS-Integrationen oder Drittanbieter-Lesegeräte benötigen, verfügbar.
+Sales-Team kontaktieren 
+Weitere Ressourcen
+Bericht
+Stripe im Bericht „The Forrester Wave™: Merchant Payment Providers, Q1 2026“ als Leader ausgezeichnet
+Kundenerfolgsgeschichte
+URBN bündelt 5 Mrd. USD Online- und Filialumsatz bei Stripe
+Leitfaden
+Leitfaden für Unified Commerce
+Bereit, loszulegen?
+
+Starten Sie im Dashboard oder kontaktieren Sie unser Sales-Team.
+
+Jetzt loslegen 
+Sales-Team kontaktieren 
+Terminal-APIs und -SDKs
+
+Unterstützen Sie flexible Möglichkeiten für Präsenzzahlungen.
+
+Dokumentation lesen 
+POS- und Handelsintegrationen
+
+Verbinden Sie ganz einfach unterstützte Drittanbieter-POS-Systeme, Kreditkartenleser und vieles mehr.
+
+Mehr erfahren 
+
+Für Tap to Pay auf dem iPhone benötigen Sie die neueste iOS-Version. Um die neueste Version des Betriebssystems herunterzuladen, gehen Sie auf „Einstellungen“ > „Allgemein“ > „Softwareupdate“. Tippen Sie auf „Laden und Installieren“. Einige kontaktlose Karten werden möglicherweise nicht akzeptiert. Das Symbol für kontaktlose Zahlungen ist eine Marke der EMVCo, LLC und wird mit ihrer Genehmigung verwendet. Tap to Pay auf dem iPhone ist nicht überall verfügbar. Länder und Regionen für Tap to Pay auf dem iPhone anzeigen.
+
+Schweiz (Deutsch)
+Australien
+English
+Belgien
+Nederlands
+Français
+Deutsch
+English
+Brasilien
+Português
+English
+Bulgarien
+English
+Dänemark
+English
+Deutschland
+Deutsch
+English
+Estland
+English
+Festlandchina
+简体中文
+English
+Finnland
+English
+Svenska
+Frankreich
+Français
+English
+Gibraltar
+English
+Griechenland
+English
+Indien
+English
+Irland
+English
+Italien
+Italiano
+English
+Japan
+日本語
+English
+Kanada
+English
+Français
+Kroatien
+English
+Italiano
+Lettland
+English
+Liechtenstein
+Deutsch
+English
+Litauen
+English
+Luxemburg
+Français
+Deutsch
+English
+Malaysia
+English
+简体中文
+Malta
+English
+Mexiko
+Español
+English
+Neuseeland
+English
+Niederlande
+Nederlands
+English
+Norwegen
+English
+Österreich
+Deutsch
+English
+Polen
+English
+Portugal
+Português
+English
+Rumänien
+English
+Schweden
+Svenska
+English
+Schweiz
+Deutsch
+Français
+Italiano
+English
+Singapur
+English
+简体中文
+Slowakei
+English
+Slowenien
+English
+Italiano
+Sonderverwaltungsregion Hongkong, China
+English
+简体中文
+Spanien
+Español
+English
+Thailand
+ไทย
+English
+Tschechische Republik
+English
+Ungarn
+English
+Vereinigte Arabische Emirate
+English
+Vereinigte Staaten
+English
+Español
+简体中文
+Vereinigtes Königreich
+English
+Zypern
+English
+Produkte und Preisinformationen
+Preisinformationen
+Atlas
+Authorization Boost
+Billing
+Capital
+Checkout
+Climate
+Connect
+Krypto
+Data Pipeline
+Elements
+Financial Connections
+Identity
+Invoicing
+Issuing
+Link
+Managed Payments
+Zahlungslinks
+Payments
+Payouts
+Radar
+Revenue Recognition
+Stripe Sigma
+Tax
+Terminal
+Treasury
+Lösungen
+Unternehmen
+Start-ups
+Agentenbasierter Handel
+Krypto
+E-Commerce
+Embedded Finance
+Finanzautomatisierung
+Globale Unternehmen
+In-App-Zahlungen
+Marktplätze
+Geldmanagement
+Plattformen
+SaaS
+KI-Unternehmen
+Creator Economy
+FinTech
+Gaming
+Bewirtung, Reisen und Freizeit
+Versicherungen
+Medien und Unterhaltung
+Gemeinnützige Organisationen
+Fachdienstleistungen
+Öffentlicher Sektor
+Einzelhandel
+Integrationen und Custom-Lösungen
+Stripe App-Marktplatz
+Stripe Partner Ecosystem
+Fachdienstleistungen
+Entwickler/innen
+Dokumentation
+API-Referenz
+API-Status
+API-Änderungsprotokoll
+Bibliotheken und SDKs
+Stripe Projects
+Entwickler-Blog
+Ressourcen
+Leitfäden
+Kundenstories
+Blog
+Community
+Stripe Sessions
+Datenschutz und AGB
+Eingeschränkte und nicht zugelassene Geschäfte
+Lizenzen
+Sitemap
+Cookie-Einstellungen
+Weitere Ressourcen
+Unternehmen
+Über Stripe
+Produkt-Roadmap
+Karriere
+Newsroom
+Stripe Press
+Sales-Team kontaktieren
+Support
+Support anfordern
+Verwaltete Supportpläne
+Anmelden 
+Erhalten Sie Branchen-Einblicke und Updates von Stripe
+Weiter
+Bitte geben Sie eine gültige Arbeits-E-Mail-Adresse ein
+Erhalten Sie Marketingmitteilungen von Stripe (einschließlich über automatisierte Systeme) zu Produktaktualisierungen, Branchennachrichten und Veranstaltungseinladungen. Sie können sich jederzeit abmelden. Datenschutzerklärung.
+© 2026 Stripe, LLC
+You’re viewing our website for Switzerland, but it looks like you’re in the United States.
+Switch to the United States site 

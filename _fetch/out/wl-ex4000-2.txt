@@ -1,0 +1,7 @@
+URL https://support.worldline.com/en-ch/home/merchants/in-store-payments/terminals/axium-ex4000-portable-flex STATUS 406
+
+Error 406 Not Acceptable
+
+Not Acceptable
+
+Trace-id: c8bbb2a2-18a3-4da4-851b-26ce32e8ad05

@@ -1,0 +1,404 @@
+URL https://docs.saferpay.com/home/master/payment-methods-and-acquirers STATUS 200
+
+Ctrl
+K
+Blog
+Login
+An Introduction to Saferpay
+Licensing
+Reconciliation
+Acquirers & Payment Methods
+Web Shop Plugins and certified partners
+Supported Languages
+Common Saferpay terms - Glossary
+News & Important Changes
+QUICK LINKS
+Web Shop Plugins and certified partners
+Secure PayGate
+User Administration
+Payment Page Configuration
+Risk Management
+API Authentication
+INTERFACES
+Payment API (JSON API)
+Management API
+Backoffice
+Saferpay OnSite
+INTEGRATION GUIDE
+Integrating Saferpay
+General Information
+Ways of integration
+Payment Methods & Wallets
+Testing
+Go-Live
+Guides for solution developers
+Frequently Asked Questions
+Saferpay Demo
+Support
+Changelog
+Powered by GitBook
+For the complete documentation index, see llms.txt. This page is also available as Markdown.
+Copy
+On this page
+An Introduction to Saferpay
+Acquirers & Payment Methods
+
+SAFERPAY – ACQUIRERS AND SUPPORTED PAYMENT METHODS
+
+WORLDLINE PAYMENT SERVICES FROM A SINGLE SOURCE
+
+Acquirer, Bank, Provider
+
+Method
+
+Brand/Scheme
+
+Coverage
+
+Worldline
+
+Bank Transfer
+
+Blik
+
+Poland
+
+Worldline
+
+Bank Transfer
+
+Worldline Account-to-Account Payments
+
+Europe (excl. Switzerland)
+
+Worldline
+
+Credit Card/Debit Card
+
+Mastercard (+Identity Check) Maestro Intl. (+Identity Check) Visa, V PAY (+Visa Secure)
+
+JCB (+J/Secure)
+
+Diners Club International/Discover Card (+ProtectBuy)
+
+UnionPay (+SecurePlus)
+
+Europe (incl. Switzerland and UK)
+
+Worldline
+
+Credit Card/Debit Card
+
+Bancontact
+
+Belgium
+
+Worldline
+
+E-Wallet
+
+TWINT
+
+Switzerland
+
+Worldline
+
+E-Wallet
+
+Apple Pay
+
+International
+
+Worldline
+
+E-Wallet
+
+Click to Pay
+
+International
+
+Worldline
+
+E-Wallet
+
+Google Pay
+
+International
+
+Worldline
+
+E-Wallet
+
+Alipay+
+
+International
+
+Worldline
+
+E-Wallet
+
+WeChat Pay
+
+International
+
+Worldline
+
+E-Wallet
+
+Wero
+
+Europe
+
+Worldline
+
+E-Wallet
+
+payconiq
+
+Belgium
+
+Worldline
+
+Online Transfer
+
+iDEAL 2.0
+
+Europe
+
+OTHER ACQUIRERS AND PAYMENT METHODS
+
+Acquirer, Bank, Provider
+
+Method
+
+Brand/Scheme
+
+Coverage
+
+Alpha Card
+
+Credit Card/Debit Card
+
+American Express (+SafeKey)
+
+Luxembourg, Belgium
+
+American Express
+
+Credit Card/Debit Card
+
+American Express (+SafeKey)
+
+Europe
+
+boncard
+
+Giftcard
+
+Lunch-Check, boncard PAY, OeV-Voucher
+
+Switzerland
+
+Chase Paymentech
+
+Credit Card/Debit Card
+
+Mastercard (+Identity Check) Visa, V PAY (+Visa Secure) American Express
+
+USA, Canada
+
+creditPass/Intercard
+
+Direct Debit
+
+SEPA direct debit
+
+Germany
+
+Dialcom24
+
+Online Transfer
+
+Przelewy24
+
+Poland
+
+Diners Deutschland
+
+Credit Card/Debit Card
+
+Diners Club International
+
+Germany
+
+Acquirer, Bank, Provider
+
+Method
+
+Brand/Scheme
+
+Coverage
+
+eps
+
+Online Transfer
+
+eps
+
+Austria
+
+Klarna
+
+Open Invoice B2B
+
+Billie
+
+Europe
+
+Klarna
+
+Online Transfer
+
+Klarna Pay Now
+
+Europe
+
+Klarna
+
+Open Invoice
+
+Klarna Pay Later
+
+Europe
+
+Klarna
+
+Instalments
+
+Klarna Financing
+
+Europe
+
+PAYONE
+
+Credit Card/Debit Card
+
+Mastercard (+Identity Check) Maestro Intl. (+Identity Check) Visa, V PAY (+Visa Secure)
+
+Diners Club International/Discover Card (+ProtectBuy)
+JCB (+J/Secure)
+
+Europe
+
+PAYONE
+
+E-Wallet
+
+Apple Pay
+
+Europe
+
+PAYONE
+
+E-Wallet
+
+Alipay+
+
+International
+
+PAYONE
+
+E-Wallet
+
+Click to Pay
+
+International
+
+PAYONE
+
+E-Wallet
+
+Google Pay
+
+Europe
+
+PAYONE
+
+E-Wallet
+
+WeChat Pay
+
+International
+
+PAYONE
+
+E-Wallet
+
+Wero
+
+Europe
+
+PayPal
+
+E-Wallet
+
+PayPal
+
+International
+
+PostFinance
+
+Direct Debit
+
+PostFinance Pay
+
+Switzerland
+
+PostFinance
+
+Direct Debit
+
+PostFinance Instant Payout
+
+Switzerland
+
+Reka
+
+E-Wallet
+
+Reka-Pay, Reka-Meal, Reka-Rail
+
+Switzerland
+
+SIA
+
+Credit Card/Debit Card
+
+American Express (+SafeKey)
+
+Italy
+
+SwissCard
+
+Credit Card/Debit Card
+
+American Express (+SafeKey)
+
+Switzerland
+
+Yapi Kredi
+
+Credit Card/Debit Card
+
+Mastercard (+Identity Check) Visa, V PAY (+Visa Secure)
+
+Turkey
+
+Previous
+Reconciliation
+Next
+Web Shop Plugins and certified partners
+
+Last updated 3 months ago
+
+Was this helpful?
