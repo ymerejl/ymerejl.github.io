@@ -11,6 +11,8 @@ def rep(a, b, n=1):
 
 # ---------- Version, Navigator
 rep('<html lang="de-CH" data-version="1">', '<html lang="de-CH" data-version="2">')
+rep('<meta name="theme-color" content="#0F0E0D">', '<meta name="theme-color" content="#F4EFE7">')
+rep('Leistungen, Preise und Öffnungszeiten laut Salonkee · Bilder teils KI-generiert ·', 'Leistungen, Preise und Öffnungszeiten laut Salonkee · echte Fotos aus dem Salon ·')
 rep("const VER = '1',", "const VER = '2',")
 
 # ---------- dunkleres Gold für helle Flächen (Logo im Header)
@@ -68,7 +70,7 @@ rep('<figcaption><b id="svcCapTitle"></b><span id="svcCapText"></span></figcapti
     '<figcaption><span class="cap-k">Kategorie</span><b id="svcCapTitle"></b><span id="svcCapText"></span><small id="svcCapMeta"></small></figcaption>')
 rep("$('#svcCapTitle').textContent = c.cap[0]; $('#svcCapText').textContent = c.cap[1];",
     "$('#svcCapTitle').textContent = c.cap[0]; $('#svcCapText').textContent = c.cap[1];\n"
-    "    { const m = $('#svcCapMeta'); if (m) { const lo = Math.min(...c.items.map(x => x.price)); m.textContent = c.items.length + (c.items.length === 1 ? ' Leistung' : ' Leistungen') + ' · ab CHF ' + lo + '.–'; } }")
+    "    { const m = $('#svcCapMeta'); if (m) { const base = c.items.filter(x => !['d4', 'h3'].includes(x.id)), pool = base.length ? base : c.items, lo = Math.min(...pool.map(x => x.price)), ab = pool.length > 1 || pool.some(x => x.from); m.textContent = c.items.length + (c.items.length === 1 ? ' Leistung' : ' Leistungen') + ' · ' + (ab ? 'ab ' : '') + 'CHF ' + lo + '.–'; } }")
 rep("  imgs.innerHTML = CATS.map(c => `<img src=\"${c.img}\" alt=\"${c.alt}\" data-cat=\"${c.id}\">`).join('');", "  imgs.innerHTML = '';")
 
 # ---------- Über uns: echtes Foto im Bogen
@@ -108,12 +110,15 @@ MARBLE = ("url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
           "<feComponentTransfer><feFuncA type='table' tableValues='0 0 0 0 0 0 0 0 0 .55 0 0 0 0 0 0 0 0 0 0'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23m)'/></svg>\")")
 CSS = f'''
 /* =================== Version 2: Salon-Licht (Elfenbein, Marmor, Gold wie an der Neugasse) =================== */
-.site-header,main{{--bg:#F4EFE7;--bg-2:#EEE7DC;--bg-3:#E6DDCF;--ivory:#1F1B17;--ivory-2:#4C453D;--ivory-3:#7E7569;--sand:#97743A;--gold:#9C7633;--gold-line:rgba(156,118,51,.42);--line:rgba(31,27,23,.11);--line-2:rgba(31,27,23,.24);--open:#3B8457;--closed:#B4573E;--err:#B4482E;--au:linear-gradient(118deg,#6E521F 0%,#A07A34 22%,#C6A052 40%,#8B6A2B 58%,#B38D44 76%,#76592A 100%);color:var(--ivory)}}
+.site-header,main{{--bg:#F4EFE7;--bg-2:#EEE7DC;--bg-3:#E6DDCF;--ivory:#1F1B17;--ivory-2:#4C453D;--ivory-3:#6B6357;--sand:#86652F;--gold:#9C7633;--gold-line:rgba(156,118,51,.42);--line:rgba(31,27,23,.11);--line-2:rgba(31,27,23,.24);--open:#3B8457;--closed:#B4573E;--err:#B4482E;--au:linear-gradient(118deg,#6E521F 0%,#A07A34 22%,#C6A052 40%,#8B6A2B 58%,#B38D44 76%,#76592A 100%);color:var(--ivory);color-scheme:light}}
 body{{background:#F4EFE7}}
 main{{background:var(--bg)}}
 .site-header .lg-base{{fill:url(#auGd)}}
 .site-header.is-scrolled{{background:rgba(244,239,231,.88);box-shadow:0 1px 0 var(--line)}}
-.btn-primary:hover{{background:#3A332C}}
+.site-header .btn-primary:hover,main .btn-primary:hover{{background:#3A332C}}
+.booking .btn-primary:hover{{background:#fff}}
+.booking.flash{{animation:flash2 1.4s var(--ease)}}
+@keyframes flash2{{0%{{box-shadow:0 0 0 0 rgba(156,118,51,.55),0 60px 100px -50px rgba(60,40,12,.6)}}100%{{box-shadow:0 0 0 22px rgba(156,118,51,0),0 60px 100px -50px rgba(60,40,12,.6)}}}}
 .menu-row:hover{{background:rgba(31,27,23,.03)}}
 .marble{{background-image:{MARBLE}}}
 
@@ -139,6 +144,7 @@ main{{background:var(--bg)}}
 .hero2-arch figcaption{{position:absolute;left:calc(100% + 34px);top:50%;display:flex;align-items:center;gap:14px;writing-mode:vertical-rl;transform:translateY(-50%);font-size:10.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory-3);white-space:nowrap}}
 .hero2-arch figcaption i{{width:1px;height:46px;background:var(--gold-line)}}
 .hero2 .scroll-cue{{color:var(--ivory-3)}}
+@media (max-width:1240px){{.hero2-arch figcaption{{display:none}}}}
 
 /* Online-Termin: die Buchungskarte bleibt dunkel, wie ein ledergebundenes Terminbuch */
 .book{{background:var(--bg-2)}}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BesArt Hairsalon</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#0F0E0D">
+<meta name="theme-color" content="#F4EFE7">
 <style>
 /* Schriften lokal (Cormorant Garamond, Archivo · SIL Open Font License), damit die Vorschau auch offline identisch aussieht */
 /* Archivo normal 300 700 latin-ext */
@@ -558,6 +558,7 @@ a.menu-book{text-decoration:none}
 
 /* ---------- Print-Paket: versteckter Bereich hinter „Weiter“ im Footer ---------- */
 .foot-meta{align-items:center}
+html:not(.pitch) .foot-next[data-print-open]{display:none}
 .foot-next{display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px 0 16px;border:0;border-radius:999px;background:none;box-shadow:inset 0 0 0 1px var(--line);color:var(--ivory-3);font:500 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;transition:color .3s,box-shadow .3s}
 .foot-next svg{width:14px;height:14px;transition:transform .5s var(--ease)}
 .foot-next:hover,.foot-next:focus-visible{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--line-2)}
@@ -860,7 +861,7 @@ a.menu-book{text-decoration:none}
 .pt-dl{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:8px 26px;margin:0}
 .pt-dl dt{font-size:13.5px;line-height:1.5;color:var(--ivory-3)}
 .pt-dl dd{margin:0;font-size:15px;line-height:1.5;color:var(--ivory);white-space:pre-wrap;overflow-wrap:anywhere}
-.pt-dl dd.empty{color:rgba(237,230,218,.28)}
+.pt-dl dd.empty{color:rgba(237,230,218,.58)}
 .pt-text{margin:0;font-size:15px;line-height:1.65;color:var(--ivory);white-space:pre-wrap;overflow-wrap:anywhere}
 .pt-empty{margin:18px 0 0;font-size:14px;color:var(--ivory-3)}
 .pt-reset{margin-top:48px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;font-size:13px;color:var(--ivory-3)}
@@ -1050,6 +1051,7 @@ a.menu-book{text-decoration:none}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1180px){
+  .site-header #hdrStatus{display:none}
   .hero-inner{grid-template-columns:minmax(0,1fr) minmax(0,410px)}
   .nav-links{gap:22px}
 }
@@ -1131,6 +1133,12 @@ a.menu-book{text-decoration:none}
 .intro-on .logo{opacity:0}
 .intro-on .logo .l,.intro-on .logo .wr,.intro-played .logo .l,.intro-played .logo .wr{animation:none}
 
+#pv9{justify-content:flex-start}
+@media (max-width:900px){
+  html.pitch .pt-nav{padding-left:62px}
+  html.pitch .pt-nfoot{padding-left:58px}
+  html.pitch #pv9{padding-bottom:96px}
+}
 /* ---------- Gesprächsleitfaden: Bausteine im Abschluss ---------- */
 .pt-tag{flex:none;white-space:nowrap;display:inline-flex;align-items:center;height:22px;padding:0 10px;border-radius:11px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#1a1612;background:linear-gradient(135deg,#E6CB86,#B8893E)}
 .pt-li{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
@@ -1228,12 +1236,15 @@ a.menu-book{text-decoration:none}
 }
 
 /* =================== Version 2: Salon-Licht (Elfenbein, Marmor, Gold wie an der Neugasse) =================== */
-.site-header,main{--bg:#F4EFE7;--bg-2:#EEE7DC;--bg-3:#E6DDCF;--ivory:#1F1B17;--ivory-2:#4C453D;--ivory-3:#7E7569;--sand:#97743A;--gold:#9C7633;--gold-line:rgba(156,118,51,.42);--line:rgba(31,27,23,.11);--line-2:rgba(31,27,23,.24);--open:#3B8457;--closed:#B4573E;--err:#B4482E;--au:linear-gradient(118deg,#6E521F 0%,#A07A34 22%,#C6A052 40%,#8B6A2B 58%,#B38D44 76%,#76592A 100%);color:var(--ivory)}
+.site-header,main{--bg:#F4EFE7;--bg-2:#EEE7DC;--bg-3:#E6DDCF;--ivory:#1F1B17;--ivory-2:#4C453D;--ivory-3:#6B6357;--sand:#86652F;--gold:#9C7633;--gold-line:rgba(156,118,51,.42);--line:rgba(31,27,23,.11);--line-2:rgba(31,27,23,.24);--open:#3B8457;--closed:#B4573E;--err:#B4482E;--au:linear-gradient(118deg,#6E521F 0%,#A07A34 22%,#C6A052 40%,#8B6A2B 58%,#B38D44 76%,#76592A 100%);color:var(--ivory);color-scheme:light}
 body{background:#F4EFE7}
 main{background:var(--bg)}
 .site-header .lg-base{fill:url(#auGd)}
 .site-header.is-scrolled{background:rgba(244,239,231,.88);box-shadow:0 1px 0 var(--line)}
-.btn-primary:hover{background:#3A332C}
+.site-header .btn-primary:hover,main .btn-primary:hover{background:#3A332C}
+.booking .btn-primary:hover{background:#fff}
+.booking.flash{animation:flash2 1.4s var(--ease)}
+@keyframes flash2{0%{box-shadow:0 0 0 0 rgba(156,118,51,.55),0 60px 100px -50px rgba(60,40,12,.6)}100%{box-shadow:0 0 0 22px rgba(156,118,51,0),0 60px 100px -50px rgba(60,40,12,.6)}}
 .menu-row:hover{background:rgba(31,27,23,.03)}
 .marble{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='900'><filter id='m' x='0' y='0'><feTurbulence type='fractalNoise' baseFrequency='.0022 .006' numOctaves='5' seed='11'/><feColorMatrix type='matrix' values='0 0 0 0 .6 0 0 0 0 .47 0 0 0 0 .26 1 0 0 0 0'/><feComponentTransfer><feFuncA type='table' tableValues='0 0 0 0 0 0 0 0 0 .55 0 0 0 0 0 0 0 0 0 0'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23m)'/></svg>")}
 
@@ -1259,6 +1270,7 @@ main{background:var(--bg)}
 .hero2-arch figcaption{position:absolute;left:calc(100% + 34px);top:50%;display:flex;align-items:center;gap:14px;writing-mode:vertical-rl;transform:translateY(-50%);font-size:10.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory-3);white-space:nowrap}
 .hero2-arch figcaption i{width:1px;height:46px;background:var(--gold-line)}
 .hero2 .scroll-cue{color:var(--ivory-3)}
+@media (max-width:1240px){.hero2-arch figcaption{display:none}}
 
 /* Online-Termin: die Buchungskarte bleibt dunkel, wie ein ledergebundenes Terminbuch */
 .book{background:var(--bg-2)}
@@ -1908,7 +1920,7 @@ main{background:var(--bg)}
     <div class="foot-logo" id="footLogo" aria-hidden="true"><svg viewBox="0 0 909.3 353"><defs><clipPath id="ftWrite"><rect class="wr" x="0" y="190" width="910" height="165"/></clipPath></defs><g fill="url(#auG)"><use href="#lp0" class="l" style="--i:0"/><use href="#lp1" class="l" style="--i:1"/><use href="#lp2" class="l" style="--i:2"/><use href="#lp3" class="l" style="--i:3"/><use href="#lp4" class="l" style="--i:4"/><use href="#lp5" class="l" style="--i:5"/><g clip-path="url(#ftWrite)"><use href="#lp6"/></g></g></svg></div>
     <div class="foot-meta">
       <span>BesArt Hairsalon · Neugasse 29 · 8810 Horgen · 044 725 14 04</span>
-      <span>Designkonzept &amp; Vorschau · Leistungen, Preise und Öffnungszeiten laut Salonkee · Bilder teils KI-generiert · <a class="replay" href="?intro" data-replay>Intro ansehen</a></span>
+      <span>Designkonzept &amp; Vorschau · Leistungen, Preise und Öffnungszeiten laut Salonkee · echte Fotos aus dem Salon · <a class="replay" href="?intro" data-replay>Intro ansehen</a></span>
       <button type="button" class="foot-next" data-print-open aria-haspopup="dialog">Weiter<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
     </div>
   </div>
@@ -2462,6 +2474,7 @@ main{background:var(--bg)}
     S.step = step;
     if (step === 2) ensureDay();
     render(dir);
+    requestAnimationFrame(() => { if (booking.getBoundingClientRect().top < 64) booking.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); });
   }
   function ics() {
     const list = selSvcs(), d = S.day, p2 = n => String(n).padStart(2, '0');
@@ -2490,7 +2503,7 @@ main{background:var(--bg)}
     const t = e.target.closest('button'); if (!t || t.disabled) return;
     const k = t.dataset;
     if (k.cat) { S.cat = k.cat; S.tel = null; render(); }
-    else if (k.svc) { S.picked = true; toggle(k.svc); render(); }
+    else if (k.svc) { if (!S.picked && !(S.sel.length === 1 && S.sel[0] === k.svc)) S.sel = []; S.picked = true; toggle(k.svc); render(); }
     else if (k.add) { S.picked = true; toggle(k.add, true); render(); }
     else if (k.tel) { S.tel = S.tel === k.tel ? null : k.tel; render(); }
     else if (k.go) { if (t.type !== 'submit') go(+k.go); }
@@ -2549,7 +2562,7 @@ main{background:var(--bg)}
     moveInd();
     imgs.querySelectorAll('img').forEach(i => i.classList.toggle('is-active', i.dataset.cat === activeCat));
     $('#svcCapTitle').textContent = c.cap[0]; $('#svcCapText').textContent = c.cap[1];
-    { const m = $('#svcCapMeta'); if (m) { const lo = Math.min(...c.items.map(x => x.price)); m.textContent = c.items.length + (c.items.length === 1 ? ' Leistung' : ' Leistungen') + ' · ab CHF ' + lo + '.–'; } }
+    { const m = $('#svcCapMeta'); if (m) { const base = c.items.filter(x => !['d4', 'h3'].includes(x.id)), pool = base.length ? base : c.items, lo = Math.min(...pool.map(x => x.price)), ab = pool.length > 1 || pool.some(x => x.from); m.textContent = c.items.length + (c.items.length === 1 ? ' Leistung' : ' Leistungen') + ' · ' + (ab ? 'ab ' : '') + 'CHF ' + lo + '.–'; } }
     const menu = $('#svcMenu'); menu.setAttribute('aria-labelledby', 'tab-' + c.id);
     menu.innerHTML = c.items.map((i, r) => `<li class="menu-row${swap ? ' enter' : ''}" style="--r:${r}"><span class="menu-name">${i.name}</span>${i.tel ? `<span class="menu-tag">${PHONE}Telefonisch</span>` : i.note ? `<span class="menu-tag">${i.note}</span>` : ''}<span class="menu-price">${price(i)}</span>${i.tel
       ? `<a class="menu-book" href="${TEL}" aria-label="${i.name} telefonisch vereinbaren">${PHONE}</a>`
@@ -3173,7 +3186,7 @@ main{background:var(--bg)}
     }
 
     function nm(t) {
-      const first = String(S.a['gespraech.partner'] || '').trim().split(/\s+/)[0];
+      const parts = String(S.a['gespraech.partner'] || '').trim().split(/\s+/), first = /^(herr|frau)$/i.test(parts[0]) && parts[1] ? parts[0] + ' ' + parts[1] : parts[0];
       return String(t).replace(/\{name\}/g, first || 'der Kunde').replace(/\{Name\}/g, first || 'Der Kunde');
     }
     const optV = o => Array.isArray(o) ? o[0] : o;
@@ -3188,7 +3201,8 @@ main{background:var(--bg)}
         inertSaved.forEach(([el]) => { el.inert = true; });
         html.classList.add('pt-lock');
       } else if (!on && inertSaved) {
-        inertSaved.forEach(([el, was]) => { el.inert = was; }); inertSaved = null;
+        const pvOpen = pv0 && pv0.classList.contains('open');
+        inertSaved.forEach(([el, was]) => { el.inert = pvOpen && el !== pv0 ? was : false; }); inertSaved = null;
         html.classList.remove('pt-lock');
       }
     }
@@ -3426,6 +3440,7 @@ main{background:var(--bg)}
       updateFab();
     }
     function startPresentation() {
+      if (!S.started) { const de = document.documentElement; de.style.scrollBehavior = 'auto'; scrollTo(0, 0); de.style.scrollBehavior = ''; }
       S.stage = 'site'; S.started = S.started || new Date().toISOString(); save(true);
       mode = null;
       ov.classList.remove('open'); ov.setAttribute('aria-hidden', 'true');
@@ -3771,7 +3786,15 @@ main{background:var(--bg)}
       if (!quiet && panel.contains(document.activeElement)) fab.focus({ preventScroll: true });
     }
     const togglePanel = () => panel.classList.contains('open') ? closePanel() : openPanel();
-    document.addEventListener('nav:pitch', e => { const m = e.detail.mode; if (m === 'notes') { closeOverlay(); openPanel(); } else openOverlay(m); });
+    document.addEventListener('nav:pitch', e => {
+      const m = e.detail.mode;
+      if (html.classList.contains('pitch-hold') && m !== 'intake') {
+        startPresentation();
+        if (m === 'notes') introDone.then(() => setTimeout(() => openPanel(), 250)); else setTimeout(() => openOverlay(m), 150);
+        return;
+      }
+      if (m === 'notes') { closeOverlay(); openPanel(); } else openOverlay(m);
+    });
     // Navigator verlässt das Gespräch: vor der Präsentation (Fragebogen) startet sie, sonst schliesst das Fenster
     const leave = () => { if (html.classList.contains('pitch-hold')) startPresentation(); else closeOverlay(); closePanel(true); };
     document.addEventListener('nav:close', leave); document.addEventListener('nav:pitch-off', leave);
@@ -3821,8 +3844,7 @@ main{background:var(--bg)}
 
     /* ---------- Start ---------- */
     fab.hidden = false; panel.hidden = false;
-    const closingBtn = $('[data-pitch-closing]');
-    if (closingBtn) { closingBtn.hidden = false; closingBtn.addEventListener('click', () => openOverlay('closing')); }
+    $$('[data-pitch-closing]').forEach(b => { b.hidden = false; b.addEventListener('click', () => openOverlay('closing')); });
     updateFab();
     if (html.classList.contains('pitch-hold')) { S.stage = 'intake'; openOverlay('intake'); }
     else ov.setAttribute('aria-hidden', 'true');
@@ -3867,10 +3889,15 @@ main{background:var(--bg)}
       function closeNv() { nv.classList.remove('open'); tab.setAttribute('aria-expanded', 'false'); }
       tab.addEventListener('click', () => nv.classList.contains('open') ? closeNv() : openNv());
       $('#nvClose').addEventListener('click', closeNv); $('#nvScrim').addEventListener('click', closeNv);
-      document.addEventListener('keydown', e => { if (e.key === 'Escape' && nv.classList.contains('open')) { e.preventDefault(); e.stopPropagation(); closeNv(); tab.focus(); } }, true);
+      addEventListener('keydown', e => {
+        if (!nv.classList.contains('open')) return;
+        if (e.key === 'Escape') { e.preventDefault(); e.stopImmediatePropagation(); closeNv(); tab.focus(); }
+        else if (e.key !== 'Tab') e.stopPropagation();
+      }, true);
       body.addEventListener('click', e => {
         const b = e.target.closest('[data-nav]'); if (!b) return;
         const [kind, val] = b.dataset.nav.split(':'); closeNv();
+        const lbx = $('#lightbox'); if (lbx && lbx.classList.contains('open')) { lbx.classList.remove('open'); lbx.setAttribute('aria-hidden', 'true'); }
         if (kind === 'pt') document.dispatchEvent(new CustomEvent('nav:pitch', { detail: { mode: val } }));
         else if (kind === 'pv') { document.dispatchEvent(new Event('nav:pitch-off')); document.dispatchEvent(new CustomEvent('nav:print', { detail: { i: +val } })); }
         else { document.dispatchEvent(new Event('nav:close')); setTimeout(() => { const el = document.getElementById(val); if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }, 80); }
