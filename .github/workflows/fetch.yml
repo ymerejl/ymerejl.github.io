@@ -1,0 +1,19 @@
+# Temporary helper: collects terminal photos and facts for the conversation guide (removed afterwards).
+name: fetch
+on:
+  push:
+    branches: [claude/sweet-noether-py50gr]
+    paths: [_fetch/fetch.js, .github/workflows/fetch.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && npx playwright install chrome
+      - run: node _fetch/fetch.js || true
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add _fetch && git commit -m "Fetched terminal facts and photos (temporary)" && git pull --rebase && git push
