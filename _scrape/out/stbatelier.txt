@@ -1,2 +1,0 @@
-### stbatelier Horgen https://www.stb-atelier.ch
-ERROR page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.stb-atelier.ch/

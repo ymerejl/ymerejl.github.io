@@ -1,6 +1,8 @@
 # Baut die passwortgeschützte Vorschau als eine einzige HTML-Datei (funktioniert auch offline).
-#   python3.13 besart/tools/build_preview.py <passwort> [ausgabe.html]
-# 1. besart/index.html: alle Verweise auf img/, fonts/, logo/, media/ werden als data:-URI eingebettet.
+#   python3.13 besart/tools/build_preview.py <passwort> [ausgabe.html] [quelle.html]
+#   Version 2: … <passwort> besart/_build/v2/index.html besart/index-v2.html
+# 1. besart/index.html (oder quelle.html): alle Verweise auf img/, fonts/, logo/, media/, private/ werden als data:-URI eingebettet.
+#    private/ (Marktdaten, Preisempfehlung) ist nicht im Repo und gelangt nur verschlüsselt in die Vorschau.
 #    Ausnahme: Videos (.mp4) bleiben eigene Dateien und werden neben die Seite kopiert (ausgabe/media/…),
 #    damit die Passwortseite schnell lädt. Offline zeigt die Seite an ihrer Stelle die Standbilder.
 # 2. Das Ergebnis wird mit AES-GCM verschlüsselt (Schlüssel per PBKDF2-SHA256, 250'000 Runden)
@@ -14,7 +16,8 @@ out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(SITE, '_build', 'index.
 MIME = {'.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.woff2': 'font/woff2',
         '.mp4': 'video/mp4', '.webm': 'video/webm', '.json': 'application/json'}
 
-html = open(os.path.join(SITE, 'index.html'), encoding='utf-8').read()
+src = sys.argv[3] if len(sys.argv) > 3 else os.path.join(SITE, 'index.html')
+html = open(src, encoding='utf-8').read()
 cache, missing, external = {}, set(), set()
 def inline(m):
     q1, path, q2 = m.group(1), m.group(2), m.group(3)
@@ -25,7 +28,7 @@ def inline(m):
         mt = MIME.get(os.path.splitext(f)[1].lower()) or mimetypes.guess_type(f)[0] or 'application/octet-stream'
         cache[path] = f'data:{mt};base64,' + base64.b64encode(open(f, 'rb').read()).decode()
     return q1 + cache[path] + q2
-html = re.sub(r'''(["'(])((?:img|fonts|logo|media)/[A-Za-z0-9._/-]+)(["')])''', inline, html)
+html = re.sub(r'''(["'(])((?:img|fonts|logo|media|private)/[A-Za-z0-9._/-]+)(["')])''', inline, html)
 if missing: print('FEHLT:', sorted(missing)); sys.exit(1)
 
 salt, iv = secrets.token_bytes(16), secrets.token_bytes(12)

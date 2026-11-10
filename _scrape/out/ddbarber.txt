@@ -1,2 +1,0 @@
-### ddbarber Horgen https://www.dd-barber.ch
-ERROR page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.dd-barber.ch/
