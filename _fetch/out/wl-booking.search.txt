@@ -1,6 +1,0 @@
-https://worldline.com/en-ch/home/top-navigation/developers/e-commerce-developer/integration
-https://worldline.com/en-lu/home/top-navigation/developers/e-commerce-developer/integration
-https://docs.saferpay.com/home/master/payment-methods-and-acquirers
-https://docs.connect.worldline-solutions.com/
-https://docs.saferpay.com/home/integration-guide/payment-methods/account-to-account-payments
-https://support.azavista.com/hc/en-us/articles/24096610070812-How-do-I-Configure-and-Manage-SaferPay-Worldline-Integration

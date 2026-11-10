@@ -1,7 +1,0 @@
-URL https://worldline.com/de-ch/campaigns/ms/ex4000-all-in-one STATUS 406
-
-Error 406 Not Acceptable
-
-Not Acceptable
-
-Trace-id: 04dcb886-7357-4ae1-8ec3-800900894325

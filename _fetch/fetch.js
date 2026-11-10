@@ -4,22 +4,13 @@ const fs = require('fs'); const path = require('path');
 const OUT = '_fetch/out'; fs.mkdirSync(OUT + '/img', { recursive: true });
 const log = (...a) => { const s = a.join(' '); console.log(s); fs.appendFileSync(OUT + '/log.txt', s + '\n'); };
 const PAGES = [
-  ['stripe-pricing', 'https://stripe.com/de-ch/pricing'],
-  ['stripe-terminal', 'https://stripe.com/de-ch/terminal'],
-  ['stripe-wisepad3', 'https://docs.stripe.com/terminal/readers/bbpos-wisepad3'],
-  ['stripe-s700', 'https://docs.stripe.com/terminal/readers/stripe-reader-s700'],
-  ['stripe-wiseposE', 'https://docs.stripe.com/terminal/readers/bbpos-wisepos-e'],
-  ['stripe-readers', 'https://docs.stripe.com/terminal/payments/setup-reader'],
-  ['stripe-taptopay', 'https://docs.stripe.com/terminal/payments/setup-reader/tap-to-pay'],
-  ['stripe-dashboard-terminal', 'https://docs.stripe.com/terminal/payments/collect-card-payment?terminal-sdk-platform=server-driven'],
-  ['cal-payment-apps', 'https://cal.com/apps/categories/payment'],
-  ['cal-stripe', 'https://cal.com/apps/stripe'],
+  ['ex4000-ejost', 'https://www.ejost.ch/axium-ex4000/'],
+  ['ex4000-bcv', 'https://www.bcv.ch/en/home/corporate-banking/for-your-core-banking-needs/bcv-business-plus/axium-ex4000-portable.html'],
+  ['saturn-castles', 'https://www.castlestechsupport.com/terminals/saturn'],
 ];
 const SEARCH = [
-  ['wl-ex4000', 'Worldline EX4000 All-in-One Schweiz'],
-  ['wl-saturn', 'Worldline Saturn 1000F2 Winter Deal 349'],
-  ['wl-online', 'Worldline Schweiz Pay by Link KMU Online-Zahlung Terminal'],
-  ['wl-booking', 'Worldline Saferpay Online-Terminbuchung Integration Cal.com'],
+  ['ex4000', 'Ingenico Axium EX4000 payment terminal'],
+  ['saturn', 'Castles Saturn 1000F2 payment terminal'],
 ];
 (async () => {
   const b = await chromium.launch({ channel: 'chrome' });
@@ -37,7 +28,7 @@ const SEARCH = [
       const imgs = await p.evaluate(() => [...document.images].map(i => ({ src: i.currentSrc || i.src, alt: i.alt || '', w: i.naturalWidth, h: i.naturalHeight })).filter(i => i.w >= 200 && i.h >= 150));
       fs.writeFileSync(`${OUT}/${slug}.imgs.json`, JSON.stringify(imgs, null, 1));
       let n = 0;
-      for (const im of imgs.slice(0, 14)) {
+      for (const im of imgs.slice(0, 20)) {
         try { const res = await ctx.request.get(im.src, { timeout: 20000 }); if (!res.ok()) continue; const buf = await res.body(); const ct = res.headers()['content-type'] || '';
           const ext = ct.includes('png') ? 'png' : ct.includes('webp') ? 'webp' : ct.includes('svg') ? 'svg' : ct.includes('avif') ? 'avif' : 'jpg';
           fs.writeFileSync(`${OUT}/img/${slug}-${n++}.${ext}`, buf); } catch (e) {}
@@ -53,7 +44,7 @@ const SEARCH = [
       const real = links.map(h => { try { const u = new URL(h); return u.searchParams.get('uddg') || h; } catch (e) { return h; } });
       fs.writeFileSync(`${OUT}/${s}.search.txt`, real.join('\n'));
       log('SEARCH', s, real.join(' | '));
-      let k = 0; for (const u of real.filter(u => /worldline|saferpay|six-payment|cal\.com/.test(u)).slice(0, 3)) await grab(`${s}-${k++}`, u);
+      let k = 0; for (const u of real.filter(u => !/worldline\.com|manualslib/.test(u)).slice(0, 4)) await grab(`${s}-${k++}`, u);
     } catch (e) { log('ERR search', s, e.message.split('\n')[0]); }
   }
   await b.close();
