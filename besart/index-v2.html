@@ -2757,13 +2757,17 @@ main{background:var(--bg)}
         /* ---- Domain ---- */
         const dm = D.domains, picks = $('#dmPicks');
         const byName = n => dm.list.find(x => x.domain === n);
-        let chosen = dm.picks[0].domain;
+        let chosen = null;
         const card = (pk, i) => { const x = byName(pk.domain) || {}; const ok = x.status === 'frei';
-          return `<button type="button" class="dm-card" role="radio" aria-checked="${i === 0}" data-d="${pk.domain}"><span class="tag${i ? ' alt' : ''}">${pk.tag}</span><span class="dm-name">${pk.domain}</span><span class="dm-why">${pk.why}</span><span class="dm-meta"><span class="${ok ? 'dm-ok' : ''}">${ok ? 'frei' : x.status || 'unbekannt'}</span><span>CHF ${fmtCHF(x.price_first_chf)} im 1. Jahr · danach ${fmtCHF(x.price_renew_chf)}</span></span></button>`; };
+          return `<button type="button" class="dm-card" role="radio" aria-checked="false" data-d="${pk.domain}"><span class="tag${i ? ' alt' : ''}">${pk.tag}</span><span class="dm-name">${pk.domain}</span><span class="dm-why">${pk.why}</span><span class="dm-meta"><span class="${ok ? 'dm-ok' : ''}">${ok ? 'frei' : x.status || 'unbekannt'}</span><span>CHF ${fmtCHF(x.price_first_chf)} im 1. Jahr · danach ${fmtCHF(x.price_renew_chf)}</span></span></button>`; };
         picks.innerHTML = dm.picks.map(card).join('');
         const choose = d => { chosen = d; $('#dmUrl').textContent = d; $$('.dm-card', picks).forEach(c => c.setAttribute('aria-checked', String(c.dataset.d === d)));
           document.dispatchEvent(new CustomEvent('pitch:answer', { detail: { k: 'start.domain', v: d } })); };
         picks.addEventListener('click', e => { const c = e.target.closest('.dm-card'); if (c) choose(c.dataset.d); });
+        const saved = () => { try { const st = JSON.parse(localStorage.getItem('besart-pitch')); return st && st.a ? st.a['start.domain'] || null : null; } catch (e) { return null; } };
+        const sync = () => { const d = saved(); chosen = d; $('#dmUrl').textContent = d || dm.picks[0].domain; $$('.dm-card', picks).forEach(c => c.setAttribute('aria-checked', String(c.dataset.d === d))); };
+        sync(); document.addEventListener('nav:print', () => setTimeout(sync, 450));
+        if ('IntersectionObserver' in window) new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) sync(); }), { root: pv }).observe($('#pv8'));
         const top = new Set(dm.picks.map(x => x.domain));
         $('#dmMore').innerHTML = dm.list.filter(x => x.status === 'frei' && !top.has(x.domain)).map(x => `<span>${x.domain}</span>`).join('');
         $('#dmTaken').innerHTML = dm.list.filter(x => x.status !== 'frei').map(x => `<span class="${x.status === 'vergeben' ? 'no' : 'unk'}">${x.domain}${x.status === 'vergeben' ? (x.registered_since ? ' · seit ' + x.registered_since.slice(0, 4) : ' · vergeben') : ' · ' + x.status}</span>`).join('');
