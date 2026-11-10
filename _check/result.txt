@@ -1,0 +1,3 @@
+V1 {"ver":"1","nav":false,"hero":false,"film":0,"slides":9,"mk":"Mit 42.– liegt BesArt sogar unter der Billig-Grenze von 46.4"}
+V2 (same session, no password) {"ver":"2","nav":false,"hero":true,"film":0,"slides":9,"mk":"Mit 42.– liegt BesArt sogar unter der Billig-Grenze von 46.4"}
+errors []
