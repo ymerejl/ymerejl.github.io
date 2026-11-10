@@ -1,0 +1,147 @@
+URL https://www.manua.ls/ingenico/axium-ex4000/manual STATUS 200
+
+Manua.ls
+Ingenico not categorized ·
+Ingenico AXIUM EX4000 manual
+8.6 · 1
+Give Review
+PDF manual
+ · 29 pages
+ English
+Tutorial
+Questions
+Specs
+Ingenico AXIUM EX4000
+ 
+  www.ingenico.com 
+16 Place de L'Iris Tour Cb21 92400 Courbevoie - France   
+Banks and Acquirers International Holding, SAS / 814 767 216 RCS Nanterre 
+Moving Commerce Forward 
+ 
+ 
+ 
+ 
+AXIUM EX4000 
+User Guide 
+ 
+ 
+Terminal ready for   
+visual impaired people 
+1 / 29 
+Page: 1
+Manual
+
+View the manual for the Ingenico AXIUM EX4000 here, completely for free. This manual belongs to the not categorized category and has been rated by 1 users with an average score of 8.6. The manual is currently available in the following languages: English. Do you have a specific question about the Ingenico AXIUM EX4000 or do you require additional help with your product?
+
+Ask your question here
+Index
+1. Introduction
+2. Presentation
+2.1 Content of the box
+2.2 Overview of AXIUM EX4000
+2.3 Key Locations and Functions
+2.4 Touch Panel
+3. Use of the terminal
+3.1 Power on/Power off the terminal
+3.2 Reading cards
+3.3 Usage of rear camera
+3.4 USB Type-C
+4. Installation
+4.1 Recommendations
+4.2 Screen Protective film
+4.3 Installing modules
+4.4 Battery
+4.5 Visual Impaired (VI) Accessory
+5. Recommendations
+5.1 Safety
+5.2 Security of your terminal
+5.3 Fixed installation
+5.4 Cleaning the terminal
+5.5 Transport and storage
+6. Safety and Standards
+7. Accessibility
+Need help?
+
+Do you have a specific question about the Ingenico AXIUM EX4000 that you cannot find the answer to in the manual?
+
+Ask a question
+Receive updates on solutions
+Get answers to your question
+Question and answer
+Number of questions: 0
+Product Images (1)
+Ingenico AXIUM EX4000 specifications
+
+Below you will find the product specifications and the manual specifications for the Ingenico AXIUM EX4000.
+
+General
+Brand	Ingenico
+Model	AXIUM EX4000
+Product	not categorized
+Language	English
+Filetype	User manual (PDF)
+Frequently Asked Questions
+
+Can't find the answer to your question in the manual? You may find the information you need in the FAQs about the Ingenico AXIUM EX4000 listed below.
+
+Why can't my AXIUM EX4000 terminal be started?
+If your AXIUM EX4000 terminal cannot be started, it could be due to a low energy status or a defective state of an application running on the device. Ensure that the device is properly powered. You might also try resetting the device. If the problem persists, contact customer service for further assistance.
+ 0
+What should I do if there is a transaction processing failure with my AXIUM EX4000?
+Transaction processing failure may occur due to various reasons such as damaged magnetic or smart cards, a faulty card reader, or improper card swiping. To troubleshoot, use more than one magnetic card for a transaction to confirm if the issue is with the card itself. Ensure that card swiping is done correctly. If a manual transaction works without a reader, the card reader might be at fault. Check the SIM card installation and the function of the local wireless communication network. Lastly, ensure the SAM card is properly inserted.
+ 0
+How can I reboot my AXIUM EX4000 terminal in case of an abnormal behavior?
+If your AXIUM EX4000 terminal exhibits abnormal behavior, press and hold the power button for 8 seconds to force a reboot. This procedure will help resolve many common issues without further intervention.
+ 0
+How do I ensure the SIM and SAM cards are correctly installed in the AXIUM EX4000?
+To ensure that the SIM and SAM cards are correctly installed, power off the terminal before opening the SIM card tray. The SIM/SAM connectors are located on the right side of the terminal. Insert the ejector into the tray hole to pop it out, then place the cards in their corresponding slots marked inside the tray. Note that SAM and SIM2 share a slot, so only one can be used at a time according to the terminal function.
+ 0
+What should I do if the AXIUM EX4000's card reader or transaction function fails to work?
+If the card reader or transaction function of the AXIUM EX4000 terminal fails, verify if the card is damaged or improperly inserted. Use multiple cards to test the reader functionality. If manual transactions work, the issue might lie with the reader. Also, check that the device is connected to a functioning phone line or network, as this may affect transaction success.
+ 0
+Is the manual of the Ingenico AXIUM EX4000 available in English?
+Yes, the manual of the Ingenico AXIUM EX4000 is available in English .
+
+Is your question not listed? Ask your question here
+
+Related product manuals
+Ingenico AXIUM EX6000
+Manual
+35 Pages
+Ingenico AXIUM EX
+Manual
+22 Pages
+Ingenico AXIUM EX8000
+Manual
+33 Pages
+Ingenico AXIUM CX
+Manual
+20 Pages
+Ingenico AXIUM NX8
+Manual
+24 Pages
+Ingenico Move/2500
+Manual
+32 Pages
+Ingenico Desk/3200
+Manual
+2 Pages
+Ingenico Lane 5000 LE
+Manual
+36 Pages
+Ingenico AXIUM DX8000
+Manual
+36 Pages
+Ingenico AXIUM RX5000
+Manual
+33 Pages
+ View all Ingenico manuals
+ View all Ingenico not categorized manuals
+EN_US 
+Manua.ls
+
+Are you looking for a specific manual? Manua.ls is here to ensure that you find the exact manual you need in no time. Our extensive database contains over 1,000,000 free PDF manuals from more than 10,000 different brands. We update our library every day by adding the latest manuals, so you can always find the most up-to-date information for your product. Finding your manual is very simple: just type the brand name and the product model into the search bar, and you can instantly view your chosen manual online for free.
+
+© Copyright 2026 Manua.ls. All Rights Reserved.
+
+Privacy PolicyContact

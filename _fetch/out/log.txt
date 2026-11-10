@@ -1,0 +1,13 @@
+OK ex4000-ejost https://www.ejost.ch/axium-ex4000/ imgs 2 saved 2
+OK ex4000-bcv https://www.bcv.ch/en/home/corporate-banking/for-your-core-banking-needs/bcv-business-plus/axium-ex4000-portable.html imgs 1 saved 1
+OK saturn-castles https://www.castlestechsupport.com/terminals/saturn imgs 31 saved 20
+SEARCH ex4000 https://ingenico.com/en/products-services/payment-terminals/axium-android/axium-ex4000 | https://ingenico.com/sites/default/files/resource-document/2026-09/UYS01000684-INGC-ST-06-000857-User%20Guide%20AXIUM%20EX4000.pdf | https://www.manualslib.com/manual/3250562/Ingenico-Axium-Ex4000.html | https://www.manua.ls/ingenico/axium-ex4000/manual | https://paymentdiscounter.com/product/axium-ex4000/ | https://manuals.plus/m/170742b3ac79c4414c40b36e03d1ee994996738afaf7617c14e6662e8ffd58db
+OK ex4000-0 https://ingenico.com/en/products-services/payment-terminals/axium-android/axium-ex2 imgs 20 saved 20
+OK ex4000-1 https://ingenico.com/sites/default/files/resource-document/2026-09/UYS01000684-INGC-ST-06-000857-User%20Guide%20AXIUM%20EX4000.pdf imgs 0 saved 0
+OK ex4000-2 https://www.manua.ls/ingenico/axium-ex4000/manual imgs 16 saved 16
+OK ex4000-3 https://paymentdiscounter.com/product/axium-ex4000/ imgs 17 saved 17
+SEARCH saturn https://allstarterminals.com/products/castles-s1f2-saturn-1000f2-portable-android-smart-payment-terminal | https://support.ventrata.com/en/articles/10145958-how-to-set-up-the-castles-s1f2-saturn-1000f2-and-s1f2l-saturn-1000f2l-payment-terminals | https://www.castlestechsupport.com/terminals/saturn | https://www.manualslib.com/manual/3576930/Castles-Technology-Saturn-S1f2.html | https://www.castlestech.com/products/s1f2/ | https://www.castlestechsupport.com/documents-downloads
+OK saturn-0 https://allstarterminals.com/products/castles-s1f2-saturn-1000f2-portable-android-smart-payment-terminal imgs 22 saved 20
+OK saturn-1 https://support.ventrata.com/en/articles/10145958-how-to-set-up-the-castles-s1f2-saturn-1000f2-and-s1f2l-saturn-1000f2l-payment-terminals imgs 12 saved 12
+OK saturn-2 https://www.castlestechsupport.com/terminals/saturn imgs 31 saved 20
+OK saturn-3 https://www.castlestech.com/products/s1f2/ imgs 3 saved 3
